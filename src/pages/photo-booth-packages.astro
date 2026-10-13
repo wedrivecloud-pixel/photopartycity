@@ -377,7 +377,9 @@ const citySlug = (c: string) => `/photo-booth-rental-${c.toLowerCase().replaceAl
         history.replaceState(null, '', a.getAttribute('href'));
       });
     });
-    select(location.hash === '#selfservice' ? 'self' : 'full');
+    const selectFromHash = () => select(location.hash === '#selfservice' ? 'self' : 'full');
+    selectFromHash();
+    window.addEventListener('hashchange', selectFromHash);
 
     const state = {hours: 4, days: 1, addons: 0};
     const render = () => {
