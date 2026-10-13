@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import pages from '../data/pages.json';
 import {booking} from '../data/brand';
-export function getStaticPaths(){return pages.filter(p=>p.slug).map(page=>({params:{slug:page.slug},props:{page}}));}
+// Pages with a dedicated route in src/pages (e.g. photo-booth-packages.astro) are excluded here.
+export function getStaticPaths(){const dedicated=['photo-booth-packages'];return pages.filter(p=>p.slug && !dedicated.includes(p.slug)).map(page=>({params:{slug:page.slug},props:{page}}));}
 const {page}=Astro.props;
 const backendPages=['cart','checkout','my-account','rental-search','thank-you','search-item-list','rent-grid','rent-list','evercompare'];
 const isBackend=backendPages.includes(page.slug);

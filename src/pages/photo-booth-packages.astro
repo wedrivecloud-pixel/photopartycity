@@ -1,0 +1,586 @@
+---
+// Photo Booth Packages & Pricing — dedicated redesign of /photo-booth-packages/.
+// SEO title, description, canonical and schema still come from pages.json so they stay unchanged.
+import Layout from '../layouts/Layout.astro';
+import pages from '../data/pages.json';
+import {booking,cities} from '../data/brand';
+
+const page = pages.find((p) => p.slug === 'photo-booth-packages')!;
+
+const EXTRA_HOUR = 150;
+const DEFAULT_HOURS = 4;
+const DEFAULT_DAYS = 1;
+const money = (n: number) => '$' + n.toLocaleString('en-US');
+
+const booths = {
+  helio: {name: 'Helio Sport', url: 'https://www.ataphotobooths.com/shop/helio-sport-ipad-photobooth-system-package/'},
+  lumia: {name: 'Lumia M Pro', url: 'https://www.ataphotobooths.com/shop/lumia-m-pro-ipad-based-full-system-package/'},
+  posh: {name: 'Posh Pro', url: 'https://www.ataphotobooths.com/shop/helio-sapphire-pro-m50-ipad-photobooth-system-package/'},
+};
+
+const fullService = [
+  {name: 'Silver Package', tagline: 'A refined starting point for any celebration', img: '/media/9bdc247ed0d954ad.webp', w: 683, h: 1024, alt: 'Silver Package iPad photo booth with personalized print examples', base: 695, incl: 3, booth: booths.helio, book: 'https://eventdeskly.com/book/4b01576a-0a6c-4f79-94af-83b5374a6d63', popular: false, note: 'Ideal for smaller events that still deserve a polished experience'},
+  {name: 'Gold Package', tagline: 'Our most popular full-service option', img: '/media/c5b88e6543d0506c.webp', w: 683, h: 1024, alt: 'Gold Package Lumia M Pro wedding photo booth with personalized print examples', base: 895, incl: 4, booth: booths.lumia, book: 'https://eventdeskly.com/book/9c2f5061-4898-4de7-9bd5-20ab1aa6fc54', popular: true, note: 'The right amount of booth time with setup and on-site help'},
+  {name: 'Platinum Package', tagline: 'Designed for weddings and premium celebrations', img: '/media/e43dade889004232.webp', w: 683, h: 1024, alt: 'Platinum Package Posh Pro photo booth with 37-inch display and print examples', base: 1095, incl: 5, booth: booths.posh, book: 'https://eventdeskly.com/book/685d2b8e-ea41-43d2-b391-01fe7fc31200', popular: false, note: 'Extended coverage with custom branding and unlimited prints'},
+];
+
+const selfService = [
+  {name: 'Starter Package', tagline: 'Standard iPad-based photo booth', img: '/media/123ffba4a1fe4fe1.webp', w: 819, h: 1024, alt: 'Starter Package iPad photo booth with digital photo features', price: 199, booth: booths.helio, book: 'https://eventdeskly.com/book/fa8083c9-0fdf-4387-9151-4f7ce7e8d5ee', points: ['Uses the built-in iPad camera', 'Unlimited videos, boomerangs & GIFs', 'Unlimited digital photos & sharing']},
+  {name: 'Showbiz Package', tagline: 'Hybrid iPad + DSLR photo booth', img: '/media/cb016e35883fe101.webp', w: 819, h: 1024, alt: 'Showbiz Package Lumia M Pro digital photo booth with hybrid iPad and DSLR cameras', price: 350, booth: booths.lumia, book: 'https://eventdeskly.com/book/3308ef3e-f828-4636-a9a7-9fd12dd1737e', points: ['Professional DSLR camera for high-quality photos', 'Unlimited videos, boomerangs & GIFs', 'Unlimited digital photos & sharing']},
+  {name: 'Hollywood Package', tagline: 'Hybrid iPad + DSLR with digital signage', img: '/media/c8c6acf2b0d8f4a0.webp', w: 825, h: 1024, alt: 'Hollywood Package Posh Pro photo booth with DSLR camera and 37-inch digital signage column', price: 525, booth: booths.posh, book: 'https://eventdeskly.com/book/c13f6c7a-4721-494c-9e83-c138c496fdca', points: ['Professional DSLR camera for high-quality photos', '37″ digital signage column for your videos, slideshows or ads', 'Unlimited digital photos & sharing']},
+];
+
+type AddOn = {id: string; label: string; short?: string; price: number};
+const addOns: AddOn[] = [
+  {id: 'printer', label: 'Printer', price: 65},
+  {id: 'media', label: 'Media kit (paper & ink, 100 4×6 prints)', short: 'Media kit (100 prints)', price: 65},
+  {id: 'template', label: 'Custom template', price: 25},
+  {id: 'backdrop', label: 'Backdrop', price: 25},
+];
+
+const fullIncluded = [
+  {icon: 'user', text: 'Professional on-site attendant'},
+  {icon: 'printer', text: 'Unlimited prints'},
+  {icon: 'image', text: 'Open booth with a backdrop from our collection'},
+  {icon: 'strips', text: '3 or 4 picture format: portrait, landscape or strips'},
+  {icon: 'pen', text: 'Personalized photo design'},
+  {icon: 'download', text: 'Digital copy of all prints taken'},
+  {icon: 'cloud', text: '30-day online gallery, password option, free downloads'},
+  {icon: 'sparkle', text: 'Props for guests'},
+];
+
+const selfIncluded = [
+  {icon: 'image', text: 'Custom digital backdrop'},
+  {icon: 'grid', text: '100+ premade templates'},
+  {icon: 'play', text: 'Unlimited videos, boomerangs & GIFs'},
+  {icon: 'share', text: 'Unlimited social sharing'},
+  {icon: 'camera', text: 'Unlimited digital photos'},
+  {icon: 'album', text: 'Digital album access'},
+];
+
+// Stroke icon paths (24×24 viewBox).
+const icons: Record<string, string> = {
+  user: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
+  printer: '<path d="M7 8V3h10v5"/><rect x="3" y="8" width="18" height="9" rx="2"/><path d="M7 14h10v7H7z"/>',
+  image: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>',
+  strips: '<rect x="3" y="3" width="8" height="18" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/>',
+  pen: '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>',
+  download: '<path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/>',
+  cloud: '<path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1 0 8Z"/>',
+  sparkle: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/>',
+  grid: '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>',
+  play: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3Z"/>',
+  share: '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/>',
+  camera: '<path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="4"/>',
+  album: '<path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4Z"/><path d="M8 4v12"/>',
+};
+
+const faqs = [
+  {q: 'Can you deliver the photo booth?', a: 'Yes. Delivery, setup and collection can be arranged for an additional charge. Pricing depends on your event location and requirements and is confirmed in your proposal.'},
+  {q: 'What’s the difference between full service and self service?', a: 'Full service includes professional setup, an on-site attendant and unlimited prints for a set number of hours. Self service is a 24-hour rental you run yourself, with digital photos, videos and sharing included and printing available as an add-on.'},
+  {q: 'Which areas do you serve?', a: `Our rental team is based in Mira Loma and serves event locations within 45 miles, including ${cities.slice(0, -1).join(', ')} and ${cities[cities.length - 1]}. Coverage is confirmed for your exact event address.`},
+];
+
+const citySlug = (c: string) => `/photo-booth-rental-${c.toLowerCase().replaceAll(' ', '-')}/`;
+---
+<Layout {...page}>
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" />
+  </Fragment>
+
+  <div class="pk">
+    <!-- Hero -->
+    <section class="pk-hero">
+      <div class="pk-wrap pk-hero-grid">
+        <div>
+          <nav class="pk-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / Packages &amp; pricing</nav>
+          <p class="pk-eyebrow">Packages &amp; pricing</p>
+          <h1>Photo booth rental packages, priced up front.</h1>
+          <p class="pk-lede">Let’s plan your next event. Compare full-service and 24-hour self-service rentals, pick a package to check your date, and send a booking request for approval.</p>
+          <ul class="pk-hero-facts">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>Within 45 miles of Mira Loma</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Equipment made by ATA Photobooths</li>
+          </ul>
+        </div>
+        <div class="pk-choices">
+          <a class="pk-choice" href="#fullservice" data-tab-link="full">
+            <span>
+              <span class="pk-choice-kicker">Full service</span>
+              <span class="pk-choice-price">From {money(fullService[0].base)}</span>
+              <span class="pk-choice-sub">On-site attendant, unlimited prints, 3–5 hours included</span>
+            </span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="pk-choice pk-choice--dark" href="#selfservice" data-tab-link="self">
+            <span>
+              <span class="pk-choice-kicker">Self service</span>
+              <span class="pk-choice-price">From {money(selfService[0].price)} / day</span>
+              <span class="pk-choice-sub">24-hour rental you run yourself, pickup in Mira Loma</span>
+            </span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="pk-section" id="packages" aria-labelledby="packages-title">
+      <div class="pk-wrap">
+        <div class="pk-head">
+          <h2 id="packages-title">Compare packages &amp; pricing</h2>
+          <div class="pk-tabs" role="tablist" aria-label="Rental type" hidden>
+            <button type="button" role="tab" id="tab-full" aria-controls="fullservice" aria-selected="true">Full service</button>
+            <button type="button" role="tab" id="tab-self" aria-controls="selfservice" aria-selected="false" tabindex="-1">Self service</button>
+          </div>
+        </div>
+
+        <!-- Full service panel -->
+        <div class="pk-panel" id="fullservice" role="tabpanel" aria-labelledby="tab-full" data-panel="full">
+          <h3 class="pk-panel-title">Full-service photo booth rental</h3>
+          <p class="pk-intro">A seamless, stress-free event: professional setup, custom-designed photo templates and an on-site attendant who guides your guests. Every detail is managed for you.</p>
+
+          <div class="pk-estimator">
+            <div class="pk-stepper-row">
+              <span class="pk-label" id="hours-label">How long is your event?</span>
+              <div class="pk-stepper" role="group" aria-labelledby="hours-label">
+                <button type="button" data-step="hours" data-dir="-1" aria-label="Fewer hours">−</button>
+                <output data-out="hours" aria-live="polite">{DEFAULT_HOURS} hours</output>
+                <button type="button" data-step="hours" data-dir="1" aria-label="More hours">+</button>
+              </div>
+            </div>
+            <p class="pk-fine">Extra time is {money(EXTRA_HOUR)} per hour on every package. Estimates exclude delivery or travel charges, which your proposal confirms.</p>
+          </div>
+
+          <div class="pk-cards">
+            {fullService.map((p) => (
+              <article class:list={['pk-card', {'pk-card--popular': p.popular}]}>
+                <div class="pk-card-media">
+                  <img src={p.img} alt={p.alt} width={p.w} height={p.h} loading="lazy" decoding="async" />
+                  {p.popular && <span class="pk-badge">Most popular</span>}
+                </div>
+                <div class="pk-card-body">
+                  <div>
+                    <h4>{p.name}</h4>
+                    <p class="pk-tagline">{p.tagline}</p>
+                  </div>
+                  <p class="pk-price"><strong>{money(p.base)}</strong> <span>starting price · {p.incl} hrs included</span></p>
+                  <p class="pk-estimate" data-est="full" data-base={p.base} data-incl={p.incl}>
+                    <span data-est-label>Your {DEFAULT_HOURS}-hour event</span>
+                    <strong data-est-total>{money(p.base + EXTRA_HOUR * Math.max(0, DEFAULT_HOURS - p.incl))}</strong>
+                  </p>
+                  <ul class="pk-points">
+                    <li>{p.incl} hours of booth time with an attendant</li>
+                    <li>+{money(EXTRA_HOUR)} per additional hour</li>
+                    <li>{p.note}</li>
+                  </ul>
+                  <p class="pk-booth">Booth included: <a href={p.booth.url}>{p.booth.name}</a></p>
+                  <a class:list={['pk-cta', {'pk-cta--soft': !p.popular}]} href={p.book}>Check availability<span class="sr-only"> for the {p.name}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div class="pk-included">
+            <h3>Included in every full-service package</h3>
+            <p>The packages differ only in booth time and booth model. Everything below comes standard.</p>
+            <ul class="pk-feature-grid">
+              {fullIncluded.map((f) => <li><svg viewBox="0 0 24 24" aria-hidden="true" set:html={icons[f.icon]}></svg>{f.text}</li>)}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Self service panel -->
+        <div class="pk-panel" id="selfservice" role="tabpanel" aria-labelledby="tab-self" data-panel="self">
+          <h3 class="pk-panel-title">Self-service photo booth rental</h3>
+          <p class="pk-intro">Complete control without compromising on quality. A 24-hour rental with professional-grade equipment that’s easy to set up, so guests capture and share moments at their own pace.</p>
+
+          <div class="pk-estimator">
+            <div class="pk-stepper-row">
+              <span class="pk-label" id="days-label">Rental days</span>
+              <div class="pk-stepper" role="group" aria-labelledby="days-label">
+                <button type="button" data-step="days" data-dir="-1" aria-label="Fewer days">−</button>
+                <output data-out="days" aria-live="polite">{DEFAULT_DAYS} day</output>
+                <button type="button" data-step="days" data-dir="1" aria-label="More days">+</button>
+              </div>
+            </div>
+            <div class="pk-addon-row" role="group" aria-label="Add-ons">
+              <span class="pk-label">Add-ons</span>
+              {addOns.map((a) => (
+                <button type="button" class="pk-pill" data-addon={a.price} aria-pressed="false">{a.short ?? a.label} · {money(a.price)}</button>
+              ))}
+            </div>
+          </div>
+
+          <div class="pk-cards">
+            {selfService.map((p) => (
+              <article class="pk-card">
+                <div class="pk-card-media">
+                  <img src={p.img} alt={p.alt} width={p.w} height={p.h} loading="lazy" decoding="async" />
+                </div>
+                <div class="pk-card-body">
+                  <div>
+                    <h4>{p.name}</h4>
+                    <p class="pk-tagline">{p.tagline}</p>
+                  </div>
+                  <p class="pk-price"><strong>{money(p.price)}</strong> <span>per rental day · 1 day minimum</span></p>
+                  <p class="pk-estimate" data-est="self" data-price={p.price}>
+                    <span data-est-label>{DEFAULT_DAYS} day</span>
+                    <strong data-est-total>{money(p.price * DEFAULT_DAYS)}</strong>
+                  </p>
+                  <ul class="pk-points">
+                    {p.points.map((t) => <li>{t}</li>)}
+                  </ul>
+                  <p class="pk-booth">Booth included: <a href={p.booth.url}>{p.booth.name}</a></p>
+                  <a class="pk-cta" href={p.book}>Check availability<span class="sr-only"> for the {p.name}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div class="pk-included pk-included--split">
+            <div>
+              <h3>Included in every self-service rental</h3>
+              <p>Pick up and return at our Mira Loma location, or request delivery, setup and collection for an additional charge. Your proposal confirms the final total before booking.</p>
+              <ul class="pk-feature-grid">
+                {selfIncluded.map((f) => <li><svg viewBox="0 0 24 24" aria-hidden="true" set:html={icons[f.icon]}></svg>{f.text}</li>)}
+              </ul>
+            </div>
+            <div class="pk-addons-card">
+              <h3>Add-ons</h3>
+              <p>Available with any self-service package.</p>
+              <dl>
+                {addOns.map((a) => <div><dt>{a.label}</dt><dd>{money(a.price)}</dd></div>)}
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booth models -->
+    <section class="pk-section pk-section--tight" id="ata-photobooths-packages" aria-labelledby="booths-title">
+      <div class="pk-wrap">
+        <h2 id="booths-title">Photo booths made by ATA Photobooths</h2>
+        <p class="pk-sub">Each booth model comes in a full-service and a self-service version. Explore the hardware, then choose the rental that fits your event.</p>
+        <div class="pk-booths">
+          {[
+            {b: booths.helio, full: 'Silver', self: 'Starter'},
+            {b: booths.lumia, full: 'Gold', self: 'Showbiz'},
+            {b: booths.posh, full: 'Platinum', self: 'Hollywood'},
+          ].map((m) => (
+            <a class="pk-booth-card" href={m.b.url}>
+              <span class="pk-booth-name">{m.b.name}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+              <span class="pk-tags"><span class="pk-tag">{m.full} · full service</span><span class="pk-tag pk-tag--gold">{m.self} · self service</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- How booking works -->
+    <section class="pk-steps-band" aria-labelledby="steps-title">
+      <div class="pk-wrap">
+        <h2 id="steps-title">How booking works</h2>
+        <ol class="pk-steps">
+          <li><span class="pk-step-num">1</span><strong>Pick a package</strong><span>Choose full service or self service and the booth that fits your event.</span></li>
+          <li><span class="pk-step-num">2</span><strong>Check your date</strong><span>See availability and send a booking request with your event details for approval.</span></li>
+          <li><span class="pk-step-num">3</span><strong>Approve your proposal</strong><span>Your proposal confirms availability, upgrades and any delivery or travel charges.</span></li>
+        </ol>
+        <a class="pk-cta pk-cta--inline" href={booking}>Check your date<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="pk-section" aria-labelledby="faq-title">
+      <div class="pk-wrap pk-narrow">
+        <h2 id="faq-title">Common questions</h2>
+        {faqs.map((f) => (
+          <details class="pk-faq">
+            <summary>{f.q}<span class="pk-plus" aria-hidden="true">+</span></summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- Internal links (kept from the original page for SEO) -->
+    <section class="pk-section pk-section--tight" id="rental-planning-links" aria-labelledby="explore-title">
+      <div class="pk-wrap">
+        <h2 id="explore-title">Explore rentals by location, service, and occasion</h2>
+        <div class="pk-explore">
+          <div>
+            <h3>Choose your service</h3>
+            <ul>
+              <li><a href="/self-service-photo-booth-rental/">24-hour self-service rentals</a></li>
+              <li><a href="/full-service-photo-booth-rental/">Full-service rentals with prints</a></li>
+              <li><a href="/digital-photo-booth-rental/">Digital photo booth rentals</a></li>
+              <li><a href="/360-photo-booth-rental/">360 video booth rentals</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Match your event &amp; budget</h3>
+            <ul>
+              <li><a href="/wedding-photo-booth-rental/">Wedding photo booth rentals</a></li>
+              <li><a href="/corporate-photo-booth-rental/">Corporate photo booth rentals</a></li>
+              <li><a href="/photo-booth-rental-cost/">Rental cost guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Inland Empire service areas</h3>
+            <ul class="pk-cities">
+              {cities.map((c) => <li><a href={citySlug(c)}>{c}</a></li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  // Tabs, event-length estimator and self-service add-on estimator.
+  // Without JavaScript both panels stay visible, so every package and price is still readable.
+  const EXTRA_HOUR = 150;
+  const money = (n: number) => '$' + n.toLocaleString('en-US');
+  const root = document.querySelector<HTMLElement>('.pk');
+  if (root) {
+    const tablist = root.querySelector<HTMLElement>('[role="tablist"]')!;
+    const tabs = Array.from(root.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    const panels = Array.from(root.querySelectorAll<HTMLElement>('[role="tabpanel"]'));
+    tablist.hidden = false;
+    root.classList.add('pk-js');
+
+    const select = (key: 'full' | 'self', focus = false) => {
+      tabs.forEach((t, i) => {
+        const on = panels[i].dataset.panel === key;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        panels[i].hidden = !on;
+        if (on && focus) t.focus();
+      });
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(panels[i].dataset.panel as 'full' | 'self'));
+      t.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        select(panels[(i + 1) % 2].dataset.panel as 'full' | 'self', true);
+      });
+    });
+    root.querySelectorAll<HTMLAnchorElement>('[data-tab-link]').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        select(a.dataset.tabLink as 'full' | 'self');
+        document.getElementById('packages')?.scrollIntoView({behavior: 'smooth'});
+        history.replaceState(null, '', a.getAttribute('href'));
+      });
+    });
+    select(location.hash === '#selfservice' ? 'self' : 'full');
+
+    const state = {hours: 4, days: 1, addons: 0};
+    const render = () => {
+      root.querySelector('[data-out="hours"]')!.textContent = `${state.hours} hours`;
+      const dayText = `${state.days} ${state.days === 1 ? 'day' : 'days'}`;
+      root.querySelector('[data-out="days"]')!.textContent = dayText;
+      root.querySelectorAll<HTMLElement>('[data-est="full"]').forEach((el) => {
+        const base = Number(el.dataset.base), incl = Number(el.dataset.incl);
+        el.querySelector('[data-est-label]')!.textContent = `Your ${state.hours}-hour event`;
+        el.querySelector('[data-est-total]')!.textContent = money(base + EXTRA_HOUR * Math.max(0, state.hours - incl));
+      });
+      root.querySelectorAll<HTMLElement>('[data-est="self"]').forEach((el) => {
+        el.querySelector('[data-est-label]')!.textContent = dayText + (state.addons ? ' + add-ons' : '');
+        el.querySelector('[data-est-total]')!.textContent = money(Number(el.dataset.price) * state.days + state.addons);
+      });
+    };
+    root.querySelectorAll<HTMLButtonElement>('[data-step]').forEach((b) => {
+      b.addEventListener('click', () => {
+        const dir = Number(b.dataset.dir);
+        if (b.dataset.step === 'hours') state.hours = Math.min(10, Math.max(2, state.hours + dir));
+        else state.days = Math.min(7, Math.max(1, state.days + dir));
+        render();
+      });
+    });
+    root.querySelectorAll<HTMLButtonElement>('[data-addon]').forEach((b) => {
+      b.addEventListener('click', () => {
+        const on = b.getAttribute('aria-pressed') !== 'true';
+        b.setAttribute('aria-pressed', String(on));
+        state.addons += (on ? 1 : -1) * Number(b.dataset.addon);
+        render();
+      });
+    });
+  }
+</script>
+
+<style>
+  .pk {
+    --pk-plum: #29173d;
+    --pk-plum-2: #3a2453;
+    --pk-purple: #54228b;
+    --pk-purple-dark: #3a165f;
+    --pk-gold: #f2c85c;
+    --pk-tint: #f3edf7;
+    --pk-tint-2: #f7f2fb;
+    --pk-line: #e7deee;
+    --pk-ink: #241d30;
+    --pk-muted: #5c5368;
+    --pk-display: 'Bricolage Grotesque', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Figtree', Arial, Helvetica, sans-serif;
+    color: var(--pk-ink);
+  }
+  .pk h1, .pk h2, .pk h3, .pk h4 { font-family: var(--pk-display); font-weight: 800; letter-spacing: -0.025em; }
+  .pk svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+  .pk-wrap { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+  .pk-narrow { max-width: 860px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* Hero */
+  .pk-hero { background: var(--pk-plum); color: #fff; padding: 4rem 0 4.5rem; }
+  .pk-hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: center; }
+  .pk-crumbs { font-size: .8rem; color: #c9b8db; margin-bottom: 1.4rem; }
+  .pk-crumbs a { color: #c9b8db; }
+  .pk-eyebrow { margin: 0 0 1rem; font-size: .8rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--pk-gold); }
+  .pk-hero h1 { margin: 0; font-size: clamp(2.5rem, 5vw, 4.25rem); line-height: 1.02; letter-spacing: -0.035em; }
+  .pk-lede { margin: 1.4rem 0 0; max-width: 560px; font-size: 1.2rem; line-height: 1.6; color: #e3d8ee; }
+  .pk-hero-facts { list-style: none; margin: 1.75rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; font-size: .9rem; color: #d3c4e2; }
+  .pk-hero-facts li { display: inline-flex; align-items: center; gap: .5rem; }
+  .pk-hero-facts svg { stroke: var(--pk-gold); }
+  .pk-choices { display: flex; flex-direction: column; gap: .9rem; }
+  .pk-choice { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.5rem 1.6rem; border-radius: 18px; background: #fff; color: var(--pk-ink); text-decoration: none; transition: transform .15s ease; }
+  .pk-choice:hover { transform: translateY(-2px); }
+  .pk-choice > span { display: flex; flex-direction: column; gap: .35rem; }
+  .pk-choice svg { width: 28px; height: 28px; stroke: var(--pk-purple); }
+  .pk-choice--dark { background: var(--pk-plum-2); color: #fff; border: 1px solid #5a3f78; }
+  .pk-choice--dark svg { stroke: var(--pk-gold); }
+  .pk-choice-kicker { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #6a5a7d; }
+  .pk-choice--dark .pk-choice-kicker { color: var(--pk-gold); }
+  .pk-choice-price { font-family: var(--pk-display); font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; }
+  .pk-choice-sub { font-size: .95rem; color: var(--pk-muted); }
+  .pk-choice--dark .pk-choice-sub { color: #e3d8ee; }
+
+  /* Sections */
+  .pk-section { padding: 5rem 0 2.5rem; }
+  .pk-section--tight { padding: 2.5rem 0 4rem; }
+  .pk-section h2, .pk-steps-band h2 { margin: 0; font-size: clamp(1.7rem, 2.8vw, 2.6rem); line-height: 1.08; }
+  .pk-sub { margin: .7rem 0 0; max-width: 680px; color: var(--pk-muted); line-height: 1.6; }
+
+  /* Tabs */
+  .pk-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1.5rem 2.5rem; }
+  .pk-tabs { display: inline-flex; gap: 4px; padding: 5px; border-radius: 999px; background: #f1eaf6; }
+  .pk-tabs[hidden] { display: none; }
+  .pk-tabs button { min-height: 44px; padding: .75rem 1.4rem; border: 0; border-radius: 999px; background: transparent; color: var(--pk-purple-dark); font-weight: 700; font-size: .95rem; cursor: pointer; }
+  .pk-tabs button[aria-selected="true"] { background: var(--pk-plum); color: #fff; }
+  .pk-panel { margin-top: 1rem; }
+  .pk-panel + .pk-panel { margin-top: 4rem; }
+  .pk-js .pk-panel + .pk-panel { margin-top: 1rem; }
+  .pk-panel-title { margin: 1.5rem 0 0; font-size: 1.35rem; }
+  .pk-js .pk-panel-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .pk-intro { margin: .8rem 0 0; max-width: 640px; font-size: 1.05rem; line-height: 1.65; color: var(--pk-muted); }
+
+  /* Estimator */
+  .pk-estimator { margin-top: 2rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; padding: 1.25rem 1.5rem; background: #fff; border: 1px solid var(--pk-line); border-radius: 18px; }
+  .pk-stepper-row, .pk-addon-row { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }
+  .pk-addon-row { flex: 1 1 420px; }
+  .pk-label { font-weight: 700; }
+  .pk-stepper { display: inline-flex; align-items: center; border: 1px solid #d9cce4; border-radius: 999px; overflow: hidden; }
+  .pk-stepper button { width: 44px; height: 44px; border: 0; background: var(--pk-tint-2); color: var(--pk-purple); font-size: 1.25rem; cursor: pointer; }
+  .pk-stepper output { min-width: 96px; text-align: center; font-weight: 700; }
+  .pk-fine { flex: 1 1 320px; margin: 0; font-size: .9rem; line-height: 1.55; color: var(--pk-muted); }
+  .pk-pill { min-height: 44px; padding: .6rem 1rem; border: 1px solid #d9cce4; border-radius: 999px; background: #fff; color: var(--pk-ink); font-size: .88rem; font-weight: 600; cursor: pointer; }
+  .pk-pill[aria-pressed="true"] { background: var(--pk-plum); border-color: var(--pk-plum); color: #fff; }
+  .pk:not(.pk-js) .pk-estimator { display: none; }
+
+  /* Cards */
+  .pk-cards { margin-top: 1.75rem; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+  .pk-card { display: flex; flex-direction: column; overflow: hidden; background: #fff; border: 2px solid #ece4f1; border-radius: 22px; }
+  .pk-card--popular { border-color: var(--pk-gold); }
+  .pk-card-media { position: relative; background: var(--pk-tint); }
+  .pk-card-media img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
+  .pk-badge { position: absolute; top: 1rem; right: 1rem; padding: .5rem .9rem; border-radius: 999px; background: var(--pk-gold); color: var(--pk-plum); font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .pk-card-body { flex: 1 1 auto; display: flex; flex-direction: column; gap: 1.1rem; padding: 1.6rem 1.6rem 1.75rem; }
+  .pk-card h4 { margin: 0; font-size: 1.75rem; }
+  .pk-tagline { margin: .35rem 0 0; font-size: .95rem; line-height: 1.5; color: var(--pk-muted); }
+  .pk-price { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem; }
+  .pk-price strong { font-family: var(--pk-display); font-size: 2.75rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; color: var(--pk-purple); }
+  .pk-price span { font-size: .9rem; color: var(--pk-muted); }
+  .pk-estimate { margin: 0; display: flex; justify-content: space-between; align-items: center; gap: .75rem; padding: .75rem 1rem; border-radius: 12px; background: var(--pk-tint-2); }
+  .pk-estimate span { color: #4a4057; }
+  .pk-estimate strong { font-size: 1.05rem; }
+  .pk:not(.pk-js) .pk-estimate { display: none; }
+  .pk-points { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .6rem; }
+  .pk-points li { position: relative; padding-left: 1.75rem; font-size: .95rem; line-height: 1.45; }
+  .pk-points li::before { content: ''; position: absolute; left: .2rem; top: .3rem; width: .7rem; height: .4rem; border-left: 2.5px solid var(--pk-purple); border-bottom: 2.5px solid var(--pk-purple); transform: rotate(-45deg); }
+  .pk-booth { margin: 0; font-size: .9rem; color: var(--pk-muted); }
+  .pk-booth a { color: var(--pk-purple); font-weight: 700; }
+  .pk-cta { margin-top: auto; display: flex; align-items: center; justify-content: center; gap: .5rem; min-height: 52px; padding: 0 1.4rem; border-radius: 14px; background: var(--pk-purple); color: #fff !important; font-weight: 700; text-decoration: none !important; }
+  .pk-cta:hover { background: var(--pk-purple-dark); }
+  .pk-cta--soft { background: var(--pk-tint); color: var(--pk-purple-dark) !important; }
+  .pk-cta--soft:hover { background: #e6daf0; }
+  .pk-cta--inline { display: inline-flex; margin-top: 2.5rem; border-radius: 999px; }
+
+  /* Included */
+  .pk-included { margin-top: 3rem; padding: 3rem 2.5rem; border-radius: 28px; background: var(--pk-tint); }
+  .pk-included h3 { margin: 0; font-size: clamp(1.4rem, 2.4vw, 2rem); }
+  .pk-included > p, .pk-included--split > div > p { margin: .6rem 0 0; color: var(--pk-muted); line-height: 1.6; }
+  .pk-included--split { display: grid; grid-template-columns: 1.6fr 1fr; gap: 2.5rem; }
+  .pk-feature-grid { list-style: none; margin: 1.75rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: .85rem; }
+  .pk-feature-grid li { display: flex; align-items: center; gap: .85rem; padding: 1rem 1.1rem; border-radius: 14px; background: #fff; font-weight: 600; font-size: .95rem; }
+  .pk-feature-grid svg { width: 24px; height: 24px; stroke: var(--pk-purple); stroke-width: 1.8; }
+  .pk-addons-card { align-self: start; padding: 1.75rem; border-radius: 18px; background: #fff; }
+  .pk-addons-card h3 { font-size: 1.4rem; }
+  .pk-addons-card p { margin: .3rem 0 1rem; font-size: .9rem; color: var(--pk-muted); }
+  .pk-addons-card dl { margin: 0; }
+  .pk-addons-card dl div { display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 0; border-top: 1px solid #ece4f1; }
+  .pk-addons-card dd { margin: 0; font-weight: 700; }
+
+  /* Booths */
+  .pk-booths { margin-top: 1.75rem; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
+  .pk-booth-card { display: flex; flex-direction: column; gap: .9rem; padding: 1.6rem; border: 1px solid var(--pk-line); border-radius: 18px; background: #fff; color: var(--pk-ink); text-decoration: none; }
+  .pk-booth-card:hover { border-color: #cbb6dd; }
+  .pk-booth-name { display: flex; justify-content: space-between; align-items: center; font-family: var(--pk-display); font-size: 1.5rem; font-weight: 800; }
+  .pk-booth-name svg { stroke: var(--pk-purple); }
+  .pk-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .pk-tag { padding: .35rem .75rem; border-radius: 999px; background: var(--pk-tint); color: var(--pk-purple-dark); font-size: .8rem; font-weight: 700; }
+  .pk-tag--gold { background: #fbf3dc; color: #5b4300; }
+
+  /* Steps */
+  .pk-steps-band { padding: 5rem 0; background: #fff; border-block: 1px solid #ece4f1; }
+  .pk-steps { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+  .pk-steps li { display: flex; flex-direction: column; gap: .7rem; }
+  .pk-steps strong { font-size: 1.2rem; }
+  .pk-steps li > span:last-child { color: var(--pk-muted); line-height: 1.6; }
+  .pk-step-num { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; background: var(--pk-plum); color: var(--pk-gold); font-family: var(--pk-display); font-weight: 800; font-size: 1.25rem; }
+
+  /* FAQ */
+  .pk-faq { padding: 1.2rem 0; border-bottom: 1px solid #e2d7ea; }
+  .pk-faq:first-of-type { margin-top: 1rem; }
+  .pk-faq summary { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 44px; list-style: none; font-weight: 700; font-size: 1.1rem; cursor: pointer; }
+  .pk-faq summary::-webkit-details-marker { display: none; }
+  .pk-plus { font-size: 1.6rem; color: var(--pk-purple); transition: transform .2s; }
+  .pk-faq[open] .pk-plus { transform: rotate(45deg); }
+  .pk-faq p { margin: .6rem 0 0; color: var(--pk-muted); line-height: 1.65; }
+
+  /* Explore */
+  .pk-explore { margin-top: 1.75rem; display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 2rem; }
+  .pk-explore h3 { margin: 0 0 .75rem; font-size: 1.1rem; }
+  .pk-explore ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
+  .pk-explore a { color: var(--pk-purple); }
+  .pk-explore .pk-cities { flex-direction: row; flex-wrap: wrap; gap: .4rem 1rem; }
+
+  @media (max-width: 1000px) {
+    .pk-hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .pk-cards, .pk-booths { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pk-included--split, .pk-explore { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 680px) {
+    .pk-hero { padding: 2.75rem 0 3rem; }
+    .pk-cards, .pk-booths, .pk-steps { grid-template-columns: 1fr; }
+    .pk-included { padding: 2rem 1.25rem; border-radius: 20px; }
+    .pk-section { padding-top: 3.5rem; }
+    .pk-estimator { padding: 1rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pk-choice, .pk-plus { transition: none; }
+  }
+</style>
