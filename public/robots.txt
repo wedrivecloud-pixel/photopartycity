@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /my-account/
+Disallow: /thank-you/
+Disallow: /rental-search/
+Disallow: /search-item-list/
+Disallow: /rent-grid/
+Disallow: /rent-list/
+Disallow: /evercompare/
+Sitemap: https://photopartycity.com/sitemap-index.xml

@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+import {booking,business,cities,services} from '../data/brand';
+interface Props { title: string; description?: string; canonical?: string; image?: string; schema?: object; robots?: string }
+const {title,description='',canonical=new URL(Astro.url.pathname,'https://photopartycity.com').href,image='',schema={},robots='index, follow'}=Astro.props;
+const socialImage=image.startsWith('/')?'https://photopartycity.com'+image:image;
+const json=(value:object)=>JSON.stringify(value).replace(/</g,'\\u003c');
+---
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#54228b"/><title>{title}</title><meta name="description" content={description}/><meta name="robots" content={robots || 'index, follow'}/><link rel="canonical" href={canonical}/><link rel="icon" type="image/svg+xml" href="/favicon.svg"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content="website"/><meta property="og:site_name" content="Photo Party City"/>{image && <meta property="og:image" content={socialImage}/>}<meta name="twitter:card" content="summary_large_image"/><script type="application/ld+json" set:html={json(schema)}></script><script type="application/ld+json" set:html={json(business)}></script></head>
+<body><a class="skip-link" href="#content">Skip to content</a>
+<div class="topbar">Mira Loma, CA · Serving events within 45 miles <a href="tel:+19094037143">(909) 403-7143</a></div>
+<header class="site-header"><a class="brand" href="/" aria-label="Photo Party City home"><img class="brand-logo" src="/media/52b598863a8e1582.webp" alt="" width="70" height="52"/><span>PHOTO <b>PARTY CITY</b><small>PHOTO BOOTH RENTALS</small></span></a><nav aria-label="Main navigation"><a href="/photo-booth-packages/">Packages & pricing</a><details class="nav-menu"><summary>Experiences</summary><div>{services.map(s=><a href={s.url}>{s.name}</a>)}</div></details><a href="/about-photo-party-city/">About us</a><a href="/contact-us/">Contact</a><a class="book-button" href={booking}>Check your date <span aria-hidden="true">↗</span></a></nav></header>
+<main id="content"><slot/></main>
+<section class="closing"><p class="eyebrow">LET’S MAKE SOME MEMORIES</p><h2>Your guests. Their moment.</h2><p>Tell us your date, venue, and the experience you have in mind.</p><a class="book-button" href={booking}>Check availability ↗</a><a class="text-link" href="tel:+19094037143">Or call (909) 403-7143</a></section>
+<footer><div class="footer-grid"><div><a class="brand" href="/">Photo <b>Party City</b></a><p>Local photo booths. Lasting memories.<br/>Equipment made by <a href="https://www.ataphotobooths.com/">ATA Photobooths</a>.</p><p>3827 Wacker Dr.<br/>Mira Loma, CA 91752</p><p>Monday–Friday · 9 AM–5 PM Pacific</p><a href="mailto:hello@photopartycity.com">hello@photopartycity.com</a><br/><a href="tel:+19094037143">(909) 403-7143</a></div><div><h3>Find your experience</h3>{services.map(s=><a href={s.url}>{s.name}</a>)}<a href="/photo-booth-rental-cost/">Rental cost guide</a><a href="/photo-booth-packages/">All packages</a></div><div><h3>Explore</h3><a href="/about-photo-party-city/">Our story</a><a href="/contact-us/">Contact our team</a><a href="/blog/">From the blog</a><a href="/shop-page/">Photo booths & accessories</a><a href="/photobooth-props/">Photo booth props</a><a href="/refund-policy/">Refund policy</a></div><div><h3>Inland Empire service areas</h3><div class="city-links">{cities.map(c=><a href={`/photo-booth-rental-${c.toLowerCase().replaceAll(' ','-')}/`}>{c}</a>)}</div><p>Within 45 miles of Mira Loma. Coverage is confirmed for your exact address.</p></div></div><div class="footer-bottom">© {new Date().getFullYear()} Photo Party City <a href="/sitemap-index.xml">Sitemap</a></div></footer>
+<script>
+ document.querySelectorAll<HTMLFormElement>('form[data-inquiry-form]').forEach(form=>{
+ form.addEventListener('submit',event=>{
+  event.preventDefault();if(!form.reportValidity())return;
+  const lines:string[]=[];
+  const data=new FormData(form);
+  for(const [name,value] of data.entries()){
+   const controls=Array.from(form.elements).filter((e)=>e instanceof HTMLInputElement || e instanceof HTMLSelectElement || e instanceof HTMLTextAreaElement) as Array<HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement>;
+   const control=controls.find(e=>e.name===name);const label=control?.labels?.[0]?.textContent?.trim() || name;
+   if(value)lines.push(`${label}: ${value}`);
+  }
+  const subject=`Photo Party City inquiry — ${document.title.split('|')[0].trim()}`;
+  window.location.href=`mailto:hello@photopartycity.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+ });
+ });
+</script>
+</body></html>

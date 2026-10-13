@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import pages from '../data/pages.json';
+import {booking} from '../data/brand';
+export function getStaticPaths(){return pages.filter(p=>p.slug).map(page=>({params:{slug:page.slug},props:{page}}));}
+const {page}=Astro.props;
+const backendPages=['cart','checkout','my-account','rental-search','thank-you','search-item-list','rent-grid','rent-list','evercompare'];
+const isBackend=backendPages.includes(page.slug);
+const isProduct=page.type==='product';
+const catalog=['shop-page','photobooth-props'].includes(page.slug) || page.type==='archive' && page.path.startsWith('/product-');
+const products=pages.filter(p=>p.type==='product' && (!('catalogPaths' in page) || page.catalogPaths?.includes(p.path))); 
+let content=page.content;
+if(isBackend)content='';
+// Plugin shortcode artifacts cannot execute in a static site.
+content=content.replace(/\[(?:rbfw_[^\]]*|rent-list[^\]]*|evercompare_table|search-result)\]/g,'');
+---
+<Layout {...page} robots={isBackend?'noindex, follow':page.robots}>
+<div class="page-heading"><div class="breadcrumbs"><a href="/">Home</a> / {page.name}</div><h1>{page.name}</h1>{page.description && <p>{page.description}</p>}</div>
+<div class="page-body">
+{isBackend && <aside><h2>Plan your rental with our team</h2><p>Check dates and request a reservation through our booking system. For an existing order or account question, contact us at <a href="tel:+19094037143">(909) 403-7143</a> or <a href="mailto:hello@photopartycity.com">hello@photopartycity.com</a>.</p><a class="book-button" href={booking}>Open booking ↗</a></aside>}
+{isProduct && <aside><p>For current availability, pricing, and rental or purchase arrangements, <a href="/contact-us/">contact our team</a>. Photo booth rental package rates are listed on our <a href="/photo-booth-packages/">packages page</a>; your proposal confirms the final total.</p></aside>}
+{page.image && isProduct && <img src={page.image} alt={page.name} width="640" height="640" loading="lazy" style="max-height:480px;object-fit:contain;margin:0 auto 2rem;display:block"/>}
+<div class="content" set:html={content}></div>
+{catalog && <><label class="catalog-controls">Find a photo booth or accessory <input id="catalog-search" type="search" placeholder="Search the catalog…"/></label><div class="cards" id="catalog">{products.map(p=><article class="catalog-card" data-name={p.name.toLowerCase()}>{p.image && <img src={p.image} alt={p.name} loading="lazy" width="300" height="300"/>}<h2><a href={p.path}>{p.name}</a></h2><p>{p.description}</p>{'price' in p && <p>Published catalog price: {'priceDisplay' in p ? p.priceDisplay : '$'+Number(p.price).toLocaleString('en-US',{minimumFractionDigits:2})}</p>}<a href={p.path}>View details →</a></article>)}</div><p id="catalog-empty" hidden>No matches. Try a different search or contact our team.</p></>}
+</div>
+<script>
+ const input=document.querySelector<HTMLInputElement>('#catalog-search');input?.addEventListener('input',()=>{
+  let matches=0;document.querySelectorAll<HTMLElement>('[data-name]').forEach(card=>{card.hidden=!card.dataset.name?.includes(input.value.toLowerCase().trim());if(!card.hidden)matches++;});
+  const empty=document.querySelector<HTMLElement>('#catalog-empty');if(empty)empty.hidden=matches>0;
+ });
+</script>
+</Layout>

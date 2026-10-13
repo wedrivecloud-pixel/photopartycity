@@ -1,0 +1,6 @@
+---
+import Layout from '../layouts/Layout.astro';
+import pages from '../data/pages.json';
+const posts=pages.filter(p=>p.type==='post');
+---
+<Layout title="Photo Booth Ideas & Event Planning | Photo Party City" description="Explore Photo Party City's photo booth ideas, event planning guides, and advice for celebrations and photo booth businesses."><div class="page-heading"><p class="eyebrow">FROM THE BLOG</p><h1>Ideas for your next great event.</h1></div><section class="section cards">{posts.map(p=><article class="catalog-card">{p.image && <img src={p.image} alt={p.name} loading="lazy" width="640" height="400"/>}<h2><a href={p.path}>{p.name}</a></h2><p>{p.description}</p><a href={p.path}>Read the story →</a></article>)}</section></Layout>
