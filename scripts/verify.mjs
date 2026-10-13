@@ -3,6 +3,21 @@ import fs from 'node:fs';
 import path from 'node:path';
 const pages=JSON.parse(fs.readFileSync('src/data/pages.json','utf8'));
 const failures=[];
+// Catch remote image dependencies in every generated route, including the
+// custom homepage, blog index, and 404 (which are outside the source inventory).
+function verifyMigratedHosts(directory){
+ for(const entry of fs.readdirSync(directory,{withFileTypes:true})){
+  const file=path.join(directory,entry.name);
+  if(entry.isDirectory())verifyMigratedHosts(file);
+  else if(entry.name.endsWith('.html')){
+   const html=fs.readFileSync(file,'utf8');
+   if(/(?:lh7-rt\.googleusercontent\.com|s\.w\.org|(?:[\w-]+\.)?sinfo-t\.jp)/i.test(html)){
+    failures.push(`Unmigrated image host: ${file}`);
+   }
+  }
+ }
+}
+verifyMigratedHosts('dist');
 for(const page of pages){
  const file=path.join('dist',page.slug,'index.html');
  if(!fs.existsSync(file)){failures.push(`Missing route: ${page.path}`);continue;}
@@ -29,4 +44,4 @@ assert(home.includes('72420.48'),'45-mile service radius in metres');
 assert(home.includes('909-403-7143')||home.includes('909) 403-7143'),'Original business telephone');
 assert(fs.existsSync('dist/sitemap-index.xml'),'Sitemap');
 if(failures.length){console.error(failures.join('\n'));process.exit(1);}
-console.log(`Verified ${pages.length} source routes, unchanged titles/canonicals, valid JSON-LD, local images, business details, and booking ID.`);
+console.log(`Verified ${pages.length} source routes, unchanged titles/canonicals, valid JSON-LD, local images, business details, and booking ID. No remaining migrated image hosts in any generated HTML.`);

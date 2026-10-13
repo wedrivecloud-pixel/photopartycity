@@ -1,18 +1,29 @@
 [
   {
     "url": "http://www.sinfo-t.jp/eng/printer/images/pix.gif",
-    "status": "needs-allowlist",
-    "host": "www.sinfo-t.jp"
+    "status": "unavailable",
+    "host": "www.sinfo-t.jp",
+    "redirect": "https://hibiki.sinfo-t.jp/eng/printer/images/pix.gif",
+    "reason": "Allowed source host returns HTTP 301; redirect destination is not allowlisted (proxy CONNECT HTTP 403).",
+    "action": "Removed unavailable image row; retained local printer photo and all specifications."
   },
   {
     "url": "https://lh7-rt.googleusercontent.com/formsz/AN7BsVCb9w9oeBUdY5vi6fG_pZDjCrELlY75P-wK6o83eT26fXFqCp2bhJbU0c3_LhR3WpEL_V7Uzz50AL9tJMpkHAJhUKpX6JDk-UipMXKfac_uz9ziLmzUF_ontBXM-DgQeXTLERGlfeMDliZB97tBkJPUYIxs_37JHjBV2ydHWrcujUHa8c_c9KGvkwtgpTsuKF3TwKBAAmsD4um8=w740?key=zwCSH1yJR-Mni4YAGwYHsg",
-    "status": "needs-allowlist",
-    "host": "lh7-rt.googleusercontent.com"
+    "status": "downloaded",
+    "host": "lh7-rt.googleusercontent.com",
+    "local": "/media/223a01a082be3c75.jpg",
+    "optimized": "/media/223a01a082be3c75.webp",
+    "width": 740,
+    "height": 715
   },
   {
     "url": "https://lh7-rt.googleusercontent.com/formsz/AN7BsVDBLjELT9H0rXk7NNKZdMRwrf73XOoa7MFYJ1XdgMRVKQL99Br-ktMsqC15ZwixsjIMVtX8Zk7jSetLKoMsZENQLfololtW4cU15LG7BtHoXiAhtDAukvItsjozYYvSEaUqncZwIq8ScDuU6Cqhea9mzezSmFrzluJr38eE3GrItDorZjnMSVrwIHQzHhZfpTrqy27s_DRLtJY=w740?key=g64rMAM6WGxirOIGuBv9-A",
-    "status": "needs-allowlist",
-    "host": "lh7-rt.googleusercontent.com"
+    "status": "downloaded",
+    "host": "lh7-rt.googleusercontent.com",
+    "local": "/media/223a01a082be3c75.jpg",
+    "optimized": "/media/223a01a082be3c75.webp",
+    "width": 740,
+    "height": 715
   },
   {
     "url": "https://photopartycity.com/wp-content/uploads/2023/07/360-PHOTO-BOOTH-2ND-GEN-AUTOMATIC-3.webp",
@@ -5204,12 +5215,14 @@
   },
   {
     "url": "https://s.w.org/images/core/emoji/11/svg/1f1fa-1f1f8.svg",
-    "status": "needs-allowlist",
-    "host": "s.w.org"
+    "status": "replaced-native-text",
+    "host": "s.w.org",
+    "replacement": "🇺🇸"
   },
   {
     "url": "https://s.w.org/images/core/emoji/11/svg/2705.svg",
-    "status": "needs-allowlist",
-    "host": "s.w.org"
+    "status": "replaced-native-text",
+    "host": "s.w.org",
+    "replacement": "✅"
   }
 ]

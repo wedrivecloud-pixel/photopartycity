@@ -33,13 +33,17 @@ WooCommerce payment processing, cart sessions, account login, order history, inv
 
 742 images hosted on photopartycity.com were downloaded. Optimized derivatives are served locally, while original upload URLs remain available. The image manifest is `src/data/assets.json`.
 
-Five external image references remain remote because their hosts are not allowlisted:
+Follow-up on October 14, 2026 (Asia/Manila): all three previously blocked hosts are now reachable. Both Google image URLs and both WordPress emoji URLs returned HTTP 200. `https://www.sinfo-t.jp/` returned HTTP 200; its legacy HTTP image URL redirects to HTTPS, then to `https://hibiki.sinfo-t.jp/eng/printer/images/pix.gif`, whose host is not allowlisted (proxy CONNECT HTTP 403).
 
-- `lh7-rt.googleusercontent.com`: two images embedded in source content.
-- `s.w.org`: two WordPress emoji SVGs (checkmark and US flag).
-- `www.sinfo-t.jp`: a manufacturer-hosted `pix.gif` reference in product content.
+- Both Google URLs returned the same 740 × 715 backdrop chart. One local original and one shared WebP derivative are saved under `public/media/`. The derivative is 98,628 bytes versus 159,209 bytes for the JPEG (38% smaller). `/full-service-form/` and `/24-hours-self-service/` now use it with intrinsic dimensions and descriptive alternative text, including the crossed-out sequin options.
+- All 27 WordPress emoji image instances across three ECO booth product pages are replaced with native checkmark and US flag characters. No emoji files were downloaded.
+- **Unrecovered:** the manufacturer `pix.gif` above. Its unavailable image row was removed from `/product/sinfonia-cs2-dye-sub-printer/`; the local printer photo and all specification text remain. The manifest records the redirect, failure, and removal without assuming what the inaccessible image contains.
 
-These are image hosts, not new dependencies for building. Allowlist them to download/self-host the remaining files. Links to Eventdeskly, ATA Photobooths, social services, and source article resources are also preserved as external links; clicking those does not require the build process to fetch their domains.
+No generated page references these external image hosts. The manifest retains original source URLs as provenance and records each result. `npm test` checks every generated HTML file to prevent these dependencies from returning. Links to Eventdeskly, ATA Photobooths, social services, and source article resources are preserved as external links.
+
+## Secondary button follow-up
+
+The shared `SecondaryCTA` uses explicit dark text on opaque light grey backgrounds in both system color schemes, avoiding the old system-dark background override. Measured text contrast is 13.99:1 in default/focus, 12.42:1 on hover, and 10.85:1 when pressed, exceeding WCAG AA's 4.5:1 threshold. Its border and purple keyboard focus outline also meet 3:1 against the adjacent light surfaces. The only current rendered instance is the homepage's "Packages & pricing" hero button; all uses of this component inherit these states.
 
 ## SEO and deployment
 
@@ -52,3 +56,5 @@ Deploy `dist/` with trailing-slash/index.html resolution and a 404 page. `_heade
 Astro checks: zero errors, warnings, or hints. Production build: 269 generated pages. Route/SEO/schema/image checks: all 267 source routes pass. Internal link audit: zero missing local targets, including full-size gallery links. Image dimensions reserve layout space; hero loading is eager, other imagery is lazy; no external webfont or client animation framework is required. The design includes mobile layouts, keyboard focus states, skip navigation, semantic form labels, and reduced-motion support.
 
 The homepage was subsequently rendered and visually reviewed in local Chromium at desktop (1440 px) and mobile (390 px) widths on October 13, 2026. Both views returned HTTP 200 with no horizontal overflow or broken visible images. The review identified and fixed CTA text contrast and a missing arrow glyph. Lighthouse measurements, email-app handling, and Eventdeskly's external booking flow remain unverified. No claim of a measured Lighthouse score or confirmed booking/form delivery is made.
+
+The October 14 follow-up additionally verified 20 secondary-button combinations in local Playwright/Chromium (default, hover, keyboard focus, hover with focus, and pressed; 1440px and 390px; light and dark system preferences), both local backdrop images loading at their expected dimensions, native emoji on all three ECO product pages, and retained Sinfonia specifications. All 269 generated HTML files pass the external-host check.
