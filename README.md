@@ -36,4 +36,4 @@ Base: [ScrewFast](https://github.com/mearashadowfax/ScrewFast), upstream commit 
 
 ## Verification
 
-`npm run build` runs Astro type checks and the production static build. `npm test` checks all migrated routes, original titles and canonicals, JSON-LD parsing, local image existence, a single H1 per page, original business details, and the Eventdeskly business ID. GitHub Actions runs those checks on pushes and pull requests. A headless browser was unavailable in this session, so visual behavior and actual Eventdeskly/email interactions were not browser-tested.
+`npm run build` runs Astro type checks and the production static build. `npm test` checks all migrated routes, original titles and canonicals, JSON-LD parsing, local image existence, a single H1 per page, original business details, and the Eventdeskly business ID. GitHub Actions runs those checks on pushes and pull requests. The homepage has been rendered and reviewed in Chromium at desktop (1440 px) and mobile (390 px) widths, with no horizontal overflow or broken visible images. Actual Eventdeskly/email interactions have not been browser-tested.

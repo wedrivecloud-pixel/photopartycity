@@ -6,3 +6,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 .brand-logo{width:60px;height:45px;object-fit:contain}.product-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:2rem 0}.product-gallery img{height:260px;width:100%;object-fit:contain;border:1px solid #e8dfec;border-radius:.5rem;background:white}.catalog-price{font-weight:700;color:var(--purple);font-size:1.5rem}.content img[src*="s.w.org"]{height:1em;width:1em;display:inline}.content .widget-woocommerce-product-meta{font-size:.85rem}.content .widget-price-table>div{line-height:1.8}
 .content dt{font-weight:700;margin-top:1rem}.content dd{margin:.4rem 0 1.2rem;color:var(--muted)}
+
+.ppc-primary{color:#fff!important}
+.inline-arrow{display:inline-block;width:16px;height:16px;vertical-align:middle;margin-left:.35rem}
