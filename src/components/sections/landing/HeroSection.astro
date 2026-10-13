@@ -15,6 +15,7 @@ const {
   secondaryBtnURL,
   src,
   alt,
+  note,
 } = Astro.props;
 
 // Define TypeScript interface for props
@@ -27,11 +28,12 @@ interface Props {
   secondaryBtnURL?: string;
   src?: any;
   alt?: string;
+  note?: string;
 }
 ---
 
 {/* Defining a grid container that holds all the content */}
-<section class="mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full">
+<section class="home-hero mx-auto grid max-w-[85rem] gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full">
   {/* Title and description */}
   <div>
     {/* Each h1 and p tag renders a portion of the title and subTitle defined above */}
@@ -51,6 +53,7 @@ interface Props {
         <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
       )}
     </div>
+    {note && <p class="hero-note">{note}</p>}
 
   </div>
   {/* Hero Image Section — aspect ratio reserves space before the AVIF loads */}

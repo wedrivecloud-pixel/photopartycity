@@ -9,3 +9,39 @@
 
 .ppc-primary{color:#fff!important}
 .inline-arrow{display:inline-block;width:16px;height:16px;vertical-align:middle;margin-left:.35rem}
+
+/* Homepage hero uses the packages page's spacing, with the existing photo. */
+.hero-wrap { padding: 4rem 0 4.5rem; }
+.hero-wrap .home-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+.hero-wrap .home-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+.hero-wrap .home-hero > div:first-child > p:not(.hero-note) {
+  max-width: 560px;
+  width: auto;
+  margin: 1.4rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.hero-wrap .home-hero .hero-note {
+  margin: 1.75rem 0 0;
+  padding: 0;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+.hero-wrap .home-hero > div:last-child { margin: 0; }
+@media (max-width: 1000px) {
+  .hero-wrap .home-hero { grid-template-columns: 1fr; gap: 2rem; }
+}
+@media (max-width: 680px) {
+  .hero-wrap { padding: 2.75rem 0 3rem; }
+}
