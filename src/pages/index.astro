@@ -13,7 +13,7 @@ const packages=[
 const testimonials=[{name:'Sarah',text:'The Lumia Photobooth was the star of our wedding reception! Our guests couldn’t get enough of it, and the instant prints made for fantastic party favors.'},{name:'John Andrews',text:'The 360 Photobooth took our corporate event to the next level. The interactive experience wowed our clients, and we received so much positive feedback. Highly recommended!'},{name:'Emily Parker',text:'Photo Party City’s prompt service and quality photobooth accessories made my birthday bash unforgettable. The props and backdrops added so much fun to the evening!'}];
 ---
 <Layout {...page}>
-<div class="hero-wrap"><HeroSection title='Photo Booth Rentals in Mira Loma &amp; the <em>Inland Empire.</em>' subTitle="Make your wedding, corporate event, or party more memorable with an attended photo booth or a flexible self-service rental. Serving event locations within 45 miles of Mira Loma, California." primaryBtn="Check availability" primaryBtnURL={booking} secondaryBtn="Packages & pricing" secondaryBtnURL="/photo-booth-packages/" src="/media/b2848fa71ec3ac2c.webp" alt="Photo Party City photo booth experience"/><p class="hero-note">24-hour digital rentals from $199 · Attended packages with prints from $695</p></div>
+<div class="hero-wrap"><HeroSection title='Photo Booth Rentals in Mira Loma &amp; the <em>Inland Empire.</em>' subTitle="Make your wedding, corporate event, or party more memorable with an attended photo booth or a flexible self-service rental. Serving event locations within 45 miles of Mira Loma, California." primaryBtn="Check availability" primaryBtnURL={booking} secondaryBtn="Packages & pricing" secondaryBtnURL="/photo-booth-packages/" src="/media/b2848fa71ec3ac2c.webp" alt="Photo Party City photo booth experience" note="24-hour digital rentals from $199 · Attended packages with prints from $695"/></div>
 <div class="trust-strip"><span>WEDDINGS</span><span>BIRTHDAYS & MILESTONES</span><span>CORPORATE CELEBRATIONS</span><span>SCHOOL & COMMUNITY EVENTS</span></div>
 <section class="section" id="services"><div class="section-intro"><p class="eyebrow">YOUR PARTY. YOUR PACE.</p><h2>Choose your photo booth experience.</h2><p>Want an attendant and printed keepsakes, or prefer a flexible rental? Choose the experience that fits your event.</p></div><div class="cards">{packages.map(p=><article class="experience"><img src={p.image} alt={p.name+' photo booth'} width="480" height="540" loading="lazy" decoding="async"/><div class="experience-content"><p class="eyebrow">{p.model}</p><h3>{p.name}</h3><p class="price">From {p.price}<small>{p.term}</small></p><ul>{p.features.map(f=><li>{f}</li>)}</ul><PrimaryCTA title="Explore this experience" url={p.url}/></div></article>)}</div><p>Self-service pickup and return are at our Mira Loma location. Delivery, setup, and collection are available for an additional charge. Your proposal confirms availability and final charges. 360 rates cover two, three, or four hours.</p></section>
 <div class="section-tint"><section class="section"><div class="section-intro"><p class="eyebrow">HOW BOOKING WORKS</p><h2>Three steps to a great party.</h2><p>Send your event details, review your proposal, and reserve your date once availability is confirmed.</p></div><div class="steps">{[{name:'Tell us about your event',text:'Choose a package and send your date, location, and event type. Unsure which booth to choose? Ask us for help.'},{name:'Review your proposal',text:'Review rental duration, included features, upgrades, and delivery or travel charges before reserving.'},{name:'Reserve & celebrate',text:'Confirm your reservation and follow the setup or pickup arrangements for your selected package.'}].map((s,i)=><article><span class="step-number">0{i+1}</span><h3>{s.name}</h3><p>{s.text}</p></article>)}</div></section></div>
@@ -22,3 +22,76 @@ const testimonials=[{name:'Sarah',text:'The Lumia Photobooth was the star of our
 <section class="section"><div class="section-intro"><p class="eyebrow">GOOD TO KNOW</p><h2>A few party-planning answers.</h2></div><details class="faq"><summary>Can you deliver the photo booth?</summary><p>Yes. Delivery, setup, and collection can be arranged for an additional charge. Pricing depends on your event location and requirements and is confirmed in your proposal.</p></details><details class="faq"><summary>What is included with self-service?</summary><p>Choose a 24-hour Starter ($199), Showbiz ($350), or Hollywood ($525) rental. Unlimited digital photos, sharing, videos, GIFs, boomerangs, digital album access, a custom digital backdrop, and 100+ premade templates are included. Printing and a physical backdrop are optional.</p></details><details class="faq"><summary>What is included with full service?</summary><p>Silver is $695 for three hours, Gold $895 for four hours, and Platinum $1,095 for five hours. Each includes an attendant, unlimited prints, personalized photo design, backdrop, props, digital copies, and a 30-day gallery. Additional hours are $150, subject to availability.</p></details></section>
 <section class="section"><details><summary>More from Photo Party City: events, photos, and rental details</summary><div class="content" set:html={page.content}></div></details></section>
 </Layout>
+
+<style>
+  /* Match the packages page's card treatment within this homepage section. */
+  #services .cards { gap: 1.5rem; }
+  #services .experience {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 2px solid #ece4f1;
+    border-radius: 22px;
+    overflow: hidden;
+  }
+  #services .experience-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 1.6rem 1.6rem 1.75rem;
+  }
+  #services .experience-content .eyebrow {
+    margin: 0;
+    color: #54228b;
+    line-height: 1.5;
+  }
+  #services .experience-content h3 { margin: 0; font-size: 1.75rem; }
+  #services .price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .6rem;
+    margin: 0;
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+  #services .price small { font-size: .9rem; letter-spacing: normal; }
+  #services .experience-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #5c5368;
+    font-size: .95rem;
+    line-height: 1.45;
+  }
+  #services .experience-content li { position: relative; padding-left: 1.75rem; }
+  #services .experience-content li::before {
+    content: '';
+    position: absolute;
+    left: .2rem;
+    top: .3rem;
+    width: .7rem;
+    height: .4rem;
+    border-left: 2.5px solid #54228b;
+    border-bottom: 2.5px solid #54228b;
+    transform: rotate(-45deg);
+  }
+  #services .experience-content :global(.ppc-primary) {
+    margin-top: auto;
+    min-height: 52px;
+    border-radius: 14px;
+    background: #54228b;
+  }
+  #services .experience-content :global(.ppc-primary:hover) { background: #3a165f; }
+  @media (max-width: 1000px) {
+    #services .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 680px) {
+    #services .cards { grid-template-columns: 1fr; }
+  }
+</style>
