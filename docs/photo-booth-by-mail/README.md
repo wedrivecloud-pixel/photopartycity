@@ -2,6 +2,10 @@
 
 Recreated `/photo-booth-by-mail/` in the Astro project for Cloudflare Pages, using the public WordPress page as the content reference on 2026-10-15. No WordPress changes or form submissions were made.
 
+The page now follows the corporate rental page's service-page structure: shared `PageHeading`, `.page-body` and `.content`, a single content column, standard image blocks, headings, lists, pricing panel and form styles. It has no page-specific CSS. Rental details, option lists, policies, booking destination, metadata and schema remain unchanged.
+
+At both screenshot widths, browser checks compare the title banner, heading, body and content widths, padding, fonts, line heights and background colors against `/corporate-photo-booth-rental/`. Reference screenshots are [desktop](corporate-reference-1440.png) and [mobile](corporate-reference-390.png).
+
 The page keeps the $275 rental price, original delivery/return/cancellation policies, $40 hotspot option, all five option lists, and six FAQs. Booking uses the source page's Booth By Mail Eventdeskly destination. The page is linked from the Experiences menu and footer.
 
 The inquiry form prepares a draft addressed to `hello@photopartycity.com`, consistent with the site's existing forms. It clearly explains that the visitor must send the draft and that an inquiry does not confirm a reservation. Its native mailto action and contact details remain available without JavaScript. No email delivery service or payment backend was added.
