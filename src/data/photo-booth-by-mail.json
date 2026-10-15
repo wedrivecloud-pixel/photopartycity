@@ -1,0 +1,188 @@
+{
+  "booking": "https://eventdeskly.com/book/photo-party-city?service=Photobooths&group=Booth+By+Mail",
+  "fields": [
+    {
+      "id": "ff_3_dropdown",
+      "name": "Select Backdrop",
+      "options": [
+        "None",
+        "Backdrop Stand Kit w/o Backdrop",
+        "Black and White"
+      ]
+    },
+    {
+      "id": "ff_3_dropdown_1",
+      "name": "Print Packages",
+      "options": [
+        "No Prints",
+        "After Event Prints (Unlimited Single print of all composite photos taken, shipped after booth is returned)",
+        "54 Onsite Print Package",
+        "108 Onsite Print Package",
+        "162 Onsite Print Package",
+        "216 Onsite Print Package"
+      ]
+    },
+    {
+      "id": "ff_3_dropdown_2",
+      "name": "Wifi Hotspot",
+      "options": [
+        "No Wifi Hotspot",
+        "Wifi Hotspot"
+      ]
+    },
+    {
+      "id": "ff_3_dropdown_3",
+      "name": "Select Props",
+      "options": [
+        "Adults Only",
+        "And I Oop…",
+        "Any Given Sunday 1.0",
+        "Bae+Boo Paddles",
+        "Best Birthday Ever Paddles",
+        "Best Party Ever Paddles",
+        "Bling on the New Year",
+        "Corporate Chic",
+        "Dope Props",
+        "Fa La La Paddles",
+        "Fairest of Them All",
+        "First Down Baby",
+        "Forever a Princess",
+        "Forever a Princess Paddles",
+        "Free Spirit Props",
+        "God is Good Props",
+        "God’s Greatest Gift Paddles",
+        "He Put a Ring On It Paddles",
+        "Hella Pinoy",
+        "Hip Hop Raised Me",
+        "Ho Ho Ho Paddles",
+        "I Feel Pretty",
+        "I Love You More Paddle",
+        "Inspiration",
+        "Kawaii Christmas",
+        "Kawaii Love",
+        "Kawaii Spooks",
+        "Let’s Flamingle",
+        "Let’s Get Social",
+        "Lets Get Social Remix",
+        "Letterboard Christmas",
+        "Lightbox Lyrics 2.0",
+        "Local Fever",
+        "Love is Love",
+        "Mazel Tov Paddles",
+        "Modern Aloha",
+        "Parenting 101",
+        "Poker Face",
+        "Prom Squad",
+        "Pump The Boobies Paddles",
+        "Roaring 20s",
+        "Rustic Love",
+        "So This is Love 1.0",
+        "So This is Love 2.0",
+        "The Future is Female",
+        "This is Now 1.0 Paddles",
+        "This is Now 5.0",
+        "This is Now 6.0",
+        "Viva La Vouge Paddles",
+        "We Like to Party",
+        "We Were on a Break",
+        "Where’s the Cake",
+        "Wine Not",
+        "Yessah Blessah Paddles"
+      ]
+    },
+    {
+      "id": "ff_3_dropdown_4",
+      "name": "Accidental Damage Insurance",
+      "options": [
+        "Accept Accidental Damage Insurance",
+        "Decline Accidental Damage Insurance"
+      ]
+    }
+  ],
+  "blocks": {
+    "Photo Booth By Mail": [
+      "This product is an extremely portable booth that can be transported to any location and utilized to perform a completely professional task, even in challenging situations. Furthermore, the sleek appearance and innovative design of the Helio Booth make it exceptionally suitable for someone new to the industry who aims to attract attention and create a significant impact in a short amount of time."
+    ],
+    "How Booth By Mail Works": [
+      "Make your next celebration one to remember with Photo Booth By Mail. We provide all the magic of a photo booth without the hassle."
+    ],
+    "Easy, Affordable, & Fun": [
+      "Capture life's special moments with Photo Booth By Mail. Our service delivers a photo booth directly to your event for a fun and memorable twist on photos. Guests at your wedding, birthday, graduation or any celebration will love gathering around our photo booth to strike a pose and get instant photo strips to take home. With a variety of fun props and backdrops, you can customize the photo booth experience. We handle the complete setup and operation, or you can FaceTime us for step-by-step photo booth setup. Photo Booth By Mail brings the classic photo booth experience to your next event, creating lasting memories with friends and family. Our service delivers charm and nostalgia, giving your celebration a unique personal touch."
+    ],
+    "What is Included?": [
+      "Our photo booths arrive at your door with everything you need and free shipping included. Each rental comes fully loaded with the booth, props, backdrops, lighting, and easy setup instructions to capture memories at your event"
+    ],
+    "Get Social Instantly": [
+      "Our photo booths make sharing event memories a breeze with instant digital photo delivery. Simply connect the booth to WiFi and you're ready for real-time social sharing.",
+      "Guests can instantly text or email their photo strips to themselves and others right from the booth. There's no waiting for prints or sharing photos after the fact. Plus, the event host receives a complete digital album of every photo strip captured at the event."
+    ],
+    "A.I. Photo Booth": [
+      "Our AI photo booth ushers in a new age of event entertainment. This smart booth delivers more than just photos - it creates unforgettable experiences and memories for you and your guests."
+    ],
+    "What is an AI Photo Booth?": [
+      "Our AI photo booth takes pictures to the next level with built-in artificial intelligence. It captures your photos then uses AI to digitally enhance images in real time. The booth customizes photos on the fly by applying cool effects, fun themes, and magical transformations.",
+      "With AI power, every photo strip becomes a mini work of art tailored to each user. The booth analyzes preferences, occasions, and personalities to creatively adapt the images. The result? Photos as unique as the guests themselves."
+    ],
+    "3 Steps to Amazing AI Photos": [
+      "Don’t let your event's photos and videos go to waste. Instead, empower them to work for you as part of your marketing strategy. Our AI-powered photo booth and video guest book can create sharable media that promotes your brand to new audiences."
+    ],
+    "Hassle-Free Photos Made Easy with Photo Party City AI Photo Booth": [
+      "The photo booth gets an exciting upgrade with Photo Party City.",
+      "This next-generation photo experience goes beyond the classic booth with cutting-edge features powered by AI. Face detection allows for personalized backdrops and digital props so each photo session is unique. The end result is an unforgettable photoshoot that delights every event guest. Photo Party City brings the photo booth into the future."
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How Does it Work?",
+      "answer": "\n<p><strong>Renting a Photobooth Has Never Been Easier!</strong></p><p>Getting your photobooth is as simple as 1-2-3:</p><ol><li>Choose your booth options.</li><li>Pick your event date.</li><li>Place your order!</li></ol><p>Your photobooth will arrive a few days before your event, ready for effortless setup. <strong>No tools required</strong>, and setup takes less than <strong>10 minutes</strong>. Clear instructions are included, and our friendly phone support team is just a call away if you need assistance.</p><p>Enjoy the photobooth until the day after your event. When you're done, pack it up, attach the provided return label, and drop it off at your nearest UPS location.</p><p>It's <strong>convenience and fun—delivered right to your door!</strong></p> "
+    },
+    {
+      "question": "What is the cancellation Policy?",
+      "answer": "\n<p><strong>Event Cancellation Policy:</strong></p><ul><li>Cancellations made <strong>more than 7 days prior to the event</strong> are eligible for a <strong>full refund</strong>.</li><li>Cancellations made <strong>within 7 days of the event</strong> will incur a <strong>$50 cancellation fee</strong>.</li></ul> "
+    },
+    {
+      "question": "When do I return the equipment?",
+      "answer": "\n<p><strong>Return Policy</strong></p><p>The photo booth must be returned on the <strong>first business day following your event</strong>:</p><ul><li>For <strong>weekend events</strong>, this is typically <strong>Monday</strong>, unless it coincides with a UPS-recognized holiday, in which case the return will be due the next business day.</li><li>For <strong>weekday events</strong>, the return is due on the following business day.</li></ul><p>A <strong>late fee of $100 per day, per item</strong> may apply if the photo booth or DJ equipment is not returned on time, unless prior arrangements have been made with us.</p> "
+    },
+    {
+      "question": "What if I have a problem?",
+      "answer": "\n<p><strong>Reliable and Supported </strong></p><p>Our iPad-based photobooth is built for reliability, so issues are uncommon. However, if you ever need assistance, our dedicated <a href=\"/about-photo-party-city/\"><strong>support team</strong></a> is just a call away. Contact us anytime at <a href=\"tel:+19094037143\"><strong>1 (909) 403-7143</strong></a>—we’re here to help!</p> "
+    },
+    {
+      "question": "How do my guest received the Photos",
+      "answer": "\n<p><strong>Multiple Ways to Access and Share Photos</strong></p><p>We offer several convenient options for your guests to access their photos:</p><ul><li><strong>Text or Email</strong>: Guests can send their photos directly to their phones or inboxes right from the booth.</li><li><strong>On-the-Spot Printing</strong>: Choose our print option, and guests can take home a memorable keepsake with instant photo prints.</li></ul><p>Whatever you choose, we make it easy to share the fun!</p> "
+    },
+    {
+      "question": "Do I need a WIFI or Hotspot?",
+      "answer": "\n<p><strong>WiFi Requirement</strong></p><p>Our booth requires a <strong>WiFi connection</strong> to send texts and emails. If WiFi isn’t available at your event location, we’ve got you covered! You can add our <strong>hotspot option</strong> for just <strong>$40</strong>, which uses cellular networks to keep your booth connected.</p> "
+    }
+  ],
+  "steps": [
+    {
+      "title": "Convenient Doorstep Delivery",
+      "text": "Your photo booth will arrive 1-2 days before your event for easy setup. For a Saturday event, delivery is Thursday/Friday. Free shipping is included with all rentals. We'll handle packing and shipping the booth directly to your event location - no extra fees"
+    },
+    {
+      "title": "Quick 5-Minutes Assembly",
+      "text": "Our photo booth is designed for quick, easy setup with no tools or experience required. The booth can be fully assembled in minutes thanks to its intuitive snap-together design. Simply follow the instructions to get the booth up and running in no time."
+    },
+    {
+      "title": "Quick and Easy Booth Pickup",
+      "text": "Returning your photo booth after your event couldn't be easier. We provide a UPS shipping label so you can pack up the booth and schedule a free pickup when your event wraps up. There are no extra rental fees or costs associated with returns."
+    }
+  ],
+  "aiSteps": [
+    {
+      "title": "1. Click a Photo:",
+      "text": "Let guests easily capture their best memorable moments at your special event with our photo booth delivered right to your door - just open the box and let the candid fun and laughter begin!"
+    },
+    {
+      "title": "2. Customize AI Magic:",
+      "text": "Our AI platform processes each photo based on your specifications, whether it's adding digital props or custom backdrops. The AI applies your brand's touch to every picture."
+    },
+    {
+      "title": "3. Effortless Image Sharing:",
+      "text": "After processing, the fun photos are ready for guests to receive and share. When shared on social media, your brand visibility increases, creating online buzz beyond the event."
+    }
+  ]
+}
