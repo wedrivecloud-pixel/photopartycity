@@ -53,6 +53,16 @@ for(const slug of ['photo-booth-packages','24-hours-self-service','full-service-
  assert(html.includes('199')||html.includes('695'),`${slug} must retain published pricing`);
 }
 const home=fs.readFileSync('dist/index.html','utf8');
+const byMail=fs.readFileSync('dist/photo-booth-by-mail/index.html','utf8');
+assert(byMail.includes('$275'),'Booth by mail base price');
+assert(byMail.includes('https://eventdeskly.com/book/photo-party-city?service=Photobooths&amp;group=Booth+By+Mail'),'Booth by mail booking destination');
+assert(byMail.includes('action="mailto:hello@photopartycity.com"'),'Booth by mail inquiry must not post to the original WordPress website');
+assert(byMail.includes('You must send the email to submit your inquiry.'),'Booth by mail must explain email draft behavior');
+assert.equal((byMail.match(/<h1(?:\s|>)/g)||[]).length,1,'Booth by mail H1');
+assert.equal((byMail.match(/<details class="faq"/g)||[]).length,6,'Booth by mail policies and FAQs');
+for(const match of byMail.matchAll(/<img[^>]*src="([^"]+)"/g)){
+ assert(match[1].startsWith('/') && fs.existsSync(path.join('dist',match[1])),`Booth by mail image must be local: ${match[1]}`);
+}
 assert(home.includes('88aeb400-c578-40f7-8adc-96e170181c01'),'Original Eventdeskly business ID');
 assert(home.includes('72420.48'),'45-mile service radius in metres');
 assert(home.includes('909-403-7143')||home.includes('909) 403-7143'),'Original business telephone');

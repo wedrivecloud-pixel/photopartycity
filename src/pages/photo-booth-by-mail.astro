@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+import mail from '../data/photo-booth-by-mail.json';
+
+const description = 'Photo Booth By Mail delivers the fun to your door. Rentals from $275 with free shipping, easy setup, digital sharing, and optional prints.';
+const canonical = 'https://photopartycity.com/photo-booth-by-mail/';
+const included = ['All night rental!', 'Camera, Stand & Light', 'Sequin Back Drop, Stand & Props', 'Optional Custom Logo*'];
+const sharing = ['Pics Texted & Emailed Instantly', 'Customize Your Backdrop', 'Complimentary Props & Delivery', 'Personalized with Your Logo', 'Complete Event Photo Album'];
+const schema = {'@context':'https://schema.org', '@type':'WebPage', name:'Photo Booth By Mail', url:canonical, description};
+---
+<Layout title="Photo Booth By Mail - Photo Party City" description={description} canonical={canonical} image="/media/by-mail/helio-booth.webp" schema={schema}>
+ <div class="mail-page">
+  <div class="mail-hero-wrap">
+   <section class="section mail-hero" aria-labelledby="mail-title">
+    <div>
+     <div class="breadcrumbs"><a href="/">Home</a> / Photo Booth By Mail</div>
+     <p class="eyebrow">THE PARTY, DELIVERED</p>
+     <h1 id="mail-title">Photo Booth <span>By Mail.</span></h1>
+     {mail.blocks['How Booth By Mail Works'].map(text=><p class="mail-lead">{text}</p>)}
+     <p class="mail-price">$275 <small>rental · free shipping included</small></p>
+     <div class="mail-actions"><a class="book-button" href={mail.booking}>Book now <svg class="inline-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><a href="#mail-rental">Explore rental options <span aria-hidden="true">↓</span></a></div>
+     <p class="mail-small">Delivered 1–2 days before your event. Easy setup. All-night fun.</p>
+    </div>
+    <div class="mail-hero-image"><img src="/media/by-mail/helio-booth.webp" alt="White Helio ring-light photo booth set up at an event" width="825" height="681" fetchpriority="high"/></div>
+   </section>
+  </div>
+
+  <section class="section mail-intro" aria-labelledby="mail-intro-title">
+   <p class="eyebrow">HOW BOOTH BY MAIL WORKS</p><h2 id="mail-intro-title">Easy, Affordable, &amp; Fun</h2>
+   {mail.blocks['Easy, Affordable, & Fun'].map(text=><p>{text}</p>)}
+  </section>
+
+  <div class="section-tint">
+   <section class="section" aria-labelledby="mail-how-title">
+    <div class="section-intro"><p class="eyebrow">FROM OUR DOOR TO YOUR DANCE FLOOR</p><h2 id="mail-how-title">How Does It Work?</h2></div>
+    <ol class="mail-steps">{mail.steps.map((step,index)=><li><span class="step-number" aria-hidden="true">0{index+1}</span><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol>
+    <p class="mail-support">Questions? Give us a call at <a href="tel:+19094037143">(909) 403-7143</a>.</p>
+   </section>
+  </div>
+
+  <section class="section mail-split" aria-labelledby="mail-included-title">
+   <img class="mail-product-image" src="/media/by-mail/helio-detail.webp" alt="Helio photo booth equipment for a booth-by-mail rental" width="600" height="600" loading="lazy"/>
+   <div><p class="eyebrow">OPEN THE BOX. START THE FUN.</p><h2 id="mail-included-title">What is Included?</h2>
+    {mail.blocks['What is Included?'].map(text=><p>{text}</p>)}
+    <ul class="mail-checklist">{included.map(item=><li>{item}</li>)}</ul>
+    <p class="mail-small">*Select your backdrop, props, and optional extras below. Your booking confirms the final package and any add-on charges.</p>
+    <a class="book-button" href={mail.booking}>Book now <svg class="inline-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+   </div>
+  </section>
+
+  <div class="section-tint">
+   <section class="section mail-split" aria-labelledby="mail-social-title">
+    <div><p class="eyebrow">MEMORIES MADE TO BE SHARED</p><h2 id="mail-social-title">Get Social Instantly</h2>
+     {mail.blocks['Get Social Instantly'].map(text=><p>{text}</p>)}
+     <ul class="mail-checklist">{sharing.map(item=><li>{item}</li>)}</ul>
+    </div>
+    <div class="mail-sharing"><p class="eyebrow">SHARING OPTIONS</p><h3>Capture it.<br/>Keep it. Share it.</h3><ul><li>Text</li><li>Email</li><li>Airdrop</li></ul><p>Connect to Wi-Fi for instant texts and emails. A hotspot is available for $40.</p></div>
+   </section>
+  </div>
+
+  <section class="section" aria-labelledby="mail-ai-title">
+   <div class="mail-split">
+    <img class="mail-product-image" src="/media/by-mail/ai-experience.webp" alt="White ring-light photo booth with a colorful geometric backdrop" width="700" height="700" loading="lazy"/>
+    <div><p class="eyebrow">A LITTLE EXTRA PHOTO MAGIC</p><h2 id="mail-ai-title">A.I. Photo Booth</h2>
+     {mail.blocks['A.I. Photo Booth'].map(text=><p>{text}</p>)}
+     <h3>What is an AI Photo Booth?</h3>{mail.blocks['What is an AI Photo Booth?'].map(text=><p>{text}</p>)}
+     <a class="book-button" href={mail.booking}>Book now <svg class="inline-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+    </div>
+   </div>
+   <div class="mail-ai-steps"><h2>3 Steps to Amazing AI Photos</h2>{mail.blocks['3 Steps to Amazing AI Photos'].map(text=><p>{text}</p>)}<h3>Click, Customize, Share</h3>
+    <ol class="mail-steps">{mail.aiSteps.map(step=><li><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol>
+   </div>
+   <div class="mail-ai-note"><h3>Hassle-Free Photos Made Easy with Photo Party City AI Photo Booth</h3>{mail.blocks['Hassle-Free Photos Made Easy with Photo Party City AI Photo Booth'].map(text=><p>{text}</p>)}</div>
+  </section>
+
+  <div class="section-tint">
+   <section class="section mail-rental" id="mail-rental" aria-labelledby="mail-rental-title">
+    <div class="mail-rental-summary"><p class="eyebrow">YOUR EVENT, YOUR WAY</p><h2 id="mail-rental-title">Photo Booth By Mail</h2><p class="mail-price">$275 <small>base rental price</small></p>
+     {mail.blocks['Photo Booth By Mail'].map(text=><p>{text}</p>)}
+     <p>Choose your backdrop, print package, hotspot, props, and insurance preference. Add-on pricing and availability are confirmed before booking.</p>
+     <a class="book-button" href={mail.booking}>Book through Eventdeskly <svg class="inline-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+     <p class="mail-small">Prefer to ask us first? Complete the options form to prepare an email inquiry.</p>
+    </div>
+    <form action="mailto:hello@photopartycity.com" method="post" enctype="text/plain" data-inquiry-form="true" data-kind="booth-by-mail" aria-labelledby="mail-form-title">
+     <h3 id="mail-form-title">Choose your rental options</h3>
+     <p id="mail-form-help">This opens a draft in your email app. You must send the email to submit your inquiry. Your rental is confirmed only after booking.</p>
+     <div class="mail-fields">{mail.fields.map(field=><div class:list={['mail-field',{'mail-field-wide':field.name==='Print Packages'}]}><label for={field.id}>{field.name}</label><select id={field.id} name={field.name} required><option value="">— Select —</option>{field.options.map(option=><option value={option}>{option}</option>)}</select></div>)}
+      <div class="mail-field"><label for="mail-email">Email</label><input id="mail-email" name="Email" type="email" autocomplete="email" required/></div>
+      <div class="mail-field"><label for="mail-date">Event Date</label><input id="mail-date" name="Event Date" type="date" required/></div>
+      <div class="mail-field mail-field-wide"><label for="mail-address">Venue Address</label><textarea id="mail-address" name="Venue Address" rows="3" required></textarea></div>
+     </div>
+     <button type="submit" class="inquiry-submit" aria-describedby="mail-form-help">Prepare email inquiry <svg class="inline-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></button>
+     <noscript><p>Your email app will open with your selections. If it does not open, email <a href="mailto:hello@photopartycity.com">hello@photopartycity.com</a> or call <a href="tel:+19094037143">(909) 403-7143</a>.</p></noscript>
+    </form>
+   </section>
+  </div>
+
+  <section class="section" aria-labelledby="mail-states-title"><div class="section-intro"><p class="eyebrow">FUN, DELIVERED TO YOUR DOOR</p><h2 id="mail-states-title">States We Proudly Serve</h2><p>Tell us your venue address when booking so we can confirm delivery for your event.</p></div>
+   <iframe class="mail-map" title="Map of the United States for photo booth by mail delivery" width="1000" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18696299.842840057!2d-109.31061126403752!3d39.03254337586955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e1!3m2!1sen!2s!4v1693918072161!5m2!1sen!2s"></iframe>
+  </section>
+
+  <section class="section mail-faqs" aria-labelledby="mail-faq-title"><p class="eyebrow">GOOD TO KNOW BEFORE YOU BOOK</p><h2 id="mail-faq-title">Frequently Asked Questions</h2>
+   {mail.faqs.map(faq=><details class="faq"><summary>{faq.question}</summary><div class="mail-faq-answer" set:html={faq.answer}/></details>)}
+  </section>
+ </div>
+ <section slot="closing" class="closing"><p class="eyebrow">THE PARTY STARTS WITH A BOX</p><h2>Make your next celebration one to remember.</h2><p>Photo Booth By Mail · $275 base rental · Free shipping included</p><a class="book-button" href={mail.booking}>Book your booth by mail <svg class="inline-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a><a class="text-link" href="tel:+19094037143">Or call (909) 403-7143</a></section>
+</Layout>
+
+<style>
+ .mail-page h1,.mail-page h2,.mail-page h3{margin:0 0 1.25rem}.mail-page p{color:var(--muted);margin:0 0 1.25rem}.mail-page a:not(.book-button):not(.inquiry-submit){color:var(--purple)}
+ .mail-hero-wrap{background:linear-gradient(120deg,#fffdf9,#f3edf7)}.mail-hero{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:3rem;padding-top:4rem;padding-bottom:4.5rem}.mail-hero>div,.mail-split>div,.mail-rental>div{min-width:0}
+ .mail-hero .breadcrumbs{margin-bottom:2rem}.mail-page .eyebrow{color:var(--purple)}.mail-hero h1{font-size:clamp(2.7rem,5.5vw,4.5rem);line-height:1.04}.mail-hero h1 span{display:block;color:var(--purple)}.mail-hero .mail-lead{font-size:1.2rem;max-width:37rem}.mail-page .mail-price{font-size:3rem;font-weight:750;letter-spacing:-.045em;color:var(--purple);line-height:1.2}.mail-price small{display:block;font-size:.9rem;letter-spacing:0;font-weight:400;color:var(--muted);margin-top:.5rem}
+ .mail-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1rem 1.5rem;margin:1.75rem 0}.mail-actions>a:not(.book-button){font-size:.9rem;font-weight:600}.mail-hero-image{padding:1.5rem;background:#fff;border:1px solid #e8dfec;border-radius:24px;box-shadow:10px 10px 0 #f2c85c}.mail-hero-image img{display:block;width:100%;height:auto}.mail-page .mail-small{font-size:.85rem}.mail-intro{max-width:960px;text-align:center}
+ .mail-steps{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;padding:0;margin:0}.mail-steps li{padding:2rem;background:#fff;border:1px solid #e8dfec;border-radius:22px}.mail-steps h3{font-size:1.3rem;line-height:1.3}.mail-steps .step-number{margin-bottom:1.5rem}.mail-steps p{font-size:.95rem;margin-bottom:0}.mail-page .mail-support{margin:2rem 0 0;text-align:center}.mail-support a{font-weight:700;white-space:nowrap}
+ .mail-split{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:3rem}.mail-product-image{display:block;width:100%;height:auto;border-radius:22px;background:#f3edf7}.mail-checklist{list-style:none;margin:1.5rem 0;padding:0;display:grid;gap:1rem}.mail-checklist li{display:flex;gap:.75rem;align-items:baseline;line-height:1.5}.mail-checklist li::before{content:'✓';color:var(--purple);font-weight:700}.mail-sharing{padding:3rem;border-radius:24px;background:#fff;border:1px solid #e8dfec}.mail-sharing h3{font-size:2.6rem}.mail-sharing ul{display:flex;flex-wrap:wrap;gap:.75rem;list-style:none;padding:0;margin:1.5rem 0}.mail-sharing li{padding:.75rem 1.2rem;background:#f3edf7;color:var(--purple);border-radius:99px;font-weight:700}.mail-ai-steps{margin-top:4rem}.mail-ai-steps>p{max-width:75ch}.mail-ai-note{margin-top:2rem;padding:2rem;background:#f3edf7;border-radius:22px}.mail-ai-note p:last-child{margin-bottom:0}
+ .mail-rental{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem;align-items:start;scroll-margin-top:2rem}.mail-rental form{min-width:0;background:#fff;border:1px solid #e1d5e9;border-radius:22px;padding:2rem}.mail-rental form>p{font-size:.9rem}.mail-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}.mail-field-wide{grid-column:1/-1}.mail-field{min-width:0}.mail-field label{display:block;font-size:.9rem;font-weight:700;margin-bottom:.6rem}.mail-field input,.mail-field select,.mail-field textarea{display:block;min-width:0;max-width:100%;width:100%;min-height:48px;border:1px solid #cbbdd5;border-radius:8px;background:white;padding:.75rem;font-size:.9rem}.mail-rental .inquiry-submit{margin-top:1.5rem;min-height:48px}.mail-map{display:block;width:100%;border:0;border-radius:22px;background:#f3edf7}.mail-faqs{padding-top:0}.mail-faq-answer{color:var(--muted);line-height:1.7;padding-top:1rem}.mail-faq-answer :global(ul),.mail-faq-answer :global(ol){list-style:revert;padding-left:1.5rem}.mail-faq-answer :global(li){margin:.5rem 0}.mail-faq-answer :global(p){margin:0 0 1rem}
+ @media(max-width:900px){.mail-hero,.mail-split,.mail-rental{grid-template-columns:1fr;gap:2rem}.mail-hero-image{max-width:620px}.mail-steps{grid-template-columns:1fr}.mail-hero{padding-top:3rem;padding-bottom:3.5rem}}
+ @media(max-width:540px){.mail-hero h1{font-size:3rem}.mail-hero-image{padding:.75rem;box-shadow:6px 6px 0 #f2c85c}.mail-sharing,.mail-rental form,.mail-steps li,.mail-ai-note{padding:1.5rem}.mail-fields{grid-template-columns:1fr}.mail-sharing h3{font-size:2rem}.mail-map{height:300px}.mail-ai-steps{margin-top:3rem}}
+</style>

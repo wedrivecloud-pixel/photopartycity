@@ -7,6 +7,7 @@ export const services = [
  {name:'360 video booths',url:'/360-photo-booth-rental/'},
  {name:'Wedding rentals',url:'/wedding-photo-booth-rental/'},
  {name:'Corporate events',url:'/corporate-photo-booth-rental/'},
+ {name:'Photo booth by mail',url:'/photo-booth-by-mail/'},
 ];
 export const business = {
  '@context':'https://schema.org','@type':'LocalBusiness','@id':'https://photopartycity.com/#localbusiness',
