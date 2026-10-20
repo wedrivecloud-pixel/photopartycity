@@ -1,0 +1,84 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "photos": 17,
+      "generatedSlots": 11,
+      "distinctGeneratedAssets": 7,
+      "overflow": false,
+      "wall": [
+        {
+          "height": 392,
+          "width": 554
+        },
+        {
+          "height": 190,
+          "width": 271
+        },
+        {
+          "height": 190,
+          "width": 271
+        },
+        {
+          "height": 190,
+          "width": 554
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "photos": 17,
+      "generatedSlots": 11,
+      "distinctGeneratedAssets": 7,
+      "overflow": false,
+      "wall": [
+        {
+          "height": 308,
+          "width": 358
+        },
+        {
+          "height": 150,
+          "width": 175
+        },
+        {
+          "height": 150,
+          "width": 175
+        },
+        {
+          "height": 150,
+          "width": 358
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "photos": 17,
+      "generatedSlots": 11,
+      "distinctGeneratedAssets": 7,
+      "overflow": false,
+      "wall": [
+        {
+          "height": 308,
+          "width": 288
+        },
+        {
+          "height": 150,
+          "width": 140
+        },
+        {
+          "height": 150,
+          "width": 140
+        },
+        {
+          "height": 150,
+          "width": 288
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "noJavaScript": "passed",
+  "metadataLinksAndSchema": "unchanged"
+}
