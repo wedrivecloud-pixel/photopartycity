@@ -1,6 +1,7 @@
 ---
 import RentalLayout from '../layouts/RentalLayout.astro';
 import FAQ from '../components/redesign/FAQ.astro';
+import Photo from '../components/redesign/Photo.astro';
 import {fullServiceTiers,bookingLinks,addons,money,serviceSchema} from '../data/rentals';
 const title = "Photo Booth Rental With Prints | Inland Empire | From $695";
 const description = "Full-service photo booth rentals with prints and an attendant in the Inland Empire. Packages from $695. Compare coverage and check your event date.";
@@ -30,9 +31,12 @@ const schema = serviceSchema("Full service photo booth rental",canonical,fullSer
 </div>
 <ul class="ppc-checks ppc-checks-row"><li>3, 4 or 5 hours</li><li>Attendant on site</li><li>Unlimited prints</li></ul>
 </div>
-<div style="position: relative">
-<div class="ppc-ph ppc-r45" style="border-radius: 28px"><span>Photo: wedding guests laughing with the attendant</span></div>
-<div class="ppc-strip ppc-hidesm" style="position: absolute; left: -28px; bottom: 56px; transform: rotate(-5deg)" aria-hidden="true"><i></i><i></i><i></i><small>YOUR NAMES · YOUR DATE</small></div>
+<div class="full-service-hero-art">
+<div class="full-service-hero-photo">
+<Photo label="An attended wedding photo booth" src="/media/full-service/hero.webp" alt="Illustrative scene of an attendant giving a photo print to a bridal couple" width={1200} height={1500} loading="eager" fetchpriority="high" ratio="4/5"/>
+<div class="ppc-strip ppc-hidesm full-service-strip full-service-hero-strip" aria-hidden="true"><img src="/media/homepage/wedding.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"/><img src="/media/homepage/corporate.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"/><img src="/media/homepage/birthday.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"/><small>YOUR NAMES · YOUR DATE</small></div>
+</div>
+<p class="ppc-small full-service-caption">Illustrative event imagery.</p>
 </div>
 </div>
 </section>
@@ -51,24 +55,25 @@ const schema = serviceSchema("Full service photo booth rental",canonical,fullSer
 <h2 class="ppc-h2">Choose your hours</h2>
 <p class="ppc-p">Same full experience in every package. Longer packages also step up the booth.</p>
 </div>
-<div class="ppc-cards">
+<div class="ppc-cards full-service-tiers">
 <article class="ppc-tier">
-<div class="ppc-ph t-lav ppc-r32"><span>Photo: birthday guests at the Helio Sport</span></div>
+<Photo label="Helio Sport photo booth" src="/media/full-service/helio-sport.webp" alt="Helio Sport photo booth in an illustrative reception setting" width={1200} height={800} tone="lav" ratio="3/2"/>
 <div class="ppc-tier-body"><p class="ppc-eyebrow">3 hours · Helio Sport</p><h3 class="ppc-h3" style="font-size: 28px">{fullServiceTiers[0].name}</h3><p class="ppc-p" style="font-size: 16px">A focused window of photo booth fun.</p></div>
 <div class="ppc-tier-foot"><p class="ppc-price"><span>from</span><b>{money(fullServiceTiers[0].price)}</b></p><a class="ppc-btng ppc-btn-sm" href={fullServiceTiers[0].href} data-source="card" data-booth="full">Check your date</a></div>
 </article>
 <article class="ppc-tier is-feature">
 <span class="ppc-badge">Most popular</span>
-<div class="ppc-ph t-blush ppc-r32"><span>Photo: reception guests at the Lumia M Pro</span></div>
+<Photo label="Lumia M Pro photo booth" src="/media/full-service/lumia-m-pro.webp" alt="Lumia M Pro photo booth in an illustrative reception setting" width={1200} height={800} tone="blush" ratio="3/2"/>
 <div class="ppc-tier-body"><p class="ppc-eyebrow">4 hours · Lumia M Pro</p><h3 class="ppc-h3" style="font-size: 28px">{fullServiceTiers[1].name}</h3><p class="ppc-p" style="font-size: 16px">More time and a DSLR camera for sharper prints.</p></div>
 <div class="ppc-tier-foot"><p class="ppc-price"><span>from</span><b>{money(fullServiceTiers[1].price)}</b></p><a class="ppc-btnp ppc-btn-sm" href={fullServiceTiers[1].href} data-source="card" data-booth="full">Check your date</a></div>
 </article>
 <article class="ppc-tier">
-<div class="ppc-ph t-gold ppc-r32"><span>Photo: guests in front of the Posh Pro display</span></div>
+<Photo label="Posh Pro photo booth" src="/media/full-service/posh-pro.webp" alt="Posh Pro photo booth in an illustrative reception setting" width={1200} height={800} tone="gold" ratio="3/2"/>
 <div class="ppc-tier-body"><p class="ppc-eyebrow">5 hours · Posh Pro</p><h3 class="ppc-h3" style="font-size: 28px">{fullServiceTiers[2].name}</h3><p class="ppc-p" style="font-size: 16px">Extended coverage plus a 37‑inch display for slideshows.</p></div>
 <div class="ppc-tier-foot"><p class="ppc-price"><span>from</span><b>{money(fullServiceTiers[2].price)}</b></p><a class="ppc-btng ppc-btn-sm" href={fullServiceTiers[2].href} data-source="card" data-booth="full">Check your date</a></div>
 </article>
 </div>
+<p class="ppc-small full-service-caption">Photo booth models shown in illustrative event settings.</p>
 <div class="ppc-card ppc-split ppc-split-top" style="gap: 32px">
 <div class="ppc-stack" style="gap: 8px"><h3 class="ppc-h3">Every package includes</h3><p class="ppc-small">Extra hours are {money(addons.extraHour)} each, subject to availability.</p></div>
 <ul class="ppc-checks" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 10px 24px"><li>Delivery, setup and takedown</li><li>On‑site attendant</li><li>Unlimited prints</li><li>Personalized photo design</li><li>Backdrop and props</li><li>30‑day online gallery</li></ul>
@@ -83,9 +88,12 @@ const schema = serviceSchema("Full service photo booth rental",canonical,fullSer
 <p class="ppc-p">We design the print around your event, then print as many as your guests want during booth time.</p>
 <ul class="ppc-checks"><li>3‑ or 4‑photo layouts</li><li>Portrait, landscape or strips</li><li>Your names, date, colors or logo</li><li>Digital copies of every print</li></ul>
 </div>
-<div style="display: flex; justify-content: center; gap: 20px; padding: 32px; border-radius: 28px; background: #FFFFFF" role="img" aria-label="Sample print strips placeholder">
-<div class="ppc-strip" style="transform: rotate(-4deg); width: 132px"><i></i><i></i><i></i><small>YOUR NAMES · YOUR DATE</small></div>
-<div class="ppc-strip" style="transform: rotate(3deg); width: 132px; margin-top: 28px"><i style="background: #F3E6CF"></i><i style="background: #E9E1F2"></i><i style="background: #DDE6EF"></i><small>YOUR EVENT LOGO</small></div>
+<div class="full-service-print-art">
+<div class="full-service-print-panel" role="img" aria-label="Illustrative examples of personalized three-photo print strips">
+<div class="ppc-strip full-service-strip" style="transform: rotate(-4deg); width: 132px"><img src="/media/homepage/wedding.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"/><img src="/media/homepage/corporate.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"/><img src="/media/homepage/birthday.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"/><small>YOUR NAMES · YOUR DATE</small></div>
+<div class="ppc-strip full-service-strip" style="transform: rotate(3deg); width: 132px; margin-top: 28px"><img src="/media/homepage/wedding.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"/><img src="/media/homepage/corporate.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"/><img src="/media/homepage/birthday.webp" alt="" width="1200" height="800" loading="lazy" decoding="async"/><small>YOUR EVENT LOGO</small></div>
+</div>
+<p class="ppc-small full-service-caption">Sample layouts with illustrative event imagery.</p>
 </div>
 </div>
 </section>
@@ -94,10 +102,11 @@ const schema = serviceSchema("Full service photo booth rental",canonical,fullSer
 <div class="ppc-wrap ppc-stack-lg">
 <h2 id="occ-h" class="ppc-h2">Made for the big moments</h2>
 <div class="ppc-grid3">
-<a class="ppc-tile ppc-stack" href="/wedding-photo-booth-rental/" style="gap: 12px; text-decoration: none; color: #1F1A24"><div class="ppc-ph ppc-tileimg ppc-r43"><span>Photo: newlyweds and friends</span></div><span class="ppc-h3" style="display: flex; justify-content: space-between">Weddings <span class="ppc-arrow" aria-hidden="true">→</span></span><span class="ppc-small">Prints that match your colors, timed around the reception.</span></a>
-<a class="ppc-tile ppc-stack" href="/corporate-photo-booth-rental/" style="gap: 12px; text-decoration: none; color: #1F1A24"><div class="ppc-ph t-lav ppc-tileimg ppc-r43"><span>Photo: coworkers at a holiday party</span></div><span class="ppc-h3" style="display: flex; justify-content: space-between">Corporate <span class="ppc-arrow" aria-hidden="true">→</span></span><span class="ppc-small">Your logo on every print.</span></a>
-<a class="ppc-tile ppc-stack" href="/self-service-photo-booth-rental/" style="gap: 12px; text-decoration: none; color: #1F1A24"><div class="ppc-ph t-blush ppc-tileimg ppc-r43"><span>Photo: family at a 50th birthday</span></div><span class="ppc-h3" style="display: flex; justify-content: space-between">Birthdays &amp; milestones <span class="ppc-arrow" aria-hidden="true">→</span></span><span class="ppc-small">Birthdays, graduations, anniversaries.</span></a>
+<a class="ppc-tile ppc-stack" href="/wedding-photo-booth-rental/" style="gap: 12px; text-decoration: none; color: #1F1A24"><div class="ppc-tileimg"><Photo label="Wedding celebration" src="/media/homepage/wedding.webp" alt="Illustrative scene of wedding guests celebrating with printed photo strips" width={1200} height={800} ratio="4/3"/></div><span class="ppc-h3" style="display: flex; justify-content: space-between">Weddings <span class="ppc-arrow" aria-hidden="true">→</span></span><span class="ppc-small">Prints that match your colors, timed around the reception.</span></a>
+<a class="ppc-tile ppc-stack" href="/corporate-photo-booth-rental/" style="gap: 12px; text-decoration: none; color: #1F1A24"><div class="ppc-tileimg"><Photo label="Corporate celebration" src="/media/homepage/corporate.webp" alt="Illustrative scene of colleagues celebrating together at a company event" width={1200} height={800} tone="lav" ratio="4/3"/></div><span class="ppc-h3" style="display: flex; justify-content: space-between">Corporate <span class="ppc-arrow" aria-hidden="true">→</span></span><span class="ppc-small">Your logo on every print.</span></a>
+<a class="ppc-tile ppc-stack" href="/self-service-photo-booth-rental/" style="gap: 12px; text-decoration: none; color: #1F1A24"><div class="ppc-tileimg"><Photo label="Birthday celebration" src="/media/homepage/birthday.webp" alt="Illustrative scene of friends celebrating a birthday at a photo booth" width={1200} height={800} tone="blush" ratio="4/3"/></div><span class="ppc-h3" style="display: flex; justify-content: space-between">Birthdays &amp; milestones <span class="ppc-arrow" aria-hidden="true">→</span></span><span class="ppc-small">Birthdays, graduations, anniversaries.</span></a>
 </div>
+<p class="ppc-small full-service-caption">Illustrative event imagery.</p>
 </div>
 </section>
 
@@ -126,3 +135,8 @@ const schema = serviceSchema("Full service photo booth rental",canonical,fullSer
 </section>
 
 </RentalLayout>
+
+<style>
+ .full-service-hero-photo{position:relative}.full-service-hero-photo :global(.ppc-ph){border-radius:28px}.full-service-hero-strip{position:absolute;left:-28px;bottom:56px;transform:rotate(-5deg)}.full-service-strip{min-width:0}.full-service-strip>img{display:block;width:100%;height:76px;min-width:0;object-fit:cover}.full-service-tiers :global(.ppc-photo){aspect-ratio:3/2}.full-service-caption{margin:12px 0 0}.full-service-tiers+.full-service-caption,.ppc-grid3+.full-service-caption{margin:0}.full-service-print-panel{display:flex;justify-content:center;gap:20px;padding:32px;border-radius:28px;background:#fff}
+ @media(max-width:960px){.full-service-hero-strip{left:16px}}
+</style>
