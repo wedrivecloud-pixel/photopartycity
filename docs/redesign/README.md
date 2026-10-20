@@ -10,7 +10,7 @@ This branch is a review preview. It is not merged into main and does not change 
 - Two-audience homepage, near/ship toggle, automatic ZIP mode switching, rental cards, photo wall, event links, service-area illustration and native FAQs.
 - Seven coordinated AI-generated [homepage images](homepage-images.md) fill all 11 formerly empty rental-card, photo-wall and event-tile slots. The hero photo strip also contains images. Captions distinguish illustrative scenes from existing event photographs.
 - Four new [full-service images](full-service-images.md), guided by the supplied product references, fill the hero and package cards. Reused event imagery fills its occasion tiles and nine photo-strip frames.
-- A new [self-service hero](self-service-images.md) and the matching reusable booth images fill all four self-service image areas.
+- A [self-service hero](self-service-images.md) and the same three guest scenes used on the packages page fill all four self-service image areas.
 - Two new [digital rental portraits](digital-images.md) show capture and phone viewing; a reused print image fills that page's full-service upgrade area.
 - Three new [360 event scenes](360-images.md) fill the hero and rate cards using the referenced round platform, camera arm and ring-light geometry.
 - Seven new [Photo Booth by Mail scenes](mail-images.md), a reused phone-sharing image and a sourced continental-US map fill all nine mail-page image slots. Photos are illustrative; the kit arrangement is representative.
