@@ -1,6 +1,7 @@
 ---
 import RentalLayout from '../layouts/RentalLayout.astro';
 import FAQ from '../components/redesign/FAQ.astro';
+import Photo from '../components/redesign/Photo.astro';
 import {bookingLinks,addons,mailRental,mailTerms,money,serviceSchema} from '../data/rentals';
 const title = "Photo Booth By Mail - Photo Party City";
 const description = "Photo Booth By Mail delivers the fun to your door. Rentals from $275 with free shipping, easy setup, digital sharing, and optional prints.";
@@ -32,12 +33,15 @@ const schema = serviceSchema("Photo Booth By Mail",canonical,[mailRental]);
 </div>
 <ul class="ppc-checks ppc-checks-row"><li>Free shipping both ways</li><li>Guided setup</li><li>Setup guide included</li></ul>
 </div>
-<div style="position: relative">
-<div class="ppc-ph t-sky ppc-r45" style="border-radius: 28px"><span>Photo: friends laughing at a house party, booth in the corner</span></div>
-<div class="ppc-hidesm ppc-row" style="position: absolute; right: -20px; bottom: 40px; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 20px 40px -16px rgba(31, 26, 36, 0.3)">
+<div class="mail-hero-art">
+<div class="mail-hero-photo" style="position: relative">
+<Photo label="A booth-by-mail house party" src="/media/by-mail/hero.webp" alt="Illustrative scene of friends enjoying a white Helio photo booth at a house party" width={1200} height={1500} loading="eager" fetchpriority="high" tone="sky" ratio="4/5"/>
+<div class="ppc-hidesm ppc-row" style="position: absolute; left: 16px; bottom: 16px; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 20px 40px -16px rgba(31, 26, 36, 0.3)">
 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#54228b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"></path><path d="M3 7.5L12 12l9-4.5M12 12v9"></path></svg>
 <span style="display: flex; flex-direction: column; line-height: 1.3"><strong style="font-size: 15px">Arrives 1–2 days early</strong><span style="font-size: 13px; color: #5C5463">Saturday party → Thursday or Friday</span></span>
 </div>
+</div>
+<p class="ppc-small mail-image-caption">Illustrative event imagery.</p>
 </div>
 </div>
 </section>
@@ -47,18 +51,19 @@ const schema = serviceSchema("Photo Booth By Mail",canonical,[mailRental]);
 <div class="ppc-wrap ppc-stack-lg">
 <h2 id="how-h" class="ppc-h2">How booth by mail works</h2>
 <ol class="ppc-numcards ppc-grid4">
-<li class="ppc-card ppc-stack" style="gap: 12px"><div class="ppc-ph t-lav ppc-r43" style="order: -1"><span>Photo: host booking on her phone</span></div><h3 class="ppc-h3" style="font-size: 21px">Check your date</h3><p class="ppc-p" style="font-size: 16px">Pick your date and options, then book online.</p></li>
-<li class="ppc-card ppc-stack" style="gap: 12px"><div class="ppc-ph t-blush ppc-r43" style="order: -1"><span>Image: a print layout with names and date</span></div><h3 class="ppc-h3" style="font-size: 21px">Design your print layout</h3><p class="ppc-p" style="font-size: 16px">Choose a template and add your names, date or logo.</p></li>
-<li class="ppc-card ppc-stack" style="gap: 12px"><div class="ppc-ph t-gold ppc-r43" style="order: -1"><span>Photo: case arriving at a front door</span></div><h3 class="ppc-h3" style="font-size: 21px">It arrives before your event</h3><p class="ppc-p" style="font-size: 16px">Follow the setup guide and test the booth before your guests arrive.</p></li>
-<li class="ppc-card ppc-stack" style="gap: 12px"><div class="ppc-ph t-sage ppc-r43" style="order: -1"><span>Photo: case dropped off at a UPS counter</span></div><h3 class="ppc-h3" style="font-size: 21px">Ship it back</h3><p class="ppc-p" style="font-size: 16px">Pack the case, attach the prepaid label and drop it at UPS the next business day.</p></li>
+<li class="ppc-card ppc-stack" style="gap: 12px"><div class="mail-step-visual" style="order: -1"><Photo label="Checking an event date" src="/media/by-mail/booking.webp" alt="Illustrative scene of an event host checking a rental date on a phone" width={960} height={720} tone="lav" ratio="4/3"/></div><h3 class="ppc-h3" style="font-size: 21px">Check your date</h3><p class="ppc-p" style="font-size: 16px">Pick your date and options, then book online.</p></li>
+<li class="ppc-card ppc-stack" style="gap: 12px"><div class="mail-step-visual" style="order: -1"><Photo label="A sample personalized photo layout" src="/media/by-mail/print-layout.webp" alt="Illustrative floral photo-strip layouts with blank space for event personalization" width={960} height={720} tone="blush" ratio="4/3"/></div><h3 class="ppc-h3" style="font-size: 21px">Design your print layout</h3><p class="ppc-p" style="font-size: 16px">Choose a template and add your names, date or logo.</p></li>
+<li class="ppc-card ppc-stack" style="gap: 12px"><div class="mail-step-visual" style="order: -1"><Photo label="The booth arriving before an event" src="/media/by-mail/arrival.webp" alt="Illustrative scene of a photo booth travel case arriving at a front door" width={960} height={720} tone="gold" ratio="4/3"/></div><h3 class="ppc-h3" style="font-size: 21px">It arrives before your event</h3><p class="ppc-p" style="font-size: 16px">Follow the setup guide and test the booth before your guests arrive.</p></li>
+<li class="ppc-card ppc-stack" style="gap: 12px"><div class="mail-step-visual" style="order: -1"><Photo label="Returning the booth after an event" src="/media/by-mail/return.webp" alt="Illustrative scene of a renter returning a photo booth travel case at a shipping counter" width={960} height={720} tone="sage" ratio="4/3"/></div><h3 class="ppc-h3" style="font-size: 21px">Ship it back</h3><p class="ppc-p" style="font-size: 16px">Pack the case, attach the prepaid label and drop it at UPS the next business day.</p></li>
 </ol>
+<p class="ppc-small mail-image-caption mail-group-caption">Illustrative booking, design and shipping imagery.</p>
 </div>
 </section>
 
 <!-- In the box -->
 <section class="ppc-section" aria-labelledby="box-h">
 <div class="ppc-wrap ppc-split">
-<div class="ppc-ph ppc-r43"><span>Photo: the open travel case with booth, light and props</span></div>
+<div class="mail-kit-art"><Photo label="An illustrative booth-by-mail rental kit" src="/media/by-mail/kit.webp" alt="Illustrative arrangement of a white Helio photo booth and rental accessories beside an open travel case" width={1200} height={900} ratio="4/3"/><p class="ppc-small mail-image-caption">Illustrative contents arrangement.</p></div>
 <div class="ppc-stack" style="gap: 18px">
 <h2 id="box-h" class="ppc-h2">What’s in the box</h2>
 <ul class="ppc-checks" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 10px 24px">
@@ -77,9 +82,12 @@ const schema = serviceSchema("Photo Booth By Mail",canonical,[mailRental]);
 <p class="ppc-p">Guests text, email or AirDrop their photos straight from the booth. You get the complete event album afterward.</p>
 <ul class="ppc-checks"><li>Text, email and AirDrop sharing</li><li>Complete event photo album</li><li>No Wi‑Fi at the venue? Add a hotspot for {money(addons.mailHotspot)}</li></ul>
 </div>
-<div class="ppc-grid2" style="gap: 12px">
-<div class="ppc-ph t-lil ppc-r45"><span>Photo: guests laughing at a photo on a phone</span></div>
-<div class="ppc-ph t-blush ppc-r45" style="margin-top: 40px"><span>Photo: group squeezed into one shot</span></div>
+<div class="mail-sharing-art">
+<div class="ppc-grid2 mail-sharing-photos" style="gap: 12px">
+<Photo label="Sharing an event photo" src="/media/digital/phone-sharing.webp" alt="Illustrative scene of a guest viewing an event photo on their phone" width={1200} height={1500} tone="lil" ratio="4/5"/>
+<div style="margin-top: 40px"><Photo label="Friends posing together" src="/media/by-mail/group.webp" alt="Illustrative scene of friends posing closely together for an event photo" width={1200} height={1500} tone="blush" ratio="4/5"/></div>
+</div>
+<p class="ppc-small mail-image-caption">Illustrative event imagery.</p>
 </div>
 </div>
 </section>
@@ -108,7 +116,7 @@ const schema = serviceSchema("Photo Booth By Mail",canonical,[mailRental]);
 <p class="ppc-p">All 48 contiguous states. We confirm delivery timing for your address when you book.</p>
 <p class="ppc-callout" style="margin: 0"><strong>Within 45 miles of Mira Loma?</strong> <a href="/full-service-photo-booth-rental/" style="font-weight: 600">We can deliver it and run it for you.</a></p>
 </div>
-<div class="ppc-ph t-sky ppc-r169" style="background: #DDE6EF"><span>Map: continental US, shaded</span></div>
+<div class="mail-coverage-art"><Photo label="Continental US coverage" src="/media/by-mail/coverage.svg" alt="Map of the 48 contiguous United States showing booth-by-mail coverage" width={1200} height={675} tone="sky" ratio="16/9"/><p class="ppc-small mail-image-caption">Booth-by-mail coverage.</p></div>
 </div>
 </section>
 
@@ -121,3 +129,7 @@ const schema = serviceSchema("Photo Booth By Mail",canonical,[mailRental]);
 </section>
 
 </RentalLayout>
+
+<style>
+ .mail-hero-photo :global(.ppc-ph){border-radius:28px}.mail-sharing-photos{align-items:start}.mail-sharing-photos :global(.ppc-ph){aspect-ratio:4/5}.mail-image-caption{margin:12px 0 0}.mail-group-caption{margin:0}
+</style>

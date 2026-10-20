@@ -13,6 +13,7 @@ This branch is a review preview. It is not merged into main and does not change 
 - A new [self-service hero](self-service-images.md) and the matching reusable booth images fill all four self-service image areas.
 - Two new [digital rental portraits](digital-images.md) show capture and phone viewing; a reused print image fills that page's full-service upgrade area.
 - Three new [360 event scenes](360-images.md) fill the hero and rate cards using the referenced round platform, camera arm and ring-light geometry.
+- Seven new [Photo Booth by Mail scenes](mail-images.md), a reused phone-sharing image and a sourced continental-US map fill all nine mail-page image slots. Photos are illustrative; the kit arrangement is representative.
 - Six rental pages, 11 city pages, wedding/corporate templates, About, rental cost guide, props/backdrops, policies, contact, blog index and four posts.
 - Central prices and original Eventdeskly destinations in `src/data/rentals.ts`. Package calculators removed in favor of one displayed price per tier. The 360 duration controls update individual prices.
 - `/check-your-date/` with real ZIP-centroid distance calculations and local/shipping/unsupported/invalid results. Old form URLs and duplicates redirect, and the five-booth-types article has its corrected slug.
@@ -22,6 +23,8 @@ This branch is a review preview. It is not merged into main and does not change 
 The shop and 188 product pages keep their legacy layout, styles, metadata, schemas, prices and product links. The legacy layout, global stylesheet, source page inventory and business data are unchanged.
 
 ## Verification
+
+The mail-imagery update also passes its [image, layout, keyboard and no-JavaScript checks](mail-images.md#validation), including exact preservation of the preceding page's metadata, schema, links, IDs and prices.
 
 - `npm run build`: 263 generated pages; Astro type checking reports zero errors, warnings or hints. Vite reports a size warning for the existing ZIP-data JavaScript chunk.
 - `npm test`: ZIP/distance/date and contact-handler mock cases, all route/metadata/image/schema checks, price and booking contracts, redirects and catalog preservation pass. Tests never send email.
@@ -33,7 +36,7 @@ See [screenshots](screenshots/), [browser results](browser-results.json), [route
 
 ## Needed before a public launch
 
-1. **Guest photos and reviews:** only four distinct guest photographs were found in the existing library. Suitable existing images are used on home, city and event pages. At the owner's request, the homepage, full-service, self-service, digital and 360 rental pages' empty image slots now use captioned AI-generated event and product scenes; other pages retain labelled photo slots. Supply the remaining approved photography and verified review text/source URLs. No star rating, review count or fictional customer quotation is published in this preview. Client-logo claims are omitted pending permission.
+1. **Guest photos and reviews:** only four distinct guest photographs were found in the existing library. Suitable existing images are used on home, city and event pages. At the owner's request, the homepage, full-service, self-service, digital, 360 and Photo Booth by Mail pages' empty photo slots now use captioned AI-generated event and product scenes; other pages retain labelled photo slots. The mail kit is a representative arrangement rather than an exact packing or inventory record; its coverage map uses sourced geographic data. Supply the remaining approved photography and verified review text/source URLs. No star rating, review count or fictional customer quotation is published in this preview. Client-logo claims are omitted pending permission.
 2. **Email:** configure `RESEND_API_KEY` and `CONTACT_FROM` in Cloudflare Pages Preview/Production. The current endpoint truthfully returns an unavailable message without them. Set optional `CONTACT_TO` and Turnstile variables as documented, then complete a real inbox test. Do not paste secrets in chat or source.
 3. **Rental details:** confirm local deposit/balance/cancellation terms, mail print/protection prices, and shipping/support claims. Unconfirmed prices are described as proposal-confirmed rather than invented. Existing mail return/cancellation terms are retained.
 4. **360 booking:** provide a dedicated Eventdeskly group/package. Until then, the checker clearly routes to the original general business booking and asks visitors to confirm 360 availability. Date forwarding is not invented because Eventdeskly parameter support is unconfirmed.

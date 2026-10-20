@@ -1,0 +1,1099 @@
+{
+  "status": "passed",
+  "testedAt": "2026-10-20T05:54:51.904Z",
+  "url": "http://127.0.0.1:4336/photo-booth-by-mail/",
+  "baseline": {
+    "path": "/workspace/work/mail-images-before.html",
+    "sha256": "0cb9190f4a61676001d5012a21d516f9f4b96d31da8dffc7d0fc93fc9c31ca0c"
+  },
+  "widths": [
+    {
+      "width": 1440,
+      "status": "passed",
+      "contract": "unchanged",
+      "imageCount": 10,
+      "images": [
+        {
+          "src": "/media/52b598863a8e1582.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+          "alt": "Photo Party City",
+          "loaded": true,
+          "naturalWidth": 313,
+          "naturalHeight": 234,
+          "inMain": false,
+          "declaredWidth": "52",
+          "declaredHeight": "40"
+        },
+        {
+          "src": "/media/by-mail/hero.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/hero.webp",
+          "alt": "Illustrative scene of friends enjoying a white Helio photo booth at a house party",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/by-mail/booking.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/booking.webp",
+          "alt": "Illustrative scene of an event host checking a rental date on a phone",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/print-layout.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/print-layout.webp",
+          "alt": "Illustrative floral photo-strip layouts with blank space for event personalization",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/arrival.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/arrival.webp",
+          "alt": "Illustrative scene of a photo booth travel case arriving at a front door",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/return.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/return.webp",
+          "alt": "Illustrative scene of a renter returning a photo booth travel case at a shipping counter",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/kit.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/kit.webp",
+          "alt": "Illustrative arrangement of a white Helio photo booth and rental accessories beside an open travel case",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "900"
+        },
+        {
+          "src": "/media/digital/phone-sharing.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/digital/phone-sharing.webp",
+          "alt": "Illustrative scene of a guest viewing an event photo on their phone",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/by-mail/group.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/group.webp",
+          "alt": "Illustrative scene of friends posing closely together for an event photo",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/by-mail/coverage.svg",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/coverage.svg",
+          "alt": "Map of the 48 contiguous United States showing booth-by-mail coverage",
+          "loaded": true,
+          "naturalWidth": 267,
+          "naturalHeight": 150,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "675"
+        }
+      ],
+      "geometry": {
+        "viewportWidth": 1440,
+        "documentWidth": 1440,
+        "bodyWidth": 1440,
+        "h1s": 1,
+        "overflowing": []
+      },
+      "ratios": [
+        {
+          "name": "hero",
+          "expectedRatio": 0.8,
+          "measurements": [
+            {
+              "width": 505.390625,
+              "height": 631.734375,
+              "ratio": 0.8000049466993149,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "workflow",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 210,
+              "height": 157.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 210,
+              "height": 157.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 210,
+              "height": 157.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 210,
+              "height": 157.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "kit",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 532,
+              "height": 399,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "sharing",
+          "expectedRatio": 0.8,
+          "measurements": [
+            {
+              "width": 260,
+              "height": 325,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            },
+            {
+              "width": 260,
+              "height": 325,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "coverage",
+          "expectedRatio": 1.7777777777777777,
+          "measurements": [
+            {
+              "width": 532,
+              "height": 299.25,
+              "ratio": 1.7777777777777777,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "keyboardFaq": {
+        "count": 6,
+        "enterAndSpace": true
+      },
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/mail-images-1440.webp"
+    },
+    {
+      "width": 768,
+      "status": "passed",
+      "contract": "unchanged",
+      "imageCount": 10,
+      "images": [
+        {
+          "src": "/media/52b598863a8e1582.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+          "alt": "Photo Party City",
+          "loaded": true,
+          "naturalWidth": 313,
+          "naturalHeight": 234,
+          "inMain": false,
+          "declaredWidth": "52",
+          "declaredHeight": "40"
+        },
+        {
+          "src": "/media/by-mail/hero.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/hero.webp",
+          "alt": "Illustrative scene of friends enjoying a white Helio photo booth at a house party",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/by-mail/booking.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/booking.webp",
+          "alt": "Illustrative scene of an event host checking a rental date on a phone",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/print-layout.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/print-layout.webp",
+          "alt": "Illustrative floral photo-strip layouts with blank space for event personalization",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/arrival.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/arrival.webp",
+          "alt": "Illustrative scene of a photo booth travel case arriving at a front door",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/return.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/return.webp",
+          "alt": "Illustrative scene of a renter returning a photo booth travel case at a shipping counter",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/kit.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/kit.webp",
+          "alt": "Illustrative arrangement of a white Helio photo booth and rental accessories beside an open travel case",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "900"
+        },
+        {
+          "src": "/media/digital/phone-sharing.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/digital/phone-sharing.webp",
+          "alt": "Illustrative scene of a guest viewing an event photo on their phone",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/by-mail/group.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/group.webp",
+          "alt": "Illustrative scene of friends posing closely together for an event photo",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/by-mail/coverage.svg",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/coverage.svg",
+          "alt": "Map of the 48 contiguous United States showing booth-by-mail coverage",
+          "loaded": true,
+          "naturalWidth": 267,
+          "naturalHeight": 150,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "675"
+        }
+      ],
+      "geometry": {
+        "viewportWidth": 768,
+        "documentWidth": 768,
+        "bodyWidth": 768,
+        "h1s": 1,
+        "overflowing": []
+      },
+      "ratios": [
+        {
+          "name": "hero",
+          "expectedRatio": 0.8,
+          "measurements": [
+            {
+              "width": 706.5625,
+              "height": 883.203125,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "workflow",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 287.28125,
+              "height": 215.453125,
+              "ratio": 1.3333816810501125,
+              "objectFit": "cover"
+            },
+            {
+              "width": 287.28125,
+              "height": 215.453125,
+              "ratio": 1.3333816810501125,
+              "objectFit": "cover"
+            },
+            {
+              "width": 287.28125,
+              "height": 215.453125,
+              "ratio": 1.3333816810501125,
+              "objectFit": "cover"
+            },
+            {
+              "width": 287.28125,
+              "height": 215.453125,
+              "ratio": 1.3333816810501125,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "kit",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 706.5625,
+              "height": 529.921875,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "sharing",
+          "expectedRatio": 0.8,
+          "measurements": [
+            {
+              "width": 706.5625,
+              "height": 883.203125,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            },
+            {
+              "width": 706.5625,
+              "height": 883.203125,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "coverage",
+          "expectedRatio": 1.7777777777777777,
+          "measurements": [
+            {
+              "width": 706.5625,
+              "height": 397.4375,
+              "ratio": 1.7777952508256014,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "keyboardFaq": {
+        "count": 6,
+        "enterAndSpace": true
+      },
+      "runtimeErrors": []
+    },
+    {
+      "width": 390,
+      "status": "passed",
+      "contract": "unchanged",
+      "imageCount": 10,
+      "images": [
+        {
+          "src": "/media/52b598863a8e1582.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+          "alt": "Photo Party City",
+          "loaded": true,
+          "naturalWidth": 313,
+          "naturalHeight": 234,
+          "inMain": false,
+          "declaredWidth": "52",
+          "declaredHeight": "40"
+        },
+        {
+          "src": "/media/by-mail/hero.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/hero.webp",
+          "alt": "Illustrative scene of friends enjoying a white Helio photo booth at a house party",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/by-mail/booking.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/booking.webp",
+          "alt": "Illustrative scene of an event host checking a rental date on a phone",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/print-layout.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/print-layout.webp",
+          "alt": "Illustrative floral photo-strip layouts with blank space for event personalization",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/arrival.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/arrival.webp",
+          "alt": "Illustrative scene of a photo booth travel case arriving at a front door",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/return.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/return.webp",
+          "alt": "Illustrative scene of a renter returning a photo booth travel case at a shipping counter",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/kit.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/kit.webp",
+          "alt": "Illustrative arrangement of a white Helio photo booth and rental accessories beside an open travel case",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "900"
+        },
+        {
+          "src": "/media/digital/phone-sharing.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/digital/phone-sharing.webp",
+          "alt": "Illustrative scene of a guest viewing an event photo on their phone",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/by-mail/group.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/group.webp",
+          "alt": "Illustrative scene of friends posing closely together for an event photo",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/by-mail/coverage.svg",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/coverage.svg",
+          "alt": "Map of the 48 contiguous United States showing booth-by-mail coverage",
+          "loaded": true,
+          "naturalWidth": 267,
+          "naturalHeight": 150,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "675"
+        }
+      ],
+      "geometry": {
+        "viewportWidth": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "h1s": 1,
+        "overflowing": []
+      },
+      "ratios": [
+        {
+          "name": "hero",
+          "expectedRatio": 0.8,
+          "measurements": [
+            {
+              "width": 358,
+              "height": 447.5,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "workflow",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 300,
+              "height": 225,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 300,
+              "height": 225,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 300,
+              "height": 225,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 300,
+              "height": 225,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "kit",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 358,
+              "height": 268.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "sharing",
+          "expectedRatio": 0.8,
+          "measurements": [
+            {
+              "width": 358,
+              "height": 447.5,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            },
+            {
+              "width": 358,
+              "height": 447.5,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "coverage",
+          "expectedRatio": 1.7777777777777777,
+          "measurements": [
+            {
+              "width": 358,
+              "height": 201.375,
+              "ratio": 1.7777777777777777,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "keyboardFaq": {
+        "count": 6,
+        "enterAndSpace": true
+      },
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/mail-images-390.webp"
+    },
+    {
+      "width": 320,
+      "status": "passed",
+      "contract": "unchanged",
+      "imageCount": 10,
+      "images": [
+        {
+          "src": "/media/52b598863a8e1582.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+          "alt": "Photo Party City",
+          "loaded": true,
+          "naturalWidth": 313,
+          "naturalHeight": 234,
+          "inMain": false,
+          "declaredWidth": "52",
+          "declaredHeight": "40"
+        },
+        {
+          "src": "/media/by-mail/hero.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/hero.webp",
+          "alt": "Illustrative scene of friends enjoying a white Helio photo booth at a house party",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/by-mail/booking.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/booking.webp",
+          "alt": "Illustrative scene of an event host checking a rental date on a phone",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/print-layout.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/print-layout.webp",
+          "alt": "Illustrative floral photo-strip layouts with blank space for event personalization",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/arrival.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/arrival.webp",
+          "alt": "Illustrative scene of a photo booth travel case arriving at a front door",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/return.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/return.webp",
+          "alt": "Illustrative scene of a renter returning a photo booth travel case at a shipping counter",
+          "loaded": true,
+          "naturalWidth": 960,
+          "naturalHeight": 720,
+          "inMain": true,
+          "declaredWidth": "960",
+          "declaredHeight": "720"
+        },
+        {
+          "src": "/media/by-mail/kit.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/kit.webp",
+          "alt": "Illustrative arrangement of a white Helio photo booth and rental accessories beside an open travel case",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "900"
+        },
+        {
+          "src": "/media/digital/phone-sharing.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/digital/phone-sharing.webp",
+          "alt": "Illustrative scene of a guest viewing an event photo on their phone",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/by-mail/group.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/group.webp",
+          "alt": "Illustrative scene of friends posing closely together for an event photo",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/by-mail/coverage.svg",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/coverage.svg",
+          "alt": "Map of the 48 contiguous United States showing booth-by-mail coverage",
+          "loaded": true,
+          "naturalWidth": 267,
+          "naturalHeight": 150,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "675"
+        }
+      ],
+      "geometry": {
+        "viewportWidth": 320,
+        "documentWidth": 320,
+        "bodyWidth": 320,
+        "h1s": 1,
+        "overflowing": []
+      },
+      "ratios": [
+        {
+          "name": "hero",
+          "expectedRatio": 0.8,
+          "measurements": [
+            {
+              "width": 288,
+              "height": 360,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "workflow",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 230,
+              "height": 172.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 230,
+              "height": 172.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 230,
+              "height": 172.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 230,
+              "height": 172.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "kit",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 288,
+              "height": 216,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "sharing",
+          "expectedRatio": 0.8,
+          "measurements": [
+            {
+              "width": 288,
+              "height": 360,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            },
+            {
+              "width": 288,
+              "height": 360,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "coverage",
+          "expectedRatio": 1.7777777777777777,
+          "measurements": [
+            {
+              "width": 288,
+              "height": 162,
+              "ratio": 1.7777777777777777,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "keyboardFaq": {
+        "count": 6,
+        "enterAndSpace": true
+      },
+      "runtimeErrors": []
+    }
+  ],
+  "noJavaScript": {
+    "width": 390,
+    "status": "passed",
+    "images": [
+      {
+        "src": "/media/52b598863a8e1582.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+        "alt": "Photo Party City",
+        "loaded": true,
+        "naturalWidth": 313,
+        "naturalHeight": 234,
+        "inMain": false,
+        "declaredWidth": "52",
+        "declaredHeight": "40"
+      },
+      {
+        "src": "/media/by-mail/hero.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/by-mail/hero.webp",
+        "alt": "Illustrative scene of friends enjoying a white Helio photo booth at a house party",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 1500,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "1500"
+      },
+      {
+        "src": "/media/by-mail/booking.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/by-mail/booking.webp",
+        "alt": "Illustrative scene of an event host checking a rental date on a phone",
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 720,
+        "inMain": true,
+        "declaredWidth": "960",
+        "declaredHeight": "720"
+      },
+      {
+        "src": "/media/by-mail/print-layout.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/by-mail/print-layout.webp",
+        "alt": "Illustrative floral photo-strip layouts with blank space for event personalization",
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 720,
+        "inMain": true,
+        "declaredWidth": "960",
+        "declaredHeight": "720"
+      },
+      {
+        "src": "/media/by-mail/arrival.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/by-mail/arrival.webp",
+        "alt": "Illustrative scene of a photo booth travel case arriving at a front door",
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 720,
+        "inMain": true,
+        "declaredWidth": "960",
+        "declaredHeight": "720"
+      },
+      {
+        "src": "/media/by-mail/return.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/by-mail/return.webp",
+        "alt": "Illustrative scene of a renter returning a photo booth travel case at a shipping counter",
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 720,
+        "inMain": true,
+        "declaredWidth": "960",
+        "declaredHeight": "720"
+      },
+      {
+        "src": "/media/by-mail/kit.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/by-mail/kit.webp",
+        "alt": "Illustrative arrangement of a white Helio photo booth and rental accessories beside an open travel case",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 900,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "900"
+      },
+      {
+        "src": "/media/digital/phone-sharing.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/digital/phone-sharing.webp",
+        "alt": "Illustrative scene of a guest viewing an event photo on their phone",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 1500,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "1500"
+      },
+      {
+        "src": "/media/by-mail/group.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/by-mail/group.webp",
+        "alt": "Illustrative scene of friends posing closely together for an event photo",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 1500,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "1500"
+      },
+      {
+        "src": "/media/by-mail/coverage.svg",
+        "currentSrc": "http://127.0.0.1:4336/media/by-mail/coverage.svg",
+        "alt": "Map of the 48 contiguous United States showing booth-by-mail coverage",
+        "loaded": true,
+        "naturalWidth": 267,
+        "naturalHeight": 150,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "675"
+      }
+    ],
+    "contract": "unchanged",
+    "bookingLinks": 1,
+    "nativeFaq": true,
+    "geometry": {
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "h1s": 1,
+      "overflowing": []
+    },
+    "ratios": [
+      {
+        "name": "hero",
+        "expectedRatio": 0.8,
+        "measurements": [
+          {
+            "width": 358,
+            "height": 447.5,
+            "ratio": 0.8,
+            "objectFit": "cover"
+          }
+        ]
+      },
+      {
+        "name": "workflow",
+        "expectedRatio": 1.3333333333333333,
+        "measurements": [
+          {
+            "width": 300,
+            "height": 225,
+            "ratio": 1.3333333333333333,
+            "objectFit": "cover"
+          },
+          {
+            "width": 300,
+            "height": 225,
+            "ratio": 1.3333333333333333,
+            "objectFit": "cover"
+          },
+          {
+            "width": 300,
+            "height": 225,
+            "ratio": 1.3333333333333333,
+            "objectFit": "cover"
+          },
+          {
+            "width": 300,
+            "height": 225,
+            "ratio": 1.3333333333333333,
+            "objectFit": "cover"
+          }
+        ]
+      },
+      {
+        "name": "kit",
+        "expectedRatio": 1.3333333333333333,
+        "measurements": [
+          {
+            "width": 358,
+            "height": 268.5,
+            "ratio": 1.3333333333333333,
+            "objectFit": "cover"
+          }
+        ]
+      },
+      {
+        "name": "sharing",
+        "expectedRatio": 0.8,
+        "measurements": [
+          {
+            "width": 358,
+            "height": 447.5,
+            "ratio": 0.8,
+            "objectFit": "cover"
+          },
+          {
+            "width": 358,
+            "height": 447.5,
+            "ratio": 0.8,
+            "objectFit": "cover"
+          }
+        ]
+      },
+      {
+        "name": "coverage",
+        "expectedRatio": 1.7777777777777777,
+        "measurements": [
+          {
+            "width": 358,
+            "height": 201.375,
+            "ratio": 1.7777777777777777,
+            "objectFit": "cover"
+          }
+        ]
+      }
+    ]
+  },
+  "errors": [],
+  "contractFields": [
+    "all anchor hrefs",
+    "title",
+    "all meta tags",
+    "canonical",
+    "JSON-LD schema",
+    "all IDs",
+    "all dollar prices"
+  ]
+}
