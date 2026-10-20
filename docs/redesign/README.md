@@ -16,6 +16,7 @@ This branch is a review preview. It is not merged into main and does not change 
 - Seven new [Photo Booth by Mail scenes](mail-images.md), a reused phone-sharing image and a sourced continental-US map fill all nine mail-page image slots. Photos are illustrative; the kit arrangement is representative.
 - [Packages imagery](packages-images.md) fills ten image areas with three new self-operated guest scenes, reused model illustrations and the mail kit. Tier cards keep 3:2 framing; model cards use 4:3 crops. Build, repository tests, browser checks and desktop/mobile visual review pass.
 - A new [cost-guide planning image](cost-images.md) fills the guide's hero. Image wiring is conditional on the cost route in the shared information-page template.
+- The [wedding package cards](wedding-images.md) reuse the matching Silver, Gold and Platinum images from the full-service page.
 - Six rental pages, 11 city pages, wedding/corporate templates, About, rental cost guide, props/backdrops, policies, contact, blog index and four posts.
 - Central prices and original Eventdeskly destinations in `src/data/rentals.ts`. Package calculators removed in favor of one displayed price per tier. The 360 duration controls update individual prices.
 - `/check-your-date/` with real ZIP-centroid distance calculations and local/shipping/unsupported/invalid results. Old form URLs and duplicates redirect, and the five-booth-types article has its corrected slug.
