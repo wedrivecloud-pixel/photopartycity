@@ -1,0 +1,114 @@
+---
+import RentalLayout from '../layouts/RentalLayout.astro';
+import FAQ from '../components/redesign/FAQ.astro';
+import {selfServiceTiers,bookingLinks,addons,money,serviceSchema} from '../data/rentals';
+const title = "Self-Service Photo Booth Rental from $199 | Inland Empire";
+const description = "Rent a self-service photo booth for 24 hours from $199. Compare packages, optional prints, and Mira Loma pickup or paid delivery. Check your event date.";
+const canonical = "https://photopartycity.com/self-service-photo-booth-rental/";
+const faqs = [
+  {question:"What’s the difference between Starter, Showbiz and Hollywood?",answer:`Starter uses the iPad camera. Showbiz adds a DSLR camera. Hollywood adds a 37‑inch signage column for videos, slideshows or branding.`},
+  {question:"Are printed photos included?",answer:`The base packages are digital. Add a printer (${money(addons.printer)}) and a 100‑print media kit (${money(addons.mediaKit)}) for prints.`},
+  {question:"Can you deliver and set it up?",answer:`Yes, within 45 miles of Mira Loma, for an added charge shown in your proposal.`},
+  {question:"What does my venue need?",answer:`A spot near power, internet for sharing, and room for guests to pose. Tell us if it’s outdoors.`},
+  {question:"Can I get an attendant instead?",answer:`Yes — that’s our full‑service rental, which also includes unlimited prints.`},
+  {question:"Does checking my date reserve it?",answer:`Not yet. Your date is reserved once you approve the proposal and book.`},
+];
+const schema = serviceSchema("Self-service photo booth rental",canonical,selfServiceTiers);
+---
+<RentalLayout title={title} description={description} canonical={canonical} image="/media/cad64fdd70a5b804.webp" schema={schema} breadcrumbs={[{name:'Home',href:'/'},{name:'Ways to rent',href:'/photo-booth-packages/'},{name:"Self-service"}]} checkHref={bookingLinks.self}>
+
+
+<section style="padding-block: 24px clamp(56px, 7vw, 96px)">
+<div class="ppc-wrap ppc-hero">
+<div class="ppc-stack" style="gap: 22px">
+<span class="ppc-tag">You pick it up · Within 45 mi of Mira Loma</span>
+<h1 class="ppc-h1">Your party. Your pace. A photo booth for 24 hours.</h1>
+<p class="ppc-lead">Pick it up in Mira Loma and let guests take photos, GIFs, videos and boomerangs all day.</p>
+<div class="ppc-row">
+<a class="ppc-btnp" href={bookingLinks.self} data-source="hero" data-booth="self">Check your date</a>
+<a class="ppc-link" href="tel:+19094037143" data-source="hero" data-booth="self">Call or text (909) 403-7143</a>
+</div>
+<ul class="ppc-checks ppc-checks-row"><li>Full 24‑hour rental</li><li>Unlimited digital photos</li><li>Prints optional</li></ul>
+</div>
+<div class="ppc-ph t-sage ppc-r45" style="border-radius: 28px"><span>Photo: cousins mid‑laugh at a backyard birthday</span></div>
+</div>
+</section>
+
+<section id="packages" class="ppc-section ppc-band">
+<div class="ppc-wrap ppc-stack-lg">
+<div class="ppc-stack" style="gap: 12px">
+<h2 class="ppc-h2">Three booths. One full day of fun.</h2>
+<p class="ppc-p">Every package includes a custom digital backdrop and 100+ premade templates.</p>
+</div>
+<div class="ppc-cards">
+<article class="ppc-tier">
+<div class="ppc-ph t-sage ppc-r32"><span>Photo: kids crowding the Helio Sport</span></div>
+<div class="ppc-tier-body"><p class="ppc-eyebrow">Helio Sport · iPad camera</p><h3 class="ppc-h3" style="font-size: 28px">{selfServiceTiers[0].name}</h3><p class="ppc-p" style="font-size: 16px">A simple, fun booth for birthdays, showers and family parties.</p></div>
+<div class="ppc-tier-foot"><p class="ppc-price"><span>from</span><b>{money(selfServiceTiers[0].price)}</b><span>/ day</span></p><a class="ppc-btnp ppc-btn-sm" href={selfServiceTiers[0].href} data-source="card" data-booth="self">Check your date</a></div>
+</article>
+<article class="ppc-tier">
+<div class="ppc-ph t-lil ppc-r32"><span>Photo: friends posing at the Lumia M Pro</span></div>
+<div class="ppc-tier-body"><p class="ppc-eyebrow">Lumia M Pro · iPad + DSLR</p><h3 class="ppc-h3" style="font-size: 28px">{selfServiceTiers[1].name}</h3><p class="ppc-p" style="font-size: 16px">Pick it for the camera upgrade.</p></div>
+<div class="ppc-tier-foot"><p class="ppc-price"><span>from</span><b>{money(selfServiceTiers[1].price)}</b><span>/ day</span></p><a class="ppc-btng ppc-btn-sm" href={selfServiceTiers[1].href} data-source="card" data-booth="self">Check your date</a></div>
+</article>
+<article class="ppc-tier">
+<div class="ppc-ph t-sky ppc-r32"><span>Photo: guests watching the 37‑inch display</span></div>
+<div class="ppc-tier-body"><p class="ppc-eyebrow">Posh Pro · iPad + DSLR + display</p><h3 class="ppc-h3" style="font-size: 28px">{selfServiceTiers[2].name}</h3><p class="ppc-p" style="font-size: 16px">Pick it for branding, slideshows and signage.</p></div>
+<div class="ppc-tier-foot"><p class="ppc-price"><span>from</span><b>{money(selfServiceTiers[2].price)}</b><span>/ day</span></p><a class="ppc-btng ppc-btn-sm" href={selfServiceTiers[2].href} data-source="card" data-booth="self">Check your date</a></div>
+</article>
+</div>
+<div class="ppc-grid2" style="align-items: start">
+<div class="ppc-card ppc-stack" style="gap: 14px">
+<h3 class="ppc-h3">Included in every package</h3>
+<ul class="ppc-checks"><li>Unlimited digital photos and social sharing</li><li>Videos, GIFs and boomerangs</li><li>Custom digital backdrop</li><li>100+ premade templates</li><li>Digital album access</li></ul>
+</div>
+<div class="ppc-card ppc-stack" style="gap: 14px">
+<h3 class="ppc-h3">Add prints or a personal touch</h3>
+<table class="ppc-table" style="min-width: 0"><tbody>
+<tr><th scope="row">Printer</th><td class="num">{money(addons.printer)}</td></tr>
+<tr><th scope="row">Media kit (100 4×6 prints)</th><td class="num">{money(addons.mediaKit)}</td></tr>
+<tr><th scope="row">Custom template design</th><td class="num">{money(addons.customTemplate)}</td></tr>
+<tr><th scope="row">Physical backdrop</th><td class="num">{money(addons.backdrop)}</td></tr>
+</tbody></table>
+<p class="ppc-small">Example: Starter + printer + 100 prints comes to {money(selfServiceTiers[0].price + addons.printer + addons.mediaKit)} before delivery.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ppc-section" aria-labelledby="pickup-h">
+<div class="ppc-wrap ppc-split ppc-split-top">
+<div class="ppc-stack" style="gap: 20px">
+<h2 id="pickup-h" class="ppc-h2">Pick it up, or we’ll bring it</h2>
+<ol class="ppc-steps"><li>Check your date and pick a booth</li><li>Review your proposal and book</li><li>Pick up in Mira Loma, or add delivery</li></ol>
+<a class="ppc-btnp" style="align-self: flex-start" href={bookingLinks.self} data-source="section" data-booth="self">Check your date</a>
+</div>
+<div class="ppc-card ppc-stack" style="gap: 14px">
+<h3 class="ppc-h3">Pickup location</h3>
+<address style="font-style: normal; color: #3B3442; font-size: 18px">3827 Wacker Dr.<br>Mira Loma, CA 91752</address>
+<p class="ppc-p" style="font-size: 16px">Pickup and return times are set when you book. Office hours are Monday–Friday, 9 AM–5 PM Pacific; ask us about weekend handoffs.</p>
+<p class="ppc-p" style="font-size: 16px">Prefer delivery, setup and pickup? We’ll quote it in your proposal.</p>
+<a class="ppc-link" href="https://www.google.com/maps/search/?api=1&amp;query=3827+Wacker+Dr+Mira+Loma+CA+91752">Get directions</a>
+</div>
+</div>
+</section>
+
+<section class="ppc-section-sm ppc-white" aria-labelledby="fit-h">
+<div class="ppc-wrap ppc-stack-lg">
+<h2 id="fit-h" class="ppc-h2">Is self‑service right for your party?</h2>
+<div class="ppc-grid3">
+<div class="ppc-stack" style="gap: 8px"><h3 class="ppc-h3">Yes, if…</h3><p class="ppc-p">Someone’s happy to keep an eye on the booth — birthdays, showers, graduations and open houses.</p></div>
+<div class="ppc-stack" style="gap: 8px"><h3 class="ppc-h3">Want an attendant?</h3><p class="ppc-p">Full service adds delivery, a staff member and unlimited prints. <a href="/full-service-photo-booth-rental/" style="font-weight: 600">See full service</a></p></div>
+<div class="ppc-stack" style="gap: 8px"><h3 class="ppc-h3">Not near Mira Loma?</h3><p class="ppc-p">We ship a booth anywhere in the US, free both ways. <a href="/photo-booth-by-mail/" style="font-weight: 600">See booth by mail</a></p></div>
+</div>
+</div>
+</section>
+
+<section class="ppc-section" aria-labelledby="faq-h">
+<div class="ppc-wrap ppc-faqgrid">
+<div class="ppc-stack"><h2 id="faq-h" class="ppc-h2">Self‑service questions</h2><p class="ppc-p">Something else? <a href="tel:+19094037143" style="font-weight: 600" data-source="section" data-booth="self">Call or text (909) 403-7143</a>.</p></div>
+<FAQ items={faqs} bare />
+</div>
+</section>
+
+</RentalLayout>

@@ -1,0 +1,16 @@
+---
+import '../styles/redesign.css';
+import {business} from '../data/brand';
+import SiteHeader from '../components/redesign/SiteHeader.astro';
+import SiteFooter from '../components/redesign/SiteFooter.astro';
+import CtaBand from '../components/redesign/CtaBand.astro';
+import Breadcrumbs from '../components/redesign/Breadcrumbs.astro';
+interface Props {title:string;description:string;canonical?:string;image?:string;schema?:object|object[];breadcrumbs?:Array<{name:string;href?:string}>;ctaHeading?:string;ctaSub?:string;checkHref?:string;hideCta?:boolean;robots?:string}
+const {title,description,canonical=new URL(Astro.url.pathname,'https://photopartycity.com').href,image='',schema,breadcrumbs=[],ctaHeading,ctaSub,checkHref='/check-your-date/',hideCta=false,robots='index, follow'}=Astro.props;
+const json=(value:object)=>JSON.stringify(value).replace(/</g,'\\u003c');
+const socialImage=image ? new URL(image,'https://photopartycity.com').href : '';
+const breadcrumbSchema=breadcrumbs.length ? {'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:breadcrumbs.map((item,index)=>({'@type':'ListItem',position:index+1,name:item.name,item:new URL(item.href || Astro.url.pathname,'https://photopartycity.com').href}))} : undefined;
+---
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#54228b"/><title>{title}</title><meta name="description" content={description}/><meta name="robots" content={robots}/><link rel="canonical" href={canonical}/><link rel="icon" type="image/svg+xml" href="/favicon.svg"/><link rel="preload" href="/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin/><link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content="website"/><meta property="og:site_name" content="Photo Party City"/>{socialImage && <meta property="og:image" content={socialImage}/>}<meta name="twitter:card" content="summary_large_image"/><script type="application/ld+json" set:html={json(business)}></script>{schema && <script type="application/ld+json" set:html={json(schema)}></script>}{breadcrumbSchema && <script type="application/ld+json" set:html={json(breadcrumbSchema)}></script>}<slot name="head"/></head>
+<body class="ppc-page"><a href="#content" class="ppc-skip">Skip to content</a><SiteHeader checkHref={checkHref}/><main id="content" tabindex="-1">{breadcrumbs.length>0 && <Breadcrumbs trail={breadcrumbs}/>}<slot/></main>{!hideCta && <CtaBand heading={ctaHeading} sub={ctaSub}/>}<SiteFooter checkHref={checkHref}/><script>import '../scripts/tracking';</script></body></html>

@@ -1,0 +1,128 @@
+---
+import RentalLayout from '../layouts/RentalLayout.astro';
+import FAQ from '../components/redesign/FAQ.astro';
+import {fullServiceTiers,bookingLinks,addons,money,serviceSchema} from '../data/rentals';
+const title = "Photo Booth Rental With Prints | Inland Empire | From $695";
+const description = "Full-service photo booth rentals with prints and an attendant in the Inland Empire. Packages from $695. Compare coverage and check your event date.";
+const canonical = "https://photopartycity.com/full-service-photo-booth-rental/";
+const faqs = [
+  {question:"Are prints included, or is the printer extra?",answer:`Included. Unlimited prints during your booked hours are part of every full‑service package.`},
+  {question:"Can we personalize the print design?",answer:`Yes. Send names, date, colors or a logo; we’ll share the design for approval before your event.`},
+  {question:"Will someone stay with the booth?",answer:`Yes. An attendant runs the booth for your full booked time.`},
+  {question:"Is delivery included?",answer:`Delivery, setup and takedown are included in the package. Coverage within 45 miles of Mira Loma and any applicable travel or venue-related charges are confirmed in your proposal.`},
+  {question:"How much space and power do you need?",answer:`It depends on the booth and backdrop you choose. We confirm space, power and load‑in access with you or your venue before the event.`},
+  {question:"Does checking my date reserve it?",answer:`Not yet. Your date is reserved once you approve the proposal and book.`},
+];
+const schema = serviceSchema("Full service photo booth rental",canonical,fullServiceTiers);
+---
+<RentalLayout title={title} description={description} canonical={canonical} image="/media/f69b4b7237d721ff.webp" schema={schema} breadcrumbs={[{name:'Home',href:'/'},{name:'Ways to rent',href:'/photo-booth-packages/'},{name:"Full service"}]} checkHref={bookingLinks.full}>
+
+
+<section style="padding-block: 24px clamp(56px, 7vw, 96px)">
+<div class="ppc-wrap ppc-hero">
+<div class="ppc-stack" style="gap: 22px">
+<span class="ppc-tag">We bring it · Within 45 mi of Mira Loma</span>
+<h1 class="ppc-h1">Full‑service photo booth rental with prints.</h1>
+<p class="ppc-lead">We deliver, set up and run the booth. Your guests leave with prints, and you get the gallery.</p>
+<div class="ppc-row">
+<a class="ppc-btnp" href={bookingLinks.full} data-source="hero" data-booth="full">Check your date</a>
+<a class="ppc-link" href="tel:+19094037143" data-source="hero" data-booth="full">Call or text (909) 403-7143</a>
+</div>
+<ul class="ppc-checks ppc-checks-row"><li>3, 4 or 5 hours</li><li>Attendant on site</li><li>Unlimited prints</li></ul>
+</div>
+<div style="position: relative">
+<div class="ppc-ph ppc-r45" style="border-radius: 28px"><span>Photo: wedding guests laughing with the attendant</span></div>
+<div class="ppc-strip ppc-hidesm" style="position: absolute; left: -28px; bottom: 56px; transform: rotate(-5deg)" aria-hidden="true"><i></i><i></i><i></i><small>YOUR NAMES · YOUR DATE</small></div>
+</div>
+</div>
+</section>
+
+<section class="ppc-section-sm ppc-white" aria-label="What you get">
+<div class="ppc-wrap ppc-grid3">
+<div class="ppc-stack" style="gap: 8px"><h2 class="ppc-h3">We run the booth</h2><p class="ppc-p">An attendant guides guests, keeps props moving and handles the printer.</p></div>
+<div class="ppc-stack" style="gap: 8px"><h2 class="ppc-h3">They keep the memories</h2><p class="ppc-p">Every guest walks away with a print designed for your event.</p></div>
+<div class="ppc-stack" style="gap: 8px"><h2 class="ppc-h3">You get the gallery</h2><p class="ppc-p">Digital copies of every photo in a 30‑day online gallery.</p></div>
+</div>
+</section>
+
+<section id="packages" class="ppc-section">
+<div class="ppc-wrap ppc-stack-lg">
+<div class="ppc-stack" style="gap: 12px">
+<h2 class="ppc-h2">Choose your hours</h2>
+<p class="ppc-p">Same full experience in every package. Longer packages also step up the booth.</p>
+</div>
+<div class="ppc-cards">
+<article class="ppc-tier">
+<div class="ppc-ph t-lav ppc-r32"><span>Photo: birthday guests at the Helio Sport</span></div>
+<div class="ppc-tier-body"><p class="ppc-eyebrow">3 hours · Helio Sport</p><h3 class="ppc-h3" style="font-size: 28px">{fullServiceTiers[0].name}</h3><p class="ppc-p" style="font-size: 16px">A focused window of photo booth fun.</p></div>
+<div class="ppc-tier-foot"><p class="ppc-price"><span>from</span><b>{money(fullServiceTiers[0].price)}</b></p><a class="ppc-btng ppc-btn-sm" href={fullServiceTiers[0].href} data-source="card" data-booth="full">Check your date</a></div>
+</article>
+<article class="ppc-tier is-feature">
+<span class="ppc-badge">Most popular</span>
+<div class="ppc-ph t-blush ppc-r32"><span>Photo: reception guests at the Lumia M Pro</span></div>
+<div class="ppc-tier-body"><p class="ppc-eyebrow">4 hours · Lumia M Pro</p><h3 class="ppc-h3" style="font-size: 28px">{fullServiceTiers[1].name}</h3><p class="ppc-p" style="font-size: 16px">More time and a DSLR camera for sharper prints.</p></div>
+<div class="ppc-tier-foot"><p class="ppc-price"><span>from</span><b>{money(fullServiceTiers[1].price)}</b></p><a class="ppc-btnp ppc-btn-sm" href={fullServiceTiers[1].href} data-source="card" data-booth="full">Check your date</a></div>
+</article>
+<article class="ppc-tier">
+<div class="ppc-ph t-gold ppc-r32"><span>Photo: guests in front of the Posh Pro display</span></div>
+<div class="ppc-tier-body"><p class="ppc-eyebrow">5 hours · Posh Pro</p><h3 class="ppc-h3" style="font-size: 28px">{fullServiceTiers[2].name}</h3><p class="ppc-p" style="font-size: 16px">Extended coverage plus a 37‑inch display for slideshows.</p></div>
+<div class="ppc-tier-foot"><p class="ppc-price"><span>from</span><b>{money(fullServiceTiers[2].price)}</b></p><a class="ppc-btng ppc-btn-sm" href={fullServiceTiers[2].href} data-source="card" data-booth="full">Check your date</a></div>
+</article>
+</div>
+<div class="ppc-card ppc-split ppc-split-top" style="gap: 32px">
+<div class="ppc-stack" style="gap: 8px"><h3 class="ppc-h3">Every package includes</h3><p class="ppc-small">Extra hours are {money(addons.extraHour)} each, subject to availability.</p></div>
+<ul class="ppc-checks" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 10px 24px"><li>Delivery, setup and takedown</li><li>On‑site attendant</li><li>Unlimited prints</li><li>Personalized photo design</li><li>Backdrop and props</li><li>30‑day online gallery</li></ul>
+</div>
+</div>
+</section>
+
+<section class="ppc-section ppc-band" aria-labelledby="prints-h">
+<div class="ppc-wrap ppc-split">
+<div class="ppc-stack" style="gap: 18px">
+<h2 id="prints-h" class="ppc-h2">A party favor with your guests in the picture.</h2>
+<p class="ppc-p">We design the print around your event, then print as many as your guests want during booth time.</p>
+<ul class="ppc-checks"><li>3‑ or 4‑photo layouts</li><li>Portrait, landscape or strips</li><li>Your names, date, colors or logo</li><li>Digital copies of every print</li></ul>
+</div>
+<div style="display: flex; justify-content: center; gap: 20px; padding: 32px; border-radius: 28px; background: #FFFFFF" role="img" aria-label="Sample print strips placeholder">
+<div class="ppc-strip" style="transform: rotate(-4deg); width: 132px"><i></i><i></i><i></i><small>YOUR NAMES · YOUR DATE</small></div>
+<div class="ppc-strip" style="transform: rotate(3deg); width: 132px; margin-top: 28px"><i style="background: #F3E6CF"></i><i style="background: #E9E1F2"></i><i style="background: #DDE6EF"></i><small>YOUR EVENT LOGO</small></div>
+</div>
+</div>
+</section>
+
+<section class="ppc-section" aria-labelledby="occ-h">
+<div class="ppc-wrap ppc-stack-lg">
+<h2 id="occ-h" class="ppc-h2">Made for the big moments</h2>
+<div class="ppc-grid3">
+<a class="ppc-tile ppc-stack" href="/wedding-photo-booth-rental/" style="gap: 12px; text-decoration: none; color: #1F1A24"><div class="ppc-ph ppc-tileimg ppc-r43"><span>Photo: newlyweds and friends</span></div><span class="ppc-h3" style="display: flex; justify-content: space-between">Weddings <span class="ppc-arrow" aria-hidden="true">→</span></span><span class="ppc-small">Prints that match your colors, timed around the reception.</span></a>
+<a class="ppc-tile ppc-stack" href="/corporate-photo-booth-rental/" style="gap: 12px; text-decoration: none; color: #1F1A24"><div class="ppc-ph t-lav ppc-tileimg ppc-r43"><span>Photo: coworkers at a holiday party</span></div><span class="ppc-h3" style="display: flex; justify-content: space-between">Corporate <span class="ppc-arrow" aria-hidden="true">→</span></span><span class="ppc-small">Your logo on every print.</span></a>
+<a class="ppc-tile ppc-stack" href="/self-service-photo-booth-rental/" style="gap: 12px; text-decoration: none; color: #1F1A24"><div class="ppc-ph t-blush ppc-tileimg ppc-r43"><span>Photo: family at a 50th birthday</span></div><span class="ppc-h3" style="display: flex; justify-content: space-between">Birthdays &amp; milestones <span class="ppc-arrow" aria-hidden="true">→</span></span><span class="ppc-small">Birthdays, graduations, anniversaries.</span></a>
+</div>
+</div>
+</section>
+
+<section class="ppc-section ppc-white" aria-labelledby="steps-h">
+<div class="ppc-wrap ppc-split ppc-split-top">
+<div class="ppc-stack" style="gap: 20px">
+<h2 id="steps-h" class="ppc-h2">How it works</h2>
+<ol class="ppc-steps"><li>Check your date</li><li>Approve your proposal and design</li><li>We arrive, set up and run it</li></ol>
+<a class="ppc-btnp" style="align-self: flex-start" href={bookingLinks.full} data-source="section" data-booth="full">Check your date</a>
+</div>
+<div class="ppc-stack" style="gap: 16px">
+<h3 class="ppc-h3">Within 45 miles of Mira Loma</h3>
+<ul class="ppc-chips">
+<li style="padding: 0; background: none"><a href="/photo-booth-rental-riverside/">Riverside</a></li><li style="padding: 0; background: none"><a href="/photo-booth-rental-ontario/">Ontario</a></li><li style="padding: 0; background: none"><a href="/photo-booth-rental-fontana/">Fontana</a></li><li style="padding: 0; background: none"><a href="/photo-booth-rental-corona/">Corona</a></li><li style="padding: 0; background: none"><a href="/photo-booth-rental-rancho-cucamonga/">Rancho Cucamonga</a></li><li style="padding: 0; background: none"><a href="/photo-booth-rental-san-bernardino/">San Bernardino</a></li><li style="padding: 0; background: none"><a href="/photo-booth-rental-eastvale/">Eastvale</a></li><li style="padding: 0; background: none"><a href="/photo-booth-rental-chino/">Chino</a></li>
+</ul>
+<p class="ppc-callout" style="margin: 0"><strong>Farther away?</strong> <a href="/photo-booth-by-mail/" style="font-weight: 600">We ship a booth anywhere in the US.</a></p>
+</div>
+</div>
+</section>
+
+<section class="ppc-section" aria-labelledby="faq-h">
+<div class="ppc-wrap ppc-faqgrid">
+<div class="ppc-stack"><h2 id="faq-h" class="ppc-h2">Full‑service questions</h2><p class="ppc-p">Something else? <a href="tel:+19094037143" style="font-weight: 600" data-source="section" data-booth="full">Call or text (909) 403-7143</a>.</p></div>
+<FAQ items={faqs} bare />
+</div>
+</section>
+
+</RentalLayout>

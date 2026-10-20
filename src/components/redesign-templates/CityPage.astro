@@ -1,0 +1,83 @@
+---
+import RentalLayout from '../../layouts/RentalLayout.astro';
+import Photo from '../redesign/Photo.astro';
+import FAQ from '../redesign/FAQ.astro';
+import {findCity, cityPath} from '../../data/cities';
+import {bookingLinks, fullServiceTiers, selfServiceTiers, money, rentalCopy, serviceSchema} from '../../data/rentals';
+interface Props {page: {slug:string;title:string;name:string;description:string;canonical:string;schema?:any}}
+const {page}=Astro.props;
+const city=findCity(page.slug);
+if (!city) throw new Error(`Missing city rental data: ${page.slug}`);
+const text=(value:string)=>value.replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ');
+const oldFaq=page.schema?.['@graph']?.find((node:any)=>node['@type']==='FAQPage');
+const faqs=(oldFaq?.mainEntity || []).map((item:any)=>({question:item.name,answer:rentalCopy(text(item.acceptedAnswer.text))}));
+const options=[
+  {name:'We bring it',title:'Full service with prints',tier:fullServiceTiers[0],href:bookingLinks.full,detail:'An attendant runs the booth while you enjoy the event. Personalized prints, backdrop, props, delivery, setup, and takedown are included.',link:'/full-service-photo-booth-rental/',label:'Explore full service',image:'/media/1db5b1de66a843ce.webp',alt:'Event guests posing together with photo booth props'},
+  {name:'You pick it up',title:'24-hour self-service',tier:selfServiceTiers[0],href:bookingLinks.self,detail:'Pick up in Mira Loma and let a designated helper run the booth. Digital photos and sharing are included; printing, a physical backdrop, and delivery are optional.',link:'/self-service-photo-booth-rental/',label:'Explore self-service',image:'/media/f8545184ac481dfe.webp',alt:'A wedding couple holding Mr. and Mrs. photo props'},
+];
+const schema={...serviceSchema(`Photo booth rental in ${city.name}`,page.canonical,[fullServiceTiers[0],selfServiceTiers[0]]),areaServed:{'@type':'City',name:city.name,address:{'@type':'PostalAddress',addressRegion:'CA',addressCountry:'US'}}};
+---
+<RentalLayout title={page.title} description={page.description} canonical={page.canonical} schema={schema} breadcrumbs={[{name:'Home',href:'/'},{name:city.name}]} ctaHeading={`Let’s plan your ${city.name} photo booth.`}>
+  <section class="ppc-city-hero">
+    <div class="ppc-wrap ppc-hero">
+      <div class="ppc-stack" style="gap:22px">
+        <p class="ppc-eyebrow">Your people. Your celebration.</p>
+        <h1 class="ppc-h1">Photo booth rental in {city.name}.</h1>
+        <p class="ppc-lead">From a wedding reception to a party with your favorite people, choose a booth that fits. Full service with prints, or a digital rental you run yourself.</p>
+        <form class="ppc-form ppc-formcard" action="/check-your-date/" method="get" aria-label={`Check your ${city.name} event date`}>
+          <div class="ppc-fields">
+            <div class="ppc-field"><label for="city-date">Event date</label><input class="ppc-input" id="city-date" type="date" name="date" required /></div>
+            <div class="ppc-field"><label for="city-zip">Event ZIP code</label><input class="ppc-input" id="city-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5" placeholder={`e.g. ${city.zip}`} required /></div>
+          </div>
+          <button class="ppc-btnp" type="submit">Check your date</button>
+          <p class="ppc-small">Based in Mira Loma. Coverage is confirmed for your exact event address.</p>
+        </form>
+        <a class="ppc-link" href="tel:+19094037143">Call or text (909) 403-7143</a>
+      </div>
+      <Photo src="/media/1db5b1de66a843ce.webp" alt="Guests making memories together with photo booth props" label="Guests making memories together" ratio="4/5" loading="eager" fetchpriority="high" width={700} height={450} />
+    </div>
+  </section>
+
+  <section class="ppc-section ppc-white" aria-labelledby="city-rentals">
+    <div class="ppc-wrap ppc-stack-lg">
+      <div class="ppc-stack"><p class="ppc-eyebrow">Two ways to make it yours</p><h2 class="ppc-h2" id="city-rentals">A little less planning.<br />A lot more fun.</h2><p class="ppc-p">Choose the support you want. Every proposal confirms the final arrangements, extras, and any applicable travel or venue charges.</p></div>
+      <div class="ppc-grid2">
+        {options.map(option=><article class="ppc-card ppc-stack ppc-city-option">
+          <Photo src={option.image} label={option.alt} alt={option.alt} ratio="3/2" />
+          <p class="ppc-eyebrow">{option.name}</p>
+          <h3 class="ppc-h3">{option.title}</h3>
+          <p class="ppc-p">{option.detail}</p>
+          <p class="ppc-price"><b>From {money(option.tier.price)}</b><span>/ {option.tier.hours} hours</span></p>
+          <div class="ppc-row"><a class="ppc-btnp ppc-btn-sm" href={option.href}>Check your date</a><a class="ppc-link" href={option.link}>{option.label} →</a></div>
+        </article>)}
+      </div>
+      <a class="ppc-link" href="/photo-booth-packages/">Compare every package and inclusion →</a>
+    </div>
+  </section>
+
+  <section class="ppc-section" aria-labelledby="city-planning">
+    <div class="ppc-wrap ppc-stack-lg">
+      <div class="ppc-stack"><p class="ppc-eyebrow">A few details make the difference</p><h2 class="ppc-h2" id="city-planning">Planning your {city.name} event.</h2></div>
+      <div class="ppc-grid3">{city.planning.map((paragraph,index)=><article class="ppc-stack"><h3 class="ppc-h3">{city.planningTitles[index]}</h3><p class="ppc-p">{paragraph}</p></article>)}</div>
+    </div>
+  </section>
+
+  <section class="ppc-section ppc-band" aria-labelledby="city-venue">
+    <div class="ppc-wrap ppc-split ppc-split-top">
+      <div class="ppc-stack"><p class="ppc-eyebrow">Before the first photo</p><h2 class="ppc-h2" id="city-venue">Make room for the good times.</h2><p class="ppc-p">{city.venue}</p><a class="ppc-link" href={city.officialUrl} target="_blank" rel="noopener noreferrer">Official {city.name} information ↗</a></div>
+      <div class="ppc-card ppc-stack"><h3 class="ppc-h3">Send us the practical details.</h3><ul class="ppc-checks"><li>The full venue address and room</li><li>Approved booth position and room for a queue</li><li>Loading route, power, and internet details</li><li>Setup and removal windows</li><li>Any required vendor documentation</li></ul><p class="ppc-small">Our team reviews these with your selected equipment before confirming the rental.</p><a class="ppc-link" href="/check-your-date/">Check your date →</a></div>
+    </div>
+  </section>
+
+  <section class="ppc-section-sm" aria-labelledby="nearby-cities">
+    <div class="ppc-wrap ppc-stack"><h2 class="ppc-h3" id="nearby-cities">Celebrating nearby?</h2><div class="ppc-chips">{city.nearby.map(slug=><a href={cityPath(slug)}>{findCity(slug)?.name}</a>)}</div><p class="ppc-small">Local rentals serve event addresses within 45 miles of Mira Loma, subject to confirmation. <a href="/photo-booth-by-mail/">Planning farther away? We ship nationwide.</a></p></div>
+  </section>
+  {faqs.length>0 && <FAQ items={faqs} heading={`${city.name}, meet your photo booth.`} />}
+</RentalLayout>
+
+<style>
+  .ppc-city-hero{padding-block:24px clamp(56px,7vw,96px)}
+  .ppc-city-option{gap:18px}
+  .ppc-city-option .ppc-row{margin-top:auto}
+  .ppc-city-option .ppc-price{flex-wrap:wrap}
+</style>

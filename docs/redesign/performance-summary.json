@@ -1,0 +1,25 @@
+{
+  "tested": "2026-10-20",
+  "url": "http://127.0.0.1:4323/",
+  "mode": "Lighthouse mobile lab run against local production build; not field data",
+  "scores": {
+    "performance": 98,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "largest-contentful-paint": {
+      "value": 2331.8388,
+      "display": "2.3\u00a0s"
+    },
+    "cumulative-layout-shift": {
+      "value": 0,
+      "display": "0"
+    },
+    "total-blocking-time": {
+      "value": 0,
+      "display": "0\u00a0ms"
+    }
+  }
+}

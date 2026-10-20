@@ -1,0 +1,12 @@
+---
+interface Props { items:Array<{question:string;answer:string}>; heading?:string; bare?:boolean }
+const {items,heading='A few things you might be wondering.',bare=false}=Astro.props;
+const schema={'@context':'https://schema.org','@type':'FAQPage',mainEntity:items.map(({question,answer})=>({'@type':'Question',name:question,acceptedAnswer:{'@type':'Answer',text:answer}}))};
+---
+{bare ? <div class="ppc-faqlist">{items.map((item,index)=><details class="ppc-faq" open={index===0}><summary class="ppc-q">{item.question}</summary><p class="ppc-a">{item.answer}</p></details>)}</div> : <section class="ppc-section ppc-faq-section" id="faq" aria-labelledby="faq-heading">
+  <div class="ppc-wrap ppc-faqgrid">
+    <div class="ppc-stack"><p class="ppc-eyebrow">Good questions</p><h2 class="ppc-h2" id="faq-heading">{heading}</h2><p class="ppc-p">Need a hand planning? We’re happy to talk through your event.</p><a href="tel:+19094037143" class="ppc-link">Call or text (909) 403-7143</a></div>
+    <div class="ppc-faqlist">{items.map((item,index)=><details class="ppc-faq" open={index===0}><summary class="ppc-q">{item.question}</summary><p class="ppc-a">{item.answer}</p></details>)}</div>
+  </div>
+</section>}
+<script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\\u003c')}></script>

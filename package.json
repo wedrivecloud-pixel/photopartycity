@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "test": "node scripts/verify.mjs"
+    "test": "node scripts/verify-booking.mjs && node scripts/verify.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",

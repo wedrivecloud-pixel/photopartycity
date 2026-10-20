@@ -1,0 +1,37 @@
+---
+import RentalLayout from '../../layouts/RentalLayout.astro';
+import Photo from '../redesign/Photo.astro';
+import pages from '../../data/pages.json';
+interface Props {page: {slug:string;name:string;title:string;description:string;canonical?:string;content:string;schema?:Record<string,unknown>}}
+const {page}=Astro.props;
+const isBenefits=page.slug==='photobooth-event-benefits';
+const isTypes=page.slug==='2-photo-booth-rental-packages-you-can-get-right-now' || page.slug==='types-of-photo-booths';
+const isOwnerGuide=['how-to-build-a-profitable-photo-booth-business','unlocking-success'].includes(page.slug);
+const name=isBenefits ? '5 reasons to bring a photo booth to your event.' : isTypes ? '5 types of photo booths: find your event’s fit.' : page.slug==='unlocking-success' ? 'Finding corporate events for your photo booth business.' : 'Building a photo booth business, one step at a time.';
+const title=isBenefits ? '5 Reasons to Have a Photo Booth at Your Event | Photo Party City' : page.title;
+const canonical=isTypes ? 'https://photopartycity.com/types-of-photo-booths/' : page.canonical;
+let content=page.content.replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/gi,'').replace(/<p>\s*(?:Introduction:|Conclusion:)\s*<\/p>/gi,'').replace(/<p><strong>Introduction<\/strong><\/p>/gi,'');
+content=content.replace(/https:\/\/photopartycity\.pages\.dev/g,'').replace(/\bTop 10 Reasons\b/g,'5 Reasons');
+if(isTypes){let number=0;content=content.replace(/<ol>\s*<li>([^<]+)<\/li>\s*<\/ol>/g,(_match,heading)=>`<h2>${++number}. ${heading.replace(/:$/,'')}</h2>`);}
+if(isBenefits){content=content.replace(/<p><strong>(\d\. [\s\S]*?)<\/strong><\/p>/g,'<h2>$1</h2>').replace(/<p><strong>Final Thoughts<\/strong><\/p>/g,'<h2>Plan for the experience you want</h2>').replace('guarantees your celebration will be remembered for years to come','gives guests another way to enjoy the celebration and take a memory home').replace('High-resolution cameras, quality prints, and perfect lighting make every shot look premium.','Choose the camera, printing option and lighting setup that fit your event.');}
+const allPosts=pages.filter(item=>item.type==='post');
+const postName=(slug:string,original:string)=>slug==='photobooth-event-benefits' ? '5 reasons to have a photo booth at your event' : slug==='2-photo-booth-rental-packages-you-can-get-right-now' ? '5 types of photo booths for your event' : original;
+const postHref=(slug:string,path:string)=>slug==='2-photo-booth-rental-packages-you-can-get-right-now' ? '/types-of-photo-booths/' : path;
+const related=allPosts.filter(item=>item.slug!==page.slug && !(isTypes && item.slug==='2-photo-booth-rental-packages-you-can-get-right-now')).slice(0,2);
+const graph=page.schema && Array.isArray(page.schema['@graph']) ? page.schema['@graph'] as Record<string,unknown>[] : [];
+const originalArticle=graph.find(item=>item['@type']==='Article');
+const articleSchema={'@context':'https://schema.org','@type':'Article',headline:name.replace(/\.$/,''),description:page.description,mainEntityOfPage:canonical || `https://photopartycity.com/${page.slug}/`,publisher:{'@id':'https://photopartycity.com/#localbusiness'},...(originalArticle?.datePublished ? {datePublished:originalArticle.datePublished} : {}),...(originalArticle?.dateModified ? {dateModified:originalArticle.dateModified} : {})};
+---
+<RentalLayout title={title} description={page.description} canonical={canonical} schema={articleSchema} breadcrumbs={[{name:'Home',href:'/'},{name:'Blog',href:'/blog/'},{name:isBenefits ? '5 reasons to have a photo booth' : isTypes ? '5 types of photo booths' : page.name}]} ctaHeading="Good ideas deserve a great photo moment.">
+  <header class="ppc-section-sm"><div class="ppc-wrap ppc-narrow ppc-stack"><p class="ppc-eyebrow">{isOwnerGuide ? 'For booth owners' : 'Ideas for your next event'}</p><h1 class="ppc-h1">{name}</h1><p class="ppc-lead">{page.description}</p><div class="ppc-row"><a class="ppc-btnp" href="/check-your-date/">Check your date</a><a class="ppc-link" href="tel:+19094037143">Call or text (909) 403-7143</a></div></div></header>
+  <article class="ppc-section-sm ppc-white"><div class="ppc-wrap ppc-narrow ppc-stack-lg">
+    <Photo label={isOwnerGuide ? 'An event host helping guests enjoy their photo booth' : isTypes ? 'Friends enjoying an open-air photo booth at an event' : 'Guests laughing together and holding their printed photo strips'} ratio="16/9" tone={isTypes ? 'sage' : 'blush'}/>
+    {isOwnerGuide && <aside class="ppc-callout"><p class="ppc-p">This article is for photo booth business owners. Planning a celebration instead? <a class="ppc-link" href="/photo-booth-packages/">Compare rental packages →</a></p></aside>}
+    <div class="ppc-prose" set:html={content}></div>
+    <aside class="ppc-callout ppc-stack"><h2 class="ppc-h3">Bring the idea to your event.</h2><p class="ppc-p">Choose a <a href="/full-service-photo-booth-rental/">full-service booth with prints</a>, manage a <a href="/self-service-photo-booth-rental/">24-hour self-service rental</a>, or have a <a href="/photo-booth-by-mail/">booth shipped to your door</a>. Compare the equipment and inclusions before deciding.</p><a class="ppc-link" href="/photo-booth-packages/">Find your rental package →</a></aside>
+  </div></article>
+  <section class="ppc-section"><div class="ppc-wrap ppc-stack-lg"><div class="ppc-row ppc-related-heading"><h2 class="ppc-h2">A little more inspiration.</h2><a class="ppc-link" href="/blog/">All articles →</a></div><div class="ppc-grid2">{related.map(item=><article class="ppc-card ppc-stack"><p class="ppc-eyebrow">{['unlocking-success','how-to-build-a-profitable-photo-booth-business'].includes(item.slug) ? 'For booth owners' : 'Event planning'}</p><h3 class="ppc-h3"><a href={postHref(item.slug,item.path)}>{postName(item.slug,item.name)}</a></h3><p class="ppc-p">{item.description}</p><a class="ppc-link" href={postHref(item.slug,item.path)}>Read the article →</a></article>)}</div></div></section>
+</RentalLayout>
+<style>
+ .ppc-related-heading{justify-content:space-between}.ppc-card h3 a{color:var(--ink);text-decoration:none}.ppc-card h3 a:hover{color:var(--accent)}.ppc-callout p a{color:var(--accent);font-weight:600;text-underline-offset:3px}.ppc-prose :global(section){margin:0}.ppc-prose :global(.widget){margin:0}.ppc-prose :global(li){padding-left:0}.ppc-prose :global(p:first-child){margin-top:0}
+</style>

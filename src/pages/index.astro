@@ -1,97 +1,33 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import HeroSection from '../components/sections/landing/HeroSection.astro';
-import PrimaryCTA from '../components/ui/buttons/PrimaryCTA.astro';
-import pages from '../data/pages.json';
-import {booking,cities} from '../data/brand';
-const page=pages.find(p=>p.path==='/')!;
-const packages=[
- {name:'Self-service',model:'Helio Sport · Lumia M Pro · Posh Pro',price:'$199',term:' / 24 hours',image:'/media/4d78463118d22d39.webp',url:'/self-service-photo-booth-rental/',features:['Unlimited digital photos & sharing','Videos, GIFs, boomerangs & album access','Starter $199 · Showbiz $350 · Hollywood $525','Printing & physical backdrop are optional']},
- {name:'Full service with prints',model:'An attendant. Printed keepsakes. All the fun.',price:'$695',term:' / 3 hours',image:'/media/e710c0e8fbf19291.webp',url:'/full-service-photo-booth-rental/',features:['Professional on-site attendant','Unlimited prints, personalized photo design','Backdrop, guest props & 30-day gallery','Silver $695 · Gold $895 · Platinum $1,095']},
- {name:'360 video booth',model:'A whole new angle on your celebration.',price:'$300',term:' / 2 hours self-service',image:'/media/0a778edc2fc58d57.webp',url:'/360-photo-booth-rental/',features:['Rotating camera arm & video capture','Custom template & video sharing','Full service: $450 / $600 / $750','Self-service: $300 / $400 / $550']},
+import RentalLayout from '../layouts/RentalLayout.astro';
+import Photo from '../components/redesign/Photo.astro';
+import FAQ from '../components/redesign/FAQ.astro';
+import WaysToRent from '../components/redesign/WaysToRent.astro';
+import CheckDateForm from '../components/redesign/CheckDateForm.astro';
+import {cities} from '../data/brand';
+const faqs=[
+ {question:'Do you serve my event location?',answer:'Staffed booths and pickup rentals are available within 45 miles of Mira Loma, California, subject to your exact address. Booth by mail is available across the continental United States. Enter your date and ZIP to explore your options.'},
+ {question:'What’s the difference between full service and self-service?',answer:'Full service includes an attendant, printing, delivery, setup and takedown during your booked hours. With self-service, you pick up the booth in Mira Loma and operate it for your 24-hour rental. Printing is an optional extra.'},
+ {question:'How does booth by mail work?',answer:'We ship a portable booth before your event. Follow the included setup guide, enjoy your celebration, then pack everything in the case and drop it off with the provided UPS return label on the first business day after your event.'},
+ {question:'Does checking my date confirm a reservation?',answer:'Checking your date starts the booking process. Availability, delivery arrangements, extras and the final total are confirmed in your proposal. Complete the required booking steps to reserve your booth.'},
 ];
-const testimonials=[{name:'Sarah',text:'The Lumia Photobooth was the star of our wedding reception! Our guests couldn’t get enough of it, and the instant prints made for fantastic party favors.'},{name:'John Andrews',text:'The 360 Photobooth took our corporate event to the next level. The interactive experience wowed our clients, and we received so much positive feedback. Highly recommended!'},{name:'Emily Parker',text:'Photo Party City’s prompt service and quality photobooth accessories made my birthday bash unforgettable. The props and backdrops added so much fun to the evening!'}];
+const events=[{name:'Weddings',label:'Photo: wedding guests showing their photo strips',href:'/wedding-photo-booth-rental/',tone:'blush'},{name:'Corporate events',label:'Photo: colleagues celebrating together at a company event',href:'/corporate-photo-booth-rental/',tone:'sky'},{name:'Birthdays',label:'Photo: friends celebrating a birthday at the photo booth',href:'/self-service-photo-booth-rental/',tone:'gold'},{name:'Quinceañeras',label:'Photo: a quinceañera celebration with family and friends',href:'/full-service-photo-booth-rental/',tone:'lav'},{name:'Graduations',label:'Photo: graduates celebrating with photo keepsakes',href:'/self-service-photo-booth-rental/',tone:'sage'},{name:'School events',label:'Photo: students enjoying a school celebration',href:'/self-service-photo-booth-rental/',tone:'lil'}];
 ---
-<Layout {...page}>
-<div class="hero-wrap"><HeroSection title='Photo Booth Rentals in Mira Loma &amp; the <em>Inland Empire.</em>' subTitle="Make your wedding, corporate event, or party more memorable with an attended photo booth or a flexible self-service rental. Serving event locations within 45 miles of Mira Loma, California." primaryBtn="Check availability" primaryBtnURL={booking} secondaryBtn="Packages & pricing" secondaryBtnURL="/photo-booth-packages/" src="/media/b2848fa71ec3ac2c.webp" alt="Photo Party City photo booth experience" note="24-hour digital rentals from $199 · Attended packages with prints from $695"/></div>
-<div class="trust-strip"><span>WEDDINGS</span><span>BIRTHDAYS & MILESTONES</span><span>CORPORATE CELEBRATIONS</span><span>SCHOOL & COMMUNITY EVENTS</span></div>
-<section class="section" id="services"><div class="section-intro"><p class="eyebrow">YOUR PARTY. YOUR PACE.</p><h2>Choose your photo booth experience.</h2><p>Want an attendant and printed keepsakes, or prefer a flexible rental? Choose the experience that fits your event.</p></div><div class="cards">{packages.map(p=><article class="experience"><img src={p.image} alt={p.name+' photo booth'} width="480" height="540" loading="lazy" decoding="async"/><div class="experience-content"><p class="eyebrow">{p.model}</p><h3>{p.name}</h3><p class="price">From {p.price}<small>{p.term}</small></p><ul>{p.features.map(f=><li>{f}</li>)}</ul><PrimaryCTA title="Explore this experience" url={p.url}/></div></article>)}</div><p>Self-service pickup and return are at our Mira Loma location. Delivery, setup, and collection are available for an additional charge. Your proposal confirms availability and final charges. 360 rates cover two, three, or four hours.</p></section>
-<div class="section-tint"><section class="section"><div class="section-intro"><p class="eyebrow">HOW BOOKING WORKS</p><h2>Three steps to a great party.</h2><p>Send your event details, review your proposal, and reserve your date once availability is confirmed.</p></div><div class="steps">{[{name:'Tell us about your event',text:'Choose a package and send your date, location, and event type. Unsure which booth to choose? Ask us for help.'},{name:'Review your proposal',text:'Review rental duration, included features, upgrades, and delivery or travel charges before reserving.'},{name:'Reserve & celebrate',text:'Confirm your reservation and follow the setup or pickup arrangements for your selected package.'}].map((s,i)=><article><span class="step-number">0{i+1}</span><h3>{s.name}</h3><p>{s.text}</p></article>)}</div></section></div>
-<section class="section" id="Reviews"><div class="section-intro"><p class="eyebrow">WHAT OUR CUSTOMERS SAY</p><h2>Good times. Happy guests.</h2><p>Experiences shared by Photo Party City clients.</p></div><div class="testimonials">{testimonials.map(t=><figure><span class="quote-mark" aria-hidden="true">“</span><blockquote>{t.text}</blockquote><figcaption>{t.name}</figcaption></figure>)}</div></section>
-<div class="section-tint"><section class="section area"><div><p class="eyebrow">YOUR LOCAL RENTAL TEAM</p><h2>From Mira Loma, with a little party magic.</h2><p>We serve events within a 45-mile radius of Mira Loma, California. Coverage is confirmed for your exact venue address.</p><div class="city-links">{cities.map(c=><a href={`/photo-booth-rental-${c.toLowerCase().replaceAll(' ','-')}/`}>{c}</a>)}</div><p>Our booths are built by <a href="https://www.ataphotobooths.com/">ATA Photobooths</a>, a California-based manufacturer.</p><a href="/about-photo-party-city/">Meet Photo Party City →</a></div><div class="area-badge"><p class="eyebrow">BASED IN MIRA LOMA, CALIFORNIA</p><strong>45</strong><p>Miles of celebrations.<br/>3827 Wacker Dr. · Mira Loma, CA 91752</p></div></section></div>
-<section class="section"><div class="section-intro"><p class="eyebrow">GOOD TO KNOW</p><h2>A few party-planning answers.</h2></div><details class="faq"><summary>Can you deliver the photo booth?</summary><p>Yes. Delivery, setup, and collection can be arranged for an additional charge. Pricing depends on your event location and requirements and is confirmed in your proposal.</p></details><details class="faq"><summary>What is included with self-service?</summary><p>Choose a 24-hour Starter ($199), Showbiz ($350), or Hollywood ($525) rental. Unlimited digital photos, sharing, videos, GIFs, boomerangs, digital album access, a custom digital backdrop, and 100+ premade templates are included. Printing and a physical backdrop are optional.</p></details><details class="faq"><summary>What is included with full service?</summary><p>Silver is $695 for three hours, Gold $895 for four hours, and Platinum $1,095 for five hours. Each includes an attendant, unlimited prints, personalized photo design, backdrop, props, digital copies, and a 30-day gallery. Additional hours are $150, subject to availability.</p></details></section>
-<section class="section"><details><summary>More from Photo Party City: events, photos, and rental details</summary><div class="content" set:html={page.content}></div></details></section>
-</Layout>
-
+<RentalLayout title="Photo Booth Rentals in Mira Loma & Nationwide | Photo Party City" description="Staffed photo booths near Mira Loma, California, easy pickup rentals, and booths shipped across the continental US. Find the right booth for your celebration." checkHref="#check" ctaHeading="Your date. Your people. Let’s make memories.">
+ <section class="home-hero ppc-section-sm" id="check"><div class="ppc-wrap ppc-hero">
+  <div class="ppc-stack" style="gap:26px"><p class="ppc-eyebrow">Good times. Great photos. Your kind of party.</p><h1 class="ppc-h1">The party’s better<br/>with a photo booth.</h1><p class="ppc-lead">We bring the booth near Mira Loma. You pick it up. Or we ship it to your door. However you celebrate, make room for the memories.</p><CheckDateForm id="home" home/><a class="ppc-link" href="tel:+19094037143" data-source="hero">Call or text (909) 403-7143</a></div>
+  <div class="home-photo-composition"><Photo label="Friends celebrating together" src="/media/2e95e775cef6987a.webp" alt="Four smiling guests holding Team Bride, BFFs and Party Animal photo props" width={600} height={400} loading="eager" fetchpriority="high" tone="lav" ratio="3/2"/><span class="home-photo-note">Your people.<br/>Their moment.</span><div class="ppc-strip home-strip" aria-hidden="true"><i></i><i></i><i></i><small>PHOTO PARTY CITY</small></div><span class="home-photo-sticker">Let’s make<br/>some memories.</span></div>
+ </div></section>
+ <section class="home-trust-strip" aria-label="Made for your celebration"><div class="ppc-wrap ppc-row"><span>Built for the good times.</span><b>Weddings</b><b>Company parties</b><b>Birthdays</b><b>Just-because celebrations</b></div></section>
+ <WaysToRent/>
+ <section class="ppc-section ppc-band"><div class="ppc-wrap ppc-stack-lg"><div class="ppc-stack"><p class="ppc-eyebrow">A little silly. A lot unforgettable.</p><h2 class="ppc-h2">This is what memories look like.</h2><p class="ppc-p">The big smiles. The unexpected poses. The one photo everyone keeps.</p></div><div class="ppc-wall"><div class="ppc-w2x2"><Photo label="Wedding photo booth memories" src="/media/f8545184ac481dfe.webp" alt="Wedding couple holding Mr. and Mrs. photo props" width={600} height={400} tone="blush" ratio="1/1"/></div><Photo label="Photo: a printed strip held by a happy guest" tone="gold" ratio="1/1"/><Photo label="Photo: friends posing with celebration props" tone="sage" ratio="1/1"/><div class="ppc-w2x1"><Photo label="Wedding guests making memories" src="/media/4b60169354289bbe.webp" alt="Laughing wedding couple posing through a heart-shaped frame outdoors" width={600} height={400} tone="sage" ratio="16/9"/></div></div></div></section>
+ <section id="how-it-works" class="ppc-section"><div class="ppc-wrap ppc-stack-lg"><div class="ppc-stack"><p class="ppc-eyebrow">The easy part of planning</p><h2 class="ppc-h2">More party. Less to figure out.</h2><p class="ppc-p">Choose the way to rent that fits your event. We’ll confirm the details with you.</p></div><div class="ppc-tracks"><article class="ppc-card ppc-stack"><span class="ppc-tag">Near Mira Loma</span><h3 class="ppc-h3">Keep it local.</h3><ol class="ppc-steps"><li>Tell us your date and event address.</li><li>Choose staffed service or a pickup rental.</li><li>Confirm your booth and event arrangements.</li><li>Make some memories with your guests.</li></ol><a class="ppc-link" href="/photo-booth-packages/">Explore local rental options →</a></article><article class="ppc-card ppc-stack"><span class="ppc-tag ppc-tag-blue">Across the continental US</span><h3 class="ppc-h3">Get the party delivered.</h3><ol class="ppc-steps is-outline"><li>Choose your booth-by-mail options.</li><li>Receive the booth before your event.</li><li>Set it up with the included guide.</li><li>Pack it up and return with the UPS label.</li></ol><a class="ppc-link" href="/photo-booth-by-mail/">See how booth by mail works →</a></article></div></div></section>
+ <section id="reviews" class="ppc-section-sm ppc-white"><div class="ppc-wrap ppc-split"><div class="ppc-stack"><p class="ppc-eyebrow">For the moments that matter</p><h2 class="ppc-h2">A celebration worth remembering.</h2><p class="ppc-p">Planning a wedding, company event or family party? Tell us what you have in mind. We’ll help you find the experience that fits.</p><a class="ppc-link" href="/contact-us/">Talk with our team →</a></div><div class="ppc-card ppc-stack"><p class="ppc-eyebrow">Guest stories</p><h3 class="ppc-h3">The best part is who’s in the picture.</h3><p class="ppc-p">Our guest stories will live here once their text and sources are confirmed.</p></div></div></section>
+ <section class="ppc-section"><div class="ppc-wrap ppc-stack-lg"><div class="ppc-stack"><p class="ppc-eyebrow">Whatever you’re celebrating</p><h2 class="ppc-h2">There’s a booth for that.</h2></div><div class="ppc-events">{events.map(event=><a class="home-event" href={event.href}><Photo label={event.label} tone={event.tone} ratio="3/2"/><span><b>{event.name}</b><span aria-hidden="true">↗</span></span></a>)}</div></div></section>
+ <section class="ppc-section ppc-band"><div class="ppc-wrap ppc-area"><div class="ppc-stack"><p class="ppc-eyebrow">Local roots. Far-reaching fun.</p><h2 class="ppc-h2">Based in Mira Loma.<br/>Ready for your celebration.</h2><p class="ppc-p">Staffed booths and pickup rentals serve events within 45 miles of Mira Loma, California. Your exact venue address confirms coverage. Farther away? We ship booths across the continental US.</p><ul class="ppc-chips">{cities.map(city=><li><a href={`/photo-booth-rental-${city.toLowerCase().replaceAll(' ','-')}/`}>{city}</a></li>)}</ul><a class="ppc-link" href="/photo-booth-by-mail/">Explore nationwide booth by mail →</a></div><div class="home-area-art" role="img" aria-label="Local service area within 45 miles of Mira Loma, California"><div class="home-area-ring"><span>Mira Loma, CA<strong>45</strong><span>mile service radius</span></span></div><p>We bring the booth.<br/>You bring your people.</p></div></div></section>
+ <FAQ items={faqs} heading="A few good questions."/>
+</RentalLayout>
 <style>
-  /* Match the packages page's card treatment within this homepage section. */
-  #services .cards { gap: 1.5rem; }
-  #services .experience {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    border: 2px solid #ece4f1;
-    border-radius: 22px;
-    overflow: hidden;
-  }
-  #services .experience-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.1rem;
-    padding: 1.6rem 1.6rem 1.75rem;
-  }
-  #services .experience-content .eyebrow {
-    margin: 0;
-    color: #54228b;
-    line-height: 1.5;
-  }
-  #services .experience-content h3 { margin: 0; font-size: 1.75rem; }
-  #services .price {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: .6rem;
-    margin: 0;
-    font-size: 2.75rem;
-    font-weight: 800;
-    line-height: 1.1;
-  }
-  #services .price small { font-size: .9rem; letter-spacing: normal; }
-  #services .experience-content ul {
-    display: flex;
-    flex-direction: column;
-    gap: .6rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    color: #5c5368;
-    font-size: .95rem;
-    line-height: 1.45;
-  }
-  #services .experience-content li { position: relative; padding-left: 1.75rem; }
-  #services .experience-content li::before {
-    content: '';
-    position: absolute;
-    left: .2rem;
-    top: .3rem;
-    width: .7rem;
-    height: .4rem;
-    border-left: 2.5px solid #54228b;
-    border-bottom: 2.5px solid #54228b;
-    transform: rotate(-45deg);
-  }
-  #services .experience-content :global(.ppc-primary) {
-    margin-top: auto;
-    min-height: 52px;
-    border-radius: 14px;
-    background: #54228b;
-  }
-  #services .experience-content :global(.ppc-primary:hover) { background: #3a165f; }
-  @media (max-width: 1000px) {
-    #services .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  }
-  @media (max-width: 680px) {
-    #services .cards { grid-template-columns: 1fr; }
-  }
+ .home-hero{padding-top:56px;padding-bottom:80px}.home-photo-composition{position:relative;padding:120px 24px 70px;background:#E6DCF0;border-radius:26px}.home-photo-composition :global(.ppc-ph){width:100%;min-height:0}.home-photo-note{position:absolute;top:34px;left:34px;font-family:var(--font-display);font-size:36px;line-height:1.05;letter-spacing:-.03em;color:var(--accent);transform:rotate(-6deg)}.home-strip{position:absolute;bottom:36px;right:24px;transform:rotate(10deg)}.home-photo-sticker{position:absolute;right:0;top:20px;background:#f3d891;border:1px solid #ebcc7d;width:140px;height:140px;padding:10px;border-radius:50%;display:grid;place-content:center;font-family:var(--font-display);font-size:18px;font-weight:600;text-align:center;line-height:1.1;transform:rotate(10deg)}.home-trust-strip{border-block:1px solid var(--line);padding:22px 0}.home-trust-strip .ppc-row{justify-content:space-between;font-size:14px}.home-trust-strip span{color:var(--muted)}.ppc-wall>div .ppc-ph,.ppc-wall>.ppc-ph{height:100%;aspect-ratio:auto}.home-event{display:block;color:var(--ink);text-decoration:none}.home-event>span{display:flex;justify-content:space-between;align-items:center;padding:14px 2px;font-size:19px}.home-event:hover b{color:var(--accent)}.home-area-art{padding:45px 28px;background:#e6dcf0;border-radius:26px;text-align:center}.home-area-ring{border-radius:50%;width:min(100%,300px);aspect-ratio:1/1;border:1px solid #aa8cbf;outline:1px dashed #bda9ca;outline-offset:-20px;margin:0 auto;display:grid;place-items:center;background:#efe6f3}.home-area-ring strong{display:block;font-family:var(--font-display);font-size:100px;font-weight:600;line-height:1.1;color:var(--accent)}.home-area-art p{font-family:var(--font-display);font-size:26px;line-height:1.2;margin:30px 0 0}.home-area-ring>span{font-size:15px}.home-area-ring>span>span{color:var(--muted)}
+ @media(max-width:960px){.home-photo-composition{max-width:560px;width:100%;margin:auto}.home-photo-composition :global(.ppc-ph){width:100%;min-height:0}}@media(max-width:720px){.home-hero{padding:36px 0 56px}.home-photo-note{font-size:26px;left:24px}.home-photo-sticker{font-size:14px;width:108px;height:108px;padding:6px}.home-trust-strip .ppc-row{justify-content:center;text-align:center}.home-area-art{padding:35px 20px}.home-photo-composition{padding-right:18px;padding-left:18px}}
 </style>

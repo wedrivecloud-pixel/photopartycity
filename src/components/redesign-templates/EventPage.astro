@@ -1,0 +1,52 @@
+---
+import RentalLayout from '../../layouts/RentalLayout.astro';
+import Hero from '../redesign/Hero.astro';
+import Photo from '../redesign/Photo.astro';
+import TierCard from '../redesign/TierCard.astro';
+import FAQ from '../redesign/FAQ.astro';
+import {fullServiceTiers, bookingLinks, rentalCopy, serviceSchema} from '../../data/rentals';
+interface Props {page: {slug:string;title:string;name:string;description:string;canonical:string;schema?:any}}
+const {page}=Astro.props;
+const wedding=page.slug==='wedding-photo-booth-rental';
+const text=(value:string)=>value.replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ');
+const oldFaq=page.schema?.['@graph']?.find((node:any)=>node['@type']==='FAQPage');
+const faqs=(oldFaq?.mainEntity || []).map((item:any)=>({question:item.name,answer:rentalCopy(text(item.acceptedAnswer.text))}));
+const fitPoints=wedding ? [
+  {title:'A favor made together',copy:'Your names, wedding date, and colors on a personalized photo design. Guests leave with a keepsake from the reception.'},
+  {title:'One less thing to manage',copy:'An on-site attendant guides guests and handles the booth and printing, while you spend time with the people you love.'},
+  {title:'The memories come home',copy:'Full-service packages include digital copies in a 30-day gallery. Save your favorites while the gallery is available.'},
+] : [
+  {title:'Bring the team together',copy:'Give employees and guests a place to connect at company celebrations, holiday parties, and team events.'},
+  {title:'Make it your event',copy:'Personalized photo designs can include your approved logo, event name, and brand artwork. Confirm the final design before event day.'},
+  {title:'Fit the schedule',copy:'Plan booth coverage around presentations, breaks, and social time. Our attendant guides guests during the booked hours.'},
+];
+const timeline=[
+  {title:'Before guests arrive',copy:'Have your coordinator approve the booth location, power, guest queue, and vendor access. Share any required documents and the setup window with us.'},
+  {title:'During the reception',copy:'Choose a booth window around dinner, speeches, and dancing. Let your coordinator know when the booth is open so guests have time for their photos.'},
+  {title:'After the last dance',copy:'Confirm the venue’s removal deadline and the agreed booth end time. Full service includes takedown; digital copies remain in your gallery for 30 days.'},
+];
+const brief=wedding ? ['Your wedding date and exact venue address','Guest count and reception timeline','Booth position, power, and vendor access','Your names, colors, and print design preferences'] : ['Event date, full venue address, and room','Guest count and guest-facing booth hours','Approved setup and removal windows','Approved logo, artwork, and display requests','Power, connectivity, and vendor requirements'];
+const heroTitle=wedding ? 'Your favorite people. Their favorite wedding favor.' : 'Good company. Great memories.';
+const heroDescription=wedding ? 'Make room for the silly poses, big hugs, and one-more-photo moments. An attended photo booth gives your guests a keepsake and you one less thing to plan.' : 'A photo booth that brings people together at company parties, launches, and team celebrations. Personalized prints, digital photos, and a little time away from the agenda.';
+const tierImages=['/media/9bdc247ed0d954ad.webp','/media/c5b88e6543d0506c.webp','/media/e43dade889004232.webp'];
+---
+<RentalLayout title={page.title} description={page.description} canonical={page.canonical} schema={serviceSchema(page.name,page.canonical,fullServiceTiers)} breadcrumbs={[{name:'Home',href:'/'},{name:wedding?'Weddings':'Corporate events'}]} ctaHeading={wedding?'Let’s make room for a little wedding fun.':'Plan a photo experience for your team.'}>
+  <Hero eyebrow={wedding?'Wedding photo booth rental · Inland Empire':'Corporate photo booth rental · Inland Empire'} title={heroTitle} description={heroDescription} image={wedding?'/media/f8545184ac481dfe.webp':'/media/1db5b1de66a843ce.webp'} imageAlt={wedding?'A wedding couple holding Mr. and Mrs. photo booth props':'A group of event guests posing with masquerade masks and photo props'} checkHref={bookingLinks.full} tag="Within 45 miles of Mira Loma">
+    <p class="ppc-small">Personalized print design, an attendant, and digital gallery access with every full-service package.</p>
+  </Hero>
+
+  <section class="ppc-section ppc-white" aria-labelledby="event-fit">
+    <div class="ppc-wrap ppc-stack-lg"><h2 class="ppc-h2" id="event-fit">{wedding?'A little booth. A lot of happy memories.':'The best connections happen between the formalities.'}</h2><div class="ppc-grid3">{fitPoints.map(point=><article class="ppc-stack"><h3 class="ppc-h3">{point.title}</h3><p class="ppc-p">{point.copy}</p></article>)}</div></div>
+  </section>
+
+  <section class="ppc-section" aria-labelledby="event-packages">
+    <div class="ppc-wrap ppc-stack-lg"><div class="ppc-stack"><p class="ppc-eyebrow">We bring it. We run it.</p><h2 class="ppc-h2" id="event-packages">Choose your hours of happy.</h2><p class="ppc-p">Every full-service package includes an attendant, printing during booked booth time, personalized photo design, backdrop, props, delivery, setup, takedown, and digital copies in a 30-day gallery.</p></div><div class="ppc-cards">{fullServiceTiers.map((tier,index)=><TierCard {...tier} featured={tier.slug==='gold'} image={tierImages[index]} />)}</div><p class="ppc-small">Your proposal confirms availability, selected extras, and any applicable travel or venue-related charges.</p><a class="ppc-link" href="/photo-booth-packages/">Compare all packages and inclusions →</a></div>
+  </section>
+
+  {wedding ? <section class="ppc-section ppc-band" aria-labelledby="event-timeline"><div class="ppc-wrap ppc-stack-lg"><div class="ppc-stack"><p class="ppc-eyebrow">It fits around your day</p><h2 class="ppc-h2" id="event-timeline">From first toast to last dance.</h2><p class="ppc-p">Your venue access window and guest-facing booth hours are different details. Share both so we can plan the booth around the moments that matter.</p></div><div class="ppc-grid3">{timeline.map((step,index)=><article class="ppc-card ppc-stack"><span class="ppc-eyebrow">0{index+1}</span><h3 class="ppc-h3">{step.title}</h3><p class="ppc-p">{step.copy}</p></article>)}</div></div></section> : <section class="ppc-section ppc-band" aria-labelledby="event-brand"><div class="ppc-wrap ppc-split"><Photo src="/media/1db5b1de66a843ce.webp" label="Guests with props at a branded event backdrop" alt="Guests with props posing in front of a branded event backdrop" ratio="4/3" /><div class="ppc-stack"><p class="ppc-eyebrow">Your brand, in the picture</p><h2 class="ppc-h2" id="event-brand">Make the keepsake feel like your event.</h2><p class="ppc-p">Full service includes a personalized photo design. Send your approved logo, event name, and artwork for review, then confirm the final layout before event day.</p><p class="ppc-p">The Posh Pro in Platinum has a 37-inch signage column for supplied slideshows or display content. Discuss files and display requirements in your proposal.</p><a class="ppc-link" href="/full-service-photo-booth-rental/">Explore full-service details →</a></div></div></section>}
+
+  <section class="ppc-section ppc-white" aria-labelledby="event-other-options"><div class="ppc-wrap ppc-stack-lg"><div class="ppc-stack"><p class="ppc-eyebrow">A different kind of celebration?</p><h2 class="ppc-h2" id="event-other-options">There’s more than one way to rent.</h2></div><div class="ppc-grid2"><article class="ppc-card ppc-stack"><span class="ppc-tag">Near Mira Loma</span><h3 class="ppc-h3">Pick it up. Make it yours.</h3><p class="ppc-p">Keep a self-service booth for 24 hours and let a designated helper run the experience. Digital capture, sharing, and album access are included. Printing and a physical backdrop are optional.</p><a class="ppc-link" href="/self-service-photo-booth-rental/">Explore self-service →</a></article><article class="ppc-card ppc-stack"><span class="ppc-tag ppc-tag-blue">Anywhere in the continental US</span><h3 class="ppc-h3">A little fun, delivered.</h3><p class="ppc-p">Planning beyond our local service area? Have a photo booth shipped to you, set it up for your event, and return it using the supplied shipping instructions.</p><a class="ppc-link" href="/photo-booth-by-mail/">Explore photo booth by mail →</a></article></div>{!wedding && <a class="ppc-link" href="/360-photo-booth-rental/">Looking for video? Explore the 360 booth →</a>}</div></section>
+
+  <section class="ppc-section" aria-labelledby="event-brief"><div class="ppc-wrap ppc-split ppc-split-top"><div class="ppc-stack"><p class="ppc-eyebrow">Let’s get the details together</p><h2 class="ppc-h2" id="event-brief">{wedding?'A quick checklist for your coordinator.':'A brief your event team can use.'}</h2><p class="ppc-p">Send the practical details before booking so we can review equipment, coverage, design, and access together.</p><p class="ppc-p">Our team is based at 3827 Wacker Dr., Mira Loma, CA 91752. Local service covers event locations within 45 miles, with the exact address confirmed in your proposal.</p></div><div class="ppc-card ppc-stack"><ul class="ppc-checks">{brief.map(item=><li>{item}</li>)}</ul><a class="ppc-link" href="/check-your-date/">Check your date →</a></div></div></section>
+  {faqs.length>0 && <FAQ items={faqs} heading={wedding?'Your wedding booth questions, answered.':'A few details for the event planner.'} />}
+</RentalLayout>

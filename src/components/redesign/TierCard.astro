@@ -1,0 +1,11 @@
+---
+import Photo from './Photo.astro';
+interface Props { name:string; model?:string; hours?:number; price:number; href:string; features:string[]; featured?:boolean; image?:string }
+const {name,model,hours,price,href,features,featured=false,image}=Astro.props;
+---
+<article class:list={['ppc-tier',{'is-feature':featured}]} data-source="card" data-booth={name.toLowerCase()}>
+  {featured && <span class="ppc-badge">Most popular</span>}
+  <Photo label={`${name} photo booth`} src={image} alt={`${name} photo booth`} tone={featured ? 'gold':'lav'}/>
+  <div class="ppc-tier-body"><p class="ppc-tier-eyebrow">{model || (hours ? `${hours} hours of booth time`:'Photo booth rental')}</p><h3 class="ppc-h3">{name}</h3><ul class="ppc-checks">{features.map(feature=><li>{feature}</li>)}</ul></div>
+  <div class="ppc-tier-foot"><p class="ppc-price"><b>${price.toLocaleString('en-US')}</b>{hours && <span>/ {hours} {hours===1 ? 'hour':'hours'}</span>}</p><a class={featured ? 'ppc-btnp ppc-btn-sm':'ppc-link'} href={href}>Check your date</a></div>
+</article>

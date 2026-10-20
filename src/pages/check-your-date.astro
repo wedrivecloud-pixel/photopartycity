@@ -1,0 +1,47 @@
+---
+import RentalLayout from '../layouts/RentalLayout.astro';
+import { bookingLinks } from '../data/rentals';
+const options = [
+  { key: 'full', title: 'We bring it', type: 'Full service', description: 'A staffed photo booth with printed keepsakes. We deliver, set up, and run it.', href: bookingLinks.full, local: true },
+  { key: 'self', title: 'You pick it up', type: 'Self-service', description: 'Pick up your booth in Mira Loma and make the whole day your own.', href: bookingLinks.self, local: true },
+  { key: 'booth360', title: 'Take a spin', type: '360 video booth', description: 'Confirm 360 availability, staffing, and setup with our team before booking.', href: bookingLinks.general, local: true },
+  { key: 'mail', title: 'We ship it', type: 'Booth by Mail', description: 'A photo booth shipped to your door, ready for your event in the contiguous US.', href: bookingLinks.mail, local: false },
+];
+---
+<RentalLayout title="Check your date | Photo Party City" description="Find photo booth rental options for your event date and ZIP code. Staffed booths near Mira Loma and booths shipped throughout the contiguous US." breadcrumbs={[{name:'Home',href:'/'},{name:'Check your date'}]}>
+  <section class="ppc-section check-hero" id="check" data-source="date-check">
+    <div class="ppc-wrap">
+      <div class="check-intro ppc-stack">
+        <p class="ppc-eyebrow">One date. A few good options.</p>
+        <h1 class="ppc-h1">Let’s find your booth.</h1>
+        <p class="ppc-p">Tell us when and where you’re celebrating. We’ll show you the ways to rent, then send you to booking to confirm availability.</p>
+      </div>
+      <form id="date-check-form" class="ppc-card check-form" action="/check-your-date/" method="get">
+        <div><label for="event-date">Event date</label><input class="ppc-input" id="event-date" name="date" type="date" required /></div>
+        <div><label for="event-zip">Event ZIP code</label><input class="ppc-input" id="event-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5" placeholder="91752" required /></div>
+        <div><label for="event-type">Event type <span>(optional)</span></label><select class="ppc-input" id="event-type" name="event"><option value="">Choose an event</option><option value="wedding">Wedding</option><option value="corporate">Corporate event</option><option value="birthday">Birthday</option><option value="quinceanera">Quinceañera</option><option value="graduation">Graduation</option><option value="school">School event</option><option value="other">Something else</option></select></div>
+        <button class="ppc-btnp" type="submit">Check your date</button>
+        <p class="check-form-help">Local service is within 45 miles of Mira Loma, CA. Shipping is available in the contiguous US. Your booking is confirmed in Eventdeskly.</p>
+      </form>
+      <p class="check-status" id="date-check-status" role="status" aria-live="polite"></p>
+      <noscript><div class="ppc-card check-noscript"><h2 class="ppc-h3">Choose your rental</h2><p>For events within 45 miles of Mira Loma, choose <a href={bookingLinks.full}>full service</a>, <a href={bookingLinks.self}>self-service</a>, or call about 360. Elsewhere in the contiguous US, choose <a href={bookingLinks.mail}>Booth by Mail</a>. Call or text <a href="tel:+19094037143">(909) 403-7143</a> to confirm your service area.</p></div></noscript>
+      <section id="date-check-results" class="check-results" aria-labelledby="date-check-results-heading" tabindex="-1" hidden>
+        <h2 class="ppc-h2" id="date-check-results-heading"></h2>
+        <p class="ppc-p" id="date-check-note"></p>
+        <p class="check-360-notice" data-booth360-notice hidden>You’re looking for a 360 booth. Choose the 360 option below to contact the team through Eventdeskly, or call <a href="tel:+19094037143">(909) 403-7143</a>.</p>
+        <div class="check-options">{options.map(option => <article class="ppc-card check-option" data-local-choice={option.local ? '' : undefined} data-booth={option.key}>
+          <p class="ppc-eyebrow">{option.type}</p><h3 class="ppc-h3">{option.title}</h3><p>{option.description}</p>
+          <a class="ppc-btng" href={option.href} data-booking-choice={option.key} data-source="date-result" data-booth={option.key}>Continue <span aria-hidden="true">→</span><span class="sr-only"> with {option.type}</span></a>
+        </article>)}</div>
+        <p class="check-distance-note">Service areas use the center of your ZIP code. If your venue is near the boundary, contact us to confirm delivery and access.</p>
+      </section>
+      <p class="check-call">Rather talk it through? <a href="tel:+19094037143" data-source="date-check">Call (909) 403-7143</a> or <a href="sms:+19094037143" data-source="date-check">send a text</a>.</p>
+      <p class="check-attribution">ZIP coordinates: <a href="https://www.geonames.org/" rel="external">GeoNames</a>, via <a href="https://github.com/zauberware/postal-codes-json-xml-csv" rel="external">zauberware</a>, <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>.</p>
+    </div>
+  </section>
+</RentalLayout>
+<script>import '../scripts/booking';</script>
+<style>
+  .check-hero{padding-top:48px}.check-intro{max-width:770px;margin-bottom:36px}.check-intro .ppc-h1{max-width:700px}.check-form{display:grid;grid-template-columns:1fr .8fr 1.2fr auto;gap:18px;padding:30px;align-items:end}.check-form label{display:block;font-weight:650;font-size:15px;margin-bottom:8px}.check-form label span{font-weight:400;color:var(--muted)}.check-form .ppc-input{width:100%;min-width:0;min-height:52px}.check-form-help{grid-column:1/-1;font-size:14px;color:var(--muted);margin:0}.check-status{color:#8b2424;max-width:760px;min-height:1em;margin:20px 0}.check-results{scroll-margin-top:120px;outline:none}.check-results>.ppc-p{max-width:800px;margin:16px 0 28px}.check-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.check-option{display:flex;flex-direction:column;align-items:start;padding:30px;gap:13px}.check-option>p{margin:0}.check-option>a{margin-top:auto}.check-option[hidden],.check-results[hidden],.check-360-notice[hidden]{display:none}.check-360-notice{background:var(--sand);padding:20px;border-radius:18px;margin-bottom:24px}.check-distance-note,.check-attribution{font-size:13px;color:var(--muted);margin-top:20px}.check-call{margin-top:32px}.check-noscript{padding:26px}.check-noscript p{margin-top:12px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  @media(max-width:960px){.check-form{grid-template-columns:1fr 1fr}.check-form button{width:100%}}@media(max-width:600px){.check-form{grid-template-columns:1fr;padding:22px}.check-options{grid-template-columns:1fr}.check-option{padding:24px}.check-hero{padding-top:30px}}
+</style>

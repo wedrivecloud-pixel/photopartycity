@@ -1,3 +1,12 @@
-# All 267 source page/product/archive paths are retained. Only aliases change.
+# Legacy sitemap aliases
 /sitemap_index.xml /sitemap-index.xml 301
 /sitemap.xml /sitemap-index.xml 301
+# Retired rental duplicates and obsolete form/plugin archives
+/photobooth-rental/ /photo-booth-packages/ 301
+/24-hours-self-service/ /check-your-date/ 301
+/full-service-form/ /check-your-date/ 301
+/360-booth-service-form/ /check-your-date/?booth=360 301
+/home2/ / 301
+/category/blog/ /blog/ 301
+/author/* /blog/ 301
+/2-photo-booth-rental-packages-you-can-get-right-now/ /types-of-photo-booths/ 301
