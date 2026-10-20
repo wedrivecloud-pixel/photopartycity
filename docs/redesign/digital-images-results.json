@@ -1,0 +1,46 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "imageSlots": 3,
+      "overflow": false,
+      "portraitRatios": [
+        0.8,
+        0.8000101337657073
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 768,
+      "imageSlots": 3,
+      "overflow": false,
+      "portraitRatios": [
+        0.8,
+        0.8
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "imageSlots": 3,
+      "overflow": false,
+      "portraitRatios": [
+        0.8,
+        0.8
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "imageSlots": 3,
+      "overflow": false,
+      "portraitRatios": [
+        0.8,
+        0.8
+      ],
+      "status": "passed"
+    }
+  ],
+  "noJavaScript": "passed",
+  "metadataPricesLinksSchemaAndIDs": "unchanged"
+}

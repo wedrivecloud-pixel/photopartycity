@@ -1,6 +1,7 @@
 ---
 import RentalLayout from '../layouts/RentalLayout.astro';
 import FAQ from '../components/redesign/FAQ.astro';
+import Photo from '../components/redesign/Photo.astro';
 import {selfServiceTiers,bookingLinks,addons,money,serviceSchema} from '../data/rentals';
 const title = "Digital Photo Booth Rental | Inland Empire | From $199";
 const description = "Digital photo booth rentals from $199 for 24 hours in the Inland Empire. Capture photos, GIFs, videos, and boomerangs. Compare booths and check your date.";
@@ -28,9 +29,12 @@ const schema = serviceSchema("Digital booth photo booth rental",canonical,selfSe
 <a class="ppc-link" href="tel:+19094037143" data-source="hero" data-booth="self">Call or text (909) 403-7143</a>
 </div>
 </div>
-<div class="ppc-grid2" style="gap: 12px">
-<div class="ppc-ph t-lil ppc-r45"><span>Photo: teens filming a boomerang</span></div>
-<div class="ppc-ph t-blush ppc-r45" style="margin-top: 40px"><span>Photo: guest checking her photo on her phone</span></div>
+<div class="digital-hero-art">
+<div class="ppc-grid2 digital-hero-photos" style="gap: 12px">
+<Photo label="Guests recording a digital booth clip" src="/media/digital/capture.webp" alt="Illustrative scene of adults recording a playful digital photo booth clip" width={1200} height={1500} loading="eager" fetchpriority="high" tone="lil" ratio="4/5"/>
+<div style="margin-top: 40px"><Photo label="A guest viewing an event photo" src="/media/digital/phone-sharing.webp" alt="Illustrative scene of a guest viewing an event photo on their phone" width={1200} height={1500} loading="eager" fetchpriority="auto" tone="blush" ratio="4/5"/></div>
+</div>
+<p class="ppc-small digital-image-caption">Illustrative event imagery.</p>
 </div>
 </div>
 </section>
@@ -70,7 +74,7 @@ const schema = serviceSchema("Digital booth photo booth rental",canonical,selfSe
 <p class="ppc-p">Full service adds delivery, an on‑site attendant, unlimited prints and a 30‑day gallery.</p>
 <a class="ppc-link" href="/full-service-photo-booth-rental/">See full service</a>
 </div>
-<div class="ppc-ph t-gold ppc-r169"><span>Photo: guests holding fresh prints</span></div>
+<div class="digital-upsell-art"><Photo label="Wedding guests with printed photo strips" src="/media/homepage/wedding.webp" alt="Illustrative scene of wedding guests holding printed photo strips" width={1200} height={800} tone="gold" ratio="16/9"/><p class="ppc-small digital-image-caption">Illustrative event imagery.</p></div>
 </div>
 </section>
 
@@ -82,3 +86,7 @@ const schema = serviceSchema("Digital booth photo booth rental",canonical,selfSe
 </section>
 
 </RentalLayout>
+
+<style>
+ .digital-hero-photos{align-items:start}.digital-hero-photos :global(.ppc-ph){min-height:0;aspect-ratio:4/5}.digital-image-caption{margin:12px 0 0}
+</style>
