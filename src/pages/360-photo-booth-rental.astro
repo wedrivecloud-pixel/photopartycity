@@ -1,6 +1,7 @@
 ---
 import RentalLayout from '../layouts/RentalLayout.astro';
 import FAQ from '../components/redesign/FAQ.astro';
+import Photo from '../components/redesign/Photo.astro';
 import {bookingLinks,booth360Rates,money,serviceSchema} from '../data/rentals';
 const title = "360 Photo Booth Rental | Inland Empire | Photo Party City";
 const description = "Compare full-service and self-service 360 video booth rentals for Inland Empire weddings, company events, and parties. See rates and request your event proposal.";
@@ -29,7 +30,7 @@ const schema = serviceSchema("360 video booth rental",canonical,[...Object.entri
 </div>
 <ul class="ppc-checks ppc-checks-row"><li>2, 3 or 4 hours</li><li>Custom video template</li><li>Instant sharing</li></ul>
 </div>
-<div class="ppc-ph t-lil ppc-r45" style="border-radius: 28px"><span>Photo: friends cheering mid‑spin on the platform</span></div>
+<div class="booth360-hero-art"><Photo label="Friends enjoying a 360 video booth" src="/media/360/hero.webp" alt="Illustrative scene of adult friends posing on a motorized 360 video booth platform" width={1200} height={1500} loading="eager" fetchpriority="high" tone="lil" ratio="4/5"/><p class="ppc-small booth360-image-caption">Illustrative event imagery.</p></div>
 </div>
 </section>
 
@@ -50,9 +51,9 @@ const schema = serviceSchema("360 video booth rental",canonical,[...Object.entri
 <h2 id="rates-h" class="ppc-h2">Pick who runs it and for how long</h2>
 <p class="ppc-p">Both include a custom template plus video capture and sharing.</p>
 </div>
-<div class="ppc-grid2">
+<div class="ppc-grid2 booth360-rate-grid">
 <article class="ppc-tier is-feature" data-360-rates={JSON.stringify(booth360Rates.full)}>
-<div class="ppc-ph t-blush ppc-r169"><span>Photo: wedding guests on the 360 platform</span></div>
+<Photo label="A wedding 360 video booth setup" src="/media/360/full-service.webp" alt="Illustrative scene of a motorized 360 video booth setup at a wedding reception" width={1200} height={675} tone="blush" ratio="16/9"/>
 <div class="ppc-tier-body">
 <p class="ppc-eyebrow">We set it up</p>
 <h3 class="ppc-h3" style="font-size: 28px">360 full service</h3>
@@ -64,7 +65,7 @@ const schema = serviceSchema("360 video booth rental",canonical,[...Object.entri
 <div class="ppc-tier-foot"><p class="ppc-price" aria-live="polite"><b data-rate-price>{money(booth360Rates.full[2])}</b><span data-rate-duration>for 2 hours</span></p><a class="ppc-btnp ppc-btn-sm" href="/check-your-date/?booth=360-full&amp;hours=2" data-rate-link data-source="card" data-booth="360">Check your date</a></div>
 </article>
 <article class="ppc-tier" data-360-rates={JSON.stringify(booth360Rates.self)}>
-<div class="ppc-ph t-sage ppc-r169"><span>Photo: kids spinning at a backyard party</span></div>
+<Photo label="A backyard 360 video booth setup" src="/media/360/self-service.webp" alt="Illustrative scene of adults using a motorized 360 video booth at a backyard celebration" width={1200} height={675} tone="sage" ratio="16/9"/>
 <div class="ppc-tier-body">
 <p class="ppc-eyebrow">You run it</p>
 <h3 class="ppc-h3" style="font-size: 28px">360 self‑service</h3>
@@ -77,6 +78,7 @@ const schema = serviceSchema("360 video booth rental",canonical,[...Object.entri
 </article>
 <noscript><p class="ppc-small">With JavaScript disabled, the cards show the two-hour rate. <a href="/photo-booth-packages/#v360">See all 360 rates</a>, then choose your hours when you check your date.</p></noscript>
 </div>
+<p class="ppc-small booth360-image-caption">Illustrative event imagery.</p>
 </div>
 </section>
 
@@ -105,6 +107,7 @@ const schema = serviceSchema("360 video booth rental",canonical,[...Object.entri
 <style>
   [data-360-rates] .ppc-seg button {background:transparent;color:var(--muted)}
   [data-360-rates] .ppc-seg button[aria-pressed="true"] {background:var(--accent);color:#fff}
+  .booth360-hero-art :global(.ppc-ph){border-radius:28px}.booth360-rate-grid :global(.ppc-photo){aspect-ratio:16/9}.booth360-image-caption{margin:12px 0 0}.booth360-rate-grid+.booth360-image-caption{margin:0}
 </style>
 <script>
  document.querySelectorAll<HTMLElement>('[data-360-rates]').forEach(card => {
