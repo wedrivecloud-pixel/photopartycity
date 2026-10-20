@@ -1,6 +1,7 @@
 ---
 import RentalLayout from '../layouts/RentalLayout.astro';
 import FAQ from '../components/redesign/FAQ.astro';
+import Photo from '../components/redesign/Photo.astro';
 import {fullServiceTiers,selfServiceTiers,bookingLinks,addons,booth360Rates,mailRental,money,serviceSchema} from '../data/rentals';
 const title = "Photo Booth Rental Packages & Pricing | Photo Party City";
 const description = "Compare full-service and self-service photo booth rental packages. Find the right fit for your event and request a booking today.";
@@ -41,9 +42,9 @@ const schema = serviceSchema("Packages photo booth rental",canonical,[...fullSer
 <h2 class="ppc-h2">We bring it: full service with prints</h2>
 <p class="ppc-p">We deliver, set up and run the booth with an attendant. Packages differ by hours and booth model.</p>
 </div>
-<div class="ppc-cards">
+<div class="ppc-cards packages-tier-grid">
 <article class="ppc-tier">
-<div class="ppc-ph t-lav ppc-r32"><span>Photo: guests laughing at the Helio Sport booth</span></div>
+<Photo label="Helio Sport photo booth" src="/media/full-service/helio-sport.webp" alt="Helio Sport photo booth in an illustrative reception setting" width={1200} height={800} tone="lav" ratio="3/2"/>
 <div class="ppc-tier-body">
 <p class="ppc-eyebrow">3 hours · Helio Sport</p>
 <h3 class="ppc-h3" style="font-size: 28px">{fullServiceTiers[0].name}</h3>
@@ -56,7 +57,7 @@ const schema = serviceSchema("Packages photo booth rental",canonical,[...fullSer
 </article>
 <article class="ppc-tier is-feature">
 <span class="ppc-badge">Most popular</span>
-<div class="ppc-ph t-blush ppc-r32"><span>Photo: wedding guests at the Lumia M Pro</span></div>
+<Photo label="Lumia M Pro photo booth" src="/media/full-service/lumia-m-pro.webp" alt="Lumia M Pro photo booth in an illustrative reception setting" width={1200} height={800} tone="blush" ratio="3/2"/>
 <div class="ppc-tier-body">
 <p class="ppc-eyebrow">4 hours · Lumia M Pro</p>
 <h3 class="ppc-h3" style="font-size: 28px">{fullServiceTiers[1].name}</h3>
@@ -68,7 +69,7 @@ const schema = serviceSchema("Packages photo booth rental",canonical,[...fullSer
 </div>
 </article>
 <article class="ppc-tier">
-<div class="ppc-ph t-gold ppc-r32"><span>Photo: party crowd around the Posh Pro display</span></div>
+<Photo label="Posh Pro photo booth" src="/media/full-service/posh-pro.webp" alt="Posh Pro photo booth in an illustrative reception setting" width={1200} height={800} tone="gold" ratio="3/2"/>
 <div class="ppc-tier-body">
 <p class="ppc-eyebrow">5 hours · Posh Pro</p>
 <h3 class="ppc-h3" style="font-size: 28px">{fullServiceTiers[2].name}</h3>
@@ -80,6 +81,7 @@ const schema = serviceSchema("Packages photo booth rental",canonical,[...fullSer
 </div>
 </article>
 </div>
+<p class="ppc-small packages-image-caption packages-group-caption">Photo booth models shown in illustrative event settings.</p>
 <div class="ppc-card ppc-split ppc-split-top" style="gap: 32px; background: #FFFFFF">
 <div class="ppc-stack" style="gap: 8px">
 <h3 class="ppc-h3">Included in every full‑service package</h3>
@@ -101,9 +103,9 @@ const schema = serviceSchema("Packages photo booth rental",canonical,[...fullSer
 <h2 class="ppc-h2">You pick it up: 24‑hour self‑service</h2>
 <p class="ppc-p">Pick up in Mira Loma, run it yourself for a full day, bring it back. Digital photos, GIFs and boomerangs are unlimited; prints are an add‑on.</p>
 </div>
-<div class="ppc-cards">
+<div class="ppc-cards packages-tier-grid">
 <article class="ppc-tier">
-<div class="ppc-ph t-sage ppc-r32"><span>Photo: friends at a backyard birthday</span></div>
+<Photo label="Helio Sport self-service photo booth" src="/media/packages/helio-self-service.webp" alt="Helio Sport photo booth in an illustrative self-service party setting" width={1200} height={800} tone="sage" ratio="3/2"/>
 <div class="ppc-tier-body">
 <p class="ppc-eyebrow">24 hours · Helio Sport</p>
 <h3 class="ppc-h3" style="font-size: 28px">{selfServiceTiers[0].name}</h3>
@@ -115,7 +117,7 @@ const schema = serviceSchema("Packages photo booth rental",canonical,[...fullSer
 </div>
 </article>
 <article class="ppc-tier">
-<div class="ppc-ph t-lil ppc-r32"><span>Photo: graduates posing with props</span></div>
+<Photo label="Lumia M Pro self-service photo booth" src="/media/packages/lumia-self-service.webp" alt="Lumia M Pro photo booth in an illustrative self-service event setting" width={1200} height={800} tone="lil" ratio="3/2"/>
 <div class="ppc-tier-body">
 <p class="ppc-eyebrow">24 hours · Lumia M Pro</p>
 <h3 class="ppc-h3" style="font-size: 28px">{selfServiceTiers[1].name}</h3>
@@ -127,7 +129,7 @@ const schema = serviceSchema("Packages photo booth rental",canonical,[...fullSer
 </div>
 </article>
 <article class="ppc-tier">
-<div class="ppc-ph t-sky ppc-r32"><span>Photo: coworkers at a branded company party</span></div>
+<Photo label="Posh Pro self-service photo booth" src="/media/packages/posh-self-service.webp" alt="Posh Pro photo booth in an illustrative self-service celebration setting" width={1200} height={800} tone="sky" ratio="3/2"/>
 <div class="ppc-tier-body">
 <p class="ppc-eyebrow">24 hours · Posh Pro</p>
 <h3 class="ppc-h3" style="font-size: 28px">{selfServiceTiers[2].name}</h3>
@@ -139,6 +141,7 @@ const schema = serviceSchema("Packages photo booth rental",canonical,[...fullSer
 </div>
 </article>
 </div>
+<p class="ppc-small packages-image-caption packages-group-caption">Photo booth models shown in illustrative event settings.</p>
 <div class="ppc-grid2" style="align-items: start">
 <div class="ppc-card ppc-stack" style="gap: 14px">
 <h3 class="ppc-h3">Included in every self‑service rental</h3>
@@ -164,7 +167,7 @@ const schema = serviceSchema("Packages photo booth rental",canonical,[...fullSer
 <section id="ship" class="ppc-section">
 <div class="ppc-wrap">
 <div class="ppc-card ppc-split" style="padding: clamp(20px, 3vw, 40px); border: 2px solid var(--accent); gap: 40px">
-<div class="ppc-ph t-sky ppc-r43"><span>Photo: family laughing at a living‑room party</span></div>
+<div class="packages-mail-art"><Photo label="An illustrative booth-by-mail rental kit" src="/media/by-mail/kit.webp" alt="Illustrative arrangement of a white Helio photo booth and rental accessories beside an open travel case" width={1200} height={900} tone="sky" ratio="4/3"/><p class="ppc-small packages-image-caption">Representative rental kit shown in an illustrative arrangement.</p></div>
 <div class="ppc-stack" style="gap: 16px">
 <span class="ppc-tag ppc-tag-blue">Anywhere in the continental US</span>
 <h2 class="ppc-h2">We ship it: Photo Booth By Mail</h2>
@@ -232,10 +235,11 @@ const schema = serviceSchema("Packages photo booth rental",canonical,[...fullSer
 <p class="ppc-p">Each booth comes in a full‑service and a self‑service version.</p>
 </div>
 <div class="ppc-grid3">
-<div class="ppc-card ppc-stack" style="gap: 12px"><div class="ppc-ph t-lav ppc-r43"><span>Photo: Helio Sport at a party</span></div><h3 class="ppc-h3">Helio Sport</h3><p class="ppc-small">Silver · Starter — iPad camera</p><a class="ppc-link" href="https://www.ataphotobooths.com/shop/helio-sport-ipad-photobooth-system-package/" style="font-size: 15px">Booth specs</a></div>
-<div class="ppc-card ppc-stack" style="gap: 12px"><div class="ppc-ph t-blush ppc-r43"><span>Photo: Lumia M Pro at a wedding</span></div><h3 class="ppc-h3">Lumia M Pro</h3><p class="ppc-small">Gold · Showbiz — iPad + DSLR</p><a class="ppc-link" href="https://www.ataphotobooths.com/shop/lumia-m-pro-ipad-based-full-system-package/" style="font-size: 15px">Booth specs</a></div>
-<div class="ppc-card ppc-stack" style="gap: 12px"><div class="ppc-ph t-gold ppc-r43"><span>Photo: Posh Pro at a company event</span></div><h3 class="ppc-h3">Posh Pro</h3><p class="ppc-small">Platinum · Hollywood — iPad + DSLR + 37‑inch display</p><a class="ppc-link" href="https://www.ataphotobooths.com/shop/helio-sapphire-pro-m50-ipad-photobooth-system-package/" style="font-size: 15px">Booth specs</a></div>
+<div class="ppc-card ppc-stack" style="gap: 12px"><Photo label="Helio Sport photo booth" src="/media/full-service/helio-sport.webp" alt="Helio Sport photo booth in an illustrative reception setting" width={1200} height={800} tone="lav" ratio="4/3"/><h3 class="ppc-h3">Helio Sport</h3><p class="ppc-small">Silver · Starter — iPad camera</p><a class="ppc-link" href="https://www.ataphotobooths.com/shop/helio-sport-ipad-photobooth-system-package/" style="font-size: 15px">Booth specs</a></div>
+<div class="ppc-card ppc-stack" style="gap: 12px"><Photo label="Lumia M Pro photo booth" src="/media/full-service/lumia-m-pro.webp" alt="Lumia M Pro photo booth in an illustrative reception setting" width={1200} height={800} tone="blush" ratio="4/3"/><h3 class="ppc-h3">Lumia M Pro</h3><p class="ppc-small">Gold · Showbiz — iPad + DSLR</p><a class="ppc-link" href="https://www.ataphotobooths.com/shop/lumia-m-pro-ipad-based-full-system-package/" style="font-size: 15px">Booth specs</a></div>
+<div class="ppc-card ppc-stack" style="gap: 12px"><Photo label="Posh Pro photo booth" src="/media/full-service/posh-pro.webp" alt="Posh Pro photo booth in an illustrative reception setting" width={1200} height={800} tone="gold" ratio="4/3"/><h3 class="ppc-h3">Posh Pro</h3><p class="ppc-small">Platinum · Hollywood — iPad + DSLR + 37‑inch display</p><a class="ppc-link" href="https://www.ataphotobooths.com/shop/helio-sapphire-pro-m50-ipad-photobooth-system-package/" style="font-size: 15px">Booth specs</a></div>
 </div>
+<p class="ppc-small packages-image-caption packages-group-caption">Photo booth models shown in illustrative event settings.</p>
 </div>
 </section>
 
@@ -253,3 +257,7 @@ const schema = serviceSchema("Packages photo booth rental",canonical,[...fullSer
 <section id="rental-planning-links" class="ppc-section-sm ppc-band"><div class="ppc-wrap ppc-stack"><h2 class="ppc-h3">Plan your photo booth rental</h2><div class="ppc-row"><a class="ppc-link" href="/photo-booth-rental-cost/">Rental cost guide</a><a class="ppc-link" href="/wedding-photo-booth-rental/">Wedding rentals</a><a class="ppc-link" href="/corporate-photo-booth-rental/">Corporate rentals</a><a class="ppc-link" href="/contact-us/">Talk to our team</a></div></div></section>
 
 </RentalLayout>
+
+<style>
+ .packages-tier-grid :global(.ppc-photo){aspect-ratio:3/2}.packages-image-caption{margin:12px 0 0}.packages-group-caption{margin:0}
+</style>

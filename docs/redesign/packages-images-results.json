@@ -1,0 +1,1662 @@
+{
+  "status": "passed",
+  "testedAt": "2026-10-20T06:16:24.113Z",
+  "url": "http://127.0.0.1:4336/photo-booth-packages/",
+  "baseline": {
+    "path": "/workspace/work/packages-images/before.html",
+    "sha256": "828578e9f47f0e1a28ee19711d9779213fb714c77d3da65c19d44404641980cb"
+  },
+  "widths": [
+    {
+      "width": 1440,
+      "status": "passed",
+      "contract": "unchanged",
+      "imageCount": 11,
+      "images": [
+        {
+          "src": "/media/52b598863a8e1582.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+          "alt": "Photo Party City",
+          "loaded": true,
+          "naturalWidth": 313,
+          "naturalHeight": 234,
+          "inMain": false,
+          "declaredWidth": "52",
+          "declaredHeight": "40"
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/helio-sport.webp",
+          "alt": "Helio Sport photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/lumia-m-pro.webp",
+          "alt": "Lumia M Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/posh-pro.webp",
+          "alt": "Posh Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/helio-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/helio-self-service.webp",
+          "alt": "Helio Sport photo booth in an illustrative self-service party setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/lumia-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/lumia-self-service.webp",
+          "alt": "Lumia M Pro photo booth in an illustrative self-service event setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/posh-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/posh-self-service.webp",
+          "alt": "Posh Pro photo booth in an illustrative self-service celebration setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/by-mail/kit.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/kit.webp",
+          "alt": "Illustrative arrangement of a white Helio photo booth and rental accessories beside an open travel case",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "900"
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/helio-sport.webp",
+          "alt": "Helio Sport photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/lumia-m-pro.webp",
+          "alt": "Lumia M Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/posh-pro.webp",
+          "alt": "Posh Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        }
+      ],
+      "geometry": {
+        "viewportWidth": 1440,
+        "documentWidth": 1440,
+        "bodyWidth": 1440,
+        "h1s": 1,
+        "overflowing": []
+      },
+      "ratios": [
+        {
+          "name": "tiers",
+          "expectedRatio": 1.5,
+          "measurements": [
+            {
+              "width": 328,
+              "height": 218.65625,
+              "ratio": 1.5000714591967985,
+              "objectFit": "cover"
+            },
+            {
+              "width": 328,
+              "height": 218.65625,
+              "ratio": 1.5000714591967985,
+              "objectFit": "cover"
+            },
+            {
+              "width": 328,
+              "height": 218.65625,
+              "ratio": 1.5000714591967985,
+              "objectFit": "cover"
+            },
+            {
+              "width": 328,
+              "height": 218.65625,
+              "ratio": 1.5000714591967985,
+              "objectFit": "cover"
+            },
+            {
+              "width": 328,
+              "height": 218.65625,
+              "ratio": 1.5000714591967985,
+              "objectFit": "cover"
+            },
+            {
+              "width": 328,
+              "height": 218.65625,
+              "ratio": 1.5000714591967985,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "mail",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 498,
+              "height": 373.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "models",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 302,
+              "height": 226.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 302,
+              "height": 226.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 302,
+              "height": 226.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "keyboardFaq": {
+        "count": 5,
+        "enterAndSpace": true
+      },
+      "tierCards": [
+        {
+          "name": "Silver",
+          "price": "$695",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/4b01576a-0a6c-4f79-94af-83b5374a6d63"
+        },
+        {
+          "name": "Gold",
+          "price": "$895",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/9c2f5061-4898-4de7-9bd5-20ab1aa6fc54"
+        },
+        {
+          "name": "Platinum",
+          "price": "$1,095",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/685d2b8e-ea41-43d2-b391-01fe7fc31200"
+        },
+        {
+          "name": "Starter",
+          "price": "$199",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/fa8083c9-0fdf-4387-9151-4f7ce7e8d5ee"
+        },
+        {
+          "name": "Showbiz",
+          "price": "$350",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/3308ef3e-f828-4636-a9a7-9fd12dd1737e"
+        },
+        {
+          "name": "Hollywood",
+          "price": "$525",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/c13f6c7a-4721-494c-9e83-c138c496fdca"
+        }
+      ],
+      "tables": [
+        {
+          "index": 0,
+          "width": 530,
+          "scrollWidth": 530,
+          "overflowX": "auto",
+          "scrollable": false,
+          "lastColumn": {
+            "scrollLeft": 0,
+            "maxScroll": 0,
+            "containerRight": 1280,
+            "columnLeft": 1097.296875,
+            "columnRight": 1279
+          }
+        },
+        {
+          "index": 1,
+          "width": 1118,
+          "scrollWidth": 1118,
+          "overflowX": "auto",
+          "scrollable": false,
+          "lastColumn": {
+            "scrollLeft": 0,
+            "maxScroll": 0,
+            "containerRight": 1280,
+            "columnLeft": 948.625,
+            "columnRight": 1279
+          }
+        }
+      ],
+      "anchors": {
+        "protected": [
+          {
+            "id": "fullservice",
+            "top": 23.859375
+          },
+          {
+            "id": "selfservice",
+            "top": 23.515625
+          },
+          {
+            "id": "ata-photobooths-packages",
+            "top": 24.359375
+          },
+          {
+            "id": "rental-planning-links",
+            "top": 23.625
+          }
+        ],
+        "directSelfservice": true
+      },
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/packages-images-1440.webp"
+    },
+    {
+      "width": 768,
+      "status": "passed",
+      "contract": "unchanged",
+      "imageCount": 11,
+      "images": [
+        {
+          "src": "/media/52b598863a8e1582.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+          "alt": "Photo Party City",
+          "loaded": true,
+          "naturalWidth": 313,
+          "naturalHeight": 234,
+          "inMain": false,
+          "declaredWidth": "52",
+          "declaredHeight": "40"
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/helio-sport.webp",
+          "alt": "Helio Sport photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/lumia-m-pro.webp",
+          "alt": "Lumia M Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/posh-pro.webp",
+          "alt": "Posh Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/helio-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/helio-self-service.webp",
+          "alt": "Helio Sport photo booth in an illustrative self-service party setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/lumia-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/lumia-self-service.webp",
+          "alt": "Lumia M Pro photo booth in an illustrative self-service event setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/posh-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/posh-self-service.webp",
+          "alt": "Posh Pro photo booth in an illustrative self-service celebration setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/by-mail/kit.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/kit.webp",
+          "alt": "Illustrative arrangement of a white Helio photo booth and rental accessories beside an open travel case",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "900"
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/helio-sport.webp",
+          "alt": "Helio Sport photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/lumia-m-pro.webp",
+          "alt": "Lumia M Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/posh-pro.webp",
+          "alt": "Posh Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        }
+      ],
+      "geometry": {
+        "viewportWidth": 768,
+        "documentWidth": 768,
+        "bodyWidth": 768,
+        "h1s": 1,
+        "overflowing": []
+      },
+      "ratios": [
+        {
+          "name": "tiers",
+          "expectedRatio": 1.5,
+          "measurements": [
+            {
+              "width": 528,
+              "height": 352,
+              "ratio": 1.5,
+              "objectFit": "cover"
+            },
+            {
+              "width": 528,
+              "height": 352,
+              "ratio": 1.5,
+              "objectFit": "cover"
+            },
+            {
+              "width": 528,
+              "height": 352,
+              "ratio": 1.5,
+              "objectFit": "cover"
+            },
+            {
+              "width": 528,
+              "height": 352,
+              "ratio": 1.5,
+              "objectFit": "cover"
+            },
+            {
+              "width": 528,
+              "height": 352,
+              "ratio": 1.5,
+              "objectFit": "cover"
+            },
+            {
+              "width": 528,
+              "height": 352,
+              "ratio": 1.5,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "mail",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 656.5,
+              "height": 492.375,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "models",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 502,
+              "height": 376.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 502,
+              "height": 376.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 502,
+              "height": 376.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "keyboardFaq": {
+        "count": 5,
+        "enterAndSpace": true
+      },
+      "tierCards": [
+        {
+          "name": "Silver",
+          "price": "$695",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/4b01576a-0a6c-4f79-94af-83b5374a6d63"
+        },
+        {
+          "name": "Gold",
+          "price": "$895",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/9c2f5061-4898-4de7-9bd5-20ab1aa6fc54"
+        },
+        {
+          "name": "Platinum",
+          "price": "$1,095",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/685d2b8e-ea41-43d2-b391-01fe7fc31200"
+        },
+        {
+          "name": "Starter",
+          "price": "$199",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/fa8083c9-0fdf-4387-9151-4f7ce7e8d5ee"
+        },
+        {
+          "name": "Showbiz",
+          "price": "$350",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/3308ef3e-f828-4636-a9a7-9fd12dd1737e"
+        },
+        {
+          "name": "Hollywood",
+          "price": "$525",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/c13f6c7a-4721-494c-9e83-c138c496fdca"
+        }
+      ],
+      "tables": [
+        {
+          "index": 0,
+          "width": 705,
+          "scrollWidth": 705,
+          "overflowX": "auto",
+          "scrollable": false,
+          "lastColumn": {
+            "scrollLeft": 0,
+            "maxScroll": 0,
+            "containerRight": 737.28125,
+            "columnLeft": 494.734375,
+            "columnRight": 736.28125
+          }
+        },
+        {
+          "index": 1,
+          "width": 705,
+          "scrollWidth": 705,
+          "overflowX": "auto",
+          "scrollable": false,
+          "lastColumn": {
+            "scrollLeft": 0,
+            "maxScroll": 0,
+            "containerRight": 737.28125,
+            "columnLeft": 531.015625,
+            "columnRight": 736.28125
+          }
+        }
+      ],
+      "anchors": {
+        "protected": [
+          {
+            "id": "fullservice",
+            "top": 24.484375
+          },
+          {
+            "id": "selfservice",
+            "top": 23.734375
+          },
+          {
+            "id": "ata-photobooths-packages",
+            "top": 23.953125
+          },
+          {
+            "id": "rental-planning-links",
+            "top": 24.0625
+          }
+        ],
+        "directSelfservice": true
+      },
+      "runtimeErrors": []
+    },
+    {
+      "width": 390,
+      "status": "passed",
+      "contract": "unchanged",
+      "imageCount": 11,
+      "images": [
+        {
+          "src": "/media/52b598863a8e1582.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+          "alt": "Photo Party City",
+          "loaded": true,
+          "naturalWidth": 313,
+          "naturalHeight": 234,
+          "inMain": false,
+          "declaredWidth": "52",
+          "declaredHeight": "40"
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/helio-sport.webp",
+          "alt": "Helio Sport photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/lumia-m-pro.webp",
+          "alt": "Lumia M Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/posh-pro.webp",
+          "alt": "Posh Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/helio-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/helio-self-service.webp",
+          "alt": "Helio Sport photo booth in an illustrative self-service party setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/lumia-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/lumia-self-service.webp",
+          "alt": "Lumia M Pro photo booth in an illustrative self-service event setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/posh-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/posh-self-service.webp",
+          "alt": "Posh Pro photo booth in an illustrative self-service celebration setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/by-mail/kit.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/kit.webp",
+          "alt": "Illustrative arrangement of a white Helio photo booth and rental accessories beside an open travel case",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "900"
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/helio-sport.webp",
+          "alt": "Helio Sport photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/lumia-m-pro.webp",
+          "alt": "Lumia M Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/posh-pro.webp",
+          "alt": "Posh Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        }
+      ],
+      "geometry": {
+        "viewportWidth": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "h1s": 1,
+        "overflowing": [
+          {
+            "tag": "TABLE",
+            "class": "ppc-table",
+            "right": 437
+          },
+          {
+            "tag": "THEAD",
+            "class": "",
+            "right": 437
+          },
+          {
+            "tag": "TR",
+            "class": "",
+            "right": 437
+          },
+          {
+            "tag": "TH",
+            "class": "",
+            "right": 437
+          },
+          {
+            "tag": "TBODY",
+            "class": "",
+            "right": 437
+          },
+          {
+            "tag": "TR",
+            "class": "",
+            "right": 437
+          },
+          {
+            "tag": "TD",
+            "class": "num",
+            "right": 437
+          },
+          {
+            "tag": "TR",
+            "class": "",
+            "right": 437
+          }
+        ]
+      },
+      "ratios": [
+        {
+          "name": "tiers",
+          "expectedRatio": 1.5,
+          "measurements": [
+            {
+              "width": 326,
+              "height": 217.328125,
+              "ratio": 1.5000359479473722,
+              "objectFit": "cover"
+            },
+            {
+              "width": 326,
+              "height": 217.328125,
+              "ratio": 1.5000359479473722,
+              "objectFit": "cover"
+            },
+            {
+              "width": 326,
+              "height": 217.328125,
+              "ratio": 1.5000359479473722,
+              "objectFit": "cover"
+            },
+            {
+              "width": 326,
+              "height": 217.328125,
+              "ratio": 1.5000359479473722,
+              "objectFit": "cover"
+            },
+            {
+              "width": 326,
+              "height": 217.328125,
+              "ratio": 1.5000359479473722,
+              "objectFit": "cover"
+            },
+            {
+              "width": 326,
+              "height": 217.328125,
+              "ratio": 1.5000359479473722,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "mail",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 314,
+              "height": 235.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "models",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 300,
+              "height": 225,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 300,
+              "height": 225,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 300,
+              "height": 225,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "keyboardFaq": {
+        "count": 5,
+        "enterAndSpace": true
+      },
+      "tierCards": [
+        {
+          "name": "Silver",
+          "price": "$695",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/4b01576a-0a6c-4f79-94af-83b5374a6d63"
+        },
+        {
+          "name": "Gold",
+          "price": "$895",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/9c2f5061-4898-4de7-9bd5-20ab1aa6fc54"
+        },
+        {
+          "name": "Platinum",
+          "price": "$1,095",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/685d2b8e-ea41-43d2-b391-01fe7fc31200"
+        },
+        {
+          "name": "Starter",
+          "price": "$199",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/fa8083c9-0fdf-4387-9151-4f7ce7e8d5ee"
+        },
+        {
+          "name": "Showbiz",
+          "price": "$350",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/3308ef3e-f828-4636-a9a7-9fd12dd1737e"
+        },
+        {
+          "name": "Hollywood",
+          "price": "$525",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/c13f6c7a-4721-494c-9e83-c138c496fdca"
+        }
+      ],
+      "tables": [
+        {
+          "index": 0,
+          "width": 356,
+          "scrollWidth": 420,
+          "overflowX": "auto",
+          "scrollable": true,
+          "lastColumn": {
+            "scrollLeft": 64,
+            "maxScroll": 64,
+            "containerRight": 374,
+            "columnLeft": 229.015625,
+            "columnRight": 373
+          }
+        },
+        {
+          "index": 1,
+          "width": 356,
+          "scrollWidth": 640,
+          "overflowX": "auto",
+          "scrollable": true,
+          "lastColumn": {
+            "scrollLeft": 284,
+            "maxScroll": 284,
+            "containerRight": 374,
+            "columnLeft": 187.5625,
+            "columnRight": 373
+          }
+        }
+      ],
+      "anchors": {
+        "protected": [
+          {
+            "id": "fullservice",
+            "top": 23.765625
+          },
+          {
+            "id": "selfservice",
+            "top": 24.3125
+          },
+          {
+            "id": "ata-photobooths-packages",
+            "top": 23.6875
+          },
+          {
+            "id": "rental-planning-links",
+            "top": 24.1875
+          }
+        ],
+        "directSelfservice": true
+      },
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/packages-images-390.webp"
+    },
+    {
+      "width": 320,
+      "status": "passed",
+      "contract": "unchanged",
+      "imageCount": 11,
+      "images": [
+        {
+          "src": "/media/52b598863a8e1582.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+          "alt": "Photo Party City",
+          "loaded": true,
+          "naturalWidth": 313,
+          "naturalHeight": 234,
+          "inMain": false,
+          "declaredWidth": "52",
+          "declaredHeight": "40"
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/helio-sport.webp",
+          "alt": "Helio Sport photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/lumia-m-pro.webp",
+          "alt": "Lumia M Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/posh-pro.webp",
+          "alt": "Posh Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/helio-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/helio-self-service.webp",
+          "alt": "Helio Sport photo booth in an illustrative self-service party setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/lumia-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/lumia-self-service.webp",
+          "alt": "Lumia M Pro photo booth in an illustrative self-service event setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/posh-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/posh-self-service.webp",
+          "alt": "Posh Pro photo booth in an illustrative self-service celebration setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/by-mail/kit.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/by-mail/kit.webp",
+          "alt": "Illustrative arrangement of a white Helio photo booth and rental accessories beside an open travel case",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "900"
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/helio-sport.webp",
+          "alt": "Helio Sport photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/lumia-m-pro.webp",
+          "alt": "Lumia M Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/full-service/posh-pro.webp",
+          "alt": "Posh Pro photo booth in an illustrative reception setting",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        }
+      ],
+      "geometry": {
+        "viewportWidth": 320,
+        "documentWidth": 320,
+        "bodyWidth": 320,
+        "h1s": 1,
+        "overflowing": [
+          {
+            "tag": "TABLE",
+            "class": "ppc-table",
+            "right": 437
+          },
+          {
+            "tag": "THEAD",
+            "class": "",
+            "right": 437
+          },
+          {
+            "tag": "TR",
+            "class": "",
+            "right": 437
+          },
+          {
+            "tag": "TH",
+            "class": "",
+            "right": 437
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "right": 368.28125
+          },
+          {
+            "tag": "TBODY",
+            "class": "",
+            "right": 437
+          },
+          {
+            "tag": "TR",
+            "class": "",
+            "right": 437
+          },
+          {
+            "tag": "TD",
+            "class": "num",
+            "right": 437
+          }
+        ]
+      },
+      "ratios": [
+        {
+          "name": "tiers",
+          "expectedRatio": 1.5,
+          "measurements": [
+            {
+              "width": 256,
+              "height": 170.65625,
+              "ratio": 1.5000915583226515,
+              "objectFit": "cover"
+            },
+            {
+              "width": 256,
+              "height": 170.65625,
+              "ratio": 1.5000915583226515,
+              "objectFit": "cover"
+            },
+            {
+              "width": 256,
+              "height": 170.65625,
+              "ratio": 1.5000915583226515,
+              "objectFit": "cover"
+            },
+            {
+              "width": 256,
+              "height": 170.65625,
+              "ratio": 1.5000915583226515,
+              "objectFit": "cover"
+            },
+            {
+              "width": 256,
+              "height": 170.65625,
+              "ratio": 1.5000915583226515,
+              "objectFit": "cover"
+            },
+            {
+              "width": 256,
+              "height": 170.65625,
+              "ratio": 1.5000915583226515,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "mail",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 244,
+              "height": 183,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "models",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 230,
+              "height": 172.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 230,
+              "height": 172.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 230,
+              "height": 172.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "keyboardFaq": {
+        "count": 5,
+        "enterAndSpace": true
+      },
+      "tierCards": [
+        {
+          "name": "Silver",
+          "price": "$695",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/4b01576a-0a6c-4f79-94af-83b5374a6d63"
+        },
+        {
+          "name": "Gold",
+          "price": "$895",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/9c2f5061-4898-4de7-9bd5-20ab1aa6fc54"
+        },
+        {
+          "name": "Platinum",
+          "price": "$1,095",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/685d2b8e-ea41-43d2-b391-01fe7fc31200"
+        },
+        {
+          "name": "Starter",
+          "price": "$199",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/fa8083c9-0fdf-4387-9151-4f7ce7e8d5ee"
+        },
+        {
+          "name": "Showbiz",
+          "price": "$350",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/3308ef3e-f828-4636-a9a7-9fd12dd1737e"
+        },
+        {
+          "name": "Hollywood",
+          "price": "$525",
+          "href": "https://eventdeskly.com/book/photo-party-city/package/c13f6c7a-4721-494c-9e83-c138c496fdca"
+        }
+      ],
+      "tables": [
+        {
+          "index": 0,
+          "width": 286,
+          "scrollWidth": 420,
+          "overflowX": "auto",
+          "scrollable": true,
+          "lastColumn": {
+            "scrollLeft": 134,
+            "maxScroll": 134,
+            "containerRight": 304,
+            "columnLeft": 159.015625,
+            "columnRight": 303
+          }
+        },
+        {
+          "index": 1,
+          "width": 286,
+          "scrollWidth": 640,
+          "overflowX": "auto",
+          "scrollable": true,
+          "lastColumn": {
+            "scrollLeft": 354,
+            "maxScroll": 354,
+            "containerRight": 304,
+            "columnLeft": 117.5625,
+            "columnRight": 303
+          }
+        }
+      ],
+      "anchors": {
+        "protected": [
+          {
+            "id": "fullservice",
+            "top": 24.25
+          },
+          {
+            "id": "selfservice",
+            "top": 24.0625
+          },
+          {
+            "id": "ata-photobooths-packages",
+            "top": 23.53125
+          },
+          {
+            "id": "rental-planning-links",
+            "top": 23.96875
+          }
+        ],
+        "directSelfservice": true
+      },
+      "runtimeErrors": []
+    }
+  ],
+  "noJavaScript": {
+    "width": 390,
+    "status": "passed",
+    "images": [
+      {
+        "src": "/media/52b598863a8e1582.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+        "alt": "Photo Party City",
+        "loaded": true,
+        "naturalWidth": 313,
+        "naturalHeight": 234,
+        "inMain": false,
+        "declaredWidth": "52",
+        "declaredHeight": "40"
+      },
+      {
+        "src": "/media/full-service/helio-sport.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/full-service/helio-sport.webp",
+        "alt": "Helio Sport photo booth in an illustrative reception setting",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 800,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "800"
+      },
+      {
+        "src": "/media/full-service/lumia-m-pro.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/full-service/lumia-m-pro.webp",
+        "alt": "Lumia M Pro photo booth in an illustrative reception setting",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 800,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "800"
+      },
+      {
+        "src": "/media/full-service/posh-pro.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/full-service/posh-pro.webp",
+        "alt": "Posh Pro photo booth in an illustrative reception setting",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 800,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "800"
+      },
+      {
+        "src": "/media/packages/helio-self-service.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/packages/helio-self-service.webp",
+        "alt": "Helio Sport photo booth in an illustrative self-service party setting",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 800,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "800"
+      },
+      {
+        "src": "/media/packages/lumia-self-service.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/packages/lumia-self-service.webp",
+        "alt": "Lumia M Pro photo booth in an illustrative self-service event setting",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 800,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "800"
+      },
+      {
+        "src": "/media/packages/posh-self-service.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/packages/posh-self-service.webp",
+        "alt": "Posh Pro photo booth in an illustrative self-service celebration setting",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 800,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "800"
+      },
+      {
+        "src": "/media/by-mail/kit.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/by-mail/kit.webp",
+        "alt": "Illustrative arrangement of a white Helio photo booth and rental accessories beside an open travel case",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 900,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "900"
+      },
+      {
+        "src": "/media/full-service/helio-sport.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/full-service/helio-sport.webp",
+        "alt": "Helio Sport photo booth in an illustrative reception setting",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 800,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "800"
+      },
+      {
+        "src": "/media/full-service/lumia-m-pro.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/full-service/lumia-m-pro.webp",
+        "alt": "Lumia M Pro photo booth in an illustrative reception setting",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 800,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "800"
+      },
+      {
+        "src": "/media/full-service/posh-pro.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/full-service/posh-pro.webp",
+        "alt": "Posh Pro photo booth in an illustrative reception setting",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 800,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "800"
+      }
+    ],
+    "contract": "unchanged",
+    "bookingLinks": 8,
+    "nativeFaq": true,
+    "tierCards": [
+      {
+        "name": "Silver",
+        "price": "$695",
+        "href": "https://eventdeskly.com/book/photo-party-city/package/4b01576a-0a6c-4f79-94af-83b5374a6d63"
+      },
+      {
+        "name": "Gold",
+        "price": "$895",
+        "href": "https://eventdeskly.com/book/photo-party-city/package/9c2f5061-4898-4de7-9bd5-20ab1aa6fc54"
+      },
+      {
+        "name": "Platinum",
+        "price": "$1,095",
+        "href": "https://eventdeskly.com/book/photo-party-city/package/685d2b8e-ea41-43d2-b391-01fe7fc31200"
+      },
+      {
+        "name": "Starter",
+        "price": "$199",
+        "href": "https://eventdeskly.com/book/photo-party-city/package/fa8083c9-0fdf-4387-9151-4f7ce7e8d5ee"
+      },
+      {
+        "name": "Showbiz",
+        "price": "$350",
+        "href": "https://eventdeskly.com/book/photo-party-city/package/3308ef3e-f828-4636-a9a7-9fd12dd1737e"
+      },
+      {
+        "name": "Hollywood",
+        "price": "$525",
+        "href": "https://eventdeskly.com/book/photo-party-city/package/c13f6c7a-4721-494c-9e83-c138c496fdca"
+      }
+    ],
+    "tables": [
+      {
+        "index": 0,
+        "width": 356,
+        "scrollWidth": 420,
+        "overflowX": "auto",
+        "scrollable": true,
+        "lastColumn": {
+          "scrollLeft": 64,
+          "maxScroll": 64,
+          "containerRight": 374,
+          "columnLeft": 229.015625,
+          "columnRight": 373
+        }
+      },
+      {
+        "index": 1,
+        "width": 356,
+        "scrollWidth": 640,
+        "overflowX": "auto",
+        "scrollable": true,
+        "lastColumn": {
+          "scrollLeft": 284,
+          "maxScroll": 284,
+          "containerRight": 374,
+          "columnLeft": 187.5625,
+          "columnRight": 373
+        }
+      }
+    ],
+    "anchors": {
+      "protected": [
+        {
+          "id": "fullservice",
+          "top": 23.765625
+        },
+        {
+          "id": "selfservice",
+          "top": 24.3125
+        },
+        {
+          "id": "ata-photobooths-packages",
+          "top": 23.6875
+        },
+        {
+          "id": "rental-planning-links",
+          "top": 23.8125
+        }
+      ],
+      "directSelfservice": true
+    },
+    "geometry": {
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "h1s": 1,
+      "overflowing": [
+        {
+          "tag": "TABLE",
+          "class": "ppc-table",
+          "right": 437
+        },
+        {
+          "tag": "THEAD",
+          "class": "",
+          "right": 437
+        },
+        {
+          "tag": "TR",
+          "class": "",
+          "right": 437
+        },
+        {
+          "tag": "TH",
+          "class": "",
+          "right": 437
+        },
+        {
+          "tag": "TBODY",
+          "class": "",
+          "right": 437
+        },
+        {
+          "tag": "TR",
+          "class": "",
+          "right": 437
+        },
+        {
+          "tag": "TD",
+          "class": "num",
+          "right": 437
+        },
+        {
+          "tag": "TR",
+          "class": "",
+          "right": 437
+        }
+      ]
+    },
+    "ratios": [
+      {
+        "name": "tiers",
+        "expectedRatio": 1.5,
+        "measurements": [
+          {
+            "width": 326,
+            "height": 217.328125,
+            "ratio": 1.5000359479473722,
+            "objectFit": "cover"
+          },
+          {
+            "width": 326,
+            "height": 217.328125,
+            "ratio": 1.5000359479473722,
+            "objectFit": "cover"
+          },
+          {
+            "width": 326,
+            "height": 217.328125,
+            "ratio": 1.5000359479473722,
+            "objectFit": "cover"
+          },
+          {
+            "width": 326,
+            "height": 217.328125,
+            "ratio": 1.5000359479473722,
+            "objectFit": "cover"
+          },
+          {
+            "width": 326,
+            "height": 217.328125,
+            "ratio": 1.5000359479473722,
+            "objectFit": "cover"
+          },
+          {
+            "width": 326,
+            "height": 217.328125,
+            "ratio": 1.5000359479473722,
+            "objectFit": "cover"
+          }
+        ]
+      },
+      {
+        "name": "mail",
+        "expectedRatio": 1.3333333333333333,
+        "measurements": [
+          {
+            "width": 314,
+            "height": 235.5,
+            "ratio": 1.3333333333333333,
+            "objectFit": "cover"
+          }
+        ]
+      },
+      {
+        "name": "models",
+        "expectedRatio": 1.3333333333333333,
+        "measurements": [
+          {
+            "width": 300,
+            "height": 225,
+            "ratio": 1.3333333333333333,
+            "objectFit": "cover"
+          },
+          {
+            "width": 300,
+            "height": 225,
+            "ratio": 1.3333333333333333,
+            "objectFit": "cover"
+          },
+          {
+            "width": 300,
+            "height": 225,
+            "ratio": 1.3333333333333333,
+            "objectFit": "cover"
+          }
+        ]
+      }
+    ]
+  },
+  "errors": [],
+  "contractFields": [
+    "all anchor hrefs",
+    "title",
+    "all meta tags",
+    "canonical",
+    "JSON-LD schema",
+    "all IDs",
+    "all dollar prices"
+  ]
+}
