@@ -25,7 +25,12 @@ const faqs=[
 ];
 ---
 <RentalLayout title={page.title} description={metadataDescription} canonical={page.canonical} breadcrumbs={[{name:'Home',href:'/'},{name:label}]} ctaHeading={isAbout ? 'Let’s make your next gathering a good one.' : isProps ? 'Have a theme in mind?' : isCost ? 'Find the right fit for your budget.' : 'Have a question about your booking?'} ctaSub={isProps ? 'Tell us your date and event details. We’ll help with the finishing touches.' : undefined}>
-  <Hero title={heading} description={description} eyebrow={label} imageAlt={isAbout ? 'The Photo Party City team welcoming guests at an event' : isProps ? 'Guests posing with props and a backdrop at a celebration' : isCost ? 'Guests enjoying a photo booth and holding their photo strips' : 'A photo booth packed and ready for its next celebration'}/>
+  {isCost ? <div class="cost-guide-hero">
+    <Hero title={heading} description={description} eyebrow={label} image="/media/cost-guide/hero.webp" imageAlt="Illustrative scene of hosts planning a celebration with sample photo strips">
+      <p class="ppc-small ppc-muted" style="margin:16px 0 0">Illustrative event planning imagery.</p>
+    </Hero>
+    <style is:inline>.cost-guide-hero .ppc-hero .ppc-ph{min-height:0}</style>
+  </div> : <Hero title={heading} description={description} eyebrow={label} imageAlt={isAbout ? 'The Photo Party City team welcoming guests at an event' : isProps ? 'Guests posing with props and a backdrop at a celebration' : 'A photo booth packed and ready for its next celebration'}/>}
   {isCost && <>
     <section class="ppc-section-sm"><div class="ppc-wrap ppc-stack-lg">
       <div class="ppc-stack"><p class="ppc-eyebrow">Start with the experience</p><h2 class="ppc-h2">Four ways to make it happen.</h2><p class="ppc-p">These are Photo Party City’s published rental rates. Compare duration, equipment and service before choosing your package.</p></div>
