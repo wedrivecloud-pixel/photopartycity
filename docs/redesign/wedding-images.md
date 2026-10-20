@@ -10,9 +10,9 @@ At the owner's request, the wedding page's “Choose your hours of happy.” sec
 
 These 1200 × 800 images retain the wedding cards' existing 4:3 crops. No new image files are generated or duplicated. The scenes are promotional illustrations; the section caption identifies them accordingly. Original equipment references and generation details are documented in [full-service imagery](full-service-images.md).
 
-The image selection is conditional on the wedding route in `EventPage.astro`. The corporate route retains its existing images. The shared TierCard component, wedding hero, layout, package copy, hours, prices, booking links, metadata, canonical URL, schema and anchors are preserved.
+The wedding and corporate routes share this model lineup in `EventPage.astro`. The shared TierCard component, wedding hero, layout, package copy, hours, prices, booking links, metadata, canonical URL, schema and anchors are preserved.
 
-Build and repository tests pass. Focused checks confirm the three source images and their order, 4:3 framing, unchanged hero attributes, prices, links, metadata, schema and IDs. Corporate DOM is unchanged after whitespace normalization. FAQ and 390px no-JavaScript checks pass; separate visual review confirms complete equipment and clear badge placement at 1440px and 390px.
+Build and repository tests pass. Focused checks confirm the three source images and their order, 4:3 framing, unchanged hero attributes, prices, links, metadata, schema and IDs. FAQ and 390px no-JavaScript checks pass; separate visual review confirms complete equipment and clear badge placement at 1440px and 390px. The matching [corporate update](corporate-images.md) preserves the wedding DOM.
 
 At 320px the card images fit, while the unchanged shared hero produces 389px page width in both the preceding and updated HTML. This existing hero sizing issue is recorded separately from the image swap. The requested 1440px and 390px views have no horizontal overflow.
 
