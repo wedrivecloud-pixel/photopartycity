@@ -1,6 +1,7 @@
 ---
 import RentalLayout from '../layouts/RentalLayout.astro';
 import FAQ from '../components/redesign/FAQ.astro';
+import Photo from '../components/redesign/Photo.astro';
 import {selfServiceTiers,bookingLinks,addons,money,serviceSchema} from '../data/rentals';
 const title = "Self-Service Photo Booth Rental from $199 | Inland Empire";
 const description = "Rent a self-service photo booth for 24 hours from $199. Compare packages, optional prints, and Mira Loma pickup or paid delivery. Check your event date.";
@@ -30,7 +31,7 @@ const schema = serviceSchema("Self-service photo booth rental",canonical,selfSer
 </div>
 <ul class="ppc-checks ppc-checks-row"><li>Full 24‑hour rental</li><li>Unlimited digital photos</li><li>Prints optional</li></ul>
 </div>
-<div class="ppc-ph t-sage ppc-r45" style="border-radius: 28px"><span>Photo: cousins mid‑laugh at a backyard birthday</span></div>
+<div class="self-service-hero-art"><Photo label="A self-service birthday photo booth" src="/media/self-service/hero.webp" alt="Illustrative scene of guests operating a Helio Sport booth at a backyard birthday party" width={1200} height={1500} loading="eager" fetchpriority="high" tone="sage" ratio="4/5"/><p class="ppc-small self-service-caption">Illustrative event imagery.</p></div>
 </div>
 </section>
 
@@ -40,23 +41,24 @@ const schema = serviceSchema("Self-service photo booth rental",canonical,selfSer
 <h2 class="ppc-h2">Three booths. One full day of fun.</h2>
 <p class="ppc-p">Every package includes a custom digital backdrop and 100+ premade templates.</p>
 </div>
-<div class="ppc-cards">
+<div class="ppc-cards self-service-tiers">
 <article class="ppc-tier">
-<div class="ppc-ph t-sage ppc-r32"><span>Photo: kids crowding the Helio Sport</span></div>
+<Photo label="Helio Sport photo booth" src="/media/full-service/helio-sport.webp" alt="Helio Sport photo booth in an illustrative event setting" width={1200} height={800} tone="sage" ratio="3/2"/>
 <div class="ppc-tier-body"><p class="ppc-eyebrow">Helio Sport · iPad camera</p><h3 class="ppc-h3" style="font-size: 28px">{selfServiceTiers[0].name}</h3><p class="ppc-p" style="font-size: 16px">A simple, fun booth for birthdays, showers and family parties.</p></div>
 <div class="ppc-tier-foot"><p class="ppc-price"><span>from</span><b>{money(selfServiceTiers[0].price)}</b><span>/ day</span></p><a class="ppc-btnp ppc-btn-sm" href={selfServiceTiers[0].href} data-source="card" data-booth="self">Check your date</a></div>
 </article>
 <article class="ppc-tier">
-<div class="ppc-ph t-lil ppc-r32"><span>Photo: friends posing at the Lumia M Pro</span></div>
+<Photo label="Lumia M Pro photo booth" src="/media/full-service/lumia-m-pro.webp" alt="Lumia M Pro photo booth in an illustrative event setting" width={1200} height={800} tone="lil" ratio="3/2"/>
 <div class="ppc-tier-body"><p class="ppc-eyebrow">Lumia M Pro · iPad + DSLR</p><h3 class="ppc-h3" style="font-size: 28px">{selfServiceTiers[1].name}</h3><p class="ppc-p" style="font-size: 16px">Pick it for the camera upgrade.</p></div>
 <div class="ppc-tier-foot"><p class="ppc-price"><span>from</span><b>{money(selfServiceTiers[1].price)}</b><span>/ day</span></p><a class="ppc-btng ppc-btn-sm" href={selfServiceTiers[1].href} data-source="card" data-booth="self">Check your date</a></div>
 </article>
 <article class="ppc-tier">
-<div class="ppc-ph t-sky ppc-r32"><span>Photo: guests watching the 37‑inch display</span></div>
+<Photo label="Posh Pro photo booth" src="/media/full-service/posh-pro.webp" alt="Posh Pro photo booth in an illustrative event setting" width={1200} height={800} tone="sky" ratio="3/2"/>
 <div class="ppc-tier-body"><p class="ppc-eyebrow">Posh Pro · iPad + DSLR + display</p><h3 class="ppc-h3" style="font-size: 28px">{selfServiceTiers[2].name}</h3><p class="ppc-p" style="font-size: 16px">Pick it for branding, slideshows and signage.</p></div>
 <div class="ppc-tier-foot"><p class="ppc-price"><span>from</span><b>{money(selfServiceTiers[2].price)}</b><span>/ day</span></p><a class="ppc-btng ppc-btn-sm" href={selfServiceTiers[2].href} data-source="card" data-booth="self">Check your date</a></div>
 </article>
 </div>
+<p class="ppc-small self-service-caption">Photo booth models shown in illustrative event settings.</p>
 <div class="ppc-grid2" style="align-items: start">
 <div class="ppc-card ppc-stack" style="gap: 14px">
 <h3 class="ppc-h3">Included in every package</h3>
@@ -112,3 +114,7 @@ const schema = serviceSchema("Self-service photo booth rental",canonical,selfSer
 </section>
 
 </RentalLayout>
+
+<style>
+ .self-service-hero-art :global(.ppc-ph){border-radius:28px}.self-service-tiers :global(.ppc-photo){aspect-ratio:3/2}.self-service-caption{margin:12px 0 0}.self-service-tiers+.self-service-caption{margin:0}
+</style>
