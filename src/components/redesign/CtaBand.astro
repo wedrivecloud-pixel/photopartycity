@@ -1,11 +1,12 @@
 ---
-interface Props { heading?:string; sub?:string }
-const {heading='Let’s get your party on the calendar.',sub='Near Mira Loma or across the country — start with your date.'}=Astro.props;
+interface Props { heading?:string; sub?:string; eventType?:string }
+const {heading='Let’s get your party on the calendar.',sub='Near Mira Loma or across the country — start with your date.',eventType}=Astro.props;
 ---
 <section class="ppc-cta-section" aria-labelledby="cta-band-heading">
   <div class="ppc-cta-inner" data-source="cta-band">
     <h2 class="ppc-h2" id="cta-band-heading">{heading}</h2><p class="ppc-cta-sub">{sub}</p>
     <form action="/check-your-date/" method="get" class="ppc-cta-form" data-check-form>
+      {eventType && <input type="hidden" name="event" value={eventType}/>}
       <div class="ppc-field"><label for="band-date">Event date</label><input id="band-date" class="ppc-input" name="date" type="date" required/></div>
       <div class="ppc-field"><label for="band-zip">ZIP code</label><input id="band-zip" class="ppc-input" name="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code" placeholder="91752" required/></div>
       <div class="ppc-cta-submit"><button class="ppc-btnp ppc-btn-light" type="submit">Check your date</button></div>

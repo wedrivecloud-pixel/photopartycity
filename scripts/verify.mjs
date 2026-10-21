@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import {retiredRoutes,isRetired,dedicatedRentalSlugs,usesRentalTemplate} from '../src/data/redesign-routes.ts';
+import {retiredRoutes,isRetired,dedicatedRentalSlugs,usesRentalTemplate,occasionSlugs} from '../src/data/redesign-routes.ts';
 import {fullServiceTiers,selfServiceTiers,bookingLinks,addons,booth360Rates,mailRental} from '../src/data/rentals.ts';
 const pages=JSON.parse(fs.readFileSync('src/data/pages.json','utf8'));
 const escapeHtml=value=>value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
@@ -37,7 +37,7 @@ for(const page of pages){
   for(const m of page.content.matchAll(/href="([^"]+)"/g))if(!links.has(m[1].replaceAll('&amp;','&')))failures.push(`Missing product link: ${page.path}`);
  }
 }
-for(const slug of ['photo-booth-by-mail','check-your-date','types-of-photo-booths','blog']){
+for(const slug of ['photo-booth-by-mail','check-your-date','types-of-photo-booths','blog',...occasionSlugs]){
  const file=`dist/${slug}/index.html`;assert(fs.existsSync(file),`New rental route ${slug}`);redesignPaths.add(file);
 }
 for(const file of htmlFiles){
@@ -53,6 +53,34 @@ for(const file of htmlFiles){
   if(!html.includes('72420.48'))failures.push(`Missing LocalBusiness service radius: ${file}`);
   if(!html.includes('909-403-7143')&&!html.includes('909) 403-7143'))failures.push(`Missing contact phone: ${file}`);
  }
+}
+const occasionKeys=['birthday','quinceanera','graduation','school'];
+const occasionTitles=new Set(),occasionDescriptions=new Set();
+for(const [index,slug] of occasionSlugs.entries()){
+ const html=fs.readFileSync(`dist/${slug}/index.html`,'utf8');
+ const canonical=`https://photopartycity.com/${slug}/`;
+ assert(html.includes(`rel="canonical" href="${canonical}"`),`Occasion canonical ${slug}`);
+ assert(html.includes(`name="event" value="${occasionKeys[index]}"`),`Occasion form context ${slug}`);
+ assert(html.includes(`href="/check-your-date/?event=${occasionKeys[index]}"`),`Occasion event-prefilled CTA ${slug}`);
+ assert(html.includes(fullServiceTiers[0].href)&&html.includes(selfServiceTiers[0].href),`Original Silver/Starter booking links ${slug}`);
+ assert(html.includes('From $695')&&html.includes('From $199'),`Original occasion starting prices ${slug}`);
+ assert(html.includes(`/media/occasions/${occasionKeys[index]}.webp`),`Occasion hero ${slug}`);
+ assert(!/<div[^>]*class="[^"]*ppc-photo[^"]*"[^>]*>\s*<span>/.test(html),`No empty occasion images ${slug}`);
+ const schemas=[...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map(match=>JSON.parse(match[1]));
+ const service=schemas.find(schema=>schema['@type']==='Service');
+ assert(service?.url===canonical&&service.offers.length===2,`Occasion service schema ${slug}`);
+ assert.deepEqual(service.offers.map(offer=>offer.price),[fullServiceTiers[0].price,selfServiceTiers[0].price]);
+ assert(schemas.some(schema=>schema['@type']==='FAQPage'&&schema.mainEntity.length===5),`Occasion FAQ schema ${slug}`);
+ assert(schemas.some(schema=>schema['@type']==='BreadcrumbList'),`Occasion breadcrumbs ${slug}`);
+ occasionTitles.add(html.match(/<title>([\s\S]*?)<\/title>/)?.[1]);
+ occasionDescriptions.add(html.match(/<meta name="description" content="([^"]+)"/)?.[1]);
+}
+assert.equal(occasionTitles.size,4,'Distinct occasion titles');
+assert.equal(occasionDescriptions.size,4,'Distinct occasion descriptions');
+for(const slug of occasionSlugs){
+ const href=`href="/${slug}/"`;
+ assert(fs.readFileSync('dist/index.html','utf8').includes(href),`Homepage links to ${slug}`);
+ assert(!fs.readFileSync('public/_redirects','utf8').includes(`/${slug}/ `),`Occasion page must not redirect ${slug}`);
 }
 const redirects=fs.readFileSync('public/_redirects','utf8');
 for(const [slug,target] of Object.entries(retiredRoutes)){assert(redirects.includes(`/${slug}/ ${target} 301`),`301 redirect ${slug}`);assert(!fs.existsSync(`dist/${slug}/index.html`),`Retired route must not shadow redirect: ${slug}`);}

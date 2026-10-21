@@ -1,4 +1,5 @@
 ---
+import {eventNavigation as events} from '../../data/occasion-events';
 interface Props {checkHref?:string}
 const {checkHref='/check-your-date/'}=Astro.props;
 const booths=[
@@ -8,7 +9,6 @@ const booths=[
  {href:'/360-photo-booth-rental/',name:'360 video booth',sub:'Slow-motion spinning video'},
  {href:'/photo-booth-by-mail/',name:'We ship it — nationwide',sub:'A photo booth shipped to your door'},
 ];
-const events=[{name:'Weddings',href:'/wedding-photo-booth-rental/'},{name:'Birthdays',href:'/self-service-photo-booth-rental/'},{name:'Corporate',href:'/corporate-photo-booth-rental/'},{name:'Quinceañeras',href:'/self-service-photo-booth-rental/'},{name:'Graduations',href:'/self-service-photo-booth-rental/'},{name:'School events',href:'/self-service-photo-booth-rental/'}];
 const more=[{name:'Packages',href:'/photo-booth-packages/'},{name:'How it works',href:'/#how-it-works'},{name:'Reviews',href:'/#reviews'},{name:'FAQ',href:'/#faq'}];
 ---
 <div class="ppc-topline"><span class="ppc-hidesm">Staffed booths in the Inland Empire · Booths shipped nationwide</span><span class="ppc-showsm">Staffed in the Inland Empire · Shipped nationwide</span></div>
@@ -25,13 +25,13 @@ const more=[{name:'Packages',href:'/photo-booth-packages/'},{name:'How it works'
       <a class="ppc-btnp ppc-btn-sm ppc-headcta" href={checkHref}>Check your date</a>
       <a class="ppc-headcall ppc-icon-button" href="tel:+19094037143" aria-label="Call or text (909) 403-7143"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
       <button class="ppc-burger ppc-icon-button" type="button" aria-label="Open menu" aria-controls="ppc-mobile-menu" aria-expanded="false" data-menu-open hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-      <noscript><details class="ppc-mobile-fallback"><summary>Menu</summary><nav aria-label="Mobile navigation">{booths.map(booth=><a href={booth.href}>{booth.name}</a>)}{more.map(link=><a href={link.href}>{link.name}</a>)}</nav></details></noscript>
+      <noscript><details class="ppc-mobile-fallback"><summary>Menu</summary><nav aria-label="Mobile navigation"><p class="ppc-foothead">Ways to rent</p>{booths.map(booth=><a href={booth.href}>{booth.name}</a>)}<p class="ppc-foothead">Events</p>{events.map(event=><a href={event.href}>{event.name}</a>)}<p class="ppc-foothead">More</p>{more.map(link=><a href={link.href}>{link.name}</a>)}</nav></details></noscript>
     </div>
   </div>
 </header>
 <dialog id="ppc-mobile-menu" class="ppc-drawer" aria-label="Site menu" data-menu-dialog>
   <div class="ppc-drawer-head"><span class="ppc-brand-name">Photo Party City</span><button class="ppc-icon-button" type="button" aria-label="Close menu" data-menu-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-  <nav class="ppc-drawer-nav" aria-label="Mobile navigation"><div><p class="ppc-foothead">Ways to rent</p>{booths.map(booth=><a class="ppc-dlink" href={booth.href}>{booth.name}</a>)}</div><div><p class="ppc-foothead">More</p>{more.map(link=><a class="ppc-dlink" href={link.href}>{link.name}</a>)}</div></nav>
+  <nav class="ppc-drawer-nav" aria-label="Mobile navigation"><div><p class="ppc-foothead">Ways to rent</p>{booths.map(booth=><a class="ppc-dlink" href={booth.href}>{booth.name}</a>)}</div><div><p class="ppc-foothead">Events</p>{events.map(event=><a class="ppc-dlink" href={event.href}>{event.name}</a>)}</div><div><p class="ppc-foothead">More</p>{more.map(link=><a class="ppc-dlink" href={link.href}>{link.name}</a>)}</div></nav>
   <div class="ppc-drawer-actions" data-source="header"><a class="ppc-btnp ppc-btn-block" href={checkHref}>Check your date</a><a class="ppc-btng ppc-btn-block" href="tel:+19094037143">Call or text (909) 403-7143</a></div>
 </dialog>
 <script>
@@ -65,3 +65,7 @@ const more=[{name:'Packages',href:'/photo-booth-packages/'},{name:'How it works'
     matchMedia('(min-width:1025px)').addEventListener('change',event=>{if(event.matches)closeMenu();});
   }
 </script>
+
+<style>
+  .ppc-mobile-fallback>nav{max-height:70dvh;overflow-y:auto;overscroll-behavior:contain}
+</style>

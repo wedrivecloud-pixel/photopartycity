@@ -1,4 +1,5 @@
-export const dedicatedRentalSlugs = ['photo-booth-packages','full-service-photo-booth-rental','self-service-photo-booth-rental','digital-photo-booth-rental','360-photo-booth-rental','photo-booth-by-mail','contact-us','check-your-date'];
+export const occasionSlugs = ['birthday-photo-booth-rental','quinceanera-photo-booth-rental','graduation-photo-booth-rental','school-event-photo-booth-rental'];
+export const dedicatedRentalSlugs = ['photo-booth-packages','full-service-photo-booth-rental','self-service-photo-booth-rental','digital-photo-booth-rental','360-photo-booth-rental','photo-booth-by-mail','contact-us','check-your-date',...occasionSlugs];
 export const infoSlugs = ['photo-booth-rental-cost','about-photo-party-city','photobooth-props','refund-policy'];
 export const eventSlugs = ['wedding-photo-booth-rental','corporate-photo-booth-rental'];
 export const retiredRoutes:Record<string,string> = {

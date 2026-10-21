@@ -1,9 +1,9 @@
 ---
+import {eventNavigation as events} from '../../data/occasion-events';
 import {cities} from '../../data/brand';
 interface Props {checkHref?:string}
 const {checkHref='/check-your-date/'}=Astro.props;
 const ways=[{name:'Full service',href:'/full-service-photo-booth-rental/'},{name:'Self-service',href:'/self-service-photo-booth-rental/'},{name:'Shipped nationwide',href:'/photo-booth-by-mail/'},{name:'360 video booth',href:'/360-photo-booth-rental/'},{name:'Digital booth',href:'/digital-photo-booth-rental/'},{name:'All packages',href:'/photo-booth-packages/'},{name:'Rental cost guide',href:'/photo-booth-rental-cost/'}];
-const events=[{name:'Weddings',href:'/wedding-photo-booth-rental/'},{name:'Birthdays',href:'/self-service-photo-booth-rental/'},{name:'Corporate',href:'/corporate-photo-booth-rental/'},{name:'Quinceañeras',href:'/self-service-photo-booth-rental/'},{name:'Graduations',href:'/self-service-photo-booth-rental/'},{name:'School events',href:'/self-service-photo-booth-rental/'}];
 const company=[{name:'About us',href:'/about-photo-party-city/'},{name:'Contact',href:'/contact-us/'},{name:'Props & backdrops',href:'/photobooth-props/'},{name:'Blog',href:'/blog/'},{name:'Rental terms & refunds',href:'/refund-policy/'},{name:'Shop equipment',href:'/shop-page/'}];
 ---
 <footer class="ppc-footer"><div class="ppc-wrap ppc-footer-inner"><div class="ppc-footgrid">

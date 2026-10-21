@@ -5,6 +5,7 @@ import FAQ from '../components/redesign/FAQ.astro';
 import WaysToRent from '../components/redesign/WaysToRent.astro';
 import CheckDateForm from '../components/redesign/CheckDateForm.astro';
 import {cities} from '../data/brand';
+import {occasionByKey} from '../data/occasion-events';
 const faqs=[
  {question:'Do you serve my event location?',answer:'Staffed booths and pickup rentals are available within 45 miles of Mira Loma, California, subject to your exact address. Booth by mail is available across the continental United States. Enter your date and ZIP to explore your options.'},
  {question:'What’s the difference between full service and self-service?',answer:'Full service includes an attendant, printing, delivery, setup and takedown during your booked hours. With self-service, you pick up the booth in Mira Loma and operate it for your 24-hour rental. Printing is an optional extra.'},
@@ -14,10 +15,10 @@ const faqs=[
 const events=[
  {name:'Weddings',label:'Illustrative scene of wedding guests showing their photo strips',image:'/media/homepage/wedding.webp',href:'/wedding-photo-booth-rental/',tone:'blush'},
  {name:'Corporate events',label:'Illustrative scene of colleagues celebrating together at a company event',image:'/media/homepage/corporate.webp',href:'/corporate-photo-booth-rental/',tone:'sky'},
- {name:'Birthdays',label:'Illustrative scene of friends celebrating a birthday at a photo booth',image:'/media/homepage/birthday.webp',href:'/self-service-photo-booth-rental/',tone:'gold'},
- {name:'Quinceañeras',label:'Illustrative scene of a quinceañera celebration with family and friends',image:'/media/homepage/quinceanera.webp',href:'/full-service-photo-booth-rental/',tone:'lav'},
- {name:'Graduations',label:'Illustrative scene of graduates celebrating with photo keepsakes',image:'/media/homepage/graduation.webp',href:'/self-service-photo-booth-rental/',tone:'sage'},
- {name:'School events',label:'Illustrative scene of students enjoying a school celebration',image:'/media/homepage/school.webp',href:'/self-service-photo-booth-rental/',tone:'lil'},
+ {name:'Birthdays',label:'Illustrative scene of friends celebrating a birthday at a photo booth',image:'/media/homepage/birthday.webp',href:`/${occasionByKey.birthday.slug}/`,tone:'gold'},
+ {name:'Quinceañeras',label:'Illustrative scene of a quinceañera celebration with family and friends',image:'/media/homepage/quinceanera.webp',href:`/${occasionByKey.quinceanera.slug}/`,tone:'lav'},
+ {name:'Graduations',label:'Illustrative scene of graduates celebrating with photo keepsakes',image:'/media/homepage/graduation.webp',href:`/${occasionByKey.graduation.slug}/`,tone:'sage'},
+ {name:'School events',label:'Illustrative scene of students enjoying a school celebration',image:'/media/homepage/school.webp',href:`/${occasionByKey.school.slug}/`,tone:'lil'},
 ];
 ---
 <RentalLayout title="Photo Booth Rentals in Mira Loma & Nationwide | Photo Party City" description="Staffed photo booths near Mira Loma, California, easy pickup rentals, and booths shipped across the continental US. Find the right booth for your celebration." checkHref="#check" ctaHeading="Your date. Your people. Let’s make memories.">
