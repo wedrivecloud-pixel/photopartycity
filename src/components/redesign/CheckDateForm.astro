@@ -1,0 +1,12 @@
+---
+interface Props {id?:string;home?:boolean;zip?:string;compact?:boolean}
+const {id='event',home=false,zip='91752',compact=false}=Astro.props;
+---
+<form action="/check-your-date/" method="get" class:list={['ppc-form',{'ppc-formcard':!compact}]} data-check-form data-home-check={home || undefined}>
+ <div class="ppc-fields">
+  <div class="ppc-field"><label for={`${id}-date`}>Event date</label><input class="ppc-input" id={`${id}-date`} type="date" name="date" required/></div>
+  <div class="ppc-field"><label for={`${id}-zip`}>Event ZIP code</label><input class="ppc-input" id={`${id}-zip`} name="zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code" placeholder={zip} required data-home-zip={home || undefined}/></div>
+ </div>
+ <button class="ppc-btnp" type="submit" data-source="hero">Check your date</button>
+ {home && <p class="ppc-small" data-home-zip-status aria-live="polite">Local staffed booths or a booth shipped to you — we’ll find the right fit.</p>}
+</form>

@@ -1,0 +1,97 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "imageSlots": 16,
+      "mainImages": 7,
+      "stripFrames": 9,
+      "overflow": false,
+      "tierRatios": [
+        1.5000714591967985,
+        1.5000714591967985,
+        1.5000714591967985
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 960,
+      "imageSlots": 16,
+      "mainImages": 7,
+      "stripFrames": 9,
+      "overflow": false,
+      "tierRatios": [
+        1.5,
+        1.5,
+        1.5
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 768,
+      "imageSlots": 16,
+      "mainImages": 7,
+      "stripFrames": 9,
+      "overflow": false,
+      "tierRatios": [
+        1.5,
+        1.5,
+        1.5
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 721,
+      "imageSlots": 16,
+      "mainImages": 7,
+      "stripFrames": 9,
+      "overflow": false,
+      "tierRatios": [
+        1.5,
+        1.5,
+        1.5
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 720,
+      "imageSlots": 16,
+      "mainImages": 7,
+      "stripFrames": 9,
+      "overflow": false,
+      "tierRatios": [
+        1.5,
+        1.5,
+        1.5
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "imageSlots": 16,
+      "mainImages": 7,
+      "stripFrames": 9,
+      "overflow": false,
+      "tierRatios": [
+        1.5000359479473722,
+        1.5000359479473722,
+        1.5000359479473722
+      ],
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "imageSlots": 16,
+      "mainImages": 7,
+      "stripFrames": 9,
+      "overflow": false,
+      "tierRatios": [
+        1.5000915583226515,
+        1.5000915583226515,
+        1.5000915583226515
+      ],
+      "status": "passed"
+    }
+  ],
+  "noJavaScript": "passed",
+  "metadataPricesLinksSchemaAndIDs": "unchanged"
+}

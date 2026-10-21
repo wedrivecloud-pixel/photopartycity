@@ -1,0 +1,7 @@
+---
+interface Props { trail: Array<{name:string;href?:string}> }
+const {trail}=Astro.props;
+---
+<nav aria-label="Breadcrumb" class="ppc-wrap ppc-crumbwrap">
+  <ol class="ppc-crumbs">{trail.map((item,index)=><li aria-current={index===trail.length-1 ? 'page':undefined}>{item.href && index!==trail.length-1 ? <a href={item.href}>{item.name}</a> : item.name}</li>)}</ol>
+</nav>

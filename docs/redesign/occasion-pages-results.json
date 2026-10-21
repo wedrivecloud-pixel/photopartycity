@@ -1,0 +1,2161 @@
+{
+  "status": "passed",
+  "testedAt": "2026-10-21T05:54:13.303Z",
+  "base": "http://127.0.0.1:4339",
+  "scope": {
+    "oldRoutes": 31,
+    "newRoutes": 4,
+    "newWidths": [
+      1440,
+      1024,
+      768,
+      390,
+      320
+    ],
+    "smokeWidths": [
+      1440,
+      390
+    ],
+    "noJavaScriptWidth": 390
+  },
+  "baselineContracts": [
+    {
+      "route": "/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "6994615ca47d77f224c63cd5378967fb1fd7cac39b7b073b950d567939e0917b"
+    },
+    {
+      "route": "/360-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "30dab1109b406c1f371ee06e2956e83e997be68c5fd0f26ddf167c7b4588a08e"
+    },
+    {
+      "route": "/about-photo-party-city/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "a0023075804da02cacb8236c5555df7f62080b1ade87d5127e8bf234cf6cc8ec"
+    },
+    {
+      "route": "/blog/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "22fa9c7b24ff6ec8b6685d717bf56a462171cb47c3861437d98f27cd537733d1"
+    },
+    {
+      "route": "/check-your-date/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "fa4d3fa90dd21118c57a6e5ec983cfa74467d0ecff95d35dfe9e0904eba54d02"
+    },
+    {
+      "route": "/contact-us/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "ab48508b15e30c3435dd1928a1991c5a1848ffe3c812e91b7b1c17e183f836ac"
+    },
+    {
+      "route": "/corporate-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "be46dd47e9cac2b6a1dc5ffdea322d7d5f0f265e5f701c99057121f4f7261e12"
+    },
+    {
+      "route": "/digital-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "0a0eeba099556551f9bc30ac255c2cbe4214b933768316448cd550fd33efc7de"
+    },
+    {
+      "route": "/full-service-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "50496cd116e55860f0c57d4e2b8445fbad6047aeff5ecb63acbc11bf42e163e5"
+    },
+    {
+      "route": "/how-to-build-a-profitable-photo-booth-business/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "90bda9bc5f55402b7730f5a1a06377ff0ada2015e6da11d7c6aaf9839afbd86c"
+    },
+    {
+      "route": "/photo-booth-by-mail/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "99c99769ed01f54a1f47dcf49f932a5a1e240ad5a8aa048d7fce90bf27ab25c6"
+    },
+    {
+      "route": "/photo-booth-packages/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "4baf39d211c8e756f3ddb762a116b38b721b14005278fc0bffdd6248fec9be53"
+    },
+    {
+      "route": "/photo-booth-rental-chino/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "f5a05dd42dfc9592908c9b9b793066a53cdaa34ffcb08078dbe97314cb5cbec5"
+    },
+    {
+      "route": "/photo-booth-rental-corona/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "ab666697ac3f6b6f64ffcdd654f3ad07c0308f5ff1d4bedb746e3c120b202bcf"
+    },
+    {
+      "route": "/photo-booth-rental-cost/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "792f9ddf5d9f7012e342b008004c75339162f5a1d078a8996e17fa3e9a5ebc24"
+    },
+    {
+      "route": "/photo-booth-rental-eastvale/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "0dc19a1a541284a5e34036e00ce0ab903e114a668ed679347718a60ded180d5f"
+    },
+    {
+      "route": "/photo-booth-rental-fontana/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "468ab08601d829b839d5e0770259b2c1f3f7e6b55fc1e4e159d1f012d04eabb5"
+    },
+    {
+      "route": "/photo-booth-rental-jurupa-valley/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "b119653af357027e41a405b86c4243d30bdee27a01289bcd062d6a0cfef98ae4"
+    },
+    {
+      "route": "/photo-booth-rental-norco/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "da06bfb3f6c8a6c256f674a9f8daa5192814caf3afd402726b238cc827758f49"
+    },
+    {
+      "route": "/photo-booth-rental-ontario/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "701ca64eecb817635f48094e31599be2c5459a6217b450a970a806173e67e891"
+    },
+    {
+      "route": "/photo-booth-rental-rancho-cucamonga/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "837b13027bcb191d8ae73fb71058f9ea83b839075b410415ef168f6718f0b140"
+    },
+    {
+      "route": "/photo-booth-rental-riverside/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "1c8492aab0d8d88083f77b65e5017a3d6eee67654a8d2e35dc11b1434d996477"
+    },
+    {
+      "route": "/photo-booth-rental-san-bernardino/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "91dfcf1a63f27445ba0d9516fc405bfbed889c1f52d3bb547e0b464f132a461d"
+    },
+    {
+      "route": "/photo-booth-rental-upland/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "d7bf2dac5fba1c34431d10020f740d71e54c24354b32be0e1e3727e7923a0e19"
+    },
+    {
+      "route": "/photobooth-event-benefits/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "5aa0e67684b11176baf6593ba549fba24992763827e4f48714d69539c9f649c4"
+    },
+    {
+      "route": "/photobooth-props/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "b0951c6af750cc48052531c233b4d2626f6fd4da3ac92ac4141c5b43d1c1b5e0"
+    },
+    {
+      "route": "/refund-policy/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "5d1e4615e5e27fbb30bd09fa690ea735155885eeecef95bee9a2049a1d288927"
+    },
+    {
+      "route": "/self-service-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "c6ee9ea7bea6012ed4f162fa858b2aaa200746c16ba366cea3a3174f493691f0"
+    },
+    {
+      "route": "/types-of-photo-booths/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "7783c9d487dd6bb824b977a0834374ea0b387404d575a500684171526df8c8dc"
+    },
+    {
+      "route": "/unlocking-success/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "a653b21d312f2277e3854e731a6a114cd2d23162e6a93e96b7d25dea2a84caa2"
+    },
+    {
+      "route": "/wedding-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchemaIdsPrices": "unchanged",
+      "mainDom": "unchanged except approved home event destinations and full-service birthday destination",
+      "excludedFromDom": "style and script nodes; JSON-LD checked separately",
+      "sourceBaselineSha256": "deee044787bae170bae24e65e1da15420fbe7d5c38b423d7e5f9d2fd3aae0037"
+    }
+  ],
+  "newPages": [
+    {
+      "event": "birthday",
+      "route": "/birthday-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "ratios": [
+        1.3334,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      },
+      "contracts": {
+        "title": "Birthday Photo Booth Rentals | Photo Party City",
+        "description": "Plan a birthday photo booth for friends and family. Compare attended prints and 24-hour self-service rentals near Mira Loma, California.",
+        "canonical": "https://photopartycity.com/birthday-photo-booth-rental/",
+        "schemaTypes": [
+          "LocalBusiness",
+          "Service",
+          "BreadcrumbList",
+          "FAQPage"
+        ],
+        "publishedOffers": [
+          695,
+          199
+        ],
+        "faqCount": 5
+      },
+      "axe": {
+        "version": "4.14.0",
+        "violations": 0,
+        "passes": 26,
+        "incompleteCount": 0
+      },
+      "screenshot": "docs/redesign/screenshots/occasion-birthday-1440.webp"
+    },
+    {
+      "event": "birthday",
+      "route": "/birthday-photo-booth-rental/",
+      "width": 1024,
+      "status": "passed",
+      "documentWidth": 1024,
+      "ratios": [
+        1.3333,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      }
+    },
+    {
+      "event": "birthday",
+      "route": "/birthday-photo-booth-rental/",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "ratios": [
+        1.3333,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      }
+    },
+    {
+      "event": "birthday",
+      "route": "/birthday-photo-booth-rental/",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "ratios": [
+        1.3333,
+        1.5001,
+        1.5001,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      }
+    },
+    {
+      "event": "quinceanera",
+      "route": "/quinceanera-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "ratios": [
+        1.3334,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      },
+      "contracts": {
+        "title": "Quincea\u00f1era Photo Booth Rentals | Photo Party City",
+        "description": "Plan a quincea\u00f1era photo booth around your family timeline. Explore attended prints, personalized photo designs and self-service rentals near Mira Loma.",
+        "canonical": "https://photopartycity.com/quinceanera-photo-booth-rental/",
+        "schemaTypes": [
+          "LocalBusiness",
+          "Service",
+          "BreadcrumbList",
+          "FAQPage"
+        ],
+        "publishedOffers": [
+          695,
+          199
+        ],
+        "faqCount": 5
+      },
+      "axe": {
+        "version": "4.14.0",
+        "violations": 0,
+        "passes": 26,
+        "incompleteCount": 0
+      },
+      "screenshot": "docs/redesign/screenshots/occasion-quinceanera-1440.webp"
+    },
+    {
+      "event": "quinceanera",
+      "route": "/quinceanera-photo-booth-rental/",
+      "width": 1024,
+      "status": "passed",
+      "documentWidth": 1024,
+      "ratios": [
+        1.3333,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      }
+    },
+    {
+      "event": "quinceanera",
+      "route": "/quinceanera-photo-booth-rental/",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "ratios": [
+        1.3333,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      }
+    },
+    {
+      "event": "quinceanera",
+      "route": "/quinceanera-photo-booth-rental/",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "ratios": [
+        1.3333,
+        1.5001,
+        1.5001,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      }
+    },
+    {
+      "event": "graduation",
+      "route": "/graduation-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "ratios": [
+        1.3334,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      },
+      "contracts": {
+        "title": "Graduation Photo Booth Rentals | Photo Party City",
+        "description": "Celebrate a graduation with photo booth keepsakes for friends and family. Plan an open house or attended party near Mira Loma, California.",
+        "canonical": "https://photopartycity.com/graduation-photo-booth-rental/",
+        "schemaTypes": [
+          "LocalBusiness",
+          "Service",
+          "BreadcrumbList",
+          "FAQPage"
+        ],
+        "publishedOffers": [
+          695,
+          199
+        ],
+        "faqCount": 5
+      },
+      "axe": {
+        "version": "4.14.0",
+        "violations": 0,
+        "passes": 26,
+        "incompleteCount": 0
+      },
+      "screenshot": "docs/redesign/screenshots/occasion-graduation-1440.webp"
+    },
+    {
+      "event": "graduation",
+      "route": "/graduation-photo-booth-rental/",
+      "width": 1024,
+      "status": "passed",
+      "documentWidth": 1024,
+      "ratios": [
+        1.3333,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      }
+    },
+    {
+      "event": "graduation",
+      "route": "/graduation-photo-booth-rental/",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "ratios": [
+        1.3333,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      }
+    },
+    {
+      "event": "graduation",
+      "route": "/graduation-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "ratios": [
+        1.3333,
+        1.5,
+        1.5,
+        1.5001
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 5
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      },
+      "axe": {
+        "version": "4.14.0",
+        "violations": 0,
+        "passes": 26,
+        "incompleteCount": 1
+      },
+      "screenshot": "docs/redesign/screenshots/occasion-graduation-390.webp",
+      "drawer": {
+        "focusableElements": 18,
+        "tabContainment": true,
+        "escapeCloses": true,
+        "openerFocusRestored": true
+      },
+      "heroBooking": {
+        "entry": "hero",
+        "eventQuery": "graduation",
+        "result": "checker preselected"
+      },
+      "finalBooking": {
+        "entry": "final date+ZIP form",
+        "eventQuery": "graduation",
+        "dateAndZip": "preserved",
+        "result": "checker preselected"
+      }
+    },
+    {
+      "event": "graduation",
+      "route": "/graduation-photo-booth-rental/",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "ratios": [
+        1.3333,
+        1.5001,
+        1.5001,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      }
+    },
+    {
+      "event": "school",
+      "route": "/school-event-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "ratios": [
+        1.3334,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      },
+      "contracts": {
+        "title": "School Event Photo Booth Rentals | Photo Party City",
+        "description": "Plan a photo booth for a school dance, banquet or celebration. Review attended and self-service options, setup access and coordinator details near Mira Loma.",
+        "canonical": "https://photopartycity.com/school-event-photo-booth-rental/",
+        "schemaTypes": [
+          "LocalBusiness",
+          "Service",
+          "BreadcrumbList",
+          "FAQPage"
+        ],
+        "publishedOffers": [
+          695,
+          199
+        ],
+        "faqCount": 5
+      },
+      "axe": {
+        "version": "4.14.0",
+        "violations": 0,
+        "passes": 26,
+        "incompleteCount": 0
+      },
+      "screenshot": "docs/redesign/screenshots/occasion-school-1440.webp"
+    },
+    {
+      "event": "school",
+      "route": "/school-event-photo-booth-rental/",
+      "width": 1024,
+      "status": "passed",
+      "documentWidth": 1024,
+      "ratios": [
+        1.3333,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      }
+    },
+    {
+      "event": "school",
+      "route": "/school-event-photo-booth-rental/",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "ratios": [
+        1.3333,
+        1.5,
+        1.5,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      }
+    },
+    {
+      "event": "school",
+      "route": "/school-event-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "ratios": [
+        1.3333,
+        1.5,
+        1.5,
+        1.5001
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 5
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      },
+      "axe": {
+        "version": "4.14.0",
+        "violations": 0,
+        "passes": 26,
+        "incompleteCount": 1
+      },
+      "screenshot": "docs/redesign/screenshots/occasion-school-390.webp",
+      "drawer": {
+        "focusableElements": 18,
+        "tabContainment": true,
+        "escapeCloses": true,
+        "openerFocusRestored": true
+      },
+      "heroBooking": {
+        "entry": "hero",
+        "eventQuery": "school",
+        "result": "checker preselected"
+      },
+      "finalBooking": {
+        "entry": "final date+ZIP form",
+        "eventQuery": "school",
+        "dateAndZip": "preserved",
+        "result": "checker preselected"
+      }
+    },
+    {
+      "event": "school",
+      "route": "/school-event-photo-booth-rental/",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "ratios": [
+        1.3333,
+        1.5001,
+        1.5001,
+        1.5
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 1
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      }
+    },
+    {
+      "event": "birthday",
+      "route": "/birthday-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "ratios": [
+        1.3333,
+        1.5,
+        1.5,
+        1.5001
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 5
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      },
+      "axe": {
+        "version": "4.14.0",
+        "violations": 0,
+        "passes": 26,
+        "incompleteCount": 1
+      },
+      "screenshot": "docs/redesign/screenshots/occasion-birthday-390.webp",
+      "drawer": {
+        "focusableElements": 18,
+        "tabContainment": true,
+        "escapeCloses": true,
+        "openerFocusRestored": true
+      },
+      "heroBooking": {
+        "entry": "hero",
+        "eventQuery": "birthday",
+        "result": "checker preselected"
+      },
+      "finalBooking": {
+        "entry": "final date+ZIP form",
+        "eventQuery": "birthday",
+        "dateAndZip": "preserved",
+        "result": "checker preselected"
+      }
+    },
+    {
+      "event": "quinceanera",
+      "route": "/quinceanera-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "ratios": [
+        1.3333,
+        1.5,
+        1.5,
+        1.5001
+      ],
+      "headingStructure": "passed",
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 5
+      },
+      "focus": {
+        "skipLink": true,
+        "nextFocusedTag": "A",
+        "focusIndicator": "solid"
+      },
+      "axe": {
+        "version": "4.14.0",
+        "violations": 0,
+        "passes": 26,
+        "incompleteCount": 1
+      },
+      "screenshot": "docs/redesign/screenshots/occasion-quinceanera-390.webp",
+      "drawer": {
+        "focusableElements": 18,
+        "tabContainment": true,
+        "escapeCloses": true,
+        "openerFocusRestored": true
+      },
+      "heroBooking": {
+        "entry": "hero",
+        "eventQuery": "quinceanera",
+        "result": "checker preselected"
+      },
+      "finalBooking": {
+        "entry": "final date+ZIP form",
+        "eventQuery": "quinceanera",
+        "dateAndZip": "preserved",
+        "result": "checker preselected"
+      }
+    }
+  ],
+  "noJavaScript": [
+    {
+      "event": "birthday",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4,
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 5
+      },
+      "hero": {
+        "entry": "hero",
+        "eventQuery": "birthday",
+        "result": "native Eventdeskly fallback present"
+      },
+      "final": {
+        "entry": "final date+ZIP form",
+        "eventQuery": "birthday",
+        "dateAndZip": "preserved",
+        "result": "native Eventdeskly fallback present"
+      }
+    },
+    {
+      "event": "quinceanera",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4,
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 5
+      },
+      "hero": {
+        "entry": "hero",
+        "eventQuery": "quinceanera",
+        "result": "native Eventdeskly fallback present"
+      },
+      "final": {
+        "entry": "final date+ZIP form",
+        "eventQuery": "quinceanera",
+        "dateAndZip": "preserved",
+        "result": "native Eventdeskly fallback present"
+      }
+    },
+    {
+      "event": "graduation",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4,
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 5
+      },
+      "hero": {
+        "entry": "hero",
+        "eventQuery": "graduation",
+        "result": "native Eventdeskly fallback present"
+      },
+      "final": {
+        "entry": "final date+ZIP form",
+        "eventQuery": "graduation",
+        "dateAndZip": "preserved",
+        "result": "native Eventdeskly fallback present"
+      }
+    },
+    {
+      "event": "school",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4,
+      "faq": {
+        "count": 5,
+        "keyboardExercised": 5
+      },
+      "hero": {
+        "entry": "hero",
+        "eventQuery": "school",
+        "result": "native Eventdeskly fallback present"
+      },
+      "final": {
+        "entry": "final date+ZIP form",
+        "eventQuery": "school",
+        "dateAndZip": "preserved",
+        "result": "native Eventdeskly fallback present"
+      }
+    }
+  ],
+  "navigation": [
+    {
+      "context": "home",
+      "javascript": true,
+      "width": 1440,
+      "event": "birthday",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "home",
+      "javascript": true,
+      "width": 1440,
+      "event": "quinceanera",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "home",
+      "javascript": true,
+      "width": 1440,
+      "event": "graduation",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "home",
+      "javascript": true,
+      "width": 1440,
+      "event": "school",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "desktop",
+      "javascript": true,
+      "width": 1440,
+      "event": "birthday",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "desktop",
+      "javascript": true,
+      "width": 1440,
+      "event": "quinceanera",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "desktop",
+      "javascript": true,
+      "width": 1440,
+      "event": "graduation",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "desktop",
+      "javascript": true,
+      "width": 1440,
+      "event": "school",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "footer",
+      "javascript": true,
+      "width": 390,
+      "event": "birthday",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "footer",
+      "javascript": true,
+      "width": 390,
+      "event": "quinceanera",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "footer",
+      "javascript": true,
+      "width": 390,
+      "event": "graduation",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "footer",
+      "javascript": true,
+      "width": 390,
+      "event": "school",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "drawer",
+      "javascript": true,
+      "width": 390,
+      "event": "birthday",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "drawer",
+      "javascript": true,
+      "width": 390,
+      "event": "quinceanera",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "drawer",
+      "javascript": true,
+      "width": 390,
+      "event": "graduation",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "drawer",
+      "javascript": true,
+      "width": 390,
+      "event": "school",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "fallback",
+      "javascript": false,
+      "width": 390,
+      "event": "birthday",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "fallback",
+      "javascript": false,
+      "width": 390,
+      "event": "quinceanera",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "fallback",
+      "javascript": false,
+      "width": 390,
+      "event": "graduation",
+      "status": 200,
+      "redirected": false
+    },
+    {
+      "context": "fallback",
+      "javascript": false,
+      "width": 390,
+      "event": "school",
+      "status": 200,
+      "redirected": false
+    }
+  ],
+  "accessibility": [
+    {
+      "label": "birthday 1440 closed navigation",
+      "version": "4.14.0",
+      "violations": [],
+      "incompleteCount": 0,
+      "passes": 26
+    },
+    {
+      "label": "birthday 390 closed navigation",
+      "version": "4.14.0",
+      "violations": [],
+      "incompleteCount": 1,
+      "passes": 26
+    },
+    {
+      "label": "quinceanera 1440 closed navigation",
+      "version": "4.14.0",
+      "violations": [],
+      "incompleteCount": 0,
+      "passes": 26
+    },
+    {
+      "label": "quinceanera 390 closed navigation",
+      "version": "4.14.0",
+      "violations": [],
+      "incompleteCount": 1,
+      "passes": 26
+    },
+    {
+      "label": "graduation 1440 closed navigation",
+      "version": "4.14.0",
+      "violations": [],
+      "incompleteCount": 0,
+      "passes": 26
+    },
+    {
+      "label": "graduation 390 closed navigation",
+      "version": "4.14.0",
+      "violations": [],
+      "incompleteCount": 1,
+      "passes": 26
+    },
+    {
+      "label": "graduation 390 open mobile drawer",
+      "version": "4.14.0",
+      "violations": [],
+      "incompleteCount": 0,
+      "passes": 15
+    },
+    {
+      "label": "school 1440 closed navigation",
+      "version": "4.14.0",
+      "violations": [],
+      "incompleteCount": 0,
+      "passes": 26
+    },
+    {
+      "label": "school 390 closed navigation",
+      "version": "4.14.0",
+      "violations": [],
+      "incompleteCount": 1,
+      "passes": 26
+    },
+    {
+      "label": "school 390 open mobile drawer",
+      "version": "4.14.0",
+      "violations": [],
+      "incompleteCount": 0,
+      "passes": 15
+    },
+    {
+      "label": "birthday 390 open mobile drawer",
+      "version": "4.14.0",
+      "violations": [],
+      "incompleteCount": 0,
+      "passes": 15
+    },
+    {
+      "label": "quinceanera 390 open mobile drawer",
+      "version": "4.14.0",
+      "violations": [],
+      "incompleteCount": 0,
+      "passes": 15
+    }
+  ],
+  "smoke": [
+    {
+      "route": "/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 17,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 17,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/360-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/360-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/about-photo-party-city/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 2,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/about-photo-party-city/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 2,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/blog/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 2,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/blog/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 2,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/check-your-date/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 0,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/check-your-date/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 0,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/contact-us/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 0,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/contact-us/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 0,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/corporate-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 5,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/corporate-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 5,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/digital-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/digital-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/full-service-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 16,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/full-service-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 16,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/how-to-build-a-profitable-photo-booth-business/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 1,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/how-to-build-a-profitable-photo-booth-business/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-by-mail/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 9,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-by-mail/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 9,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-packages/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 10,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-packages/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 10,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-chino/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-chino/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-corona/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-corona/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-cost/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 1,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-cost/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-eastvale/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-eastvale/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-fontana/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-fontana/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-jurupa-valley/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-jurupa-valley/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-norco/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-norco/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-ontario/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-ontario/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-rancho-cucamonga/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-rancho-cucamonga/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-riverside/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-riverside/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-san-bernardino/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-san-bernardino/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-upland/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photo-booth-rental-upland/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photobooth-event-benefits/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 1,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photobooth-event-benefits/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photobooth-props/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 6,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/photobooth-props/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 6,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/refund-policy/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 1,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/refund-policy/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/self-service-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 4,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/self-service-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/types-of-photo-booths/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 1,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/types-of-photo-booths/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/unlocking-success/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 1,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/unlocking-success/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/wedding-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 4,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/wedding-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/birthday-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 4,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/birthday-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/quinceanera-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 4,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/quinceanera-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/graduation-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 4,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/graduation-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/school-event-photo-booth-rental/",
+      "width": 1440,
+      "status": "passed",
+      "imageCount": 4,
+      "documentWidth": 1440,
+      "runtimeErrors": []
+    },
+    {
+      "route": "/school-event-photo-booth-rental/",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4,
+      "documentWidth": 390,
+      "runtimeErrors": []
+    }
+  ],
+  "imageInventory": [
+    {
+      "event": "birthday",
+      "images": [
+        {
+          "src": "/media/occasions/birthday.webp",
+          "alt": "Illustrative birthday celebration with three adult friends beside a Helio Sport photo booth",
+          "natural": [
+            1200,
+            900
+          ],
+          "declared": [
+            1200,
+            900
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "alt": "Illustrative Helio Sport photo booth setup at a reception",
+          "natural": [
+            1200,
+            800
+          ],
+          "declared": [
+            1200,
+            800
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        },
+        {
+          "src": "/media/packages/helio-self-service.webp",
+          "alt": "Illustrative Helio Sport self-service photo booth at a celebration",
+          "natural": [
+            1200,
+            800
+          ],
+          "declared": [
+            1200,
+            800
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        },
+        {
+          "src": "/media/homepage/birthday.webp",
+          "alt": "Illustrative birthday group of four friends smiling with party props in front of lilac draping",
+          "natural": [
+            1200,
+            800
+          ],
+          "declared": [
+            1200,
+            800
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        }
+      ]
+    },
+    {
+      "event": "quinceanera",
+      "images": [
+        {
+          "src": "/media/occasions/quinceanera.webp",
+          "alt": "Illustrative quincea\u00f1era scene with the honoree and her parents beside a Posh Pro photo booth",
+          "natural": [
+            1200,
+            900
+          ],
+          "declared": [
+            1200,
+            900
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "alt": "Illustrative Helio Sport photo booth setup at a reception",
+          "natural": [
+            1200,
+            800
+          ],
+          "declared": [
+            1200,
+            800
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        },
+        {
+          "src": "/media/packages/helio-self-service.webp",
+          "alt": "Illustrative Helio Sport self-service photo booth at a celebration",
+          "natural": [
+            1200,
+            800
+          ],
+          "declared": [
+            1200,
+            800
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        },
+        {
+          "src": "/media/homepage/quinceanera.webp",
+          "alt": "Illustrative quincea\u00f1era portrait of an honoree in a lilac dress with family and friends",
+          "natural": [
+            1200,
+            800
+          ],
+          "declared": [
+            1200,
+            800
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        }
+      ]
+    },
+    {
+      "event": "graduation",
+      "images": [
+        {
+          "src": "/media/occasions/graduation.webp",
+          "alt": "Illustrative graduation celebration with three adult graduates beside a Lumia M Pro photo booth",
+          "natural": [
+            1200,
+            900
+          ],
+          "declared": [
+            1200,
+            900
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "alt": "Illustrative Helio Sport photo booth setup at a reception",
+          "natural": [
+            1200,
+            800
+          ],
+          "declared": [
+            1200,
+            800
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        },
+        {
+          "src": "/media/packages/helio-self-service.webp",
+          "alt": "Illustrative Helio Sport self-service photo booth at a celebration",
+          "natural": [
+            1200,
+            800
+          ],
+          "declared": [
+            1200,
+            800
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        },
+        {
+          "src": "/media/homepage/graduation.webp",
+          "alt": "Illustrative group of three graduates in caps and gowns laughing over a printed photo strip",
+          "natural": [
+            1200,
+            800
+          ],
+          "declared": [
+            1200,
+            800
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        }
+      ]
+    },
+    {
+      "event": "school",
+      "images": [
+        {
+          "src": "/media/occasions/school.webp",
+          "alt": "Illustrative school celebration with three young adult guests beside a Helio Sport photo booth",
+          "natural": [
+            1200,
+            900
+          ],
+          "declared": [
+            1200,
+            900
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "alt": "Illustrative Helio Sport photo booth setup at a reception",
+          "natural": [
+            1200,
+            800
+          ],
+          "declared": [
+            1200,
+            800
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        },
+        {
+          "src": "/media/packages/helio-self-service.webp",
+          "alt": "Illustrative Helio Sport self-service photo booth at a celebration",
+          "natural": [
+            1200,
+            800
+          ],
+          "declared": [
+            1200,
+            800
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        },
+        {
+          "src": "/media/homepage/school.webp",
+          "alt": "Illustrative group of four young guests posing in formal clothes at a school celebration with lilac decorations",
+          "natural": [
+            1200,
+            800
+          ],
+          "declared": [
+            1200,
+            800
+          ],
+          "loaded": true,
+          "inMain": true,
+          "decorative": false
+        }
+      ]
+    }
+  ],
+  "heroUniqueness": [
+    {
+      "event": "birthday",
+      "source": "/media/occasions/birthday.webp",
+      "sha256": "7f0d38404f1470521f1bb67420e8e2812f23bdeb9d0236c839b5f35cfb3314ab"
+    },
+    {
+      "event": "quinceanera",
+      "source": "/media/occasions/quinceanera.webp",
+      "sha256": "492559154c3f7bf5105c9748e5a6c52755084e2a55e878974362476d98305950"
+    },
+    {
+      "event": "graduation",
+      "source": "/media/occasions/graduation.webp",
+      "sha256": "a447fe50757fb11142383abb82b59e304e48c54ac514b488a3aaa9fc8f924363"
+    },
+    {
+      "event": "school",
+      "source": "/media/occasions/school.webp",
+      "sha256": "b7984d0c21d276e25c54da267b3edb4c63a01abcea4bee17783775bd0459e39e"
+    }
+  ],
+  "errors": [],
+  "retestedAt": "2026-10-21T05:56:20.951Z",
+  "retryScope": [
+    "birthday 390",
+    "quinceanera 390"
+  ],
+  "harnessNotes": [
+    "Two mobile dialog assertions were retried after adding a bounded wait for the native asynchronous close event to update aria-expanded and restore opener focus. All original assertions remain; no product source change was required.",
+    "All 31 main DOM comparisons exclude style/script nodes; JSON-LD is compared separately, and only the four home event destinations and the full-service birthday destination are normalized as approved changes."
+  ],
+  "screenshots": [
+    {
+      "path": "docs/redesign/screenshots/occasion-birthday-1440.webp",
+      "width": 1440,
+      "height": 7169,
+      "bytes": 386968
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-birthday-390.webp",
+      "width": 390,
+      "height": 11456,
+      "bytes": 318090
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-quinceanera-1440.webp",
+      "width": 1440,
+      "height": 7268,
+      "bytes": 399532
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-quinceanera-390.webp",
+      "width": 390,
+      "height": 11459,
+      "bytes": 322254
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-graduation-1440.webp",
+      "width": 1440,
+      "height": 7189,
+      "bytes": 400208
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-graduation-390.webp",
+      "width": 390,
+      "height": 11514,
+      "bytes": 326102
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-school-1440.webp",
+      "width": 1440,
+      "height": 7271,
+      "bytes": 381738
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-school-390.webp",
+      "width": 390,
+      "height": 11409,
+      "bytes": 315640
+    }
+  ]
+}

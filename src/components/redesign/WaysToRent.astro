@@ -1,0 +1,52 @@
+---
+import Photo from './Photo.astro';
+import {fullServiceTiers,selfServiceTiers,mailRental} from '../../data/rentals';
+const cards=[
+ {mode:'local',key:'full',title:'We bring it.',name:'Full service',price:fullServiceTiers[0].price,tag:'Within 45 miles of Mira Loma',description:'We deliver, set up and stay to run the booth. You enjoy the party.',features:['An attendant by your side','Printed keepsakes for your guests','Setup and takedown handled'],href:'/full-service-photo-booth-rental/',photo:'Illustrative scene of wedding guests celebrating with printed photo strips',image:'/media/homepage/wedding.webp',tone:'lav'},
+ {mode:'local',key:'self',title:'You pick it up.',name:'Self-service',price:selfServiceTiers[0].price,tag:'Pickup in Mira Loma',description:'Pick up a booth, bring it to your event and make it your own for 24 hours.',features:['Easy setup with instructions','Digital photos and sharing','Optional prints and backdrops'],href:'/self-service-photo-booth-rental/',photo:'Illustrative scene of friends making memories at a birthday photo booth',image:'/media/homepage/birthday.webp',tone:'blush'},
+ {mode:'ship',key:'mail',title:'We ship it.',name:'Booth by mail',price:mailRental.price,tag:'Continental US',description:'The photo booth party comes to your doorstep, ready for your celebration.',features:['Delivered before your event','A setup guide in the box','Prepaid UPS return label'],href:'/photo-booth-by-mail/',photo:'Illustrative scene of a family opening a portable photo booth kit before their celebration',image:'/media/homepage/mail.webp',tone:'sage'},
+];
+---
+<section id="ways-to-rent" class="ppc-section" data-ways-to-rent data-rental-mode="local">
+ <div class="ppc-wrap ppc-stack-lg">
+  <div class="ppc-row" style="justify-content:space-between;align-items:end"><div class="ppc-stack"><p class="ppc-eyebrow">One party. Three ways to make it happen.</p><h2 class="ppc-h2">Your booth. Your way.</h2><p class="ppc-p">Choose where you’re celebrating. We’ll help with the rest.</p></div>
+   <div class="ppc-seg home-mode" role="group" aria-label="Where is your event?"><button type="button" aria-pressed="true" data-rental-mode-button="local">Near Mira Loma</button><button type="button" aria-pressed="false" data-rental-mode-button="ship">Anywhere in the US</button></div>
+  </div>
+  <p class="ppc-small" data-mode-status aria-live="polite">Full service and pickup rentals are available near Mira Loma, California.</p>
+  <div class="ppc-cards home-rental-cards" data-rental-cards>{cards.map(card=><article class="ppc-card home-rental-card" data-card-mode={card.mode} data-booth={card.key}>
+   <Photo label={card.photo} src={card.image} alt={card.photo} width={1200} height={800} tone={card.tone} ratio="3/2"/>
+   <div class="ppc-stack"><span class:list={['ppc-tag',{'ppc-tag-blue':card.mode==='ship'}]}>{card.tag}</span><p class="ppc-eyebrow">{card.name}</p><h3 class="ppc-h3">{card.title}</h3><p class="ppc-p">{card.description}</p><ul class="ppc-checks">{card.features.map(feature=><li>{feature}</li>)}</ul></div>
+   <div class="ppc-stack home-card-bottom"><p class="ppc-price"><span>from</span><b>${card.price}</b></p><p class="ppc-small" hidden data-local-only>Only available near Mira Loma, CA</p><a class="ppc-link" href={card.href}>Explore {card.name.toLowerCase()} <span aria-hidden="true">→</span></a><a class="ppc-btnp" href={`/check-your-date/?booth=${card.key}`} data-source="card" data-mode-cta>Check your date</a></div>
+  </article>)}</div>
+  <p class="ppc-small" style="margin:0">Illustrative event imagery.</p>
+ </div>
+</section>
+<script>
+ const section=document.querySelector<HTMLElement>('[data-ways-to-rent]');
+ function modeChange(mode:string){
+  if(!section)return;section.dataset.rentalMode=mode;
+  section.querySelectorAll<HTMLButtonElement>('[data-rental-mode-button]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.rentalModeButton===mode)));
+  const container=section.querySelector('[data-rental-cards]');
+  const cards=Array.from(section.querySelectorAll<HTMLElement>('[data-card-mode]'));
+  cards.sort((a,b)=>Number(b.dataset.cardMode===mode)-Number(a.dataset.cardMode===mode)).forEach(card=>{
+   const dim=mode==='ship'&&card.dataset.cardMode==='local';card.classList.toggle('ppc-dim',dim);
+   const note=card.querySelector<HTMLElement>('[data-local-only]');if(note)note.hidden=!dim;
+   const cta=card.querySelector<HTMLElement>('[data-mode-cta]');if(cta)cta.hidden=dim;
+   container?.appendChild(card);
+  });
+  const status=section.querySelector('[data-mode-status]');if(status)status.textContent=mode==='ship'?'Booth by mail is available across the continental US. Staffed and pickup rentals are local to Mira Loma.':'Full service and pickup rentals are available near Mira Loma, California.';
+ }
+ section?.querySelectorAll<HTMLButtonElement>('[data-rental-mode-button]').forEach(button=>button.addEventListener('click',()=>modeChange(button.dataset.rentalModeButton || 'local')));
+ let request=0;
+ document.querySelector<HTMLInputElement>('[data-home-zip]')?.addEventListener('input',async event=>{
+  const input=event.target as HTMLInputElement;const zip=input.value.trim();const current=++request;
+  if(!/^\d{5}$/.test(zip))return;
+  const {classifyZip}=await import('../../lib/booking');if(current!==request)return;
+  const result=classifyZip(zip);const status=document.querySelector('[data-home-zip-status]');
+  if(result.kind==='local'||result.kind==='ship'){modeChange(result.kind);if(status)status.textContent=result.kind==='local'?'You’re near Mira Loma. Explore staffed, pickup and shipped booths.':'We can ship a booth to your event in the continental US.';}
+  else if(status)status.textContent=result.kind==='unsupported'?'Please call us to discuss delivery to this ZIP code.':'Enter a valid US ZIP code to explore your options.';
+ });
+</script>
+<style>
+ .home-mode{display:flex;border:1px solid var(--line2);border-radius:999px;padding:5px;background:var(--sand);flex-wrap:wrap;max-width:100%}.home-mode button{border:0;background:transparent;min-height:44px;padding:0 18px;border-radius:999px;font:inherit;font-size:14px;font-weight:700;color:var(--ink2)}.home-mode button[aria-pressed="true"]{background:var(--accent);color:#fff}.home-rental-card{padding:14px;display:flex;flex-direction:column;gap:24px}.home-rental-card>.ppc-stack{padding:0 10px}.home-card-bottom{margin-top:auto}.home-rental-card.ppc-dim .ppc-ph{opacity:.45;filter:grayscale(.8)}.home-rental-card [hidden]{display:none!important}
+</style>

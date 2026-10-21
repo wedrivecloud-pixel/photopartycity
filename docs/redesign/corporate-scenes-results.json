@@ -1,0 +1,470 @@
+{
+  "status": "passed",
+  "testedAt": "2026-10-20T07:28:43.768Z",
+  "url": "http://127.0.0.1:4336/corporate-photo-booth-rental/",
+  "baseline": {
+    "path": "/workspace/work/corporate-scenes/corporate-photo-booth-rental-before.html",
+    "sha256": "0a8eff489af5267037f176acad8a5843238f4374fc1bc540208d02fc345fca02"
+  },
+  "widths": [
+    {
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "images": [
+        {
+          "src": "/media/corporate/hero.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800
+        },
+        {
+          "src": "/media/corporate/branding.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900
+        }
+      ],
+      "tierFraming": [
+        {
+          "name": "hero",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 505.390625,
+              "height": 379.03125,
+              "ratio": 1.3333745568472257,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "tiers",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 328,
+              "height": 246,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 328,
+              "height": 246,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 328,
+              "height": 246,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "branding",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 532,
+              "height": 399,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "contracts": "unchanged",
+      "matchedPackageTiers": [
+        {
+          "name": "Silver",
+          "src": "/media/full-service/helio-sport.webp"
+        },
+        {
+          "name": "Gold",
+          "src": "/media/full-service/lumia-m-pro.webp"
+        },
+        {
+          "name": "Platinum",
+          "src": "/media/full-service/posh-pro.webp"
+        }
+      ],
+      "faqKeyboard": true,
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/corporate-scenes-1440.webp"
+    },
+    {
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "images": [
+        {
+          "src": "/media/corporate/hero.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800
+        },
+        {
+          "src": "/media/corporate/branding.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900
+        }
+      ],
+      "tierFraming": [
+        {
+          "name": "hero",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 706.5625,
+              "height": 529.921875,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "tiers",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 528,
+              "height": 396,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 528,
+              "height": 396,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 528,
+              "height": 396,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "branding",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 706.5625,
+              "height": 529.921875,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "contracts": "unchanged",
+      "matchedPackageTiers": [
+        {
+          "name": "Silver",
+          "src": "/media/full-service/helio-sport.webp"
+        },
+        {
+          "name": "Gold",
+          "src": "/media/full-service/lumia-m-pro.webp"
+        },
+        {
+          "name": "Platinum",
+          "src": "/media/full-service/posh-pro.webp"
+        }
+      ],
+      "faqKeyboard": true,
+      "runtimeErrors": []
+    },
+    {
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "images": [
+        {
+          "src": "/media/corporate/hero.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800
+        },
+        {
+          "src": "/media/corporate/branding.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900
+        }
+      ],
+      "tierFraming": [
+        {
+          "name": "hero",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 358,
+              "height": 268.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "tiers",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 326,
+              "height": 244.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 326,
+              "height": 244.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 326,
+              "height": 244.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "branding",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 358,
+              "height": 268.5,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "contracts": "unchanged",
+      "matchedPackageTiers": [
+        {
+          "name": "Silver",
+          "src": "/media/full-service/helio-sport.webp"
+        },
+        {
+          "name": "Gold",
+          "src": "/media/full-service/lumia-m-pro.webp"
+        },
+        {
+          "name": "Platinum",
+          "src": "/media/full-service/posh-pro.webp"
+        }
+      ],
+      "faqKeyboard": true,
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/corporate-scenes-390.webp"
+    },
+    {
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "images": [
+        {
+          "src": "/media/corporate/hero.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800
+        },
+        {
+          "src": "/media/corporate/branding.webp",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900
+        }
+      ],
+      "tierFraming": [
+        {
+          "name": "hero",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 288,
+              "height": 216,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "tiers",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 256,
+              "height": 192,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 256,
+              "height": 192,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            },
+            {
+              "width": 256,
+              "height": 192,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "branding",
+          "expectedRatio": 1.3333333333333333,
+          "measurements": [
+            {
+              "width": 288,
+              "height": 216,
+              "ratio": 1.3333333333333333,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "contracts": "unchanged",
+      "matchedPackageTiers": [
+        {
+          "name": "Silver",
+          "src": "/media/full-service/helio-sport.webp"
+        },
+        {
+          "name": "Gold",
+          "src": "/media/full-service/lumia-m-pro.webp"
+        },
+        {
+          "name": "Platinum",
+          "src": "/media/full-service/posh-pro.webp"
+        }
+      ],
+      "faqKeyboard": true,
+      "runtimeErrors": []
+    }
+  ],
+  "noJavaScript": {
+    "status": "passed",
+    "width": 390,
+    "imagesLoaded": 5,
+    "bookingLinks": 4,
+    "nativeFaq": true,
+    "contracts": "unchanged",
+    "documentWidth": 390,
+    "matchingTierImages": [
+      {
+        "name": "Silver",
+        "src": "/media/full-service/helio-sport.webp"
+      },
+      {
+        "name": "Gold",
+        "src": "/media/full-service/lumia-m-pro.webp"
+      },
+      {
+        "name": "Platinum",
+        "src": "/media/full-service/posh-pro.webp"
+      }
+    ]
+  },
+  "errors": [],
+  "weddingPage": [
+    {
+      "slug": "wedding-photo-booth-rental",
+      "normalizedDom": "unchanged"
+    }
+  ],
+  "contractFields": [
+    "all anchor hrefs",
+    "title",
+    "all meta tags",
+    "canonical",
+    "JSON-LD schema",
+    "all IDs",
+    "all dollar prices",
+    "unchanged package image attributes",
+    "all table text"
+  ]
+}

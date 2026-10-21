@@ -1,0 +1,1068 @@
+{
+  "status": "passed",
+  "testedAt": "2026-10-20T07:55:55.166Z",
+  "base": "http://127.0.0.1:4337",
+  "viewports": [
+    {
+      "slug": "about-photo-party-city",
+      "width": 1440,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/about/hero.webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "src": "/media/about/lineup.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 1440,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/about-images-1440.webp"
+    },
+    {
+      "slug": "about-photo-party-city",
+      "width": 768,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/about/hero.webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "src": "/media/about/lineup.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 768,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "about-photo-party-city",
+      "width": 390,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/about/hero.webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "src": "/media/about/lineup.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 390,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/about-images-390.webp"
+    },
+    {
+      "slug": "about-photo-party-city",
+      "width": 320,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/about/hero.webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "src": "/media/about/lineup.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 320,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "photobooth-props",
+      "width": 1440,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/props/hero.webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        }
+      ],
+      "documentWidth": 1440,
+      "ratios": "passed",
+      "backdropCrops": [
+        {
+          "name": "Geometric",
+          "crop": [
+            60,
+            12,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Leaf",
+          "crop": [
+            60,
+            250,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Flower",
+          "crop": [
+            264,
+            250,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Wood",
+          "crop": [
+            469,
+            250,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Brick Angel Wings",
+          "crop": [
+            60,
+            486,
+            200,
+            200
+          ]
+        }
+      ],
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/props-images-1440.webp"
+    },
+    {
+      "slug": "photobooth-props",
+      "width": 768,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/props/hero.webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        }
+      ],
+      "documentWidth": 768,
+      "ratios": "passed",
+      "backdropCrops": [
+        {
+          "name": "Geometric",
+          "crop": [
+            60,
+            12,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Leaf",
+          "crop": [
+            60,
+            250,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Flower",
+          "crop": [
+            264,
+            250,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Wood",
+          "crop": [
+            469,
+            250,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Brick Angel Wings",
+          "crop": [
+            60,
+            486,
+            200,
+            200
+          ]
+        }
+      ],
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "photobooth-props",
+      "width": 390,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/props/hero.webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        }
+      ],
+      "documentWidth": 390,
+      "ratios": "passed",
+      "backdropCrops": [
+        {
+          "name": "Geometric",
+          "crop": [
+            60,
+            12,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Leaf",
+          "crop": [
+            60,
+            250,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Flower",
+          "crop": [
+            264,
+            250,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Wood",
+          "crop": [
+            469,
+            250,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Brick Angel Wings",
+          "crop": [
+            60,
+            486,
+            200,
+            200
+          ]
+        }
+      ],
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/props-images-390.webp"
+    },
+    {
+      "slug": "photobooth-props",
+      "width": 320,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/props/hero.webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        },
+        {
+          "src": "/media/223a01a082be3c75.webp",
+          "width": 740,
+          "height": 715
+        }
+      ],
+      "documentWidth": 320,
+      "ratios": "passed",
+      "backdropCrops": [
+        {
+          "name": "Geometric",
+          "crop": [
+            60,
+            12,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Leaf",
+          "crop": [
+            60,
+            250,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Flower",
+          "crop": [
+            264,
+            250,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Wood",
+          "crop": [
+            469,
+            250,
+            200,
+            200
+          ]
+        },
+        {
+          "name": "Brick Angel Wings",
+          "crop": [
+            60,
+            486,
+            200,
+            200
+          ]
+        }
+      ],
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "refund-policy",
+      "width": 1440,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/terms/hero.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 1440,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions",
+        "policyTextEmailsChargesAndAnchors": "unchanged"
+      },
+      "faqCount": 0,
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/terms-images-1440.webp"
+    },
+    {
+      "slug": "refund-policy",
+      "width": 768,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/terms/hero.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 768,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions",
+        "policyTextEmailsChargesAndAnchors": "unchanged"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "refund-policy",
+      "width": 390,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/terms/hero.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 390,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions",
+        "policyTextEmailsChargesAndAnchors": "unchanged"
+      },
+      "faqCount": 0,
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/terms-images-390.webp"
+    },
+    {
+      "slug": "refund-policy",
+      "width": 320,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/terms/hero.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 320,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions",
+        "policyTextEmailsChargesAndAnchors": "unchanged"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "blog",
+      "width": 1440,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/blog/featured.webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "src": "/media/blog/types.webp",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "documentWidth": 1440,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/blog-images-1440.webp"
+    },
+    {
+      "slug": "blog",
+      "width": 768,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/blog/featured.webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "src": "/media/blog/types.webp",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "documentWidth": 768,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "blog",
+      "width": 390,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/blog/featured.webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "src": "/media/blog/types.webp",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "documentWidth": 390,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/blog-images-390.webp"
+    },
+    {
+      "slug": "blog",
+      "width": 320,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/blog/featured.webp",
+          "width": 1200,
+          "height": 900
+        },
+        {
+          "src": "/media/blog/types.webp",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "documentWidth": 320,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "photobooth-event-benefits",
+      "width": 1440,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/blog/featured.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 1440,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "photobooth-event-benefits",
+      "width": 768,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/blog/featured.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 768,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "photobooth-event-benefits",
+      "width": 390,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/blog/featured.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 390,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "photobooth-event-benefits",
+      "width": 320,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/blog/featured.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 320,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "types-of-photo-booths",
+      "width": 1440,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/blog/types.webp",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "documentWidth": 1440,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "types-of-photo-booths",
+      "width": 768,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/blog/types.webp",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "documentWidth": 768,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "types-of-photo-booths",
+      "width": 390,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/blog/types.webp",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "documentWidth": 390,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "types-of-photo-booths",
+      "width": 320,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/blog/types.webp",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "documentWidth": 320,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "unlocking-success",
+      "width": 1440,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/corporate/hero.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 1440,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "unlocking-success",
+      "width": 768,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/corporate/hero.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 768,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "unlocking-success",
+      "width": 390,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/corporate/hero.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 390,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "unlocking-success",
+      "width": 320,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/corporate/hero.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 320,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "how-to-build-a-profitable-photo-booth-business",
+      "width": 1440,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/cost-guide/hero.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 1440,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "how-to-build-a-profitable-photo-booth-business",
+      "width": 768,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/cost-guide/hero.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 768,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "how-to-build-a-profitable-photo-booth-business",
+      "width": 390,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/cost-guide/hero.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 390,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    },
+    {
+      "slug": "how-to-build-a-profitable-photo-booth-business",
+      "width": 320,
+      "status": "passed",
+      "images": [
+        {
+          "src": "/media/cost-guide/hero.webp",
+          "width": 1200,
+          "height": 900
+        }
+      ],
+      "documentWidth": 320,
+      "ratios": "passed",
+      "contracts": {
+        "allFields": "unchanged",
+        "businessCopy": "unchanged except image labels/captions"
+      },
+      "faqCount": 0,
+      "runtimeErrors": []
+    }
+  ],
+  "noJavaScript": [
+    {
+      "slug": "about-photo-party-city",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 2,
+      "primaryLinks": "present and unchanged"
+    },
+    {
+      "slug": "photobooth-props",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 6,
+      "primaryLinks": "present and unchanged"
+    },
+    {
+      "slug": "refund-policy",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "policyAnchors": [
+        "booking",
+        "cancellations",
+        "equipment-returns",
+        "damage",
+        "shop-returns"
+      ]
+    },
+    {
+      "slug": "blog",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 2,
+      "navigatedArticles": [
+        "photobooth-event-benefits",
+        "types-of-photo-booths",
+        "unlocking-success",
+        "how-to-build-a-profitable-photo-booth-business"
+      ]
+    },
+    {
+      "slug": "photobooth-event-benefits",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "allArticlesLink": "passed"
+    },
+    {
+      "slug": "types-of-photo-booths",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "allArticlesLink": "passed"
+    },
+    {
+      "slug": "unlocking-success",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "allArticlesLink": "passed"
+    },
+    {
+      "slug": "how-to-build-a-profitable-photo-booth-business",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "allArticlesLink": "passed"
+    }
+  ],
+  "costGuide": {
+    "bodyAndHeadDomExceptStyles": "unchanged",
+    "contracts": "unchanged",
+    "sharedBundleAddition": {
+      "addedRules": [
+        ".ppc-editorial-figure[data-astro-cid-hd4tredm]{min-width:0;margin:0}",
+        ".ppc-editorial-figure[data-astro-cid-hd4tredm] figcaption[data-astro-cid-hd4tredm]{margin-top:10px}"
+      ],
+      "matchingCostElements": 0
+    }
+  },
+  "errors": []
+}

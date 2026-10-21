@@ -1,0 +1,655 @@
+{
+  "status": "passed",
+  "testedAt": "2026-10-20T06:31:02.598Z",
+  "url": "http://127.0.0.1:4336/self-service-photo-booth-rental/",
+  "baseline": {
+    "path": "/workspace/work/self-service-refresh/before.html",
+    "sha256": "8d0c2ca6e8e9a821bb409fe5104d3afd3b029a4fffa64e686dd3b358a3565821"
+  },
+  "widths": [
+    {
+      "width": 1440,
+      "status": "passed",
+      "contract": "unchanged",
+      "imageCount": 5,
+      "images": [
+        {
+          "src": "/media/52b598863a8e1582.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+          "alt": "Photo Party City",
+          "loaded": true,
+          "naturalWidth": 313,
+          "naturalHeight": 234,
+          "inMain": false,
+          "declaredWidth": "52",
+          "declaredHeight": "40"
+        },
+        {
+          "src": "/media/self-service/hero.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/self-service/hero.webp",
+          "alt": "Illustrative scene of guests operating a Helio Sport booth at a backyard birthday party",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/packages/helio-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/helio-self-service.webp",
+          "alt": "Illustrative scene of guests operating a Helio Sport booth at a backyard party",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/lumia-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/lumia-self-service.webp",
+          "alt": "Illustrative scene of graduates posing with props beside a Lumia M Pro booth",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/posh-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/posh-self-service.webp",
+          "alt": "Illustrative scene of guests operating a Posh Pro booth with its tall portrait display",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        }
+      ],
+      "geometry": {
+        "viewportWidth": 1440,
+        "documentWidth": 1440,
+        "bodyWidth": 1440,
+        "h1s": 1,
+        "overflowing": []
+      },
+      "ratios": [
+        {
+          "name": "hero",
+          "expectedRatio": 0.8,
+          "measurements": [
+            {
+              "width": 505.390625,
+              "height": 631.734375,
+              "ratio": 0.8000049466993149,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "tiers",
+          "expectedRatio": 1.5,
+          "measurements": [
+            {
+              "width": 328,
+              "height": 218.65625,
+              "ratio": 1.5000714591967985,
+              "objectFit": "cover"
+            },
+            {
+              "width": 328,
+              "height": 218.65625,
+              "ratio": 1.5000714591967985,
+              "objectFit": "cover"
+            },
+            {
+              "width": 328,
+              "height": 218.65625,
+              "ratio": 1.5000714591967985,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "keyboardFaq": {
+        "count": 6,
+        "enterAndSpace": true
+      },
+      "matchingTierImages": [
+        {
+          "name": "Starter",
+          "src": "/media/packages/helio-self-service.webp"
+        },
+        {
+          "name": "Showbiz",
+          "src": "/media/packages/lumia-self-service.webp"
+        },
+        {
+          "name": "Hollywood",
+          "src": "/media/packages/posh-self-service.webp"
+        }
+      ],
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/self-service-images-1440.webp"
+    },
+    {
+      "width": 768,
+      "status": "passed",
+      "contract": "unchanged",
+      "imageCount": 5,
+      "images": [
+        {
+          "src": "/media/52b598863a8e1582.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+          "alt": "Photo Party City",
+          "loaded": true,
+          "naturalWidth": 313,
+          "naturalHeight": 234,
+          "inMain": false,
+          "declaredWidth": "52",
+          "declaredHeight": "40"
+        },
+        {
+          "src": "/media/self-service/hero.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/self-service/hero.webp",
+          "alt": "Illustrative scene of guests operating a Helio Sport booth at a backyard birthday party",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/packages/helio-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/helio-self-service.webp",
+          "alt": "Illustrative scene of guests operating a Helio Sport booth at a backyard party",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/lumia-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/lumia-self-service.webp",
+          "alt": "Illustrative scene of graduates posing with props beside a Lumia M Pro booth",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/posh-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/posh-self-service.webp",
+          "alt": "Illustrative scene of guests operating a Posh Pro booth with its tall portrait display",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        }
+      ],
+      "geometry": {
+        "viewportWidth": 768,
+        "documentWidth": 768,
+        "bodyWidth": 768,
+        "h1s": 1,
+        "overflowing": []
+      },
+      "ratios": [
+        {
+          "name": "hero",
+          "expectedRatio": 0.8,
+          "measurements": [
+            {
+              "width": 706.5625,
+              "height": 883.203125,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "tiers",
+          "expectedRatio": 1.5,
+          "measurements": [
+            {
+              "width": 528,
+              "height": 352,
+              "ratio": 1.5,
+              "objectFit": "cover"
+            },
+            {
+              "width": 528,
+              "height": 352,
+              "ratio": 1.5,
+              "objectFit": "cover"
+            },
+            {
+              "width": 528,
+              "height": 352,
+              "ratio": 1.5,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "keyboardFaq": {
+        "count": 6,
+        "enterAndSpace": true
+      },
+      "matchingTierImages": [
+        {
+          "name": "Starter",
+          "src": "/media/packages/helio-self-service.webp"
+        },
+        {
+          "name": "Showbiz",
+          "src": "/media/packages/lumia-self-service.webp"
+        },
+        {
+          "name": "Hollywood",
+          "src": "/media/packages/posh-self-service.webp"
+        }
+      ],
+      "runtimeErrors": []
+    },
+    {
+      "width": 390,
+      "status": "passed",
+      "contract": "unchanged",
+      "imageCount": 5,
+      "images": [
+        {
+          "src": "/media/52b598863a8e1582.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+          "alt": "Photo Party City",
+          "loaded": true,
+          "naturalWidth": 313,
+          "naturalHeight": 234,
+          "inMain": false,
+          "declaredWidth": "52",
+          "declaredHeight": "40"
+        },
+        {
+          "src": "/media/self-service/hero.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/self-service/hero.webp",
+          "alt": "Illustrative scene of guests operating a Helio Sport booth at a backyard birthday party",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/packages/helio-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/helio-self-service.webp",
+          "alt": "Illustrative scene of guests operating a Helio Sport booth at a backyard party",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/lumia-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/lumia-self-service.webp",
+          "alt": "Illustrative scene of graduates posing with props beside a Lumia M Pro booth",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/posh-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/posh-self-service.webp",
+          "alt": "Illustrative scene of guests operating a Posh Pro booth with its tall portrait display",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        }
+      ],
+      "geometry": {
+        "viewportWidth": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "h1s": 1,
+        "overflowing": []
+      },
+      "ratios": [
+        {
+          "name": "hero",
+          "expectedRatio": 0.8,
+          "measurements": [
+            {
+              "width": 358,
+              "height": 447.5,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "tiers",
+          "expectedRatio": 1.5,
+          "measurements": [
+            {
+              "width": 326,
+              "height": 217.328125,
+              "ratio": 1.5000359479473722,
+              "objectFit": "cover"
+            },
+            {
+              "width": 326,
+              "height": 217.328125,
+              "ratio": 1.5000359479473722,
+              "objectFit": "cover"
+            },
+            {
+              "width": 326,
+              "height": 217.328125,
+              "ratio": 1.5000359479473722,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "keyboardFaq": {
+        "count": 6,
+        "enterAndSpace": true
+      },
+      "matchingTierImages": [
+        {
+          "name": "Starter",
+          "src": "/media/packages/helio-self-service.webp"
+        },
+        {
+          "name": "Showbiz",
+          "src": "/media/packages/lumia-self-service.webp"
+        },
+        {
+          "name": "Hollywood",
+          "src": "/media/packages/posh-self-service.webp"
+        }
+      ],
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/self-service-images-390.webp"
+    },
+    {
+      "width": 320,
+      "status": "passed",
+      "contract": "unchanged",
+      "imageCount": 5,
+      "images": [
+        {
+          "src": "/media/52b598863a8e1582.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+          "alt": "Photo Party City",
+          "loaded": true,
+          "naturalWidth": 313,
+          "naturalHeight": 234,
+          "inMain": false,
+          "declaredWidth": "52",
+          "declaredHeight": "40"
+        },
+        {
+          "src": "/media/self-service/hero.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/self-service/hero.webp",
+          "alt": "Illustrative scene of guests operating a Helio Sport booth at a backyard birthday party",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 1500,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "1500"
+        },
+        {
+          "src": "/media/packages/helio-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/helio-self-service.webp",
+          "alt": "Illustrative scene of guests operating a Helio Sport booth at a backyard party",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/lumia-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/lumia-self-service.webp",
+          "alt": "Illustrative scene of graduates posing with props beside a Lumia M Pro booth",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        },
+        {
+          "src": "/media/packages/posh-self-service.webp",
+          "currentSrc": "http://127.0.0.1:4336/media/packages/posh-self-service.webp",
+          "alt": "Illustrative scene of guests operating a Posh Pro booth with its tall portrait display",
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 800,
+          "inMain": true,
+          "declaredWidth": "1200",
+          "declaredHeight": "800"
+        }
+      ],
+      "geometry": {
+        "viewportWidth": 320,
+        "documentWidth": 320,
+        "bodyWidth": 320,
+        "h1s": 1,
+        "overflowing": []
+      },
+      "ratios": [
+        {
+          "name": "hero",
+          "expectedRatio": 0.8,
+          "measurements": [
+            {
+              "width": 288,
+              "height": 360,
+              "ratio": 0.8,
+              "objectFit": "cover"
+            }
+          ]
+        },
+        {
+          "name": "tiers",
+          "expectedRatio": 1.5,
+          "measurements": [
+            {
+              "width": 256,
+              "height": 170.65625,
+              "ratio": 1.5000915583226515,
+              "objectFit": "cover"
+            },
+            {
+              "width": 256,
+              "height": 170.65625,
+              "ratio": 1.5000915583226515,
+              "objectFit": "cover"
+            },
+            {
+              "width": 256,
+              "height": 170.65625,
+              "ratio": 1.5000915583226515,
+              "objectFit": "cover"
+            }
+          ]
+        }
+      ],
+      "keyboardFaq": {
+        "count": 6,
+        "enterAndSpace": true
+      },
+      "matchingTierImages": [
+        {
+          "name": "Starter",
+          "src": "/media/packages/helio-self-service.webp"
+        },
+        {
+          "name": "Showbiz",
+          "src": "/media/packages/lumia-self-service.webp"
+        },
+        {
+          "name": "Hollywood",
+          "src": "/media/packages/posh-self-service.webp"
+        }
+      ],
+      "runtimeErrors": []
+    }
+  ],
+  "noJavaScript": {
+    "width": 390,
+    "status": "passed",
+    "images": [
+      {
+        "src": "/media/52b598863a8e1582.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/52b598863a8e1582.webp",
+        "alt": "Photo Party City",
+        "loaded": true,
+        "naturalWidth": 313,
+        "naturalHeight": 234,
+        "inMain": false,
+        "declaredWidth": "52",
+        "declaredHeight": "40"
+      },
+      {
+        "src": "/media/self-service/hero.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/self-service/hero.webp",
+        "alt": "Illustrative scene of guests operating a Helio Sport booth at a backyard birthday party",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 1500,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "1500"
+      },
+      {
+        "src": "/media/packages/helio-self-service.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/packages/helio-self-service.webp",
+        "alt": "Illustrative scene of guests operating a Helio Sport booth at a backyard party",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 800,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "800"
+      },
+      {
+        "src": "/media/packages/lumia-self-service.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/packages/lumia-self-service.webp",
+        "alt": "Illustrative scene of graduates posing with props beside a Lumia M Pro booth",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 800,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "800"
+      },
+      {
+        "src": "/media/packages/posh-self-service.webp",
+        "currentSrc": "http://127.0.0.1:4336/media/packages/posh-self-service.webp",
+        "alt": "Illustrative scene of guests operating a Posh Pro booth with its tall portrait display",
+        "loaded": true,
+        "naturalWidth": 1200,
+        "naturalHeight": 800,
+        "inMain": true,
+        "declaredWidth": "1200",
+        "declaredHeight": "800"
+      }
+    ],
+    "contract": "unchanged",
+    "bookingLinks": 5,
+    "nativeFaq": true,
+    "matchingTierImages": [
+      {
+        "name": "Starter",
+        "src": "/media/packages/helio-self-service.webp"
+      },
+      {
+        "name": "Showbiz",
+        "src": "/media/packages/lumia-self-service.webp"
+      },
+      {
+        "name": "Hollywood",
+        "src": "/media/packages/posh-self-service.webp"
+      }
+    ],
+    "geometry": {
+      "viewportWidth": 390,
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "h1s": 1,
+      "overflowing": []
+    },
+    "ratios": [
+      {
+        "name": "hero",
+        "expectedRatio": 0.8,
+        "measurements": [
+          {
+            "width": 358,
+            "height": 447.5,
+            "ratio": 0.8,
+            "objectFit": "cover"
+          }
+        ]
+      },
+      {
+        "name": "tiers",
+        "expectedRatio": 1.5,
+        "measurements": [
+          {
+            "width": 326,
+            "height": 217.328125,
+            "ratio": 1.5000359479473722,
+            "objectFit": "cover"
+          },
+          {
+            "width": 326,
+            "height": 217.328125,
+            "ratio": 1.5000359479473722,
+            "objectFit": "cover"
+          },
+          {
+            "width": 326,
+            "height": 217.328125,
+            "ratio": 1.5000359479473722,
+            "objectFit": "cover"
+          }
+        ]
+      }
+    ]
+  },
+  "errors": [],
+  "contractFields": [
+    "all anchor hrefs",
+    "title",
+    "all meta tags",
+    "canonical",
+    "JSON-LD schema",
+    "all IDs",
+    "all dollar prices",
+    "unchanged hero image attributes"
+  ]
+}

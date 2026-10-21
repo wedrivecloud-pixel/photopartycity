@@ -1,0 +1,70 @@
+---
+import RentalLayout from '../../layouts/RentalLayout.astro';
+import Hero from '../redesign/Hero.astro';
+import Photo from '../redesign/Photo.astro';
+import FAQ from '../redesign/FAQ.astro';
+import FullServicePackages from '../redesign/FullServicePackages.astro';
+import {eventNavigation, type OccasionEvent} from '../../data/occasion-events';
+import {fullServiceTiers, selfServiceTiers, serviceSchema} from '../../data/rentals';
+
+interface Props {occasion: OccasionEvent}
+const {occasion}=Astro.props;
+const path=`/${occasion.slug}/`;
+const canonical=`https://photopartycity.com${path}`;
+const checkHref=`/check-your-date/?event=${encodeURIComponent(occasion.key)}`;
+const fullTier=fullServiceTiers.find(tier=>tier.slug==='silver')!;
+const selfTier=selfServiceTiers.find(tier=>tier.slug==='starter')!;
+const otherEvents=eventNavigation.filter(event=>event.href!==path);
+---
+<RentalLayout title={occasion.title} description={occasion.description} canonical={canonical} image={occasion.hero.src} schema={serviceSchema(`${occasion.navLabel} photo booth rental`,canonical,[fullTier,selfTier])} breadcrumbs={[{name:'Home',href:'/'},{name:occasion.navLabel}]} ctaHeading={occasion.ctaHeading} checkHref={checkHref} eventType={occasion.key}>
+  <div class="ppc-occasion-hero">
+    <Hero eyebrow={occasion.eyebrow} title={occasion.heading} description={occasion.intro} checkHref={checkHref} image={occasion.hero.src} imageAlt={occasion.hero.alt} imageWidth={occasion.hero.width} imageHeight={occasion.hero.height} imageRatio="4/3" tag="Within 45 miles of Mira Loma">
+      <p class="ppc-small">Illustrative celebration scene.</p>
+    </Hero>
+  </div>
+
+  <section class="ppc-section ppc-white" aria-labelledby="occasion-fit">
+    <div class="ppc-wrap ppc-stack-lg">
+      <h2 class="ppc-h2 ppc-occasion-heading" id="occasion-fit">{occasion.fitHeading}</h2>
+      <div class="ppc-grid3">{occasion.fitPoints.map(point=><article class="ppc-stack"><h3 class="ppc-h3">{point.title}</h3><p class="ppc-p">{point.copy}</p></article>)}</div>
+    </div>
+  </section>
+
+  <FullServicePackages headingId="rental-options" />
+
+  <section class="ppc-section ppc-band" aria-labelledby="occasion-style">
+    <div class="ppc-wrap ppc-split">
+      <figure class="ppc-occasion-media"><Photo src={occasion.supportImage.src} alt={occasion.supportImage.alt} label={occasion.supportImage.alt} ratio="3/2" width={occasion.supportImage.width} height={occasion.supportImage.height} /><figcaption class="ppc-small">Illustrative celebration scene.</figcaption></figure>
+      <div class="ppc-stack"><p class="ppc-eyebrow">Make it feel like your event</p><h2 class="ppc-h2" id="occasion-style">{occasion.styleHeading}</h2>{occasion.styleCopy.map(paragraph=><p class="ppc-p">{paragraph}</p>)}</div>
+    </div>
+  </section>
+
+  <section class="ppc-section ppc-white" aria-labelledby="occasion-planning">
+    <div class="ppc-wrap ppc-stack-lg">
+      <div class="ppc-stack"><p class="ppc-eyebrow">A few details make the difference</p><h2 class="ppc-h2 ppc-occasion-heading" id="occasion-planning">{occasion.planningHeading}</h2><p class="ppc-p">{occasion.planningIntro}</p></div>
+      <ol class="ppc-numcards ppc-grid3 ppc-occasion-steps">{occasion.steps.map(step=><li class="ppc-card ppc-stack"><h3 class="ppc-h3">{step.title}</h3><p class="ppc-p">{step.copy}</p></li>)}</ol>
+    </div>
+  </section>
+
+  <section class="ppc-section" aria-labelledby="occasion-brief">
+    <div class="ppc-wrap ppc-split ppc-split-top">
+      <div class="ppc-stack"><p class="ppc-eyebrow">Let’s get the details together</p><h2 class="ppc-h2" id="occasion-brief">A quick checklist before you book.</h2><p class="ppc-p">Send your plans so our team can review the booth, guest flow, and venue access with you. Local service is confirmed for your exact event address.</p><a class="ppc-link" href={checkHref}>Check your date →</a></div>
+      <div class="ppc-card"><ul class="ppc-checks">{occasion.brief.map(item=><li>{item}</li>)}</ul></div>
+    </div>
+  </section>
+
+  <FAQ items={occasion.faqs} heading="A few things to know before the celebration." />
+  <section class="ppc-section-sm ppc-white" aria-labelledby="other-events">
+    <div class="ppc-wrap ppc-stack"><h2 class="ppc-h3" id="other-events">Planning another celebration?</h2><div class="ppc-chips">{otherEvents.map(event=><a href={event.href}>{event.name}</a>)}</div></div>
+  </section>
+</RentalLayout>
+
+<style>
+  .ppc-occasion-hero :global(.ppc-hero .ppc-ph){min-height:0;aspect-ratio:4/3}
+  .ppc-occasion-hero,.ppc-occasion-hero :global(.ppc-hero-copy){min-width:0}
+  .ppc-occasion-heading{max-width:24ch}
+  .ppc-occasion-media{display:grid;gap:10px;min-width:0;margin:0}
+  .ppc-occasion-media :global(.ppc-ph){min-height:0;aspect-ratio:3/2}
+  .ppc-occasion-media figcaption{margin:0;font-size:13px;line-height:1.4}
+  .ppc-occasion-steps{padding:0}
+</style>

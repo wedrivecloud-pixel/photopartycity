@@ -1,0 +1,279 @@
+{
+  "status": "passed",
+  "testedAt": "2026-10-20T06:47:43.692Z",
+  "url": "http://127.0.0.1:4336/photo-booth-rental-cost/",
+  "baseline": {
+    "path": "/workspace/work/cost-images/photo-booth-rental-cost-before.html",
+    "sha256": "2c9722888df8a90d263ed3e6ba7e91e124870389acb69bf6de73e35a2c62607f"
+  },
+  "widths": [
+    {
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "hero": {
+        "src": "/media/cost-guide/hero.webp",
+        "naturalWidth": 1200,
+        "naturalHeight": 900,
+        "width": 505.390625,
+        "height": 379.03125,
+        "ratio": 1.3333745568472257,
+        "objectFit": "cover",
+        "minHeight": 0
+      },
+      "contracts": "unchanged",
+      "faqKeyboard": true,
+      "tables": [
+        {
+          "index": 0,
+          "scrollable": false,
+          "maxScroll": 0,
+          "reachedRightmost": true
+        },
+        {
+          "index": 1,
+          "scrollable": false,
+          "maxScroll": 0,
+          "reachedRightmost": true
+        },
+        {
+          "index": 2,
+          "scrollable": false,
+          "maxScroll": 0,
+          "reachedRightmost": true
+        },
+        {
+          "index": 3,
+          "scrollable": false,
+          "maxScroll": 0,
+          "reachedRightmost": true
+        },
+        {
+          "index": 4,
+          "scrollable": false,
+          "maxScroll": 0,
+          "reachedRightmost": true
+        }
+      ],
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/cost-images-1440.webp"
+    },
+    {
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "hero": {
+        "src": "/media/cost-guide/hero.webp",
+        "naturalWidth": 1200,
+        "naturalHeight": 900,
+        "width": 706.5625,
+        "height": 529.921875,
+        "ratio": 1.3333333333333333,
+        "objectFit": "cover",
+        "minHeight": 0
+      },
+      "contracts": "unchanged",
+      "faqKeyboard": true,
+      "tables": [
+        {
+          "index": 0,
+          "scrollable": false,
+          "maxScroll": 0,
+          "reachedRightmost": true
+        },
+        {
+          "index": 1,
+          "scrollable": false,
+          "maxScroll": 0,
+          "reachedRightmost": true
+        },
+        {
+          "index": 2,
+          "scrollable": false,
+          "maxScroll": 0,
+          "reachedRightmost": true
+        },
+        {
+          "index": 3,
+          "scrollable": false,
+          "maxScroll": 0,
+          "reachedRightmost": true
+        },
+        {
+          "index": 4,
+          "scrollable": false,
+          "maxScroll": 0,
+          "reachedRightmost": true
+        }
+      ],
+      "runtimeErrors": []
+    },
+    {
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "hero": {
+        "src": "/media/cost-guide/hero.webp",
+        "naturalWidth": 1200,
+        "naturalHeight": 900,
+        "width": 358,
+        "height": 268.5,
+        "ratio": 1.3333333333333333,
+        "objectFit": "cover",
+        "minHeight": 0
+      },
+      "contracts": "unchanged",
+      "faqKeyboard": true,
+      "tables": [
+        {
+          "index": 0,
+          "scrollable": true,
+          "maxScroll": 284,
+          "reachedRightmost": true
+        },
+        {
+          "index": 1,
+          "scrollable": true,
+          "maxScroll": 284,
+          "reachedRightmost": true
+        },
+        {
+          "index": 2,
+          "scrollable": true,
+          "maxScroll": 284,
+          "reachedRightmost": true
+        },
+        {
+          "index": 3,
+          "scrollable": true,
+          "maxScroll": 284,
+          "reachedRightmost": true
+        },
+        {
+          "index": 4,
+          "scrollable": false,
+          "maxScroll": 0,
+          "reachedRightmost": true
+        }
+      ],
+      "runtimeErrors": [],
+      "screenshot": "docs/redesign/screenshots/cost-images-390.webp"
+    },
+    {
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "hero": {
+        "src": "/media/cost-guide/hero.webp",
+        "naturalWidth": 1200,
+        "naturalHeight": 900,
+        "width": 288,
+        "height": 216,
+        "ratio": 1.3333333333333333,
+        "objectFit": "cover",
+        "minHeight": 0
+      },
+      "contracts": "unchanged",
+      "faqKeyboard": true,
+      "tables": [
+        {
+          "index": 0,
+          "scrollable": true,
+          "maxScroll": 354,
+          "reachedRightmost": true
+        },
+        {
+          "index": 1,
+          "scrollable": true,
+          "maxScroll": 354,
+          "reachedRightmost": true
+        },
+        {
+          "index": 2,
+          "scrollable": true,
+          "maxScroll": 354,
+          "reachedRightmost": true
+        },
+        {
+          "index": 3,
+          "scrollable": true,
+          "maxScroll": 354,
+          "reachedRightmost": true
+        },
+        {
+          "index": 4,
+          "scrollable": false,
+          "maxScroll": 0,
+          "reachedRightmost": true
+        }
+      ],
+      "runtimeErrors": []
+    }
+  ],
+  "noJavaScript": {
+    "status": "passed",
+    "width": 390,
+    "imageLoaded": true,
+    "bookingLinks": 6,
+    "nativeFaq": true,
+    "contracts": "unchanged",
+    "documentWidth": 390,
+    "tables": [
+      {
+        "index": 0,
+        "scrollable": true,
+        "maxScroll": 284,
+        "reachedRightmost": true
+      },
+      {
+        "index": 1,
+        "scrollable": true,
+        "maxScroll": 284,
+        "reachedRightmost": true
+      },
+      {
+        "index": 2,
+        "scrollable": true,
+        "maxScroll": 284,
+        "reachedRightmost": true
+      },
+      {
+        "index": 3,
+        "scrollable": true,
+        "maxScroll": 284,
+        "reachedRightmost": true
+      },
+      {
+        "index": 4,
+        "scrollable": false,
+        "maxScroll": 0,
+        "reachedRightmost": true
+      }
+    ]
+  },
+  "errors": [],
+  "unaffectedRoutes": [
+    {
+      "slug": "about-photo-party-city",
+      "normalizedDom": "unchanged"
+    },
+    {
+      "slug": "photobooth-props",
+      "normalizedDom": "unchanged"
+    },
+    {
+      "slug": "refund-policy",
+      "normalizedDom": "unchanged"
+    }
+  ],
+  "contractFields": [
+    "all anchor hrefs",
+    "title",
+    "all meta tags",
+    "canonical",
+    "JSON-LD schema",
+    "all IDs",
+    "all dollar prices",
+    "all table text"
+  ]
+}

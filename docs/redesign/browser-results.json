@@ -1,0 +1,312 @@
+[
+  {
+    "route": "/360-photo-booth-rental/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/about-photo-party-city/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/blog/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/check-your-date/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/contact-us/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/corporate-photo-booth-rental/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/digital-photo-booth-rental/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/full-service-photo-booth-rental/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/how-to-build-a-profitable-photo-booth-business/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-by-mail/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-packages/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-chino/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-corona/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-cost/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-eastvale/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-fontana/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-jurupa-valley/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-norco/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-ontario/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-rancho-cucamonga/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-riverside/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-san-bernardino/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-upland/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photobooth-event-benefits/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/photobooth-props/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/refund-policy/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/self-service-photo-booth-rental/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/types-of-photo-booths/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/unlocking-success/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/wedding-photo-booth-rental/",
+    "width": 1440,
+    "status": "passed"
+  },
+  {
+    "route": "/360-photo-booth-rental/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/about-photo-party-city/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/blog/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/check-your-date/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/contact-us/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/corporate-photo-booth-rental/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/digital-photo-booth-rental/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/full-service-photo-booth-rental/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/how-to-build-a-profitable-photo-booth-business/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-by-mail/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-packages/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-chino/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-corona/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-cost/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-eastvale/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-fontana/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-jurupa-valley/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-norco/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-ontario/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-rancho-cucamonga/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-riverside/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-san-bernardino/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photo-booth-rental-upland/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photobooth-event-benefits/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/photobooth-props/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/refund-policy/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/self-service-photo-booth-rental/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/types-of-photo-booths/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/unlocking-success/",
+    "width": 390,
+    "status": "passed"
+  },
+  {
+    "route": "/wedding-photo-booth-rental/",
+    "width": 390,
+    "status": "passed"
+  }
+]

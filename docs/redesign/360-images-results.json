@@ -1,0 +1,50 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "imageSlots": 3,
+      "overflow": false,
+      "rateImageRatios": [
+        1.7777777777777777,
+        1.7777777777777777
+      ],
+      "allSixRatesAndBookingParameters": "passed",
+      "status": "passed"
+    },
+    {
+      "width": 768,
+      "imageSlots": 3,
+      "overflow": false,
+      "rateImageRatios": [
+        1.7777960797232746,
+        1.7777960797232746
+      ],
+      "allSixRatesAndBookingParameters": "passed",
+      "status": "passed"
+    },
+    {
+      "width": 390,
+      "imageSlots": 3,
+      "overflow": false,
+      "rateImageRatios": [
+        1.7777777777777777,
+        1.7777777777777777
+      ],
+      "allSixRatesAndBookingParameters": "passed",
+      "status": "passed"
+    },
+    {
+      "width": 320,
+      "imageSlots": 3,
+      "overflow": false,
+      "rateImageRatios": [
+        1.7777777777777777,
+        1.7777777777777777
+      ],
+      "allSixRatesAndBookingParameters": "passed",
+      "status": "passed"
+    }
+  ],
+  "noJavaScriptRatesFallback": "passed",
+  "metadataRatesLinksSchemaAndIDs": "unchanged"
+}

@@ -1,0 +1,71 @@
+---
+import {eventNavigation as events} from '../../data/occasion-events';
+interface Props {checkHref?:string}
+const {checkHref='/check-your-date/'}=Astro.props;
+const booths=[
+ {href:'/full-service-photo-booth-rental/',name:'We bring it — full service',sub:'Delivered, set up and run by our attendant'},
+ {href:'/self-service-photo-booth-rental/',name:'You pick it up — self-service',sub:'24 hours, pickup in Mira Loma'},
+ {href:'/digital-photo-booth-rental/',name:'Digital photo booth',sub:'Photos, GIFs, boomerangs and sharing'},
+ {href:'/360-photo-booth-rental/',name:'360 video booth',sub:'Slow-motion spinning video'},
+ {href:'/photo-booth-by-mail/',name:'We ship it — nationwide',sub:'A photo booth shipped to your door'},
+];
+const more=[{name:'Packages',href:'/photo-booth-packages/'},{name:'How it works',href:'/#how-it-works'},{name:'Reviews',href:'/#reviews'},{name:'FAQ',href:'/#faq'}];
+---
+<div class="ppc-topline"><span class="ppc-hidesm">Staffed booths in the Inland Empire · Booths shipped nationwide</span><span class="ppc-showsm">Staffed in the Inland Empire · Shipped nationwide</span></div>
+<header class="ppc-header">
+  <div class="ppc-wrap ppc-headrow">
+    <a class="ppc-brand" href="/" aria-label="Photo Party City home"><img class="ppc-brand-logo" src="/media/52b598863a8e1582.webp" width="52" height="40" alt="Photo Party City"/><span class="ppc-brand-name">Photo Party City</span></a>
+    <nav class="ppc-nav" aria-label="Main navigation">
+      <details class="ppc-nav-details" data-ways-menu><summary class="ppc-navlink" aria-controls="ppc-waysmenu">Ways to rent <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="ppc-menu" id="ppc-waysmenu"><div class="ppc-wrap ppc-menugrid"><div class="ppc-menucol"><p class="ppc-foothead">Booths</p>{booths.map(booth=><a class="ppc-menuitem" href={booth.href}><b>{booth.name}</b><span>{booth.sub}</span></a>)}</div><div class="ppc-menucol"><p class="ppc-foothead">Events</p><ul class="ppc-footlinks">{events.map(event=><li><a href={event.href}>{event.name}</a></li>)}</ul></div><div class="ppc-card ppc-menunote"><p class="ppc-h4">Not sure which one?</p><p class="ppc-p" style="font-size:15px">Enter your date and ZIP. We’ll show the rental options for your area.</p><a class="ppc-btnp ppc-btn-sm" href="/check-your-date/">Check your date</a><a class="ppc-link" href="/photo-booth-packages/" style="font-size:15px">Compare all packages</a></div></div></div>
+      </details>
+      {more.map(link=><a class="ppc-navlink" href={link.href}>{link.name}</a>)}
+    </nav>
+    <div class="ppc-head-actions" data-source="header">
+      <a class="ppc-btnp ppc-btn-sm ppc-headcta" href={checkHref}>Check your date</a>
+      <a class="ppc-headcall ppc-icon-button" href="tel:+19094037143" aria-label="Call or text (909) 403-7143"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+      <button class="ppc-burger ppc-icon-button" type="button" aria-label="Open menu" aria-controls="ppc-mobile-menu" aria-expanded="false" data-menu-open hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <noscript><details class="ppc-mobile-fallback"><summary>Menu</summary><nav aria-label="Mobile navigation"><p class="ppc-foothead">Ways to rent</p>{booths.map(booth=><a href={booth.href}>{booth.name}</a>)}<p class="ppc-foothead">Events</p>{events.map(event=><a href={event.href}>{event.name}</a>)}<p class="ppc-foothead">More</p>{more.map(link=><a href={link.href}>{link.name}</a>)}</nav></details></noscript>
+    </div>
+  </div>
+</header>
+<dialog id="ppc-mobile-menu" class="ppc-drawer" aria-label="Site menu" data-menu-dialog>
+  <div class="ppc-drawer-head"><span class="ppc-brand-name">Photo Party City</span><button class="ppc-icon-button" type="button" aria-label="Close menu" data-menu-close><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <nav class="ppc-drawer-nav" aria-label="Mobile navigation"><div><p class="ppc-foothead">Ways to rent</p>{booths.map(booth=><a class="ppc-dlink" href={booth.href}>{booth.name}</a>)}</div><div><p class="ppc-foothead">Events</p>{events.map(event=><a class="ppc-dlink" href={event.href}>{event.name}</a>)}</div><div><p class="ppc-foothead">More</p>{more.map(link=><a class="ppc-dlink" href={link.href}>{link.name}</a>)}</div></nav>
+  <div class="ppc-drawer-actions" data-source="header"><a class="ppc-btnp ppc-btn-block" href={checkHref}>Check your date</a><a class="ppc-btng ppc-btn-block" href="tel:+19094037143">Call or text (909) 403-7143</a></div>
+</dialog>
+<script>
+  const openButton=document.querySelector<HTMLButtonElement>('[data-menu-open]');
+  const dialog=document.querySelector<HTMLDialogElement>('[data-menu-dialog]');
+  const closeButton=dialog?.querySelector<HTMLButtonElement>('[data-menu-close]');
+  const ways=document.querySelector<HTMLDetailsElement>('[data-ways-menu]');
+  const waysSummary=ways?.querySelector<HTMLElement>('summary');
+  if(ways && waysSummary){
+    ways.addEventListener('toggle',()=>waysSummary.setAttribute('aria-expanded',String(ways.open)));
+    ways.addEventListener('keydown',event=>{if(event.key==='Escape'){ways.open=false;waysSummary.focus();}});
+    document.addEventListener('click',event=>{if(event.target instanceof Node && !ways.contains(event.target))ways.open=false;});
+    ways.addEventListener('focusout',()=>{requestAnimationFrame(()=>{if(!ways.contains(document.activeElement))ways.open=false;});});
+  }
+  if(openButton && dialog && typeof dialog.showModal==='function'){
+    let previousOverflow='';
+    const closeMenu=()=>{if(dialog.open)dialog.close();};
+    openButton.hidden=false;
+    openButton.addEventListener('click',()=>{ways && (ways.open=false);previousOverflow=document.body.style.overflow;dialog.showModal();document.body.style.overflow='hidden';openButton.setAttribute('aria-expanded','true');closeButton?.focus();});
+    closeButton?.addEventListener('click',closeMenu);
+    dialog.addEventListener('cancel',event=>{event.preventDefault();closeMenu();});
+    dialog.addEventListener('close',()=>{document.body.style.overflow=previousOverflow;openButton.setAttribute('aria-expanded','false');openButton.focus();});
+    dialog.addEventListener('click',event=>{if(event.target instanceof Element && event.target.closest('a'))closeMenu();});
+    dialog.addEventListener('keydown',event=>{
+      if(event.key!=='Tab')return;
+      const focusable=Array.from(dialog.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex="0"]')).filter(element=>element.getClientRects().length>0);
+      const first=focusable[0],last=focusable[focusable.length-1];
+      if(event.shiftKey && document.activeElement===first){event.preventDefault();last?.focus();}
+      else if(!event.shiftKey && document.activeElement===last){event.preventDefault();first?.focus();}
+    });
+    matchMedia('(min-width:1025px)').addEventListener('change',event=>{if(event.matches)closeMenu();});
+  }
+</script>
+
+<style>
+  .ppc-mobile-fallback>nav{max-height:70dvh;overflow-y:auto;overscroll-behavior:contain}
+</style>

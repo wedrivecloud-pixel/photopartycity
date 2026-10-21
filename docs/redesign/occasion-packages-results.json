@@ -1,0 +1,712 @@
+{
+  "status": "passed",
+  "testedAt": "2026-10-21T07:50:40.031Z",
+  "base": "http://127.0.0.1:4341",
+  "sourceBaselineCommit": "d8ff503fb0ac09ef3756b6fec02bc62c6bf1dc1d",
+  "scope": "Four occasion package sections and shared wedding/corporate component extraction",
+  "normalization": "Whitespace, Astro data-astro-cid attributes and style nodes only; four replaced sections are excluded from outside-section contracts. Section comparisons additionally normalize only the heading ID and its aria-labelledby reference.",
+  "contracts": [
+    {
+      "route": "/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "2ae9eabd299d63a6d6b69035db85bf7f9eaef4c0639c334f4faadedcec428b78"
+    },
+    {
+      "route": "/360-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "03e0da52bd7e4d11a603096cef2c537fcef25dcacdc1f1f45a672fe4387b913b"
+    },
+    {
+      "route": "/about-photo-party-city/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "f3018ff1e110b02eb4da7bb66d75439f6f309affd27ca54c82fb97947a392710"
+    },
+    {
+      "route": "/birthday-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged outside replaced package section",
+      "baselineSha256": "4e34f0e01a2f9582618a6394dd758e066e145c40443a3134db0c7775d5373583"
+    },
+    {
+      "route": "/blog/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "cb2fe7bd9fd4c09110b8f4e6760045b1a5fe521d1c4bd57c52ef1ec0c8e74042"
+    },
+    {
+      "route": "/check-your-date/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "ee8057b85a38ea9551dff4d4d793f15d9e1e3e60dbeb957a5722d86beb8ace3a"
+    },
+    {
+      "route": "/contact-us/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "c94ef67368ff7a1e9c0558e5b015aad3b4bf43bdb36a1a94073cccf0a9147503"
+    },
+    {
+      "route": "/corporate-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "2736167888cb4ec8c31d52f524a146a754bf2a8eafcf4309078971e9c3f47e5b"
+    },
+    {
+      "route": "/digital-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "43aae14ea772b49c371e015844a923770a9bc62c1a601060f0aa8200221b2bd1"
+    },
+    {
+      "route": "/full-service-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "008375fa486ab74bd71dee804c534cc8d6e64afe0f2b0d51d8e7ad1e62e5c00c"
+    },
+    {
+      "route": "/graduation-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged outside replaced package section",
+      "baselineSha256": "0d2b703c0c3c2322e2adacbf2e578ffb8b87b5b563e4af9aa209edd1d1bc4288"
+    },
+    {
+      "route": "/how-to-build-a-profitable-photo-booth-business/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "8c765651b01a71467cea79acf7475273af37d10d01d3a469b46e21ddb3521cb1"
+    },
+    {
+      "route": "/photo-booth-by-mail/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "b3318f8975a78cb632df2c611a0b4cbf080ccb6998d4616aeb0062dfb4930cc9"
+    },
+    {
+      "route": "/photo-booth-packages/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "86aff1c0bb34879ee57202aa979a326c8253c6c269710836de3af04bbd5dd001"
+    },
+    {
+      "route": "/photo-booth-rental-chino/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "5d4506813666e081fe8f9480fbc33658b1766a6d54d5c340db497c63e86ffb28"
+    },
+    {
+      "route": "/photo-booth-rental-corona/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "de0fd891e039dbed771a6a209cc3c13249a6c332af777b51584f774dad1b826c"
+    },
+    {
+      "route": "/photo-booth-rental-cost/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "91bc23bb5934ef641d0b14a62d6488aa6b6de92d8a5c6c98c27fed778171b18c"
+    },
+    {
+      "route": "/photo-booth-rental-eastvale/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "18ec323eac5174c8dc67b03547f4c7c2980e1971489f16813d189fb59d2635d6"
+    },
+    {
+      "route": "/photo-booth-rental-fontana/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "12017a608f532e90baa22dd74b038e659493f58db56a53e9e503aacba1d9c3cb"
+    },
+    {
+      "route": "/photo-booth-rental-jurupa-valley/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "f06dc5ea607d872b868816219a81cc0113dc012430ce33cc8dbb4fdb963cff0a"
+    },
+    {
+      "route": "/photo-booth-rental-norco/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "8dcfd6957d333b47370ba84e665c4186af8c6ed61b56253728de18fcc2efd625"
+    },
+    {
+      "route": "/photo-booth-rental-ontario/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "39c38882da6decf1538f36f932e38373399bc8e88cb93e0f35cb32fa08cd692a"
+    },
+    {
+      "route": "/photo-booth-rental-rancho-cucamonga/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "335514d9a7dba7e81b52ab2f61bbc34a330f3d4736b006f655690f6f4af5f3b3"
+    },
+    {
+      "route": "/photo-booth-rental-riverside/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "ad89c43e538c0cb9b8c04b83a757893deaa35b678c6eea5f768175cfd9d09eb1"
+    },
+    {
+      "route": "/photo-booth-rental-san-bernardino/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "6e48b484c5b247a6270e73ada8153f37a05f747571a3436b013e52b35216e9e5"
+    },
+    {
+      "route": "/photo-booth-rental-upland/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "dce09cc6bff8b3f54a97a48ba8d09a09493060865e2f9a2f5aadc348fac0354f"
+    },
+    {
+      "route": "/photobooth-event-benefits/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "ba732fe549cacd43ac2dcb01eb4b0d88d34fbca29d8a21b2662ac347ba210c7e"
+    },
+    {
+      "route": "/photobooth-props/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "0feac0e329af8cb38049dd54c650e0df3fcdf0f890267625a6d709f9f67d8f54"
+    },
+    {
+      "route": "/quinceanera-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged outside replaced package section",
+      "baselineSha256": "57d2772ab9e1d38fb00139fcb6e61c1dbe420336ef247116f115baaa80473ff4"
+    },
+    {
+      "route": "/refund-policy/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "4435ad7e4f8d4f71f56bdcbaaf44d5a9fea1efec4cd3529422b75687b8a426a8"
+    },
+    {
+      "route": "/school-event-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged outside replaced package section",
+      "baselineSha256": "c80adc42d2a2e2afb9720c79aafbfbdec030d459e8a07cc3cac587f2ffc8e3d6"
+    },
+    {
+      "route": "/self-service-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "5a6defbeb9583d2bc1db7e2abaac612b38ee360f25ae5574ee3298df49f546a6"
+    },
+    {
+      "route": "/types-of-photo-booths/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "ab32fd7a194c9b5824cd84f8f9d8cb4177aeda52da9cb8fc7063811360632534"
+    },
+    {
+      "route": "/unlocking-success/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "546a4195fa14617a352d91b15d0ead00466187b720a6970592e583faf51477e6"
+    },
+    {
+      "route": "/wedding-photo-booth-rental/",
+      "status": "passed",
+      "titleMetaCanonicalSchema": "unchanged",
+      "bookingIdsPricesCopyImagesAndDom": "unchanged",
+      "baselineSha256": "1393107d7a403f6db89cb9a09e1da7f0d02214126c650268f307f5dfed8bbd89"
+    }
+  ],
+  "referenceSections": [
+    {
+      "event": "birthday",
+      "status": "passed",
+      "equality": "exact structural/content match to wedding and corporate after heading ID and Astro attribute normalization"
+    },
+    {
+      "event": "quinceanera",
+      "status": "passed",
+      "equality": "exact structural/content match to wedding and corporate after heading ID and Astro attribute normalization"
+    },
+    {
+      "event": "graduation",
+      "status": "passed",
+      "equality": "exact structural/content match to wedding and corporate after heading ID and Astro attribute normalization"
+    },
+    {
+      "event": "school",
+      "status": "passed",
+      "equality": "exact structural/content match to wedding and corporate after heading ID and Astro attribute normalization"
+    }
+  ],
+  "viewports": [
+    {
+      "event": "birthday",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA",
+      "tiers": [
+        {
+          "name": "Silver",
+          "model": "Helio Sport",
+          "price": 695,
+          "hours": 3,
+          "href": "https://eventdeskly.com/book/photo-party-city/package/4b01576a-0a6c-4f79-94af-83b5374a6d63",
+          "image": "/media/full-service/helio-sport.webp"
+        },
+        {
+          "name": "Gold",
+          "model": "Lumia M Pro",
+          "price": 895,
+          "hours": 4,
+          "href": "https://eventdeskly.com/book/photo-party-city/package/9c2f5061-4898-4de7-9bd5-20ab1aa6fc54",
+          "image": "/media/full-service/lumia-m-pro.webp"
+        },
+        {
+          "name": "Platinum",
+          "model": "Posh Pro",
+          "price": 1095,
+          "hours": 5,
+          "href": "https://eventdeskly.com/book/photo-party-city/package/685d2b8e-ea41-43d2-b391-01fe7fc31200",
+          "image": "/media/full-service/posh-pro.webp"
+        }
+      ]
+    },
+    {
+      "event": "birthday",
+      "width": 1024,
+      "status": "passed",
+      "documentWidth": 1024,
+      "cardRatios": [
+        1.3334,
+        1.3334,
+        1.3334
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "birthday",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "birthday",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "birthday",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "quinceanera",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA",
+      "tiers": [
+        {
+          "name": "Silver",
+          "model": "Helio Sport",
+          "price": 695,
+          "hours": 3,
+          "href": "https://eventdeskly.com/book/photo-party-city/package/4b01576a-0a6c-4f79-94af-83b5374a6d63",
+          "image": "/media/full-service/helio-sport.webp"
+        },
+        {
+          "name": "Gold",
+          "model": "Lumia M Pro",
+          "price": 895,
+          "hours": 4,
+          "href": "https://eventdeskly.com/book/photo-party-city/package/9c2f5061-4898-4de7-9bd5-20ab1aa6fc54",
+          "image": "/media/full-service/lumia-m-pro.webp"
+        },
+        {
+          "name": "Platinum",
+          "model": "Posh Pro",
+          "price": 1095,
+          "hours": 5,
+          "href": "https://eventdeskly.com/book/photo-party-city/package/685d2b8e-ea41-43d2-b391-01fe7fc31200",
+          "image": "/media/full-service/posh-pro.webp"
+        }
+      ]
+    },
+    {
+      "event": "quinceanera",
+      "width": 1024,
+      "status": "passed",
+      "documentWidth": 1024,
+      "cardRatios": [
+        1.3334,
+        1.3334,
+        1.3334
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "quinceanera",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "quinceanera",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "quinceanera",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "graduation",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA",
+      "tiers": [
+        {
+          "name": "Silver",
+          "model": "Helio Sport",
+          "price": 695,
+          "hours": 3,
+          "href": "https://eventdeskly.com/book/photo-party-city/package/4b01576a-0a6c-4f79-94af-83b5374a6d63",
+          "image": "/media/full-service/helio-sport.webp"
+        },
+        {
+          "name": "Gold",
+          "model": "Lumia M Pro",
+          "price": 895,
+          "hours": 4,
+          "href": "https://eventdeskly.com/book/photo-party-city/package/9c2f5061-4898-4de7-9bd5-20ab1aa6fc54",
+          "image": "/media/full-service/lumia-m-pro.webp"
+        },
+        {
+          "name": "Platinum",
+          "model": "Posh Pro",
+          "price": 1095,
+          "hours": 5,
+          "href": "https://eventdeskly.com/book/photo-party-city/package/685d2b8e-ea41-43d2-b391-01fe7fc31200",
+          "image": "/media/full-service/posh-pro.webp"
+        }
+      ]
+    },
+    {
+      "event": "graduation",
+      "width": 1024,
+      "status": "passed",
+      "documentWidth": 1024,
+      "cardRatios": [
+        1.3334,
+        1.3334,
+        1.3334
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "graduation",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "graduation",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "graduation",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "school",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA",
+      "tiers": [
+        {
+          "name": "Silver",
+          "model": "Helio Sport",
+          "price": 695,
+          "hours": 3,
+          "href": "https://eventdeskly.com/book/photo-party-city/package/4b01576a-0a6c-4f79-94af-83b5374a6d63",
+          "image": "/media/full-service/helio-sport.webp"
+        },
+        {
+          "name": "Gold",
+          "model": "Lumia M Pro",
+          "price": 895,
+          "hours": 4,
+          "href": "https://eventdeskly.com/book/photo-party-city/package/9c2f5061-4898-4de7-9bd5-20ab1aa6fc54",
+          "image": "/media/full-service/lumia-m-pro.webp"
+        },
+        {
+          "name": "Platinum",
+          "model": "Posh Pro",
+          "price": 1095,
+          "hours": 5,
+          "href": "https://eventdeskly.com/book/photo-party-city/package/685d2b8e-ea41-43d2-b391-01fe7fc31200",
+          "image": "/media/full-service/posh-pro.webp"
+        }
+      ]
+    },
+    {
+      "event": "school",
+      "width": 1024,
+      "status": "passed",
+      "documentWidth": 1024,
+      "cardRatios": [
+        1.3334,
+        1.3334,
+        1.3334
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "school",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "school",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    },
+    {
+      "event": "school",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "cardRatios": [
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "keyboardAnchors": "all three activate with Enter; default navigation prevented by QA"
+    }
+  ],
+  "noJavaScript": [
+    {
+      "event": "birthday",
+      "width": 390,
+      "status": "passed",
+      "tiers": 3,
+      "links": "original Eventdeskly destinations present and keyboard focusable"
+    },
+    {
+      "event": "quinceanera",
+      "width": 390,
+      "status": "passed",
+      "tiers": 3,
+      "links": "original Eventdeskly destinations present and keyboard focusable"
+    },
+    {
+      "event": "graduation",
+      "width": 390,
+      "status": "passed",
+      "tiers": 3,
+      "links": "original Eventdeskly destinations present and keyboard focusable"
+    },
+    {
+      "event": "school",
+      "width": 390,
+      "status": "passed",
+      "tiers": 3,
+      "links": "original Eventdeskly destinations present and keyboard focusable"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/redesign/screenshots/occasion-packages-birthday-1440.webp",
+      "width": 1440,
+      "height": 1250.34,
+      "bytes": 76972,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-packages-birthday-390.webp",
+      "width": 390,
+      "height": 2358.03,
+      "bytes": 74280,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-packages-quinceanera-1440.webp",
+      "width": 1440,
+      "height": 1250.34,
+      "bytes": 78080,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-packages-quinceanera-390.webp",
+      "width": 390,
+      "height": 2358.03,
+      "bytes": 74846,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-packages-graduation-1440.webp",
+      "width": 1440,
+      "height": 1250.34,
+      "bytes": 76788,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-packages-graduation-390.webp",
+      "width": 390,
+      "height": 2358.03,
+      "bytes": 74706,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-packages-school-1440.webp",
+      "width": 1440,
+      "height": 1250.34,
+      "bytes": 76972,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-packages-school-390.webp",
+      "width": 390,
+      "height": 2358.03,
+      "bytes": 74280,
+      "quality": 75
+    }
+  ],
+  "errors": []
+}

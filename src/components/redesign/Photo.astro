@@ -1,0 +1,9 @@
+---
+interface Props { label: string; tone?: string; ratio?: string; src?: string; alt?: string; width?:number; height?:number; loading?:'lazy'|'eager'; fetchpriority?:'auto'|'high'|'low' }
+const {label,tone='lav',ratio='4/3',src,alt=label,width=800,height=600,loading='lazy',fetchpriority='auto'}=Astro.props;
+const tones:Record<string,string>={lav:'t-lav',blush:'t-blush',sage:'t-sage',gold:'t-gold',lil:'t-lil',sky:'t-sky'};
+const ratios:Record<string,string>={'4/3':'ppc-r43','3/2':'ppc-r32','1/1':'ppc-r11','4/5':'ppc-r45','16/9':'ppc-r169'};
+---
+<div class:list={['ppc-ph','ppc-photo',tones[tone] || tone,ratios[ratio] || ratio,{'has-photo':!!src}]}>
+  {src ? <img src={src} alt={alt} width={width} height={height} loading={loading} fetchpriority={fetchpriority} decoding="async"/> : <span>{label}</span>}
+</div>

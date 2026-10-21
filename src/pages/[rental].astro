@@ -1,0 +1,22 @@
+---
+import pages from '../data/pages.json';
+import {infoSlugs,eventSlugs,usesRentalTemplate} from '../data/redesign-routes';
+import InfoPage from '../components/redesign-templates/InfoPage.astro';
+import CityPage from '../components/redesign-templates/CityPage.astro';
+import EventPage from '../components/redesign-templates/EventPage.astro';
+import BlogPost from '../components/redesign-templates/BlogPost.astro';
+export function getStaticPaths(){
+ return pages.filter(usesRentalTemplate).map(original=>{
+  let page={...original};
+  if(page.slug==='2-photo-booth-rental-packages-you-can-get-right-now'){
+   const old=page.slug;page.slug='types-of-photo-booths';page.path='/types-of-photo-booths/';page.canonical='https://photopartycity.com/types-of-photo-booths/';page.schema=JSON.parse(JSON.stringify(page.schema).replaceAll(old,'types-of-photo-booths'));
+  }
+  if(page.slug==='photobooth-event-benefits'){
+   page.name='5 Reasons Every Event Needs a Photo Booth';page.title='5 Reasons Every Event Needs a Photo Booth | Photo Party City';
+  }
+  return {params:{rental:page.slug},props:{page}};
+ });
+}
+const {page}=Astro.props;
+---
+{page.type==='post' ? <BlogPost page={page}/> : infoSlugs.includes(page.slug) ? <InfoPage page={page}/> : eventSlugs.includes(page.slug) ? <EventPage page={page}/> : <CityPage page={page}/>}
