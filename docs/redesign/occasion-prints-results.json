@@ -1,0 +1,400 @@
+{
+  "status": "passed",
+  "testedAt": "2026-10-21T07:31:11.218Z",
+  "base": "http://127.0.0.1:4340",
+  "scope": "Four full-service card image swaps only",
+  "normalization": "Only the first rental card image src/alt and its illustrative figcaption; style and script nodes are omitted from DOM comparison, with JSON-LD compared separately.",
+  "contracts": [
+    {
+      "event": "birthday",
+      "titleMetaCanonicalSchemaIdsPricesLinksBusinessCopy": "unchanged",
+      "heroSelfServiceSupportImages": "unchanged",
+      "normalizedDom": "unchanged",
+      "baselineSha256": "34470d00985f201c51f89f4b9db8a223bf808ad0cfff998546328d676c5331d0"
+    },
+    {
+      "event": "quinceanera",
+      "titleMetaCanonicalSchemaIdsPricesLinksBusinessCopy": "unchanged",
+      "heroSelfServiceSupportImages": "unchanged",
+      "normalizedDom": "unchanged",
+      "baselineSha256": "1f4f538b1441e9b690f1ea0333a64ae6a47b3864f1b88186d21006cc8cc2504a"
+    },
+    {
+      "event": "graduation",
+      "titleMetaCanonicalSchemaIdsPricesLinksBusinessCopy": "unchanged",
+      "heroSelfServiceSupportImages": "unchanged",
+      "normalizedDom": "unchanged",
+      "baselineSha256": "3f2120b3342602eb6752f7174c2a01dd046f868206de719b231541902383abb9"
+    },
+    {
+      "event": "school",
+      "titleMetaCanonicalSchemaIdsPricesLinksBusinessCopy": "unchanged",
+      "heroSelfServiceSupportImages": "unchanged",
+      "normalizedDom": "unchanged",
+      "baselineSha256": "90d7f1150e9d8bee0a7bec58d19ccd82f29dec04b8f6ca5e34479577c754bcd7"
+    }
+  ],
+  "imageInventory": [
+    {
+      "event": "birthday",
+      "src": "/media/occasions/birthday-prints.webp",
+      "alt": "Illustrative patio birthday with three adult friends holding photo strips and a small print",
+      "natural": [
+        1200,
+        800
+      ],
+      "declared": [
+        1200,
+        800
+      ],
+      "caption": "Illustrative birthday print experience."
+    },
+    {
+      "event": "quinceanera",
+      "src": "/media/occasions/quinceanera-prints.webp",
+      "alt": "Illustrative quinceañera honoree and family smiling over a small photo print and a photo strip",
+      "natural": [
+        1200,
+        800
+      ],
+      "declared": [
+        1200,
+        800
+      ],
+      "caption": "Illustrative quinceañera print experience."
+    },
+    {
+      "event": "graduation",
+      "src": "/media/occasions/graduation-prints.webp",
+      "alt": "Illustrative garden party with three adult graduates in caps and gowns holding photo keepsakes",
+      "natural": [
+        1200,
+        800
+      ],
+      "declared": [
+        1200,
+        800
+      ],
+      "caption": "Illustrative graduation print experience."
+    },
+    {
+      "event": "school",
+      "src": "/media/occasions/school-prints.webp",
+      "alt": "Illustrative school-event guests sharing printed photo keepsakes",
+      "natural": [
+        1200,
+        800
+      ],
+      "declared": [
+        1200,
+        800
+      ],
+      "caption": "Illustrative school-event print experience."
+    }
+  ],
+  "viewports": [
+    {
+      "event": "birthday",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "birthday",
+      "width": 1024,
+      "status": "passed",
+      "documentWidth": 1024,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "birthday",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "birthday",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "birthday",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "cardRatios": [
+        1.5001,
+        1.5001
+      ]
+    },
+    {
+      "event": "quinceanera",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "quinceanera",
+      "width": 1024,
+      "status": "passed",
+      "documentWidth": 1024,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "quinceanera",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "quinceanera",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "quinceanera",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "cardRatios": [
+        1.5001,
+        1.5001
+      ]
+    },
+    {
+      "event": "graduation",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "graduation",
+      "width": 1024,
+      "status": "passed",
+      "documentWidth": 1024,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "graduation",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "graduation",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "graduation",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "cardRatios": [
+        1.5001,
+        1.5001
+      ]
+    },
+    {
+      "event": "school",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "school",
+      "width": 1024,
+      "status": "passed",
+      "documentWidth": 1024,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "school",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "school",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "cardRatios": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "event": "school",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "cardRatios": [
+        1.5001,
+        1.5001
+      ]
+    }
+  ],
+  "noJavaScript": [
+    {
+      "event": "birthday",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4
+    },
+    {
+      "event": "quinceanera",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4
+    },
+    {
+      "event": "graduation",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4
+    },
+    {
+      "event": "school",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "docs/redesign/screenshots/occasion-prints-birthday-1440.webp",
+      "width": 1440,
+      "height": 1491.33,
+      "bytes": 108110,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-prints-birthday-390.webp",
+      "width": 390,
+      "height": 2401.06,
+      "bytes": 82602,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-prints-quinceanera-1440.webp",
+      "width": 1440,
+      "height": 1491.33,
+      "bytes": 102930,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-prints-quinceanera-390.webp",
+      "width": 390,
+      "height": 2401.06,
+      "bytes": 80142,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-prints-graduation-1440.webp",
+      "width": 1440,
+      "height": 1491.33,
+      "bytes": 105134,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-prints-graduation-390.webp",
+      "width": 390,
+      "height": 2401.06,
+      "bytes": 81582,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-prints-school-1440.webp",
+      "width": 1440,
+      "height": 1491.33,
+      "bytes": 105236,
+      "quality": 75
+    },
+    {
+      "path": "docs/redesign/screenshots/occasion-prints-school-390.webp",
+      "width": 390,
+      "height": 2401.06,
+      "bytes": 81402,
+      "quality": 75
+    }
+  ],
+  "errors": [],
+  "uniqueScenes": [
+    {
+      "event": "birthday",
+      "sha256": "6e8e2fcbf8b23ce620314a10030f547ec5ba45f9d2f2952c20a4a5b5ca72a687"
+    },
+    {
+      "event": "quinceanera",
+      "sha256": "f64743b92d785b8cb6f62447a947b74d83a42b15ae0a9caec6277beabf59e15e"
+    },
+    {
+      "event": "graduation",
+      "sha256": "2e3787da6917e80755f95c8997dafb09ca919ce367fe897dc0d081c0c48a88e5"
+    },
+    {
+      "event": "school",
+      "sha256": "1cfa04aaffc1adc657403b316c573b025a685a240ea0fcbe497b3fee942b0c87"
+    }
+  ]
+}
