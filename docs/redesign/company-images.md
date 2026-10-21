@@ -1,6 +1,6 @@
 # Company, backdrop and blog imagery
 
-Created on 20 October 2026 to fill 15 empty image areas across eight routes: About, Props & Backdrops, Rental Terms & Refunds, Blog, and the four existing articles. This update adds six AI-generated illustrations and reuses two existing editorial images. The five rental-backdrop previews come from the original published rental form, not generated designs.
+Created on 20 October 2026 to fill 15 empty image areas across eight routes: About, Props & Backdrops, Rental Terms & Refunds, Blog, and the four existing articles. This update added six AI-generated illustrations and reused two existing editorial images. The later [unique-hero update](city-images.md) changes three article leads; the checks here record the original fill, while that guide documents their current sources. The five rental-backdrop previews come from the original published rental form, not generated designs.
 
 ## New illustrations
 
@@ -10,7 +10,7 @@ Created on 20 October 2026 to fill 15 empty image areas across eight routes: Abo
 | `public/media/about/lineup.webp` | 1200 × 900 | 108,392 | About lineup: Helio Sport, Lumia M Pro and Posh Pro in an illustrative venue setting |
 | `public/media/props/hero.webp` | 1200 × 900 | 104,574 | Props hero: two adults enjoying simple heart and star props |
 | `public/media/terms/hero.webp` | 1200 × 900 | 129,566 | Terms hero: representative handling of a detached Helio booth head beside a protective case |
-| `public/media/blog/featured.webp` | 1200 × 900 | 104,980 | Blog featured article and benefits article: three friends enjoying photo strips and party props |
+| `public/media/blog/featured.webp` | 1200 × 900 | 104,980 | Blog featured article: three friends enjoying photo strips and party props |
 | `public/media/blog/types.webp` | 1280 × 720 | 142,712 | Blog types card and types article: two adults posing at an open-air ring-light photo booth |
 
 The six optimized WebP files total **693,342 bytes, approximately 677 KiB**. They use quality 82. Original generated PNGs remain in the working asset library rather than being shipped to visitors.
@@ -49,12 +49,12 @@ The separate retail catalog contains a matching Flower pattern (`b1dcf452af0bf7c
 | `/photobooth-props/` | Hero and five original rental-backdrop previews |
 | `/refund-policy/` | Representative equipment-handling hero |
 | `/blog/` | Featured article and types-of-booths card |
-| `/photobooth-event-benefits/` | Reuses the new blog featured illustration |
+| `/photobooth-event-benefits/` | Uses `public/media/homepage/birthday.webp` for a distinct celebration lead |
 | `/types-of-photo-booths/` | Reuses the new blog types illustration |
-| `/how-to-build-a-profitable-photo-booth-business/` | Reuses `public/media/cost-guide/hero.webp` as a business-planning illustration |
-| `/unlocking-success/` | Reuses `public/media/corporate/hero.webp` as a corporate-event illustration |
+| `/how-to-build-a-profitable-photo-booth-business/` | Uses `public/media/by-mail/booking.webp` as a distinct planning illustration |
+| `/unlocking-success/` | Uses `public/media/corporate/branding.webp` for a coordinated keepsake and signage scene |
 
-Article image frames follow the source aspect ratio: 4:3 for benefits and business-owner scenes, 16:9 for the types article. This keeps faces and booth equipment visible without cropping. The legacy types-article URL continues to follow the existing routing behavior. Existing [cost-guide](cost-images.md) and [corporate](corporate-scenes.md) image provenance still applies to the reused assets.
+Article image frames follow the source aspect ratio: 3:2 for benefits, 4:3 for business-owner scenes, 16:9 for the types article. This keeps faces and booth equipment visible without cropping. The legacy types-article URL continues to follow the existing routing behavior. Existing [cost-guide](cost-images.md) and [corporate](corporate-scenes.md) image provenance still applies to the reused assets.
 
 The update keeps the existing policy copy, prices, booking destinations, page titles, meta descriptions, canonicals, JSON-LD and anchor IDs. New captions describe the imagery without changing booking or policy terms. No change targets the WordPress production site at `photopartycity.com`.
 

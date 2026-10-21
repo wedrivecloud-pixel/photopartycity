@@ -31,9 +31,10 @@ const heroDescription=wedding ? 'Make room for the silly poses, big hugs, and on
 const tierImages=['/media/full-service/helio-sport.webp','/media/full-service/lumia-m-pro.webp','/media/full-service/posh-pro.webp'];
 ---
 <RentalLayout title={page.title} description={page.description} canonical={page.canonical} schema={serviceSchema(page.name,page.canonical,fullServiceTiers)} breadcrumbs={[{name:'Home',href:'/'},{name:wedding?'Weddings':'Corporate events'}]} ctaHeading={wedding?'Let’s make room for a little wedding fun.':'Plan a photo experience for your team.'}>
-  {wedding ? <Hero eyebrow="Wedding photo booth rental · Inland Empire" title={heroTitle} description={heroDescription} image="/media/f8545184ac481dfe.webp" imageAlt="A wedding couple holding Mr. and Mrs. photo booth props" checkHref={bookingLinks.full} tag="Within 45 miles of Mira Loma">
+  {wedding ? <div class="wedding-event-hero"><style is:inline>.wedding-event-hero .ppc-hero .ppc-ph{min-height:0;aspect-ratio:3/2}</style><Hero eyebrow="Wedding photo booth rental · Inland Empire" title={heroTitle} description={heroDescription} image="/media/homepage/wedding.webp" imageAlt="Illustrative wedding scene of a couple and two friends sharing a laugh and a photo strip" imageWidth={1200} imageHeight={800} imageRatio="3/2" checkHref={bookingLinks.full} tag="Within 45 miles of Mira Loma">
     <p class="ppc-small">Personalized print design, an attendant, and digital gallery access with every full-service package.</p>
-  </Hero> : <div class="corporate-event-hero">
+    <p class="ppc-small">Illustrative wedding celebration.</p>
+  </Hero></div> : <div class="corporate-event-hero">
     <style is:inline>.corporate-event-hero .ppc-hero .ppc-ph{min-height:0}</style>
     <Hero eyebrow="Corporate photo booth rental · Inland Empire" title={heroTitle} description={heroDescription} image="/media/corporate/hero.webp" imageAlt="Illustrative scene of three coworkers celebrating beside a Lumia M Pro photo booth and holding a printed photo strip" checkHref={bookingLinks.full} tag="Within 45 miles of Mira Loma">
       <p class="ppc-small">Personalized print design, an attendant, and digital gallery access with every full-service package.</p>

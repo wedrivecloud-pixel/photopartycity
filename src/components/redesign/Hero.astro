@@ -1,7 +1,7 @@
 ---
 import Photo from './Photo.astro';
-interface Props { eyebrow?: string; title:string; description:string; checkHref?:string; image?:string; imageAlt?:string; tag?:string }
-const {eyebrow,title,description,checkHref='/check-your-date/',image,imageAlt='Photo booth at an event',tag}=Astro.props;
+interface Props { eyebrow?: string; title:string; description:string; checkHref?:string; image?:string; imageAlt?:string; imageWidth?:number; imageHeight?:number; imageRatio?:string; tag?:string }
+const {eyebrow,title,description,checkHref='/check-your-date/',image,imageAlt='Photo booth at an event',imageWidth=800,imageHeight=600,imageRatio='4/3',tag}=Astro.props;
 ---
 <section class="ppc-hero-section" data-source="hero">
   <div class="ppc-wrap ppc-hero">
@@ -13,6 +13,6 @@ const {eyebrow,title,description,checkHref='/check-your-date/',image,imageAlt='P
       <div class="ppc-row"><a class="ppc-btnp" href={checkHref}>Check your date</a><a class="ppc-link" href="tel:+19094037143">Call or text (909) 403-7143</a></div>
       <slot/>
     </div>
-    <div class="ppc-hero-media"><Photo label={imageAlt} src={image} alt={imageAlt} ratio="4/3" loading="eager" fetchpriority="high"/></div>
+    <div class="ppc-hero-media"><Photo label={imageAlt} src={image} alt={imageAlt} width={imageWidth} height={imageHeight} ratio={imageRatio} loading="eager" fetchpriority="high"/></div>
   </div>
 </section>

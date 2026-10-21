@@ -1,0 +1,2085 @@
+{
+  "status": "passed",
+  "testedAt": "2026-10-21T03:27:55.490Z",
+  "base": "http://127.0.0.1:4338",
+  "scope": "final city and unique-lead QA",
+  "viewports": [
+    {
+      "slug": "photo-booth-rental-fontana",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "bookingForm": {
+        "ctaBand": {
+          "action": "/check-your-date/",
+          "method": "get",
+          "dateAndZipParameters": "preserved",
+          "checkerPrefill": true
+        }
+      },
+      "screenshot": "docs/redesign/screenshots/city-fontana-1440.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-fontana",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-fontana",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 7
+      },
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "checkerPrefill": true
+      },
+      "screenshot": "docs/redesign/screenshots/city-fontana-390.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-fontana",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        0.8,
+        1.5001,
+        1.5001
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-riverside",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "screenshot": "docs/redesign/screenshots/city-riverside-1440.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-riverside",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-riverside",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 7
+      },
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "checkerPrefill": true
+      },
+      "screenshot": "docs/redesign/screenshots/city-riverside-390.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-riverside",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        0.8,
+        1.5001,
+        1.5001
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-rancho-cucamonga",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "screenshot": "docs/redesign/screenshots/city-rancho-cucamonga-1440.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-rancho-cucamonga",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-rancho-cucamonga",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 7
+      },
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "checkerPrefill": true
+      },
+      "screenshot": "docs/redesign/screenshots/city-rancho-cucamonga-390.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-rancho-cucamonga",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        0.8,
+        1.5001,
+        1.5001
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-ontario",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "screenshot": "docs/redesign/screenshots/city-ontario-1440.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-ontario",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-ontario",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 5
+      },
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "checkerPrefill": true
+      },
+      "screenshot": "docs/redesign/screenshots/city-ontario-390.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-ontario",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        0.8,
+        1.5001,
+        1.5001
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-san-bernardino",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "screenshot": "docs/redesign/screenshots/city-san-bernardino-1440.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-san-bernardino",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-san-bernardino",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 5
+      },
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "checkerPrefill": true
+      },
+      "screenshot": "docs/redesign/screenshots/city-san-bernardino-390.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-san-bernardino",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        0.8,
+        1.5001,
+        1.5001
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-corona",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "screenshot": "docs/redesign/screenshots/city-corona-1440.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-corona",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-corona",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 5
+      },
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "checkerPrefill": true
+      },
+      "screenshot": "docs/redesign/screenshots/city-corona-390.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-corona",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        0.8,
+        1.5001,
+        1.5001
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-eastvale",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "screenshot": "docs/redesign/screenshots/city-eastvale-1440.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-eastvale",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-eastvale",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 5
+      },
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "checkerPrefill": true
+      },
+      "screenshot": "docs/redesign/screenshots/city-eastvale-390.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-eastvale",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        0.8,
+        1.5001,
+        1.5001
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-upland",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "screenshot": "docs/redesign/screenshots/city-upland-1440.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-upland",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-upland",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 5
+      },
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "checkerPrefill": true
+      },
+      "screenshot": "docs/redesign/screenshots/city-upland-390.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-upland",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        0.8,
+        1.5001,
+        1.5001
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-jurupa-valley",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "screenshot": "docs/redesign/screenshots/city-jurupa-valley-1440.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-jurupa-valley",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-jurupa-valley",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 5
+      },
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "checkerPrefill": true
+      },
+      "screenshot": "docs/redesign/screenshots/city-jurupa-valley-390.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-jurupa-valley",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        0.8,
+        1.5001,
+        1.5001
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-chino",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "screenshot": "docs/redesign/screenshots/city-chino-1440.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-chino",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-chino",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 5
+      },
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "checkerPrefill": true
+      },
+      "screenshot": "docs/redesign/screenshots/city-chino-390.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-chino",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        0.8,
+        1.5001,
+        1.5001
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-norco",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "screenshot": "docs/redesign/screenshots/city-norco-1440.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-norco",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-norco",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        0.8,
+        1.5,
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 5
+      },
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "checkerPrefill": true
+      },
+      "screenshot": "docs/redesign/screenshots/city-norco-390.webp",
+      "imageCount": 3
+    },
+    {
+      "slug": "photo-booth-rental-norco",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        0.8,
+        1.5001,
+        1.5001
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "imageCount": 3
+    },
+    {
+      "slug": "wedding-photo-booth-rental",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        1.5,
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "screenshot": "docs/redesign/screenshots/lead-wedding-photo-booth-rental-1440.webp",
+      "imageCount": 4
+    },
+    {
+      "slug": "wedding-photo-booth-rental",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        1.5,
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "imageCount": 4
+    },
+    {
+      "slug": "wedding-photo-booth-rental",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        1.5001,
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 7
+      },
+      "screenshot": "docs/redesign/screenshots/lead-wedding-photo-booth-rental-390.webp",
+      "imageCount": 4
+    },
+    {
+      "slug": "wedding-photo-booth-rental",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        1.5,
+        1.3333,
+        1.3333,
+        1.3333
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "imageCount": 4
+    },
+    {
+      "slug": "photobooth-event-benefits",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "screenshot": "docs/redesign/screenshots/lead-photobooth-event-benefits-1440.webp",
+      "imageCount": 1
+    },
+    {
+      "slug": "photobooth-event-benefits",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "imageCount": 1
+    },
+    {
+      "slug": "photobooth-event-benefits",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        1.5001
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "screenshot": "docs/redesign/screenshots/lead-photobooth-event-benefits-390.webp",
+      "imageCount": 1
+    },
+    {
+      "slug": "photobooth-event-benefits",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        1.5
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "imageCount": 1
+    },
+    {
+      "slug": "unlocking-success",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        1.3333
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "screenshot": "docs/redesign/screenshots/lead-unlocking-success-1440.webp",
+      "imageCount": 1
+    },
+    {
+      "slug": "unlocking-success",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        1.3333
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "imageCount": 1
+    },
+    {
+      "slug": "unlocking-success",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        1.3333
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "screenshot": "docs/redesign/screenshots/lead-unlocking-success-390.webp",
+      "imageCount": 1
+    },
+    {
+      "slug": "unlocking-success",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        1.3333
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "imageCount": 1
+    },
+    {
+      "slug": "how-to-build-a-profitable-photo-booth-business",
+      "width": 1440,
+      "status": "passed",
+      "documentWidth": 1440,
+      "frameRatios": [
+        1.3333
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "screenshot": "docs/redesign/screenshots/lead-how-to-build-a-profitable-photo-booth-business-1440.webp",
+      "imageCount": 1
+    },
+    {
+      "slug": "how-to-build-a-profitable-photo-booth-business",
+      "width": 768,
+      "status": "passed",
+      "documentWidth": 768,
+      "frameRatios": [
+        1.3333
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "imageCount": 1
+    },
+    {
+      "slug": "how-to-build-a-profitable-photo-booth-business",
+      "width": 390,
+      "status": "passed",
+      "documentWidth": 390,
+      "frameRatios": [
+        1.3333
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "screenshot": "docs/redesign/screenshots/lead-how-to-build-a-profitable-photo-booth-business-390.webp",
+      "imageCount": 1
+    },
+    {
+      "slug": "how-to-build-a-profitable-photo-booth-business",
+      "width": 320,
+      "status": "passed",
+      "documentWidth": 320,
+      "frameRatios": [
+        1.3333
+      ],
+      "contracts": "unchanged except illustrative captions",
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "imageCount": 1
+    }
+  ],
+  "noJavaScript": [
+    {
+      "slug": "photo-booth-rental-fontana",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "bookingLinks": "present with unchanged destinations",
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "nativeNoJsBookingFallback": true
+      }
+    },
+    {
+      "slug": "photo-booth-rental-riverside",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "bookingLinks": "present with unchanged destinations",
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "nativeNoJsBookingFallback": true
+      }
+    },
+    {
+      "slug": "photo-booth-rental-rancho-cucamonga",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "bookingLinks": "present with unchanged destinations",
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "nativeNoJsBookingFallback": true
+      }
+    },
+    {
+      "slug": "photo-booth-rental-ontario",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "bookingLinks": "present with unchanged destinations",
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "nativeNoJsBookingFallback": true
+      }
+    },
+    {
+      "slug": "photo-booth-rental-san-bernardino",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "bookingLinks": "present with unchanged destinations",
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "nativeNoJsBookingFallback": true
+      }
+    },
+    {
+      "slug": "photo-booth-rental-corona",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "bookingLinks": "present with unchanged destinations",
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "nativeNoJsBookingFallback": true
+      }
+    },
+    {
+      "slug": "photo-booth-rental-eastvale",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "bookingLinks": "present with unchanged destinations",
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "nativeNoJsBookingFallback": true
+      }
+    },
+    {
+      "slug": "photo-booth-rental-upland",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "bookingLinks": "present with unchanged destinations",
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "nativeNoJsBookingFallback": true
+      }
+    },
+    {
+      "slug": "photo-booth-rental-jurupa-valley",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "bookingLinks": "present with unchanged destinations",
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "nativeNoJsBookingFallback": true
+      }
+    },
+    {
+      "slug": "photo-booth-rental-chino",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "bookingLinks": "present with unchanged destinations",
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "nativeNoJsBookingFallback": true
+      }
+    },
+    {
+      "slug": "photo-booth-rental-norco",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 3,
+      "faq": {
+        "count": 5,
+        "exercised": 1
+      },
+      "bookingLinks": "present with unchanged destinations",
+      "bookingForm": {
+        "action": "/check-your-date/",
+        "method": "get",
+        "dateAndZipParameters": "preserved",
+        "nativeNoJsBookingFallback": true
+      }
+    },
+    {
+      "slug": "wedding-photo-booth-rental",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 4,
+      "faq": {
+        "count": 7,
+        "exercised": 1
+      },
+      "bookingLinks": "present with unchanged destinations"
+    },
+    {
+      "slug": "photobooth-event-benefits",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "bookingLinks": "present with unchanged destinations"
+    },
+    {
+      "slug": "unlocking-success",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "bookingLinks": "present with unchanged destinations"
+    },
+    {
+      "slug": "how-to-build-a-profitable-photo-booth-business",
+      "width": 390,
+      "status": "passed",
+      "imageCount": 1,
+      "faq": {
+        "count": 0,
+        "exercised": 0
+      },
+      "bookingLinks": "present with unchanged destinations"
+    }
+  ],
+  "controls": [
+    {
+      "route": "/corporate-photo-booth-rental/",
+      "bodyHeadAndContracts": "unchanged",
+      "nonmatchingDynamicCssDifferences": [
+        {
+          "context": [],
+          "selector": ".ppc-city-hero-media[data-astro-cid-nq5n4n64], .ppc-city-card-media[data-astro-cid-nq5n4n64]",
+          "style": "gap: 10px; min-width: 0px; margin: 0px; display: grid;",
+          "matchingControlElements": 0
+        },
+        {
+          "context": [],
+          "selector": ".ppc-city-hero-media[data-astro-cid-nq5n4n64] .ppc-ph",
+          "style": "aspect-ratio: 4 / 5; min-height: 0px;",
+          "matchingControlElements": 0
+        },
+        {
+          "context": [],
+          "selector": ".ppc-city-card-media[data-astro-cid-nq5n4n64] .ppc-ph",
+          "style": "aspect-ratio: 3 / 2; min-height: 0px;",
+          "matchingControlElements": 0
+        },
+        {
+          "context": [],
+          "selector": ".ppc-city-image-caption[data-astro-cid-nq5n4n64]",
+          "style": "color: var(--muted); margin: 0px; font-size: 13px; line-height: 1.4;",
+          "matchingControlElements": 0
+        }
+      ]
+    },
+    {
+      "route": "/full-service-photo-booth-rental/",
+      "bodyHeadAndContracts": "unchanged",
+      "nonmatchingDynamicCssDifferences": []
+    },
+    {
+      "route": "/photo-booth-rental-cost/",
+      "bodyHeadAndContracts": "unchanged",
+      "baselineNote": "Earlier immutable company-images baseline; business DOM and contracts are identical",
+      "nonmatchingDynamicCssDifferences": [
+        {
+          "context": [],
+          "selector": ".ppc-city-hero-media[data-astro-cid-nq5n4n64], .ppc-city-card-media[data-astro-cid-nq5n4n64]",
+          "style": "gap: 10px; min-width: 0px; margin: 0px; display: grid;",
+          "matchingControlElements": 0
+        },
+        {
+          "context": [],
+          "selector": ".ppc-city-hero-media[data-astro-cid-nq5n4n64] .ppc-ph",
+          "style": "aspect-ratio: 4 / 5; min-height: 0px;",
+          "matchingControlElements": 0
+        },
+        {
+          "context": [],
+          "selector": ".ppc-city-card-media[data-astro-cid-nq5n4n64] .ppc-ph",
+          "style": "aspect-ratio: 3 / 2; min-height: 0px;",
+          "matchingControlElements": 0
+        },
+        {
+          "context": [],
+          "selector": ".ppc-city-image-caption[data-astro-cid-nq5n4n64]",
+          "style": "color: var(--muted); margin: 0px; font-size: 13px; line-height: 1.4;",
+          "matchingControlElements": 0
+        },
+        {
+          "context": [],
+          "selector": ".ppc-editorial-figure[data-astro-cid-hd4tredm]",
+          "style": "min-width: 0px; margin: 0px;",
+          "matchingControlElements": 0
+        },
+        {
+          "context": [],
+          "selector": ".ppc-editorial-figure[data-astro-cid-hd4tredm] figcaption[data-astro-cid-hd4tredm]",
+          "style": "margin-top: 10px;",
+          "matchingControlElements": 0
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "bodyHeadAndContracts": "unchanged",
+      "nonmatchingDynamicCssDifferences": []
+    }
+  ],
+  "leadingImageAudit": {
+    "scope": "Primary and meaningful hero/article-lead images; aria-hidden decorative filmstrips are inventoried separately",
+    "routeCount": 31,
+    "duplicates": [],
+    "decorativeFilmstripReuse": [
+      {
+        "src": "/media/homepage/wedding.webp",
+        "decorativeRoute": "/full-service-photo-booth-rental/",
+        "meaningfulLeadRoutes": [
+          "/wedding-photo-booth-rental/"
+        ]
+      },
+      {
+        "src": "/media/homepage/birthday.webp",
+        "decorativeRoute": "/full-service-photo-booth-rental/",
+        "meaningfulLeadRoutes": [
+          "/photobooth-event-benefits/"
+        ]
+      }
+    ],
+    "noHeroImage": [
+      "/check-your-date/",
+      "/contact-us/",
+      "/photo-booth-packages/"
+    ],
+    "inventory": [
+      {
+        "route": "/",
+        "kind": "hero",
+        "sources": [
+          "/media/2e95e775cef6987a.webp"
+        ],
+        "decorativeSources": [
+          "/media/2e95e775cef6987a.webp",
+          "/media/f8545184ac481dfe.webp",
+          "/media/4b60169354289bbe.webp"
+        ]
+      },
+      {
+        "route": "/360-photo-booth-rental/",
+        "kind": "hero",
+        "sources": [
+          "/media/360/hero.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/about-photo-party-city/",
+        "kind": "hero",
+        "sources": [
+          "/media/about/hero.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/blog/",
+        "kind": "featured editorial",
+        "sources": [
+          "/media/blog/featured.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/check-your-date/",
+        "kind": "no hero image",
+        "sources": [],
+        "decorativeSources": []
+      },
+      {
+        "route": "/contact-us/",
+        "kind": "no hero image",
+        "sources": [],
+        "decorativeSources": []
+      },
+      {
+        "route": "/corporate-photo-booth-rental/",
+        "kind": "hero",
+        "sources": [
+          "/media/corporate/hero.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/digital-photo-booth-rental/",
+        "kind": "hero",
+        "sources": [
+          "/media/digital/capture.webp",
+          "/media/digital/phone-sharing.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/full-service-photo-booth-rental/",
+        "kind": "hero",
+        "sources": [
+          "/media/full-service/hero.webp"
+        ],
+        "decorativeSources": [
+          "/media/homepage/wedding.webp",
+          "/media/homepage/corporate.webp",
+          "/media/homepage/birthday.webp"
+        ]
+      },
+      {
+        "route": "/how-to-build-a-profitable-photo-booth-business/",
+        "kind": "article lead",
+        "sources": [
+          "/media/by-mail/booking.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-by-mail/",
+        "kind": "hero",
+        "sources": [
+          "/media/by-mail/hero.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-packages/",
+        "kind": "no hero image",
+        "sources": [],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-rental-chino/",
+        "kind": "hero",
+        "sources": [
+          "/media/cities/chino.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-rental-corona/",
+        "kind": "hero",
+        "sources": [
+          "/media/cities/corona.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-rental-cost/",
+        "kind": "hero",
+        "sources": [
+          "/media/cost-guide/hero.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-rental-eastvale/",
+        "kind": "hero",
+        "sources": [
+          "/media/cities/eastvale.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-rental-fontana/",
+        "kind": "hero",
+        "sources": [
+          "/media/cities/fontana.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-rental-jurupa-valley/",
+        "kind": "hero",
+        "sources": [
+          "/media/cities/jurupa-valley.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-rental-norco/",
+        "kind": "hero",
+        "sources": [
+          "/media/cities/norco.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-rental-ontario/",
+        "kind": "hero",
+        "sources": [
+          "/media/cities/ontario.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-rental-rancho-cucamonga/",
+        "kind": "hero",
+        "sources": [
+          "/media/cities/rancho-cucamonga.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-rental-riverside/",
+        "kind": "hero",
+        "sources": [
+          "/media/cities/riverside.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-rental-san-bernardino/",
+        "kind": "hero",
+        "sources": [
+          "/media/cities/san-bernardino.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photo-booth-rental-upland/",
+        "kind": "hero",
+        "sources": [
+          "/media/cities/upland.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photobooth-event-benefits/",
+        "kind": "article lead",
+        "sources": [
+          "/media/homepage/birthday.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/photobooth-props/",
+        "kind": "hero",
+        "sources": [
+          "/media/props/hero.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/refund-policy/",
+        "kind": "hero",
+        "sources": [
+          "/media/terms/hero.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/self-service-photo-booth-rental/",
+        "kind": "hero",
+        "sources": [
+          "/media/self-service/hero.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/types-of-photo-booths/",
+        "kind": "article lead",
+        "sources": [
+          "/media/blog/types.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/unlocking-success/",
+        "kind": "article lead",
+        "sources": [
+          "/media/corporate/branding.webp"
+        ],
+        "decorativeSources": []
+      },
+      {
+        "route": "/wedding-photo-booth-rental/",
+        "kind": "hero",
+        "sources": [
+          "/media/homepage/wedding.webp"
+        ],
+        "decorativeSources": []
+      }
+    ]
+  },
+  "assetUniqueness": {
+    "uniqueHeroFiles": 11,
+    "distinctIllustrations": 13,
+    "entries": [
+      {
+        "src": "/media/cities/fontana.webp",
+        "sha256": "64ca2dbca7cd34a778f1250297696f5cfbd41102c759844b0f8f716d3bab4297"
+      },
+      {
+        "src": "/media/cities/riverside.webp",
+        "sha256": "557a88e7e5834619ed2557863a75df46a888cb2c4972fab36652681684389297"
+      },
+      {
+        "src": "/media/cities/rancho-cucamonga.webp",
+        "sha256": "0ce15eb4ed71a22241045700180c770acf38fe084579f757b5a44e5b86a8bcd6"
+      },
+      {
+        "src": "/media/cities/ontario.webp",
+        "sha256": "fe1ac52ce763b8b987735ff02541b59f197bc72344b7af3c66d82840194d4dd9"
+      },
+      {
+        "src": "/media/cities/san-bernardino.webp",
+        "sha256": "5c1d3b550ff59e305a8e83bd51fe5e9695e7df821f7e58a816b78e24d01112b5"
+      },
+      {
+        "src": "/media/cities/corona.webp",
+        "sha256": "2e18b858e0e5b9f11e35a6dd9d45f0d038b9172a0f44feb745ae9adff613de6e"
+      },
+      {
+        "src": "/media/cities/eastvale.webp",
+        "sha256": "5d3ec8ffde47537888ec27dd4ad49a8642a7298747ce32222ec361c0c05ac54b"
+      },
+      {
+        "src": "/media/cities/upland.webp",
+        "sha256": "c8d233157ca1305e02467600fea6c12f2e630596f6c0e6f3bdfa1ed70aeba264"
+      },
+      {
+        "src": "/media/cities/jurupa-valley.webp",
+        "sha256": "954d7c92659fd4f56cf73f1257fab85b9c41816a2574a8207aef8e8c91bfeb88"
+      },
+      {
+        "src": "/media/cities/chino.webp",
+        "sha256": "fde69fbe7f6922ac425bb914ebae949edf2bbb9ee3e09ec10b574b3ea940959f"
+      },
+      {
+        "src": "/media/cities/norco.webp",
+        "sha256": "b3ec1d725843ded9358be96fb864a183b2b75efb546d3706f20a1af6b5dfa936"
+      },
+      {
+        "src": "/media/cities/full-service.webp",
+        "sha256": "0b14c3e2f12f6fdd9e9373b7c5e45b091821f3ce021407e0aeaec53a8c0fcafb"
+      },
+      {
+        "src": "/media/cities/self-service.webp",
+        "sha256": "c02efc4a13f74cdf87a0d3f780ae625cd62392c1c3c0f24e5a03ab7354db19ed"
+      }
+    ]
+  },
+  "errors": [],
+  "imageInventory": [
+    {
+      "slug": "photo-booth-rental-fontana",
+      "images": [
+        {
+          "src": "/media/cities/fontana.webp",
+          "alt": "Illustrative sunny outdoor birthday scene with two friends beside a Helio Sport photo booth",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "src": "/media/cities/full-service.webp",
+          "alt": "Illustrative full-service experience with an attendant helping two guests use a Lumia M Pro photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/cities/self-service.webp",
+          "alt": "Illustrative self-service experience with two adult friends operating a Helio Sport photo booth",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "photo-booth-rental-riverside",
+      "images": [
+        {
+          "src": "/media/cities/riverside.webp",
+          "alt": "Illustrative evening garden reception with three guests beside a Lumia M Pro photo booth",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "src": "/media/cities/full-service.webp",
+          "alt": "Illustrative full-service experience with an attendant helping two guests use a Lumia M Pro photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/cities/self-service.webp",
+          "alt": "Illustrative self-service experience with two adult friends operating a Helio Sport photo booth",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "photo-booth-rental-rancho-cucamonga",
+      "images": [
+        {
+          "src": "/media/cities/rancho-cucamonga.webp",
+          "alt": "Illustrative leafy patio celebration with two friends beside a Posh Pro photo booth",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "src": "/media/cities/full-service.webp",
+          "alt": "Illustrative full-service experience with an attendant helping two guests use a Lumia M Pro photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/cities/self-service.webp",
+          "alt": "Illustrative self-service experience with two adult friends operating a Helio Sport photo booth",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "photo-booth-rental-ontario",
+      "images": [
+        {
+          "src": "/media/cities/ontario.webp",
+          "alt": "Illustrative modern company party with three coworkers beside a Lumia M Pro photo booth",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "src": "/media/cities/full-service.webp",
+          "alt": "Illustrative full-service experience with an attendant helping two guests use a Lumia M Pro photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/cities/self-service.webp",
+          "alt": "Illustrative self-service experience with two adult friends operating a Helio Sport photo booth",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "photo-booth-rental-san-bernardino",
+      "images": [
+        {
+          "src": "/media/cities/san-bernardino.webp",
+          "alt": "Illustrative indoor graduation celebration with three adults beside a Helio Sport photo booth",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "src": "/media/cities/full-service.webp",
+          "alt": "Illustrative full-service experience with an attendant helping two guests use a Lumia M Pro photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/cities/self-service.webp",
+          "alt": "Illustrative self-service experience with two adult friends operating a Helio Sport photo booth",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "photo-booth-rental-corona",
+      "images": [
+        {
+          "src": "/media/cities/corona.webp",
+          "alt": "Illustrative courtyard anniversary celebration with a couple beside a Posh Pro photo booth",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "src": "/media/cities/full-service.webp",
+          "alt": "Illustrative full-service experience with an attendant helping two guests use a Lumia M Pro photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/cities/self-service.webp",
+          "alt": "Illustrative self-service experience with two adult friends operating a Helio Sport photo booth",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "photo-booth-rental-eastvale",
+      "images": [
+        {
+          "src": "/media/cities/eastvale.webp",
+          "alt": "Illustrative backyard birthday party with three friends beside a Helio Sport photo booth",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "src": "/media/cities/full-service.webp",
+          "alt": "Illustrative full-service experience with an attendant helping two guests use a Lumia M Pro photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/cities/self-service.webp",
+          "alt": "Illustrative self-service experience with two adult friends operating a Helio Sport photo booth",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "photo-booth-rental-upland",
+      "images": [
+        {
+          "src": "/media/cities/upland.webp",
+          "alt": "Illustrative garden wedding scene with a couple beside a Lumia M Pro photo booth",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "src": "/media/cities/full-service.webp",
+          "alt": "Illustrative full-service experience with an attendant helping two guests use a Lumia M Pro photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/cities/self-service.webp",
+          "alt": "Illustrative self-service experience with two adult friends operating a Helio Sport photo booth",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "photo-booth-rental-jurupa-valley",
+      "images": [
+        {
+          "src": "/media/cities/jurupa-valley.webp",
+          "alt": "Illustrative rustic garden party with three friends beside a Helio Sport photo booth",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "src": "/media/cities/full-service.webp",
+          "alt": "Illustrative full-service experience with an attendant helping two guests use a Lumia M Pro photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/cities/self-service.webp",
+          "alt": "Illustrative self-service experience with two adult friends operating a Helio Sport photo booth",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "photo-booth-rental-chino",
+      "images": [
+        {
+          "src": "/media/cities/chino.webp",
+          "alt": "Illustrative indoor family banquet with three adults beside a Lumia M Pro photo booth",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "src": "/media/cities/full-service.webp",
+          "alt": "Illustrative full-service experience with an attendant helping two guests use a Lumia M Pro photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/cities/self-service.webp",
+          "alt": "Illustrative self-service experience with two adult friends operating a Helio Sport photo booth",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "photo-booth-rental-norco",
+      "images": [
+        {
+          "src": "/media/cities/norco.webp",
+          "alt": "Illustrative rustic courtyard gathering with three friends beside a Posh Pro photo booth",
+          "width": 960,
+          "height": 1200
+        },
+        {
+          "src": "/media/cities/full-service.webp",
+          "alt": "Illustrative full-service experience with an attendant helping two guests use a Lumia M Pro photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/cities/self-service.webp",
+          "alt": "Illustrative self-service experience with two adult friends operating a Helio Sport photo booth",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "wedding-photo-booth-rental",
+      "images": [
+        {
+          "src": "/media/homepage/wedding.webp",
+          "alt": "Illustrative wedding scene of a couple and two friends sharing a laugh and a photo strip",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/full-service/helio-sport.webp",
+          "alt": "Silver photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/full-service/lumia-m-pro.webp",
+          "alt": "Gold photo booth",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "src": "/media/full-service/posh-pro.webp",
+          "alt": "Platinum photo booth",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "photobooth-event-benefits",
+      "images": [
+        {
+          "src": "/media/homepage/birthday.webp",
+          "alt": "Illustrative scene of four adult friends celebrating with heart-shaped glasses and a star prop",
+          "width": 1200,
+          "height": 800
+        }
+      ]
+    },
+    {
+      "slug": "unlocking-success",
+      "images": [
+        {
+          "src": "/media/corporate/branding.webp",
+          "alt": "Illustrative sample photo keepsake coordinated with a Posh Pro signage display at a company event",
+          "width": 1200,
+          "height": 900
+        }
+      ]
+    },
+    {
+      "slug": "how-to-build-a-profitable-photo-booth-business",
+      "images": [
+        {
+          "src": "/media/by-mail/booking.webp",
+          "alt": "Illustrative scene of an event planner checking a calendar on a phone beside a notebook",
+          "width": 960,
+          "height": 720
+        }
+      ]
+    }
+  ]
+}

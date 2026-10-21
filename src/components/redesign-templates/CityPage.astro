@@ -3,17 +3,20 @@ import RentalLayout from '../../layouts/RentalLayout.astro';
 import Photo from '../redesign/Photo.astro';
 import FAQ from '../redesign/FAQ.astro';
 import {findCity, cityPath} from '../../data/cities';
+import {cityHeroImages, cityServiceImages} from '../../data/city-imagery';
 import {bookingLinks, fullServiceTiers, selfServiceTiers, money, rentalCopy, serviceSchema} from '../../data/rentals';
 interface Props {page: {slug:string;title:string;name:string;description:string;canonical:string;schema?:any}}
 const {page}=Astro.props;
 const city=findCity(page.slug);
 if (!city) throw new Error(`Missing city rental data: ${page.slug}`);
+const heroImage=cityHeroImages[city.slug];
+if (!heroImage) throw new Error(`Missing city hero image: ${city.slug}`);
 const text=(value:string)=>value.replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ');
 const oldFaq=page.schema?.['@graph']?.find((node:any)=>node['@type']==='FAQPage');
 const faqs=(oldFaq?.mainEntity || []).map((item:any)=>({question:item.name,answer:rentalCopy(text(item.acceptedAnswer.text))}));
 const options=[
-  {name:'We bring it',title:'Full service with prints',tier:fullServiceTiers[0],href:bookingLinks.full,detail:'An attendant runs the booth while you enjoy the event. Personalized prints, backdrop, props, delivery, setup, and takedown are included.',link:'/full-service-photo-booth-rental/',label:'Explore full service',image:'/media/1db5b1de66a843ce.webp',alt:'Event guests posing together with photo booth props'},
-  {name:'You pick it up',title:'24-hour self-service',tier:selfServiceTiers[0],href:bookingLinks.self,detail:'Pick up in Mira Loma and let a designated helper run the booth. Digital photos and sharing are included; printing, a physical backdrop, and delivery are optional.',link:'/self-service-photo-booth-rental/',label:'Explore self-service',image:'/media/f8545184ac481dfe.webp',alt:'A wedding couple holding Mr. and Mrs. photo props'},
+  {name:'We bring it',title:'Full service with prints',tier:fullServiceTiers[0],href:bookingLinks.full,detail:'An attendant runs the booth while you enjoy the event. Personalized prints, backdrop, props, delivery, setup, and takedown are included.',link:'/full-service-photo-booth-rental/',label:'Explore full service',image:cityServiceImages.full,caption:'Illustrative full-service experience.'},
+  {name:'You pick it up',title:'24-hour self-service',tier:selfServiceTiers[0],href:bookingLinks.self,detail:'Pick up in Mira Loma and let a designated helper run the booth. Digital photos and sharing are included; printing, a physical backdrop, and delivery are optional.',link:'/self-service-photo-booth-rental/',label:'Explore self-service',image:cityServiceImages.self,caption:'Illustrative self-service experience.'},
 ];
 const schema={...serviceSchema(`Photo booth rental in ${city.name}`,page.canonical,[fullServiceTiers[0],selfServiceTiers[0]]),areaServed:{'@type':'City',name:city.name,address:{'@type':'PostalAddress',addressRegion:'CA',addressCountry:'US'}}};
 ---
@@ -34,7 +37,10 @@ const schema={...serviceSchema(`Photo booth rental in ${city.name}`,page.canonic
         </form>
         <a class="ppc-link" href="tel:+19094037143">Call or text (909) 403-7143</a>
       </div>
-      <Photo src="/media/1db5b1de66a843ce.webp" alt="Guests making memories together with photo booth props" label="Guests making memories together" ratio="4/5" loading="eager" fetchpriority="high" width={700} height={450} />
+      <figure class="ppc-city-hero-media">
+        <Photo src={heroImage.src} alt={heroImage.alt} label={heroImage.alt} ratio="4/5" loading="eager" fetchpriority="high" width={heroImage.width} height={heroImage.height} />
+        <figcaption class="ppc-city-image-caption">Illustrative event scene.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -43,7 +49,10 @@ const schema={...serviceSchema(`Photo booth rental in ${city.name}`,page.canonic
       <div class="ppc-stack"><p class="ppc-eyebrow">Two ways to make it yours</p><h2 class="ppc-h2" id="city-rentals">A little less planning.<br />A lot more fun.</h2><p class="ppc-p">Choose the support you want. Every proposal confirms the final arrangements, extras, and any applicable travel or venue charges.</p></div>
       <div class="ppc-grid2">
         {options.map(option=><article class="ppc-card ppc-stack ppc-city-option">
-          <Photo src={option.image} label={option.alt} alt={option.alt} ratio="3/2" />
+          <figure class="ppc-city-card-media">
+            <Photo src={option.image.src} label={option.image.alt} alt={option.image.alt} ratio="3/2" width={option.image.width} height={option.image.height} />
+            <figcaption class="ppc-city-image-caption">{option.caption}</figcaption>
+          </figure>
           <p class="ppc-eyebrow">{option.name}</p>
           <h3 class="ppc-h3">{option.title}</h3>
           <p class="ppc-p">{option.detail}</p>
@@ -77,6 +86,10 @@ const schema={...serviceSchema(`Photo booth rental in ${city.name}`,page.canonic
 
 <style>
   .ppc-city-hero{padding-block:24px clamp(56px,7vw,96px)}
+  .ppc-city-hero-media,.ppc-city-card-media{display:grid;gap:10px;min-width:0;margin:0}
+  .ppc-city-hero-media :global(.ppc-ph){min-height:0;aspect-ratio:4/5}
+  .ppc-city-card-media :global(.ppc-ph){min-height:0;aspect-ratio:3/2}
+  .ppc-city-image-caption{margin:0;font-size:13px;line-height:1.4;color:var(--muted)}
   .ppc-city-option{gap:18px}
   .ppc-city-option .ppc-row{margin-top:auto}
   .ppc-city-option .ppc-price{flex-wrap:wrap}
