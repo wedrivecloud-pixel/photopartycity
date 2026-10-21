@@ -17,7 +17,6 @@ export interface OccasionEvent {
   heading: string;
   intro: string;
   hero: {src:string;alt:string;width:1200;height:900};
-  fullServiceImage: {src:string;alt:string;width:1200;height:800;caption:string};
   fitHeading: string;
   fitPoints: OccasionPoint[];
   styleHeading: string;
@@ -46,12 +45,6 @@ export const occasionEvents: OccasionEvent[] = [
       src:'/media/occasions/birthday.webp',
       alt:'Illustrative birthday celebration with three adult friends beside a Helio Sport photo booth',
       width:1200,height:900,
-    },
-    fullServiceImage:{
-      src:'/media/occasions/birthday-prints.webp',
-      alt:'Illustrative patio birthday with three adult friends holding photo strips and a small print',
-      width:1200,height:800,
-      caption:'Illustrative birthday print experience.',
     },
     fitHeading:'A photo corner for your kind of birthday.',
     fitPoints:[
@@ -105,12 +98,6 @@ export const occasionEvents: OccasionEvent[] = [
       alt:'Illustrative quinceañera scene with the honoree and her parents beside a Posh Pro photo booth',
       width:1200,height:900,
     },
-    fullServiceImage:{
-      src:'/media/occasions/quinceanera-prints.webp',
-      alt:'Illustrative quinceañera honoree and family smiling over a small photo print and a photo strip',
-      width:1200,height:800,
-      caption:'Illustrative quinceañera print experience.',
-    },
     fitHeading:'Plan around the people and moments that matter.',
     fitPoints:[
       {title:'Family photos, at their own pace',copy:'A dedicated photo corner gives relatives and friends a place to gather. Leave enough space for group photos and for guests to approach comfortably in formal clothing.'},
@@ -163,12 +150,6 @@ export const occasionEvents: OccasionEvent[] = [
       alt:'Illustrative graduation celebration with three adult graduates beside a Lumia M Pro photo booth',
       width:1200,height:900,
     },
-    fullServiceImage:{
-      src:'/media/occasions/graduation-prints.webp',
-      alt:'Illustrative garden party with three adult graduates in caps and gowns holding photo keepsakes',
-      width:1200,height:800,
-      caption:'Illustrative graduation print experience.',
-    },
     fitHeading:'A photo moment for every arrival.',
     fitPoints:[
       {title:'Welcome the open-house crowd',copy:'Guests may arrive at different times after a ceremony. Think about the main arrival window before choosing a defined attended session or a 24-hour self-service rental.'},
@@ -220,12 +201,6 @@ export const occasionEvents: OccasionEvent[] = [
       src:'/media/occasions/school.webp',
       alt:'Illustrative school celebration with three young adult guests beside a Helio Sport photo booth',
       width:1200,height:900,
-    },
-    fullServiceImage:{
-      src:'/media/occasions/school-prints.webp',
-      alt:'Illustrative school-event guests sharing printed photo keepsakes',
-      width:1200,height:800,
-      caption:'Illustrative school-event print experience.',
     },
     fitHeading:'A photo moment for your school community.',
     fitPoints:[

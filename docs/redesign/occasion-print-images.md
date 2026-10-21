@@ -1,5 +1,7 @@
 # Occasion print imagery
 
+**Archived image-swap record.** The two-option section described below has been replaced by the shared three-package section used on Weddings and Corporate Events, as requested in the subsequent layout update. See [the current package section](occasion-packages.md). These generated image assets and their original files remain saved, but the current package cards use the three reference equipment images.
+
 The full-service card under “Two ways to bring everyone together” now uses a different people-and-keepsakes image for each of the four occasion pages. The screenshot supplied with this request showed the shared Helio Sport equipment image, so this update replaces that card image. Heroes and the digital self-service cards retain their existing imagery.
 
 | Page | Local asset in `public/media/occasions/` | Scene |

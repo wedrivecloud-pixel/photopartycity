@@ -1,0 +1,10 @@
+---
+import TierCard from './TierCard.astro';
+import {fullServiceTiers} from '../../data/rentals';
+interface Props {headingId?:string}
+const {headingId='event-packages'}=Astro.props;
+const tierImages=['/media/full-service/helio-sport.webp','/media/full-service/lumia-m-pro.webp','/media/full-service/posh-pro.webp'];
+---
+<section class="ppc-section" aria-labelledby={headingId}>
+  <div class="ppc-wrap ppc-stack-lg"><div class="ppc-stack"><p class="ppc-eyebrow">We bring it. We run it.</p><h2 class="ppc-h2" id={headingId}>Choose your hours of happy.</h2><p class="ppc-p">Every full-service package includes an attendant, printing during booked booth time, personalized photo design, backdrop, props, delivery, setup, takedown, and digital copies in a 30-day gallery.</p></div><div class="ppc-cards">{fullServiceTiers.map((tier,index)=><TierCard {...tier} featured={tier.slug==='gold'} image={tierImages[index]} />)}</div><p class="ppc-small">Photo booth models shown in illustrative event settings.</p><p class="ppc-small">Your proposal confirms availability, selected extras, and any applicable travel or venue-related charges.</p><a class="ppc-link" href="/photo-booth-packages/">Compare all packages and inclusions →</a></div>
+</section>

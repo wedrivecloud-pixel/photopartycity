@@ -62,8 +62,14 @@ for(const [index,slug] of occasionSlugs.entries()){
  assert(html.includes(`rel="canonical" href="${canonical}"`),`Occasion canonical ${slug}`);
  assert(html.includes(`name="event" value="${occasionKeys[index]}"`),`Occasion form context ${slug}`);
  assert(html.includes(`href="/check-your-date/?event=${occasionKeys[index]}"`),`Occasion event-prefilled CTA ${slug}`);
- assert(html.includes(fullServiceTiers[0].href)&&html.includes(selfServiceTiers[0].href),`Original Silver/Starter booking links ${slug}`);
- assert(html.includes('From $695')&&html.includes('From $199'),`Original occasion starting prices ${slug}`);
+ const tierCards=[...html.matchAll(/<article\b[^>]*class="[^"]*\bppc-tier\b[^"]*"[^>]*>[\s\S]*?<\/article>/g)].map(match=>match[0]);
+ assert.equal(tierCards.length,fullServiceTiers.length,`Three full-service occasion tiers ${slug}`);
+ for(const [tierIndex,tier] of fullServiceTiers.entries()){
+  const card=tierCards[tierIndex];
+  assert(card.includes(`href="${tier.href}"`),`Original ${tier.name} booking link ${slug}`);
+  assert(card.includes(`<b>$${tier.price.toLocaleString('en-US')}</b>`),`Original ${tier.name} price ${slug}`);
+  assert(card.includes(`>${tier.name}</h3>`)&&card.includes(tier.model)&&card.includes(`/ ${tier.hours} hours`),`${tier.name} label, booth and duration ${slug}`);
+ }
  assert(html.includes(`/media/occasions/${occasionKeys[index]}.webp`),`Occasion hero ${slug}`);
  assert(!/<div[^>]*class="[^"]*ppc-photo[^"]*"[^>]*>\s*<span>/.test(html),`No empty occasion images ${slug}`);
  const schemas=[...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map(match=>JSON.parse(match[1]));
