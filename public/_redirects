@@ -12,3 +12,5 @@
 /2-photo-booth-rental-packages-you-can-get-right-now/ /types-of-photo-booths/ 301
 /the-booths/ /types-of-photo-booths/ 301
 /photo-booth-features/ /types-of-photo-booths/ 301
+# Replaced digital hero image (new filename avoids immutable image caches)
+/media/digital/capture.webp /media/digital/capture-white-helio-3de00c06.webp 301
